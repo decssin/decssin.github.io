@@ -17,9 +17,9 @@ markdown    : kramdown
 highlighter : pygments
 
 # SEO settings
-title: dotX
-description: "A free Jekyll theme for download"
-keywords: "Jekyll, theme, free, download, SEO, blog, web"
+title: 어서와요
+description: "좋아하는 일을 하는 게 좋은 일입니다."
+keywords: "Jekyll, theme, github, welcome, SEO, blog, web"
 
 # Site settings
 url: "http://nowStackOverflow.github.io"
@@ -41,7 +41,7 @@ author:
   tumblr    : http://nowgnim.tumblr.com
   contact   : http://nowstackoverflow.github.io/about/
 
-# google_analytics: UA-69545898-1
+google_analytics: UA-69545898-1
 repo: http://github.com/nowStackOverflow/nowStackOverflow.github.io
 
 # comments
