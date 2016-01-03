@@ -13,5 +13,5 @@ permalink: /about/
 영어로 원어민과 대화하며 그들의 조크에 배꼽이 빠져보는게 저의 숙제이자 목표이고 소망입니다.<br />
 만나서 반갑습니다.
 
-커리어는 [linkedin](javascript;)에서 사상은 [tumblr](javascript;)에서 볼 수 있습니다.
+커리어는 [linkedin](#)에서 사상은 [tumblr](#)에서 볼 수 있습니다.
 연락처 : nowgnim@naver.com 또는 @gmail.com
