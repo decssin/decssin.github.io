@@ -1,0 +1,46 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: expanded # compressed # expanded
+
+# permalink and highlighter
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : pygments
+
+# SEO settings
+title: dotX
+description: "A free Jekyll theme for download"
+keywords: "Jekyll, theme, free, download, SEO, blog, web"
+
+# Site settings
+url: "http://nowStackOverflow.github.io"
+baseurl: ""
+# baseurl: ""
+
+# Author settings
+author:
+  name      : Min Jiwon
+  job       : Backend Engineer
+  bio       : "Enthusiast performance, responsive design and usability, always looking for the best project and good coffee."
+  thumb     : /images/author.jpg
+  email     : nowgnim@gmail.com
+  url       : http://nowgnim.tumblr.com
+  github    : http://github.com/nowStackOverflow
+  twitter   : http://twitter.com/nowgnim
+  facebook  : http://facebook.com/
+  linkedin  : http://linkedin.com/in/nowgnim
+
+# google_analytics: UA-52446115-1
+repo: http://github.com/nowStackOverflow/nowStackOverflow.github.io
+
+# comments
+disqus_shortname: "nowgnim"
