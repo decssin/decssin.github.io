@@ -14,9 +14,9 @@ permalink: /about/
 
 <hr />
 
-*** 교육
+*** 교육 ***
 - Digital game, Computer science 전공
 - Korea Information Security & Information Technology Academy aka KOISA 수료 (구 SBS컴퓨터아카데미)
 
-*** 경험
+*** 경험 ***
 - 
