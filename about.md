@@ -8,7 +8,7 @@ permalink: /about/
 I am a man who blah blah blah
 
 - [tumblr](http://tumblr.com/nowgnim)
-- [linkedin](http://linkedin.com/nowgnim)
+- [linkedin](http://kr.linkedin.com/in/minjiwon)
 - [facebook](http://facebook.com)
 - [Github](http://github.com/nowStackOverflow)
 - [Twitter](http://twitter.com/nowgnim)
