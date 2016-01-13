@@ -8,26 +8,28 @@
 
 ### li의 표기
 
-1. Download or clone repo `git clone git@github.com:nandomoreirame/dotX.git`
-2. Enter the folder: `cd dotX/`
-3. Install Ruby gems: `bundle install`
-4. Start Jekyll server: `jekyll serve`
+1. 첫번째: `first`
+2. 두번째: `second`
+3. 세번째: `third`
+4. 네번째: `forth`
 
-Access, [localhost:4000/dotX](http://localhost:4000/dotX)
+링크를 표기합니다, [link name](http://#)
 
 ---
 
 ### ul의 표기
 
-* Create a new page: `rake page name="contact.md"`
-* Create a new post: `rake post title="TITLE OF THE POST"`
+* 순서가 없는 링크: _순서_
+* 순서가 없는 링크: __순서__
+* 순서가 없는 링크: ___순서___
 
 ---
 
-### Copyright and license
-
-It is under [the MIT license](/LICENSE).
+```
+p 태그 같은 느낌이 나는
+마크다운 방식의 표기법
+입력한대로 나옵니다.
+```
 
 Enjoy :yum:
 
-by [nandomoreira.me](http://nandomoreira.me)
