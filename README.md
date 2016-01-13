@@ -13,7 +13,7 @@
 3. 세번째: `third`
 4. 네번째: `forth`
 
-링크를 표기합니다, [link name](http://#)
+링크를 표기합니다, [link name](http://#), [이모지 표기법](http://www.emoji-cheat-sheet.com/)
 
 ---
 
