@@ -6,7 +6,7 @@
 
 ---
 
-### Start in 4 steps
+### li의 표기
 
 1. Download or clone repo `git clone git@github.com:nandomoreirame/dotX.git`
 2. Enter the folder: `cd dotX/`
@@ -17,7 +17,7 @@ Access, [localhost:4000/dotX](http://localhost:4000/dotX)
 
 ---
 
-### Using Rake tasks
+### ul의 표기
 
 * Create a new page: `rake page name="contact.md"`
 * Create a new post: `rake post title="TITLE OF THE POST"`
