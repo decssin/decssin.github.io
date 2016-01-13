@@ -1,10 +1,8 @@
-# .X [![Build Status](https://travis-ci.org/nandomoreirame/dotX.svg?branch=master)](https://travis-ci.org/nandomoreirame/dotX)
+# markdown 방식
 
 > Simple & Beautiful Jekyll theme
 
-### [Demo](http://nandomoreira.me/dotX/)
-
-![dotX - free Jekyll theme](/screenshot.png)
+![images](/images/author.jpg)
 
 ---
 
@@ -16,11 +14,6 @@
 4. Start Jekyll server: `jekyll serve`
 
 Access, [localhost:4000/dotX](http://localhost:4000/dotX)
-
-### Deploy in Github pages in 2 steps
-
-1. Change the variables `GITHUB_REPONAME` and `GITHUB_REPO_BRANCH` in `Rakefile`
-2. Run `rake` or `rake publish` for build and publish on Github
 
 ---
 
