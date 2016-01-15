@@ -2,7 +2,7 @@
 layout: post
 title:  "커밋 테스트하기(2)"
 permalink:  "consectetuer-adipiscing-elit"
-date:   2016-01-15 12:10:35 -0200
+date:   2016-01-15 12:10:35 -0800
 categories: jekyll update
 ---
 
