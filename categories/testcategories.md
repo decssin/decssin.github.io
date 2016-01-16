@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postbycategories
 categories: 테스트
 permalink: /categories/test/
 redirect_from: /categories/Test/
