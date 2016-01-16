@@ -22,7 +22,7 @@ description: "좋아하는 일을 하고, 좋아하는 음식을 먹고, 좋아�
 keywords: "Jekyll, theme, github, welcome, SEO, blog, web"
 
 # Site settings
-url: "http://nowStackOverflow.github.io"
+url: ""#"http://nowStackOverflow.github.io"
 baseurl: "http://nowisgood.uy.to"
 # baseurl: ""
 
