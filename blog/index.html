@@ -24,7 +24,7 @@ subtitle: 글쟁이는 아니지만..
         </h1>
       </header>
 
-      <p>{{ post.content | strip_html | truncatewords: 56 }} <a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">Read more</a></p>
+      <p>{{ post.content | strip_html | truncatewords: 21 }} <a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">Read more</a></p>
     </article>
   {% endfor %}
 

@@ -26,7 +26,6 @@ subtitle: 일단 테스트 중
 
       <p>{{ post.content | strip_html | truncatewords: 56 }} <a href="{{ post.url | prepend: site.baseurl }}" title="Permalink to: {{ post.title }}" class="read-more">Read more</a></p>
     </article>
-    <p>{{ post.categories }}</p>
   {% endfor %}
 
 </section>
