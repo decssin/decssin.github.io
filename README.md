@@ -68,7 +68,7 @@ print_hi('Tom')
 
 ### 튜토리얼 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6A5EpqqDOdk" frameborder="0" allowfullscreen></iframe>
+[유투브 동영상](https://youtu.be/6A5EpqqDOdk)
 
 * * *
 
