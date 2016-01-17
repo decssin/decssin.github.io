@@ -73,8 +73,8 @@ print_hi('Tom')
 * * *
 
 ### 참고사항 ###
-[kramdown syntax](http://kramdown.gettalong.org/syntax.html "kramdwon syntax")
-[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines "Markdown Cheatsheet")
+* [kramdown syntax](http://kramdown.gettalong.org/syntax.html "kramdwon syntax")
+* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines "Markdown Cheatsheet")
 
 Enjoy :yum:
 
