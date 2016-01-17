@@ -81,6 +81,6 @@ alt="유툽동영상" width="240" height="180" border="10" /></a>
 ### 참고사항 ###
 * [kramdown syntax](http://kramdown.gettalong.org/syntax.html "kramdwon syntax")
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines "Markdown Cheatsheet")
-
+* [GFM 방식 설명](https://help.github.com/articles/github-flavored-markdown/ "Github Flavored Markdown")
 Enjoy :yum:
 
