@@ -14,7 +14,7 @@ JDK를 설치하겠습니다. 이미 컴퓨터에 JDK가 설치되어 있다면 
 
 <br />
 ***일.***<br />
-[java.oracle.com](http://java.oracle.com)&nbsp;웹 페이지에 갑니다. 다음 그림과 같이 메인 화면에서 `‘Java SE’` 링크를 클릭하세요.<br />
+[java.oracle.com](http://java.oracle.com "오라클 페이지")&nbsp;웹 페이지에 갑니다. 다음 그림과 같이 메인 화면에서 `‘Java SE’` 링크를 클릭하세요.<br />
 <br />
 ![image](https://40.media.tumblr.com/d9543aeeeb99a69db451fec393a05fe9/tumblr_inline_nzrpe9U0LK1tg5174_540.png)<br />
 <br />
