@@ -70,6 +70,8 @@ print_hi('Tom')
 
 [유투브 동영상](https://youtu.be/6A5EpqqDOdk)
 
+[![유툽 동영상](http://img.youtube.com/vi/6A5EpqqDOdk/0.jpg)](https://youtu.be/6A5EpqqDOdk)
+
 * * *
 
 ### 참고사항 ###
