@@ -72,6 +72,10 @@ print_hi('Tom')
 
 [![유툽 동영상](http://img.youtube.com/vi/6A5EpqqDOdk/0.jpg)](https://youtu.be/6A5EpqqDOdk)
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=6A5EpqqDOdk
+" target="_blank"><img src="http://img.youtube.com/vi/6A5EpqqDOdk/0.jpg" 
+alt="유툽동영상" width="240" height="180" border="10" /></a>
+
 * * *
 
 ### 참고사항 ###
