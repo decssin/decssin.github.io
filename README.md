@@ -45,6 +45,17 @@ p 태그 같은 느낌이 나는
 ```
 ![image](https://41.media.tumblr.com/3de871bcdf4919503bd0b6cc102616f1/tumblr_o12tepaOZs1v5vx7bo1_1280.png)
 
+```
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+```
+![image2](https://40.media.tumblr.com/e74f81a1bb559785e73a610de1d47bdb/tumblr_o12tr8UukN1v5vx7bo1_1280.png)
+
 * * * 
 
 ### blockquote 표기
