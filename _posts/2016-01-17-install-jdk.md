@@ -11,7 +11,7 @@ JDK를 설치하겠습니다.<br />
 그래도 가능한 JDK 최신 버전을 설치하기 바랍니다.<br />
 <br />
 <br />
-<br />
+
 ## JDK 내려받기
 
 <br />
@@ -32,14 +32,14 @@ JDK를 설치하겠습니다.<br />
 ![image](https://41.media.tumblr.com/92d080f44e947ff8b6d3b4fe419cd8d3/tumblr_inline_nzrphspFHO1tg5174_540.png)<br />
 <br />
 <br />
-<br />
+
 ## JDK 설치 실행
 
 <br />
 (4) 내려받은 JDK 설치 파일을 실행합니다. 설치 시작 화면이 출력되면 설치 중간에 JRE를 설치하라는 화면이 뜨고 계속 &lt;Next&gt; 버튼을 클릭하여 설치를 진행합니다.<br />
-<br />
+
 * * *
-<br />
+
 ## JDK 경로 설정
 
 <br />
@@ -72,7 +72,7 @@ JDK 설치 경로를 등록하기 전에 먼저 ‘JAVA_HOME’ 이라는 환경
 ![image](https://40.media.tumblr.com/81eebe37034c3d5e9b940421ccb7536d/tumblr_inline_nzrq8vwEea1tg5174_540.png)<br />
 <br />
 <br />
-<br />
+
 ## 환경 변수 등록 확인
 
 <br />
