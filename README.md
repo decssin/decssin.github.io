@@ -32,7 +32,7 @@ p 태그 같은 느낌이 나는
 ```
 
 ### highlight 표기
-
+```
 {% highlight css %}
 #header h1 a {
   display: block;
@@ -40,6 +40,18 @@ p 태그 같은 느낌이 나는
   height: 80px;
 }
 {% endhighlight %}
+```
+![image](https://41.media.tumblr.com/3de871bcdf4919503bd0b6cc102616f1/tumblr_o12tepaOZs1v5vx7bo1_1280.png)
+
+* * * 
+
+### blockquote 표기
+
+> 인용문의 사용
+
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+---
 
 Enjoy :yum:
 
