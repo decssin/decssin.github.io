@@ -31,5 +31,15 @@ p 태그 같은 느낌이 나는
 입력한대로 나옵니다.
 ```
 
+### highlight 표기
+
+{% highlight css %}
+#header h1 a {
+  display: block;
+  width: 300px;
+  height: 80px;
+}
+{% endhighlight %}
+
 Enjoy :yum:
 
