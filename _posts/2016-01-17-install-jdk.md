@@ -6,19 +6,19 @@ date:   2016-01-17 12:10:35 -0800
 categories: tip
 ---
 
-JDK를 설치하겠습니다. 이미 컴퓨터에 JDK가 설치되어 있다면 이 과정은 건너뛰세요. 그래도 가능한 JDK 최신 버전을 설치하기 바랍니다.
+>JDK를 설치하겠습니다. 이미 컴퓨터에 JDK가 설치되어 있다면 이 과정은 건너뛰세요. 그래도 가능한 JDK 최신 버전을 설치하기 바랍니다.
 
 
 
 ## JDK 내려받기
 
-*. [java.oracle.com](http://java.oracle.com)&nbsp;웹 페이지에 갑니다. 다음 그림과 같이 메인 화면에서 ‘Java SE’ 링크를 클릭하세요.
+>1. [java.oracle.com](http://java.oracle.com)&nbsp;웹 페이지에 갑니다. 다음 그림과 같이 메인 화면에서 ‘Java SE’ 링크를 클릭하세요.
 
-![image](https://40.media.tumblr.com/d9543aeeeb99a69db451fec393a05fe9/tumblr_inline_nzrpe9U0LK1tg5174_540.png)
+>![image](https://40.media.tumblr.com/d9543aeeeb99a69db451fec393a05fe9/tumblr_inline_nzrpe9U0LK1tg5174_540.png)
 
 
 
-*. 목록에서 Java SE 8u65의 JDK ‘DOWNLOAD’ 버튼을 클릭합니다.
+>2. 목록에서 Java SE 8u65의 JDK ‘DOWNLOAD’ 버튼을 클릭합니다.
 
 ![image](https://41.media.tumblr.com/81fbecc6bde33be9274a8b678a84ff6d/tumblr_inline_nzrpffK4uk1tg5174_540.png)
 
