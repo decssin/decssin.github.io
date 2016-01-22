@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 난
-subtitle: 개발자입니다.
+title: IAMA
+subtitle: 수정중...
 permalink: /about/
 ---
 
