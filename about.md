@@ -1,7 +1,7 @@
 ---
 layout: page
 title: IAMA
-subtitle: 수정중...
+subtitle: I AM A...
 permalink: /about/
 ---
 
