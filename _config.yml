@@ -17,8 +17,8 @@ markdown    : kramdown
 highlighter : pygments
 
 # SEO settings
-title: 어서와요
-description: "좋아하는 일을 하고, 좋아하는 음식을 먹고, 좋아하는 것을 즐깁니다. 피치 못할 사정이 있다면 하고 있는 일을 사랑하고, 먹고 있는 것에 감사하고, 무엇을 즐길지 고민하는 것을 즐깁니다."
+title: Hello World
+description: "좋아하는 일을 하고, 좋아하는 음식을 먹고, 좋아하는 것을 즐깁니다. 뜻대로 되지 않는다면 하고 있는 일을 사랑하고, 먹고 있는 것에 감사하고, 무엇을 즐길지 고민하는 것을 즐깁니다."
 keywords: "Jekyll, theme, github, welcome, SEO, blog, web"
 
 # Site settings
