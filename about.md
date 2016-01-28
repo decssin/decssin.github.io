@@ -1,7 +1,7 @@
 ---
 layout: page
 title: IAMA
-subtitle: I AM A...
+subtitle: I am a...
 permalink: /about/
 ---
 
