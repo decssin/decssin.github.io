@@ -423,14 +423,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						<h2>Get in touch</h2>
 					</header>
 					<form method="post" action="https://getsimpleform.com/messages?form_api_token=91d8733d517800916a87ffac5e6b13d2">
-					<input type='hidden' name='redirect_to' value='http://nowStackOverflow.github.io/refresh.html' />
 						<div class="row uniform">
 							<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
 							<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
 							<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 							<div class="12u$">
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="special" /></li>
+									<li><input type="submit" value="Send Message" class="special" onclick="success()" /></li>
 								</ul>
 							</div>
 						</div>
@@ -458,6 +457,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+			  function success(){
+			    alert("Success Send Message")
+			  }
+			</script>
 
 	</body>
 </html>
