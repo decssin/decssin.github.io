@@ -24,10 +24,13 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="https://getsimpleform.com/messages?form_api_token=91d8733d517800916a87ffac5e6b13d2">
-				<input type="text" name="email" id="email" placeholder="Simple Message" />
-				<input type="submit" value="Twinkle~!" />
-			</form>
+<form action="https://getsimpleform.com/messages?form_api_token=91d8733d517800916a87ffac5e6b13d2" method="post">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <input type='hidden' name='redirect_to' value=http://fooey.com/thank-you.html />
+  <!-- all your input fields here.... -->
+  <input type='text' name='test' />
+  <input type='submit' value='Test form' />
+</form>
 
 		<!-- Footer -->
 			<footer id="footer">
