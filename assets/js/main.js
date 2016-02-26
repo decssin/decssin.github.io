@@ -171,7 +171,7 @@
 $.ajax({
 		url: '//formspree.io/nowgnim@gmail.com',
 		method: 'POST',
-		data: {message: 'hello!'},
+		data: $(this).serialize(),
 		dataType: 'json'
 		});
 
