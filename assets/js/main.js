@@ -153,16 +153,6 @@
 					// Process form.
 					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
 					// but there's enough here to piece together a working AJAX submission call that does.
-					
-					// add ajax
-$.ajax({
-		url: '//formspree.io/nowgnim@gmail.com',
-		method: 'POST',
-		data: {message: 'hello!'},
-		dataType: 'json'
-		});
-
-					
 						window.setTimeout(function() {
 
 							// Reset form.
@@ -170,6 +160,14 @@ $.ajax({
 
 							// Enable submit.
 								$submit.disabled = false;
+
+// add ajax
+$.ajax({
+		url: '//formspree.io/nowgnim@gmail.com',
+		method: 'POST',
+		data: {message: 'hello!'},
+		dataType: 'json'
+		});
 
 							// Show message.
 								$message._show('success', 'Thank you!');
