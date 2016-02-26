@@ -161,9 +161,17 @@
 							// Enable submit.
 								$submit.disabled = false;
 
+// add ajax
+$.ajax({
+		url: '//formspree.io/nowgnim@gmail.com',
+		method: 'POST',
+		data: $(this).serialize(),
+		dataType: 'json'
+		});
+
 							// Show message.
 								$message._show('success', 'Thank you!');
-								//$message._show('failure', 'Something went wrong. Please try again.');
+								$message._show('failure', 'Something went wrong. Please try again.');
 
 						}, 750);
 
