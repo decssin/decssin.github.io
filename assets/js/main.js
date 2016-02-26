@@ -144,6 +144,14 @@
 					event.stopPropagation();
 					event.preventDefault();
 
+// add ajax
+$.ajax({
+		url: '//formspree.io/nowgnim@gmail.com',
+		method: 'POST',
+		data: {message: 'hello!'},
+		dataType: 'json'
+		});
+
 					// Hide message.
 						$message._hide();
 
@@ -160,14 +168,6 @@
 
 							// Enable submit.
 								$submit.disabled = false;
-
-// add ajax
-$.ajax({
-		url: '//formspree.io/nowgnim@gmail.com',
-		method: 'POST',
-		data: {message: 'hello!'},
-		dataType: 'json'
-		});
 
 							// Show message.
 								$message._show('success', 'Thank you!');
