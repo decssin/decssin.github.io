@@ -144,14 +144,6 @@
 					event.stopPropagation();
 					event.preventDefault();
 
-// add ajax
-$.ajax({
-		url: '//formspree.io/nowgnim@gmail.com',
-		method: 'POST',
-		data: {message: 'hello!'},
-		dataType: 'json'
-		});
-
 					// Hide message.
 						$message._hide();
 
@@ -174,6 +166,14 @@ $.ajax({
 								$message._show('failure', 'Something went wrong. Please try again.');
 
 						}, 750);
+						
+						// add ajax
+$.ajax({
+		url: '//formspree.io/nowgnim@gmail.com',
+		method: 'POST',
+		data: {message: 'hello!'},
+		dataType: 'json'
+		});
 
 				});
 
