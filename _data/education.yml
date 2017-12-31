@@ -8,8 +8,10 @@
 
 -   qualification: Certificate of qualifications
     school: self-education
-    description: |
+    description: >
      Industrial Engineer Information Processing(정보처리산업기사)
+     
+     update check string
      
      Information Technology Qualification OA MASTER(ITQ OA MASTER)
      
@@ -19,8 +21,10 @@
 
 -   qualification: Certificate in preparation
     school: self-education
-    description: | 
+    description: >
      ongoing - Linux Master Class 1(리눅스 마스터 1급)
+     
+     update check string
      
      Engineer Information Processing(정보처리기사)
      
