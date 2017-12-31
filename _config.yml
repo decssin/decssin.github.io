@@ -1,0 +1,17 @@
+# Site settings
+title: Jiwon's Plan Resume
+email: jiwonov@gmail.com
+description: This page is a simple page that represents my plan. Although this page also displays my resume, it is my main objective to record and implement the plan.
+baseurl: "https://jiwonov.github.io/"
+url: "https://jiwonov.github.io/"
+name: Jiwon Min
+job: wannabe full-stack developer
+location: Suwon, KR
+languages: Apache, PHP, MySQL, HTML, CSS and Javascript
+twitter_username: jiwonob
+github_username:  jiwonov
+facebook_username:  jiwonov
+email_address: jiwonov@gmail.com
+
+# Build settings
+markdown: kramdown
