@@ -1,10 +1,16 @@
 -   qualification: Computer Science
     school: Korea National Open University
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    description: 
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 -   qualification: Java Programming
     school: SBS Computer Academy
-    description: Java, HTML, CSS, Javascript, jQuery, Servlet, JSP for six months
+    description: 
+                 I learned Java, Servlet, JSP programming for web development at this academy. 
+                 And I learned the basic HTML, CSS and Javascript as the way I represent the Web front. 
+                 I laid the foundations for server side development and client side development using Servlet, JSP at this academy.
 
 -   qualification: Certificate of qualifications
     school: self-education
@@ -17,8 +23,8 @@
 -   qualification: Certificate in preparation
     school: self-education
     description: 
-                 <b>ongoing - Linux Master Class 1</b> <br/>
-                 <b>ongoing - SQL Developer</b> <br/>
+                 <i><u>ongoing - Linux Master Class 1</u></i><br/>
+                 <i><u>ongoing - SQL Developer</u></i><br/>
                  Engineer Information Processing, 
                  Engineer Information Security, 
                  Professional Engineer Information Management(정보관리기술사), 
