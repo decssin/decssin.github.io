@@ -6,7 +6,7 @@ description: >
   to quickly build amazing things; mapping reached that inflection point a few years ago.
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "jiwonov.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: jiwonob
 
 # Author Settings
