@@ -1,17 +1,38 @@
-# Site settings
-title: Jiwon's Plan Resume
-email: jiwonov@gmail.com
-description: This page is a simple page that represents my plan. Although this page also displays my resume, it is my main objective to record and implement the plan.
-baseurl: "https://jiwonov.github.io/"
-url: ""
-name: Jiwon Min
-job: wannabe full-stack developer
-location: Suwon, KR
-languages: PHP, MySQL and Javascript
-twitter_username: jiwonob
-github_username: jiwonov
-facebook_username: jiwonov
-email_address: jiwonov@gmail.com
+title: web developer, coding tale
+description: > 
+  I'm a web developer, these days more of a gentleman programmer. 
+  I work on a variety of projects and am interested in php frameworks, javascript libraries, 
+  and cloud server hosting. I tend to follow technologies that allow you 
+  to quickly build amazing things; mapping reached that inflection point a few years ago.
+permalink: ':title/'
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: jiwonob
 
-# Build settings
+# Author Settings
+author: Jiwon Min # add your name
+author-img: https://avatars3.githubusercontent.com/u/14918156 # add your photo
+about-author: I am a web developer focusing on back-end development. Always hungry to keep learning. # add description
+social-twitter: jiwonob
+social-facebook: jiwonov
+social-github: jiwonov
+social-linkedin: jiwonov
+social-email: jiwonov@gmail.com
+
+# Disqus
+discus-identifier: jiwonov
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
 markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
