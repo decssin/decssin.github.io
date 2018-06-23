@@ -3,27 +3,9 @@
 {% include head.html %}
 <body>
 
-  <div class="wrapper" id="wrappert">
-    <noscript id="deferred-test">
-      <!-- Styles -->
-      <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
-    </noscript>
-    <script>
-        var loadDeferredStyles = function() {
-          var addStylesNode = document.getElementById("deferred-test");
-          var replacement = document.createElement("div");
-
-          var wrappert = document.getElementById("wrappert");
-
-          replacement.innerHTML = addStylesNode.textContent;
-          wrappert.append(replacement);
-          addStylesNode.parentElement.removeChild(addStylesNode);
-        };
-        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-        else window.addEventListener('load', loadDeferredStyles);
-      </script>
+  <div class="wrapper">
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
     {{ content }}
   </div>
   
