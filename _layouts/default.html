@@ -10,19 +10,33 @@
   {% include analytics.html %}
 
   <!-- CSS 전송 최적화: https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery -->
-  <noscript id="deferred-styles">
+  <noscript id="deferred-styles-top">
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  </noscript>
+
+  <noscript id="deferred-styles-bottom">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </noscript>
+
   <script>
     var loadDeferredStyles = function() {
-      var addStylesNode = document.getElementById("deferred-styles");
+      // 스타일 시트는 <body> 밑에 추가
+      var addStylesNodeTop = document.getElementById("deferred-styles-top");
+      var replacementTop = document.createElement("div");
+      replacementTop.innerHTML = addStylesNodeTop.textContent;
+      document.body.append(replacementTop);
+      addStylesNodeTop.parentElement.removeChild(addStylesNodeTop);
+
+      // 링크형 스타일 시트는 </body> 위에 추가
+      var addStylesNode = document.getElementById("deferred-styles-bottom");
       var replacement = document.createElement("div");
       replacement.innerHTML = addStylesNode.textContent;
-      document.body.appendChild(replacement)
+      document.body.appendChild(replacement);
       addStylesNode.parentElement.removeChild(addStylesNode);
     };
     var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
