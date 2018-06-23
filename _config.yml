@@ -23,7 +23,7 @@ social-email: jiwonov@gmail.com
 discus-identifier: jiwonov
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-121325127-1 # Google Analytics
 
 # Build Settings
 markdown: kramdown
