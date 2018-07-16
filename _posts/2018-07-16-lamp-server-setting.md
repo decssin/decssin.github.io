@@ -43,10 +43,13 @@ http://mirror.kakao.com/centos/6.9/isos/x86_64/ 카카오 미러 사이트를 �
 ![lamp-server-setting-2](/assets/img/lamp-server-setting-3.jpg)
 
 네트워크 연결이 다 되었다면, 
+
 ~~~
 sss 서버계정@서버ip
 ~~~
+
 위와 같이 연결이 됩니다. 또 다른 방법으로는
+
 ~~~
 1. ssh 서버계정@***.iptime.org
 2. ssh 서버계정@동적 외부 IP 주소 (iptime 관리자 페이지에서 확인)
@@ -55,16 +58,19 @@ sss 서버계정@서버ip
 # Apache Source 설치 (v.2.4.33)
 
 1. 기존 설치 된 아파치를 제거합니다.
+
 ~~~
 yum remove -y httpd httpd-*
 ~~~
 
 2. 빌드를 위한 패키지를 인스톨 합니다.
+
 ~~~
 yum install -y make gcc g++ gcc-c++ autoconf automake libtool pkgconfig findutils oepnssl openssl-devel openldap-devel pcre-devel libxml2-devel lua-devel curl curl-devel libcurl-devel flex wget
 ~~~
 
 3. 아파치 관련 파일 다운로드 합니다.
+
 ~~~
 cd /usr/local/src
 wget http://ftp.neowiz.com/apache/httpd/httpd-2.4.33.tar.bz2
@@ -74,6 +80,7 @@ wget http://downloads.sourceforge.net/project/pcre/pcre/8.41/pcre-8.41.tar.bz2
 ~~~
 
 4. 압축 파일을 풀어줍니다.
+
 ~~~
 tar xvf apr-1.6.3.tar.bz2
 tar xvf apr-util-1.6.1.tar.bz2
@@ -84,6 +91,7 @@ mv apr-util-1.6.0 ./httpd-2.4.33/srclib/apr-util
 ~~~
 
 5. pcre 설치합니다.
+
 ~~~
 cd /usr/local/src/pcre-8.41
 ./configure
@@ -92,22 +100,26 @@ make install
 ~~~
 
 6. 아파치 설치합니다.
+
 ~~~
 cd /usr/local/src/httpd-2.4.33
 ./configure --prefix=/usr/local/apache2
 make
 make install
 ~~~
+
 > `/usr/local/apache2`가 아파치 홈 폴더가 됩니다.
 `configure: error: Cannot use an external APR-util with the bundled APR` 오류가 발생하면 `./configure --prefix=/usr/local/apache2 --with-included-apr` 를 합니다.
 
 7. Apache 서비스 등록하고 실행합니다.
+
 ~~~
 cp /usr/local/apache/bin/apachectl /etc/init.d/httpd 
 vi /etc/init.d/httpd
 ~~~
 
 vi 에디터로 httpd 파일이 열리면 아래 내용을 주석 그대로 추가합니다.
+
 ~~~
 #!/bin/sh 
 #
@@ -121,6 +133,7 @@ vi 에디터로 httpd 파일이 열리면 아래 내용을 주석 그대로 추�
 ~~~
 
 httpd.conf 파일을 열어서 ServerName 부분을 찾아서 주석을 제거하고 서버명을 입력하고 unique_id_module 부분을 주석 처리합니다.
+
 ~~~
 vi /usr/local/apache/conf/httpd.conf
 
@@ -134,6 +147,7 @@ ServerName localhost
 ~~~
 
 서비스 등록 후 아래와 같이 서비스 시작이 가능합니다.
+
 ~~~
 service httpd start
 
@@ -164,6 +178,7 @@ iptables -F; iptables -X
 ~~~
 
 httpd를 시작할 때 아래와 같이 오류가 나오는 경우가 있습니다. `httpd: apr_sockaddr_info_get() failed for ABC` 이런 경우에는 다음과 같이 하면 됩니다.
+
 ~~~
 vi /etc/hosts
 
@@ -181,17 +196,20 @@ service httpd restart
 # MySQL Source 설치
 
 1. 기존에 설치 된 MySQL 과 cmake 삭제합니다.
+
 ~~~
 yum remove -y mysql* cmake
 ~~~
 
 2. 다운로드를 위한 패키지 인스톨 합니다.
+
 ~~~
 yum install -y zlib zlib-devel cpp perl bison freetype freetype-devel freetype-utils ncurses-devel libtermcap-devel bzip2-devel
 ~~~
 
 3. cmake 다운로드 합니다.
 MySQL 5.5 부터는 `./configure` 가 아닌 `cmake` 를 통해 컴파일을 진행합니다.
+
 ~~~
 cd /usr/local/src wget
 https://cmake.org/files/v3.5/cmake-3.5.2.tar.gz 
@@ -202,17 +220,20 @@ make && make install
 ~~~
 
 4. MySQL 그룹 및 계정을 만듭니다.
+
 ~~~
 groupadd mysql
 useradd -g mysql mysql
 ~~~
 
 5. MySQL 다운로드 합니다.
+
 ~~~
 cd /usr/local/src wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.30.tar.gz tar xvfz mysql-5.6.30.tar.gz cd mysql-5.6.30
 ~~~
 
 6. MySQL cmake 컴파일을 진행합니다.
+
 ~~~
 /usr/local/bin/cmake \ 
 -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \ // mysql 설치 디렉토리
@@ -234,6 +255,7 @@ make install
 ~~~
 
 7. MySQL 그룹:계정 권한 설정합니다.
+
 ~~~
 chown -R (계정명):(그룹명) /usr/local/mysql 
 chown -R mysql:mysql /usr/local/mysql 
@@ -241,12 +263,14 @@ chown -R mysql:mysql /usr/local/mysql/data
 ~~~
 
 8. DB 생성합니다.
+
 ~~~
 cd /usr/local/mysql
 ./scripts/mysql_install_db --user=mysql --datadir=/usr/local/mysql/data
 ~~~
 
 9. MySQL 설정 파일 및 데몬 복사, base, datadir을 지정합니다.
+
 ~~~
 cp support-files/my-default.cnf /etc/my.cnf 
 #(메모리 용량에 따라 my- 뒤에 이름이 다를 수 있습니다.) 
@@ -262,6 +286,7 @@ vi /etc/init.d/mysqld
 ~~~
 
 10. 환경 변수 등록 및 MySQL 데몬을 실행합니다.
+
 ~~~
 cd ~ 
 vi .bash_profile 
@@ -274,6 +299,7 @@ service mysqld start
 ~~~
 
 11. MySQL root 계정 비밀번호를 변경합니다.
+
 ~~~
 # mysqladmin -u root password 암호 
 mysqladmin -u root password root123 
@@ -284,6 +310,7 @@ Enter password :
 ~~~
 
 12. 리눅스 시작시 자동 구동되도록 설정합니다.
+
 ~~~
 chkconfig --add mysqld 
 chkconfig mysqld on 
@@ -292,16 +319,19 @@ chkconfig --list mysqld
 
 # MySQL 원격 접속 허용
 외부 클라이언트에서 MySQL 접속을 하면 아래와 같은 에러가 나올 때가 있습니다.
+
 ~~~
 Host '135.79.246.80' is not allowed to connect to this MySQL server
 ~~~
 
 mysql 접속해서 아래 쿼리를 작성해보면, localhost에서만 접속되도록 표시되어 있습니다.
+
 ~~~
 SELECT Host,User,authentication_string FROM mysql.user;
 ~~~
 
 모든 IP를 허용하는 계정을 만들 수 있습니다.
+
 ~~~
 INSERT INTO mysql.user (host,user,authentication_string,ssl_cipher, x509_issuer, x509_subject) VALUES ('%','root',password('패스워드'),'','','');
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
@@ -311,6 +341,7 @@ FLUSH PRIVILEGES;
 ~~~
 
 모든 IP를 허용한 계정은 아래와 같이 삭제합니다.
+
 ~~~
 DELETE FROM mysql.user WHERE Host='%' AND User='root';
 FLUSH PRIVILEGES;
@@ -319,11 +350,13 @@ FLUSH PRIVILEGES;
 # PHP Source 설치를 진행합니다.
 
 1. 설치를 위한 패키지를 인스톨합니다.
+
 ~~~
 yum install -y libjpeg libjpeg-devel libjpeg-turbo-devel gd gd-devel gdbm-devel php-mbstring libexif-devel libmcrypt libmcrypt-devel libvpx libvpx-devel libXpm libXpm-devel icu libicu libicu-devel t1lib t1lib-devel gmp-devel mhash* gettext gettext-devel libtidy libtidy-devel libxslt libxslt-devel libedit-devel libc-client libc-client-devel pam-devel readline-devel libpng libpng-devel krb5-devel db4-devel expat*
 ~~~
 
 CentOS 에서는 `libmcrypt & libmcrypt-devel` 패키지가 yum에 포함되어 있지 않기 때문에 직접 설치합니다.
+
 ~~~
 cd /usr/local/src 
 wget http://elders.princeton.edu/data/puias/unsupported/6/x86_64/libmcrypt-2.5.8-9.puias6.x86_64.rpm 
@@ -333,12 +366,14 @@ rpm -ivh libmcrypt-devel-2.5.8-9.puias6.x86_64.rpm
 ~~~
 
 2. MySQL 라이브러리 참조 링크를 만듭니다.
+
 ~~~
 cd /usr/local/mysql 
 ln -s lib lib64
 ~~~
 
 3. PHP를 다운로드 및 컴파일 합니다.
+
 ~~~
 cd /usr/local/src 
 wget http://kr1.php.net/get/php-5.6.25.tar.gz/from/this/mirror 
@@ -377,6 +412,7 @@ make install
 ~~~
 
 4. PHP 환경 설정을 수정합니다.
+
 ~~~
 cp php.ini-production /etc/httpd/php.ini 
 vi /etc/httpd/php.ini
@@ -392,6 +428,7 @@ date.timezone = "Asia/Seoul"
 ~~~
 
 5. Apache 환경 설정을 수정합니다.
+
 ~~~
 vi /usr/local/apache/conf/httpd.conf 
 
@@ -416,6 +453,7 @@ LoadModule php5_module modules/libphp5.so
 ~~~
 
 6. 환경변수를 등록합니다.
+
 ~~~
 cd ~ 
 vi .bash_profile 
@@ -429,6 +467,7 @@ source .bash_profile
 ~~~
 
 7. 연동 확인합니다.
+
 ~~~
 vi /usr/local/apache/htdocs/phpinfo.php 
 
