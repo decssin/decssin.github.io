@@ -1,5 +1,56 @@
 @import url(font-awesome.min.css);
-@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400";
+/*
+ * Iropke Batang (Korean)
+ */
+@font-face {
+  font-family: 'Iropke Batang';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/IropkeBatangM/IropkeBatangM.eot);
+  src: url(/assets/fonts/IropkeBatangM/IropkeBatangM.eot?#iefix) format('embedded-opentype'),
+       url(/assets/fonts/IropkeBatangM/IropkeBatangM.woff) format('woff'),
+       url(/assets/fonts/IropkeBatangM/IropkeBatangM.ttf) format('truetype');
+}
+
+/*
+ * Noto Sans Lite Version
+ */
+ @font-face {
+	 font-family: 'NotoKrL';
+	 font-style: normal;
+	 font-weight: 100;
+	 src: local('Noto Sans Light'), local('NotoSans-Light'), url(/assets/fonts/NotoSansKr/NotoSans-Light.eot);
+	 src: url(/assets/fonts/NotoSansKr/NotoSans-Light.eot?#iefix) format('embedded-opentype'),
+		  url(/assets/fonts/NotoSansKr/NotoSans-Light.woff2) format('woff2'),
+		  url(/assets/fonts/NotoSansKr/NotoSans-Light.woff) format('woff');;
+ }
+ @font-face {
+	 font-family: 'NotoKrR';
+	 font-style: normal;
+	 font-weight: 300;
+	 src: local('Noto Sans Regular'), local('NotoSans-Regular'), url(/assets/fonts/NotoSansKr/NotoSans-Regular.eot);
+	 src: url(/assets/fonts/NotoSansKr/NotoSans-Regular.eot?#iefix) format('embedded-opentype'),
+		  url(/assets/fonts/NotoSansKr/NotoSans-Regular.woff2) format('woff2'),
+		  url(/assets/fonts/NotoSansKr/NotoSans-Regular.woff) format('woff');
+ }
+ @font-face {
+	 font-family: 'NotoKrM';
+	 font-style: normal;
+	 font-weight: 500;
+	 src: local('Noto Sans Medium'), local('NotoSans-Medium'), url(/assets/fonts/NotoSansKr/NotoSans-Medium.eot);
+	 src: url(/assets/fonts/NotoSansKr/NotoSans-Medium.eot?#iefix) format('embedded-opentype'),
+		  url(/assets/fonts/NotoSansKr/NotoSans-Medium.woff2) format('woff2'),
+		  url(/assets/fonts/NotoSansKr/NotoSans-Medium.woff) format('woff');
+ }
+ @font-face {
+	 font-family: 'NotoKrB';
+	 font-style: normal;
+	 font-weight: 700;
+	 src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(/assets/fonts/NotoSansKr/NotoSans-Bold.eot);
+	 src: url(/assets/fonts/NotoSansKr/NotoSans-Bold.eot?#iefix) format('embedded-opentype'),
+		  url(/assets/fonts/NotoSansKr/NotoSans-Bold.woff2) format('woff2'),
+		  url(/assets/fonts/NotoSansKr/NotoSans-Bold.woff) format('woff');
+ }
 
 
 html, body, div, span, applet, object,
@@ -120,7 +171,7 @@ input, select, textarea {
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Iropke Batang','NotoKrL','NotoKrR','NotoKrM','NotoKrB','sans-serif','serif';
 		font-size: 17pt;
 		font-weight: 300;
 		line-height: 1.65;
@@ -255,7 +306,7 @@ input, select, textarea {
 	code {
 		border-radius: 8px;
 		border: solid 1px;
-		font-family: "Courier New", monospace;
+		font-family: 'Iropke Batang','NotoKrL','NotoKrR','NotoKrM','NotoKrB','sans-serif','serif';
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -263,7 +314,7 @@ input, select, textarea {
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+		font-family: 'Iropke Batang','NotoKrL','NotoKrR','NotoKrM','NotoKrB','sans-serif','serif';
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
