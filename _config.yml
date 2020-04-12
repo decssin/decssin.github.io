@@ -24,7 +24,16 @@ authors:
     description: "#php && #laravel && design | developer @web | Interested in #javascript | Opinions are potentially wrong, but definitely my own."
   john:
     name: John
-    display_name: John    
+    display_name: John
+    avatar: 'assets/images/avatar.png'
+    gravatar: a802ab0b02effbafa72236af61468490
+    email: jiwonov@gmail.com
+    web: https://dessin.dev
+    twitter: https://twitter.com/mlniog
+    description: "#php && #laravel && design | developer @web | Interested in #javascript | Opinions are potentially wrong, but definitely my own."
+  sal:
+    name: Sal
+    display_name: Sal
     avatar: 'assets/images/avatar.png'
     gravatar: a802ab0b02effbafa72236af61468490
     email: jiwonov@gmail.com
