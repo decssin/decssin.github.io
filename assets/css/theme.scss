@@ -666,6 +666,10 @@ body.active-side {
             padding: 4px 10px;
         }
     }
+    .col-md-10 {
+        flex: 0 0 66.333333%;
+        max-width: 66.333333%;
+    }
 }
 
 @media (max-width: 600px) {
