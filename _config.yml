@@ -7,7 +7,6 @@ favicon: 'assets/images/logo.png'
 baseurl: /
 google_analytics:
 disqus: 'jiwonov'
-mailchimp-list:
 include: ["_pages"]
 permalink: /:title/
 email: jiwonov@gmail.com
@@ -17,9 +16,10 @@ authors:
   min:
     name: Min
     display_name: Min
+    avatar: 'assets/images/avatar.png'
     gravatar: a802ab0b02effbafa72236af61468490
     email: jiwonov@gmail.com
-    web: https://dessin.dev
+    web: https://log.dessin.dev
     twitter: https://twitter.com/mlniog
     description: "#php && #laravel && design | developer @web | Interested in #javascript | Opinions are potentially wrong, but definitely my own."
   john:
@@ -28,7 +28,7 @@ authors:
     avatar: 'assets/images/avatar.png'
     gravatar: a802ab0b02effbafa72236af61468490
     email: jiwonov@gmail.com
-    web: https://dessin.dev
+    web: https://log.dessin.dev
     twitter: https://twitter.com/mlniog
     description: "#php && #laravel && design | developer @web | Interested in #javascript | Opinions are potentially wrong, but definitely my own."
   sal:
@@ -37,7 +37,7 @@ authors:
     avatar: 'assets/images/avatar.png'
     gravatar: a802ab0b02effbafa72236af61468490
     email: jiwonov@gmail.com
-    web: https://dessin.dev
+    web: https://log.dessin.dev
     twitter: https://twitter.com/mlniog
     description: "#php && #laravel && design | developer @web | Interested in #javascript | Opinions are potentially wrong, but definitely my own."
 
@@ -76,10 +76,10 @@ adsense-data-ad-client:
 adsense-data-ad-slot:
 
 # Lazy Images ("enabled" or "disabled")
-lazyimages: "disabled"
+lazyimages: "enabled"
 
 # Post Author Box ("enabled" or "disabled")
-authorbox: "disabled"
+authorbox: "enabled"
 
 # Sass
 sass:
