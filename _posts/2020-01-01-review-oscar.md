@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Reviewing the best Oscar movies of all time"
-author: john
+author: min
 categories: [ Lifestyle ]
 tags: [Movies]
 image: assets/images/11.jpg
@@ -18,7 +18,7 @@ It's actually really simple! Add the rating in your YAML front matter. It also s
 ---
 layout: post
 title:  "Inception Movie"
-author: john
+author: min
 categories: [ Lifestyle ]
 tags: [red, yellow]
 image: assets/images/11.jpg
