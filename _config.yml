@@ -21,7 +21,7 @@ authors:
     email: jiwonov@gmail.com
     web: https://log.dessin.dev
     twitter: https://twitter.com/mlniog
-    description: "#php && #laravel && design | developer @web | Interested in #javascript | Opinions are potentially wrong, but definitely my own."
+    description: "Opinions are potentially wrong, but definitely my own."
   john:
     name: John
     display_name: John
@@ -30,7 +30,7 @@ authors:
     email: jiwonov@gmail.com
     web: https://log.dessin.dev
     twitter: https://twitter.com/mlniog
-    description: "#php && #laravel && design | developer @web | Interested in #javascript | Opinions are potentially wrong, but definitely my own."
+    description: "Opinions are potentially wrong, but definitely my own."
   sal:
     name: Sal
     display_name: Sal
@@ -39,7 +39,7 @@ authors:
     email: jiwonov@gmail.com
     web: https://log.dessin.dev
     twitter: https://twitter.com/mlniog
-    description: "#php && #laravel && design | developer @web | Interested in #javascript | Opinions are potentially wrong, but definitely my own."
+    description: "Opinions are potentially wrong, but definitely my own."
 
 # Plugins
 plugins:
