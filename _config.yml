@@ -63,7 +63,6 @@ paginate: 6
 paginate_path: /page:num/
     
 # Other
-highlighter: none
 markdown: kramdown
 kramdown:
    syntax_highlighter_opts:
