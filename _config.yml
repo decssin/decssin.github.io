@@ -1,6 +1,6 @@
 # Site
-name: "Jiwon"
-title: "minlog"
+name: "DESSIN"
+title: "DESSIN"
 description: "Time is an illusion. Lunchtime doubly so."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
@@ -60,7 +60,7 @@ jekyll-archives:
     
 # Pagination 
 paginate: 6
-paginate_path: /page:num/
+paginate_path: /page/:num
     
 # Other
 markdown: kramdown
