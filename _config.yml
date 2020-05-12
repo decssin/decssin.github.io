@@ -74,7 +74,7 @@ adsense-data-ad-client:
 adsense-data-ad-slot:
 
 # Lazy Images ("enabled" or "disabled")
-lazyimages: "enabled"
+lazyimages: "disabled"
 
 # Post Author Box ("enabled" or "disabled")
 authorbox: "enabled"
@@ -84,4 +84,4 @@ sass:
   sass_dir: _sass
   style: compressed
 
-exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+exclude: [LICENSE.txt, README.md, Gemfile, Gemfile.lock]
