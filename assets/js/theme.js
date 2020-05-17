@@ -2,6 +2,11 @@ jQuery(document).ready(function($){
 
     // Smooth on external page
     $(function() {
+      $(".real-time").text(new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"));
+	  setInterval(function() {
+	  	$(".real-time").text(new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"));
+	  }, 1000);
+
       setTimeout(function() {
         if (location.hash) {
           /* we need to scroll to the top of the window first, because the browser will always jump to the anchor first before JavaScript is ready, thanks Stack Overflow: http://stackoverflow.com/a/3659116 */
@@ -28,10 +33,6 @@ jQuery(document).ready(function($){
           }, 1000);
         }
       }
-
-      setInterval(function() {
-		$(".real-time").text(new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"));
-	  }, 1000);
     });
 	
 	
