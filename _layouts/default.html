@@ -68,7 +68,7 @@ ga('send', 'pageview');
    
     <a class="navbar-brand" href="{{ site.baseurl }}/">
         <!-- <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}"> -->
-        <span class="real-time">{{ date: "%H:%M:%S" }}</span>
+        <span class="real-time"><%= Time.now.strftime("%m/%d/%Y") %></span>
     </a>  
    
 
