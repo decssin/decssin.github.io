@@ -2,7 +2,6 @@ jQuery(document).ready(function($){
 
     // Smooth on external page
     $(function() {
-      $(".real-time").text(new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"));
 	  setInterval(function() {
 	  	$(".real-time").text(new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"));
 	  }, 1000);
