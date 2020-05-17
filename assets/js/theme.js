@@ -2,8 +2,9 @@ jQuery(document).ready(function($){
 
     // Smooth on external page
     $(function() {
+      document.getElementById('real-time').innerText = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1');
 	  setInterval(function() {
-	  	$(".real-time").text(new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, "$1"));
+		  document.getElementById('real-time').innerText = new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1');
 	  }, 1000);
 
       setTimeout(function() {

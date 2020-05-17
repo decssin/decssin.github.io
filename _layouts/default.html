@@ -68,7 +68,7 @@ ga('send', 'pageview');
    
     <a class="navbar-brand" href="{{ site.baseurl }}/">
         <!-- <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}"> -->
-        <span class="real-time" onload="$('.real-time').text(new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1'));">{{ site.time | date: "%H:%M:%S" }}</span>
+        <span id="real-time">{{ site.time | date: "%H:%M:%S" }}</span>
     </a>
    
 
