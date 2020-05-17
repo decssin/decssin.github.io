@@ -68,7 +68,7 @@ ga('send', 'pageview');
    
     <a class="navbar-brand" href="{{ site.baseurl }}/">
         <!-- <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}"> -->
-        <span class="real-time">00:00:00</span>
+        <span class="real-time">{{ site.time | date: "%H:%M:%S" }}</span>
     </a>
    
 
@@ -95,8 +95,6 @@ ga('send', 'pageview');
         <div class="row">
             <div class="col-md-6 col-sm-12 text-center text-lg-left">
                 Copyright © {{ site.time | date: "%Y" }} <a target="_blank" href="https://twitter.com/mlniog">{{ site.name }}</a>
-                {{ site.time | date: "%Y%H%M%S" }} <br/>
-                {{ site.time | date: "%Y%H%M%S" }} <br/>
             </div>
         </div>
     </div>
