@@ -523,16 +523,20 @@ img, img:hover {
 
 //share
 .share {
-    display: flex;
-    font-size: 13px;
+    max-width: 740px;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 15px 0;
     p {
         margin:0;
+        text-align: center;
     }
     ul {
         display: flex;
         margin: 0;
         list-style:none;
         padding-left:0;
+        justify-content: center;
         li {
             margin:0;
             a {
@@ -540,6 +544,12 @@ img, img:hover {
             }
         }
     }
+}
+
+//hits
+.hits {
+    width: 66px;
+    margin: 0 auto;
 }
 
 //search
