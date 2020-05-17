@@ -10,6 +10,7 @@ disqus: 'jiwonov'
 include: ["_pages"]
 permalink: /:title
 email: jiwonov@gmail.com
+timezone: 'Asia/Seoul'
 
 # Authors
 authors:
