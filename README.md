@@ -126,10 +126,10 @@ The navigation on the sidebar will automatically include all the links to the pa
 
 ### Disqus Comments
 
-Open `_includes/disqus.html` file, and change the `aspirethemes-demos` value on line `12` with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
+Open `_includes/disqus.html` file, and change the `jiwonov` value on line `12` with your [Disqus account shortname](https://help.disqus.com/customer/portal/articles/466208).
 
 ```js
-s.src = '//aspirethemes-demo.disqus.com/embed.js';
+s.src = '//jiwonov.disqus.com/embed.js';
 ```
 
 So, if your Disqus shortname is `exampleone`, the final code above should be
@@ -210,15 +210,10 @@ Youtube
 
 You can find the current favicon (favicon.ico) inside the theme root directory, just replace it with your new favicon.
 
-
-### Aspire Themes
-
-👉 Visit [**aspirethemes.com**](http://bit.ly/type-jekyll-github-link) for more Jekyll, Ghost, and WordPress themes.
-
-<img alt="Aspire Themes" src="https://user-images.githubusercontent.com/626005/63092640-afe17780-bf62-11e9-9ea9-546489bb282c.png">
-
 ---
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=&source=url">
-  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="display:flex;margin:auto;">
-</a>
+<div style="width:147px;margin:auto;">
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=&source=url">
+      <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="donate">
+    </a>
+</div>
