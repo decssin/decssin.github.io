@@ -1,25 +1,17 @@
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a class="ml-1 mr-1" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; </a>
-  {% else %}
-    <span>&laquo; </span>
-  {% endif %}
+{% if paginator.previous_page %}
+  <div class='o-grid__col o-grid__col--2-4-s'>
+    <a class='c-pagination' href='{{ paginator.previous_page_path | prepend: site.baseurl }}'>
+      <div class='c-pagination__icon c-pagination__icon--prev' data-icon='ei-chevron-left'></div>
+      <span class='c-pagination__text c-pagination__text--prev'>Previous</span>
+    </a>
+  </div>
+{% endif %}
 
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <span class="ml-1 mr-1">{{ page }}</span>
-    {% elsif page == 1 %}
-      <a class="ml-1 mr-1" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-      <a class="ml-1 mr-1" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a class="ml-1 mr-1" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"> &raquo;</a>
-  {% else %}
-    <span> &raquo;</span>
-  {% endif %}
-</div>
+{% if paginator.next_page %}
+  <div class='o-grid__col o-grid__col--end o-grid__col--2-4-s u-text-right'>
+    <a class='c-pagination' href='{{ paginator.next_page_path | prepend: site.baseurl }}'>
+      <span class='c-pagination__text c-pagination__text--next'>Next</span>
+      <div class='c-pagination__icon c-pagination__icon--next' data-icon='ei-chevron-right'></div>
+    </a>
+  </div>
 {% endif %}

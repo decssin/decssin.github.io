@@ -1,57 +1,39 @@
 ---
 layout: default
-disqus: false
-archive: false
-post_class: post-template
 ---
 
-<div class="entry-header">
-    <!-- Post Title -->
-    <h1 class="posttitle">{{ page.title }}</h1>
-    <!-- Author & Date  Box -->
-    {% assign author = site.authors[page.author] %}
-    {% if page.author %}
-    <div class="d-flex align-items-center mt-4">
-        <div>
-            {% if author.avatar %}
-            <img class="author-thumb" src="{{ site.baseurl }}/{{ author.avatar }}" alt="{{ author.display_name }}">
-            {% else %}
-            <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
-            {% endif %}
-        </div>            
-        <div>
-            Written by <a target="_blank" class="text-dark" href="{{ author.web }}">{{ author.display_name }}</a> on
-            <span class="post-date"><time class="post-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">{{ page.date | date_to_string }}</time></span>
-            {% if page.last_modified_at %}
-            (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-            {% endif %}
-        </div>            
-    </div>
-    {% endif %}
-</div>
+{% include base_path %}
 
-<!-- Adsense under title if enabled from _config.yml (change your pub id and slot) -->
-{% if site.adsense == "enabled" %}
-    {% include adsense-under-header.html %}
+{% if page.image %}
+  <meta itemprop='og:image' content='{{ base_path }}{{ page.image }}'>
 {% endif %}
 
-<!-- Featured Image -->
-{% include featured-image.html %}
+<div class='o-wrapper'>
+  <div class='o-grid'>
+    <div class='o-grid__col'>
+      <article class='c-post' itemscope itemtype='http://schema.org/BlogPosting'>
 
-<!-- Content -->
-{% include article.html %}
+        <h1 class='c-post__title u-text-center'>{{ page.title }}</h1>
 
-<!-- Share -->
-{% include share.html %}
+        <time class='c-post__date' datetime='{{ page.date | date_to_xmlschema }}' itemprop='datePublished'>{{ page.date | date: '%d %b %Y' }}</time>
 
-<!-- Hits -->
-{% include hits.html %}
+        <div class='c-content' itemprop='articleBody'>
+          {% include page-image.html %}
 
-<!-- Author Box if enabled from _config.yml -->
-{% include author-box.html %}
+          {{ content }}
+        </div>
 
-<!-- Comments if not disabled with comments: false -->
-{% include comments.html %}
+        <div class='c-tags'>
+          {% for tag in page.tags %}
+            <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag }}</a>
+          {% endfor %}
+        </div>
 
-<!-- Related Post -->
-{% include related-posts.html %}
+        <hr>
+
+        {% include disqus.html %}
+
+      </article>
+    </div>
+  </div>
+</div>

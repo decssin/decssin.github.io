@@ -1,88 +1,48 @@
-# Site
-name: "DESSIN"
-title: "DESSIN"
-description: "In order to be irreplaceable one must always be different."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
-baseurl: /
-google_analytics:
-disqus: 'jiwonov'
-include: ["_pages"]
-permalink: /:title
-email: jiwonov@gmail.com
-timezone: 'Asia/Seoul'
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Authors
-authors:
-  min:
-    name: Min
-    display_name: Min
-    avatar: 'assets/images/avatar.png'
-    gravatar: a802ab0b02effbafa72236af61468490
-    email: jiwonov@gmail.com
-    web: https://dessin.dev
-    twitter: https://twitter.com/tritwte
-    description: "Opinions are potentially wrong, but definitely my own."
-  john:
-    name: John
-    display_name: John
-    avatar: 'assets/images/avatar.png'
-    gravatar: a802ab0b02effbafa72236af61468490
-    email: jiwonov@gmail.com
-    web: https://dessin.dev
-    twitter: https://twitter.com/tritwte
-    description: "Opinions are potentially wrong, but definitely my own."
-  sal:
-    name: Sal
-    display_name: Sal
-    avatar: 'assets/images/avatar.png'
-    gravatar: a802ab0b02effbafa72236af61468490
-    email: jiwonov@gmail.com
-    web: https://dessin.dev
-    twitter: https://twitter.com/tritwte
-    description: "Opinions are potentially wrong, but definitely my own."
+# Site settings
+title:       Type
+email:       'jiwonov@gmail.com'
+description: 'Those who are believed to be most abject and humble are usually most ambitious and envious.'
+baseurl:     '' # The subpath of your site, e.g. /blog
+url:         'https://dessin.dev/' # The base hostname & protocol for your site
+twitter:     'tritwte'
+github:      'dnessi'
+instagram:   'codpene'
+facebook:    'febacook'
 
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-figure
-    
-# Archives
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: '/category/:name/'
-    
-# Pagination 
-paginate: 6
-paginate_path: /page/:num
-    
-# Other
-markdown: kramdown
-kramdown:
-   syntax_highlighter_opts:
-      disable : true
+markdown:  kramdown
+permalink: pretty
+paginate:  10
 
-# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
-adsense: "disabled"
-adsense-data-ad-client:
-adsense-data-ad-slot:
-
-# Lazy Images ("enabled" or "disabled")
-lazyimages: "disabled"
-
-# Post Author Box ("enabled" or "disabled")
-authorbox: "enabled"
-
-# Sass
 sass:
-  sass_dir: _sass
   style: compressed
 
-exclude: [LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+plugins:
+  - jekyll-paginate
+  - jekyll/tagging
+
+include:
+  - _pages
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+# Pages path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext

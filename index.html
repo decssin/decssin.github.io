@@ -1,21 +1,15 @@
 ---
 layout: default
-title: Home
 ---
 
-<!-- Posts Index
-================================================== -->
-<div class="blog-grid-container">
+<div class='o-wrapper'>
+  <div class='o-grid'>
     {% for post in paginator.posts %}
-        {% include postbox.html %}
+      {% include post-card.liquid %}
     {% endfor %}
-</div>
+  </div>
 
-<!-- Pagination
-================================================== -->
-<div class="bottompagination">
-<span class="navigation" role="navigation">
+  <div class='o-grid'>
     {% include pagination.html %}
-</span>
+  </div>
 </div>
-
