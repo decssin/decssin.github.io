@@ -27,9 +27,9 @@ layout: default
           {% for tag in page.tags %}
             <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag }}</a>
           {% endfor %}
-              <a target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">twitter</a>
-              <a target="_blank" href="https://facebook.com/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">facebook</a>
-              <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href, 'width=550,height=435');return false;">linkedin</a>
+              <a target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">🔗 twitter</a>
+              <a target="_blank" href="https://facebook.com/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">🔗 facebook</a>
+              <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" onclick="window.open(this.href, 'width=550,height=435');return false;">🔗 linkedin</a>
         </div>
 
         <hr>
