@@ -31,12 +31,10 @@
 
     &--prev {
       left: - half($base-spacing-unit);
-      top: 3px;
     }
 
     &--next {
       right: - half($base-spacing-unit);
-      top: 3px;
     }
   }
 }
