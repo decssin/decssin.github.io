@@ -20,8 +20,8 @@ authors:
     avatar: 'assets/images/avatar.png'
     gravatar: a802ab0b02effbafa72236af61468490
     email: jiwonov@gmail.com
-    web: https://log.dessin.dev
-    twitter: https://twitter.com/mlniog
+    web: https://dessin.dev
+    twitter: https://twitter.com/tritwte
     description: "Opinions are potentially wrong, but definitely my own."
   john:
     name: John
@@ -29,8 +29,8 @@ authors:
     avatar: 'assets/images/avatar.png'
     gravatar: a802ab0b02effbafa72236af61468490
     email: jiwonov@gmail.com
-    web: https://log.dessin.dev
-    twitter: https://twitter.com/mlniog
+    web: https://dessin.dev
+    twitter: https://twitter.com/tritwte
     description: "Opinions are potentially wrong, but definitely my own."
   sal:
     name: Sal
@@ -38,8 +38,8 @@ authors:
     avatar: 'assets/images/avatar.png'
     gravatar: a802ab0b02effbafa72236af61468490
     email: jiwonov@gmail.com
-    web: https://log.dessin.dev
-    twitter: https://twitter.com/mlniog
+    web: https://dessin.dev
+    twitter: https://twitter.com/tritwte
     description: "Opinions are potentially wrong, but definitely my own."
 
 # Plugins
