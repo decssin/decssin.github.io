@@ -1,3 +1,10 @@
+# github pages
+
+> *I think it’s more like, I am therefore I blog.*
+
+![github pages](https://images.unsplash.com/photo-1455390582262-044cdead277a "github pages")
+source : [unsplash](https://unsplash.com)
+
 # Type: Minimal and Clean Free Jekyll Theme
 
 <img alt="Type: Minimal and Clean Free Jekyll Theme" src="https://user-images.githubusercontent.com/626005/63093493-c3daa880-bf65-11e9-860e-da88047cce24.png">
@@ -77,7 +84,7 @@ layout: post
 title: Welcome to Jekyll!
 featured: true
 tags: [frontpage, jekyll, blog]
-image: '/assets/images/welcome.jpg'
+image: '/images/welcome.jpg'
 ---
 ```
 
@@ -85,7 +92,7 @@ You can set the author, featured or not, tags, and the post image.
 
 The `featured` key is to mark the post as a featured post, this will add a simple star icon (*) to the postcard.
 
-To keep things more organized, add post images to **/assets/images/pages** directory, and add page images to **/assets/images/pages** directory.
+To keep things more organized, add post images to **/images/pages** directory, and add page images to **/images/pages** directory.
 
 To create a draft post, create the post file under the **_drafts** directory, and you can find more information at [Working with Drafts](http://jekyllrb.com/docs/drafts/).
 
@@ -106,7 +113,7 @@ The following is the `about.md` file that you can find as an example included in
 ---
 layout: page
 title: About
-image: '/assets/images/pages/about.jpeg'
+image: '/images/pages/about.jpeg'
 ---
 ```
 
@@ -212,6 +219,6 @@ You can find the current favicon (favicon.ico) inside the theme root directory, 
 
 ---
 
-<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8G8PKPEADPD42&source=url">
-  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif">
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=&source=url">
+  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="display:flex;margin:auto;">
 </a>
