@@ -11,10 +11,10 @@ email:       'jiwonov@gmail.com'
 description: 'Those who are believed to be most abject and humble are usually most ambitious and envious.'
 baseurl:     '' # The subpath of your site, e.g. /blog
 url:         'https://dessin.dev/' # The base hostname & protocol for your site
-twitter:     'tritwte'
-github:      'dnessi'
-instagram:   'codpene'
-facebook:    'febacook'
+twitter:     'https://twitter.com/tritwte'
+github:      'https://github.com/dnessi'
+instagram:   'https://www.instagram.com/codpene/'
+facebook:    'https://www.facebook.com/febacook/'
 
 markdown:  kramdown
 permalink: pretty
@@ -25,7 +25,7 @@ sass:
 
 plugins:
   - jekyll-paginate
-  - jekyll/tagging
+  - jekyll-seo-tag
 
 include:
   - _pages
