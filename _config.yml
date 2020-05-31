@@ -25,7 +25,6 @@ sass:
 
 plugins:
   - jekyll-paginate
-  - jekyll-seo-tag
 
 include:
   - _pages
