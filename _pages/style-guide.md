@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Style Guide
-url: style-guide
 image: '/assets/images/pages/styleguide.jpg'
 ---
 
