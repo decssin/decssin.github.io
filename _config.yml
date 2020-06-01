@@ -16,9 +16,10 @@ github:      'https://github.com/dnessi'
 instagram:   'https://www.instagram.com/codpene/'
 facebook:    'https://www.facebook.com/febacook/'
 
-markdown:  kramdown
-permalink: pretty
-paginate:  10
+markdown:      kramdown
+permalink:     pretty
+paginate:      10
+paginate_path: /page/:num
 
 sass:
   style: compressed
