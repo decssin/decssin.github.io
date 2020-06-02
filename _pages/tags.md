@@ -1,5 +1,36 @@
 ---
-layout: tags
+layout: page
 title: Tags
 image: '/assets/images/pages/about.jpeg'
 ---
+
+
+# Simple default styles for headings
+
+## Simple default styles for headings
+
+### Simple default styles for headings
+
+#### Simple default styles for headings
+
+##### Simple default styles for headings
+
+###### Simple default styles for headings
+
+{% for tag in site.tags %}
+    <h4 class="mt-5 mb-neg-30" id="{{ tag[0] | replace: " ","-" }}"><span class="text-capitalize text-small badge badge-primary">{{ tag[0] }}</span></h4>
+    <div class="blog-grid-container">
+    {% assign pages_list = tag[1] %}
+
+        {% for post in pages_list %}
+            {% if post.title != null %}
+                {% if group == null or group == post.group %}
+                    {% include postbox.html %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
+    </div>
+{% endfor %}
