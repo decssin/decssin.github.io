@@ -6,7 +6,7 @@ image: '/assets/images/pages/about.jpeg'
 
 {% for tag in site.tags %}
     {{ tag[0] }}
-    <br/>
+    <br>
     
     {% assign pages_list = tag[1] %}
     
@@ -14,7 +14,7 @@ image: '/assets/images/pages/about.jpeg'
         {% if post.title != null %}
             {% if group == null or group == post.group %}
             
-                <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br>
                 
             {% endif %}
         {% endif %}
