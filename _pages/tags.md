@@ -6,7 +6,7 @@ image: '/assets/images/pages/about.jpeg'
 
 <div>
 {% for tag in site.tags %}
-    <span style="font-weight:bold;">{{ tag[0] }}</span>
+    <span style="font-weight:bold;" id="{{ tag[0] }}">{{ tag[0] }}</span>
     <br/>
     
     {% assign pages_list = tag[1] %}
