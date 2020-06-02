@@ -13,7 +13,9 @@ image: '/assets/images/pages/about.jpeg'
     {% for post in pages_list %}
         {% if post.title != null %}
             {% if group == null or group == post.group %}
-                {% include tags.html %}
+            
+                <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                
             {% endif %}
         {% endif %}
     {% endfor %}
