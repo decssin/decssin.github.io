@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 묻힌 잠, 하나에 멀리 하나의 밤을 당신은 까닭입니다. 이런 하늘에는 헤는 별 사람들의 하나에 있습니다.
+title: 하나에 멀리 하나의 밤을 당신은 까닭입니다. 이런 하늘에는 헤는 별 사람들의 하나에 있습니다.
 tags: [ipsum, jekyll, blog]
 image: /assets/images/posts/9.jpg'
 ---
