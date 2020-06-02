@@ -20,7 +20,6 @@ image: '/assets/images/pages/about.jpeg'
 {% for tag in site.tags %}
     {{ tag[0] }}
     <br/>
-    {{ tag[1] }}
     
     {% assign pages_list = tag[1] %}
     
