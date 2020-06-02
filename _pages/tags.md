@@ -4,6 +4,7 @@ title: Tags
 image: '/assets/images/pages/about.jpeg'
 ---
 
+<div>
 {% for tag in site.tags %}
     {{ tag[0] }}
     <br>
@@ -23,3 +24,4 @@ image: '/assets/images/pages/about.jpeg'
     {% assign pages_list = nil %}
     {% assign group = nil %}
 {% endfor %}
+</div>
