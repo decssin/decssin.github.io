@@ -21,4 +21,17 @@ image: '/assets/images/pages/about.jpeg'
     {{ tag[0] }}
     <br/>
     {{ tag[1] }}
+    
+    {% assign pages_list = tag[1] %}
+    
+    {% for post in pages_list %}
+        {% if post.title != null %}
+            {% if group == null or group == post.group %}
+                {% include tags.html %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
 {% endfor %}
