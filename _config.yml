@@ -17,7 +17,7 @@ instagram:   'https://www.instagram.com/codpene/'
 facebook:    'https://www.facebook.com/febacook/'
 
 markdown:      kramdown
-permalink:     pretty
+permalink:     /:title
 paginate:      10
 paginate_path: /page/:num
 
@@ -40,4 +40,4 @@ defaults:
   - scope:
       path: '_pages'
     values:
-      permalink: /:basename:output_ext
+      permalink: /:basename
