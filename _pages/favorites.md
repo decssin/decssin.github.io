@@ -54,12 +54,15 @@ image: '/assets/images/pages/favorites.jpg'
                     inset -5px -5px 5px #ffffff;
     }
     @media (max-width: 414px) {
+        .neumorphism.n-bg {
+            padding: 75px 0;
+        }
         .neumorphism.n-lnk {
             width: 75px;
             height: 75px;
             line-height: 75px;
             font-size: 12px;
-            margin: 0 15px 15px 15px;
+            margin: 0 15px 30px 15px;
         }
     }
 </style>
