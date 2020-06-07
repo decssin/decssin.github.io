@@ -31,15 +31,15 @@ image: '/assets/images/pages/favorites.jpg'
         margin: 0 25px;
         border-radius: 15px;
         background: #eeeff3;
-        box-shadow: 15px 10px 20px #cacbcf, 
-                    -15px -10px 20px #ffffff;
+        box-shadow: 5px 5px 10px #cacbcf, 
+                    -5px -5px 10px #ffffff
     }
     .neumorphism.n-txt:hover {
         text-shadow: 4px 2px 5px #cacbcf, -4px -2px 5px #ffffff;
         border-radius: 50px;
-        background: #eeeff3;
-        box-shadow: inset 15px 10px 20px #cacbcf, 
-                    inset -15px -10px 20px #ffffff;
+        background: linear-gradient(145deg, #d6d7db, #ffffff);
+        box-shadow: inset 5px 5px 5px #cacbcf, 
+                    inset -5px -5px 5px #ffffff;
     }
 </style>
 
