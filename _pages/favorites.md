@@ -28,15 +28,29 @@ image: '/assets/images/pages/favorites.jpg'
         font-size:14px;
         color:gray;
         cursor:pointer;
-        margin: 0 auto;
+        margin: 0 25px;
         border-radius: 15px;
         background: #eeeff3;
-        box-shadow: 15px 10px 20px #cacbcf, -15px -10px 20px #ffffff;
+        box-shadow: 15px 10px 20px #cacbcf, 
+                    -15px -10px 20px #ffffff;
+    }
+    .neumorphism.n-txt:hover {
+        text-shadow: 4px 2px 5px #cacbcf, -4px -2px 5px #ffffff;
+        border-radius: 50px;
+        background: #eeeff3;
+        box-shadow: inset 15px 10px 20px #cacbcf, 
+                    inset -15px -10px 20px #ffffff;
     }
 </style>
 
 <div class="neumorphism n-bg n-flex">
-    <div class="neumorphism n-txt">
-    TEST
-    </div>
+    <div class="neumorphism n-txt">TEST</div>
+    <div class="neumorphism n-txt">TEST</div>
+    <div class="neumorphism n-txt">TEST</div>
+    <div class="neumorphism n-txt">TEST</div>
+    <div class="neumorphism n-txt">TEST</div>
+    <div class="neumorphism n-txt">TEST</div>
+    <div class="neumorphism n-txt">TEST</div>
+    <div class="neumorphism n-txt">TEST</div>
+    <div class="neumorphism n-txt">TEST</div>
 </div>
