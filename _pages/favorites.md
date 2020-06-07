@@ -34,7 +34,6 @@ image: '/assets/images/pages/favorites.jpg'
         text-decoration: none !important;
         font-size:13px;
         margin: 0 25px 25px 25px;
-        outline:none;
         cursor:pointer;
         color:gray;
         
