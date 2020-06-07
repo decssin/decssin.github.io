@@ -53,6 +53,15 @@ image: '/assets/images/pages/favorites.jpg'
         box-shadow: inset 5px 5px 5px #cacbcf, 
                     inset -5px -5px 5px #ffffff;
     }
+    @media (max-width: 414px) {
+        .neumorphism.n-lnk {
+            width: 75px;
+            height: 75px;
+            line-height: 75px;
+            font-size: 12px;
+            margin: 0 15px 15px 15px;
+        }
+    }
 </style>
 
 <div class="neumorphism n-bg n-flex">
