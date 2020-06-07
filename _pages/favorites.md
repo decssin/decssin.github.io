@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Tags
+title: Favorites
 image: '/assets/images/pages/favorites.jpg'
 ---
