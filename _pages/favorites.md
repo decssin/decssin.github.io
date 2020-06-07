@@ -33,9 +33,10 @@ image: '/assets/images/pages/favorites.jpg'
         text-align: center;
         text-decoration: none !important;
         font-size:13px;
-        color:gray;
-        cursor:pointer;
         margin: 0 25px 25px 25px;
+        outline:none;
+        cursor:pointer;
+        color:gray;
         
         border-radius: 50px;
         background: #eeeff3;
