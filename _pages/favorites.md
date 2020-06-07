@@ -42,7 +42,9 @@ image: '/assets/images/pages/favorites.jpg'
         box-shadow: 5px 5px 10px #cacbcf, 
                     -5px -5px 10px #ffffff
     }
-    .neumorphism.n-lnk:hover {
+    .neumorphism.n-lnk:hover,
+    .neumorphism.n-lnk:active,
+    .neumorphism.n-lnk:focus {
         color:gray !important;
     }
     .neumorphism.n-lnk:active {
