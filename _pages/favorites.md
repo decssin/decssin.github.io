@@ -32,6 +32,7 @@ image: '/assets/images/pages/favorites.jpg'
         line-height: 80px;
         
         text-align: center;
+        text-decoration: none !important;
         font-size:13px;
         color:gray;
         cursor:pointer;
@@ -41,6 +42,9 @@ image: '/assets/images/pages/favorites.jpg'
         background: #eeeff3;
         box-shadow: 5px 5px 10px #cacbcf, 
                     -5px -5px 10px #ffffff
+    }
+    .neumorphism.n-lnk:hover {
+        color:gray !important;
     }
     .neumorphism.n-lnk:active {
         border-radius: 50px;
