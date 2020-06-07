@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tags
-image: '/assets/images/pages/about.jpeg'
+image: '/assets/images/pages/tags.jpg'
 ---
 
 <div>

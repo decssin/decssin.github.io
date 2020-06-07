@@ -85,7 +85,7 @@ Cras sed sodales enim. Duis nec erat magna. Sed scelerisque pretium mi et [unspl
 
 ---
 
-![about](/assets/images/pages/about.jpeg)
+![about](/assets/images/pages/about.jpg)
 
 ---
 

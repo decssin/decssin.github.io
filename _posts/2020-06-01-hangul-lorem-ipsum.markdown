@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 하나에 멀리 하나의 밤을 당신은 까닭입니다. 이런 하늘에는 헤는 별 사람들의 하나에 있습니다.
-tags: [ipsum, jekyll, blog]
-image: /assets/images/posts/9.jpg'
+tags: [jekyll, lipsum]
+image: /assets/images/posts/2.jpg
 ---
 
 이름자를 별 겨울이 했던 별을 노새, 언덕 봅니다. 책상을 가을로 북간도에 같이 쓸쓸함과 있습니다. 마디씩 이네들은 이름과, 자랑처럼 봅니다. 다 보고, 이름과, 불러 이름과 남은 봅니다. 때 멀듯이, 까닭이요, 별들을 별 계십니다. 패, 쉬이 이런 이네들은 까닭이요, 까닭이요, 나는 시와 말 봅니다. 아이들의 잠, 사람들의 별들을 까닭입니다. 가득 헤는 지나가는 언덕 자랑처럼 내린 아름다운 까닭입니다. 비둘기, 이런 다하지 지나고 하나에 하나에 봅니다. 나는 어머니 다하지 이런 겨울이 까닭입니다. 어머님, 시인의 가을로 까닭입니다.
@@ -33,3 +33,79 @@ image: /assets/images/posts/9.jpg'
 어머니 아무 마디씩 덮어 청춘이 풀이 이런 버리었습니다. 밤이 이런 하나에 풀이 불러 하나의 했던 내린 청춘이 까닭입니다. 하나에 까닭이요, 책상을 계십니다. 아이들의 한 하나에 강아지, 그리고 까닭입니다. 한 오면 그리워 있습니다. 잔디가 내린 딴은 않은 강아지, 별 있습니다. 사랑과 별들을 하나에 있습니다. 오는 이웃 나의 부끄러운 청춘이 새워 버리었습니다. 위에 당신은 한 헤일 차 묻힌 별 때 노새, 있습니다. 내 이제 잠, 가을로 하나 프랑시스 우는 아무 봅니다.
 
 잠, 하늘에는 써 가을 사랑과 프랑시스 하나에 있습니다. 쉬이 어머님, 별들을 하늘에는 이름자를 그러나 이름과, 않은 오면 봅니다. 하나에 흙으로 한 있습니다. 같이 추억과 다하지 봅니다. 묻힌 잠, 하나에 멀리 하나의 밤을 당신은 까닭입니다. 이런 하늘에는 헤는 별 사람들의 하나에 있습니다. 아직 지나가는 새겨지는 가슴속에 내린 나는 너무나 이름과, 듯합니다. 옥 내 무엇인지 다 새겨지는 지나고 멀듯이, 지나가는 오면 듯합니다. 내 계절이 어머니, 나는 지나고 하나에 옥 있습니다.
+
+You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at `<your blog URL>/ghost/`. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!
+
+## Getting Started
+
+Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!
+
+Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use *shortcuts* to **style** your content. For example, a list:
+
+* Item number one
+* Item number two
+    * A nested item
+* A final item
+
+or with numbers!
+
+1. Remember to buy some milk
+2. Drink the milk
+3. Tweet that I remembered to buy the milk, and drank it
+
+### Links
+
+Want to link to a source? No problem. If you paste in a URL, like http://ghost.org - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to [the Ghost website](http://ghost.org). Neat.
+
+### What about Images?
+
+Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:
+
+![The Ghost Logo](https://images.unsplash.com/photo-1433785567155-bf5530cab72c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=1348aea714b9493fa61a09a8c01113e6)
+
+Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:
+
+![A bowl of bananas]
+
+
+### Quoting
+
+Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!
+
+> Ghost - Just a blogging platform
+
+### Working with Code
+
+Got a streak of geek? We've got you covered there, too. You can write inline `<code>` blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.
+
+    .awesome-thing {
+        display: block;
+        width: 100%;
+    }
+
+### Ready for a Break?
+
+Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.
+
+---
+
+### Advanced Usage
+
+There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.
+
+<input type="text" placeholder="I'm an input field!" />
+
+That should be enough to get you started. Have fun - and let us know what you think :)
+
+# 샵 한개
+## 샵 두개
+### 샵 세개
+#### 샵 네개
+##### 샵 다섯개
+###### 샵 여섯개
+# One Sharp
+## Two Sharp
+### Three Sharp
+#### Four Sharp
+##### Five Sharp
+###### Six Sharp

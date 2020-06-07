@@ -106,7 +106,7 @@ The following is the `about.md` file that you can find as an example included in
 ---
 layout: page
 title: About
-image: '/images/pages/about.jpeg'
+image: '/images/pages/about.jpg'
 ---
 ```
 
