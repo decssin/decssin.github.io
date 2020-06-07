@@ -16,7 +16,6 @@ image: '/assets/images/pages/favorites.jpg'
     }
     .neumorphism.n-bg {
         width: 100%;
-        height: 800px;
         padding: 150px 0;
         background: rgb(239,240,242);
         background: 
