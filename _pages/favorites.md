@@ -36,6 +36,7 @@ image: '/assets/images/pages/favorites.jpg'
         margin: 0 25px 25px 25px;
         cursor:pointer;
         color:gray;
+        user-select: none;
         
         border-radius: 50px;
         background: #eeeff3;
