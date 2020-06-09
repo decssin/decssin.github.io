@@ -36,8 +36,16 @@ image: '/assets/images/pages/favorites.jpg'
         margin: 0 25px 25px 25px;
         cursor: pointer;
         color: gray;
-        user-select: none;
         outline: none;
+        
+        -webkit-tap-highlight-color: transparent;
+        -webkit-highlight: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
         
         border-radius: 50px;
         background: #eeeff3;
