@@ -32,11 +32,12 @@ image: '/assets/images/pages/favorites.jpg'
         
         text-align: center;
         text-decoration: none !important;
-        font-size:13px;
+        font-size: 13px;
         margin: 0 25px 25px 25px;
-        cursor:pointer;
-        color:gray;
+        cursor: pointer;
+        color: gray;
         user-select: none;
+        outline: none;
         
         border-radius: 50px;
         background: #eeeff3;
