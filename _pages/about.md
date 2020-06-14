@@ -5,16 +5,6 @@ order: 1
 image: '/assets/images/pages/about.jpg'
 ---
 
-<script type="text/javascript">
-    let url_string = window.location.href,
-        url = new URL(url_string),
-        who = url.searchParams.get("who");
-    
-    if (who === 'minjiwon') {
-        document.getElementById('resume').style.display = 'block';
-    }
-</script>
-
 <div id="resume" style="padding: 80px 0 50px 0; display: none;">
     <p>경기도 수원<br/>jiwonov@gmail.com</p>
     <h2 style="border-bottom: 4px solid #333;padding-bottom: 5px;">민지원</h2>
@@ -242,3 +232,13 @@ image: '/assets/images/pages/about.jpg'
         <li>커리어 스킬, 길벗, 2019년 05월</li>
     </ul>
 </div>
+
+<script type="text/javascript">
+    let url_string = window.location.href,
+        url = new URL(url_string),
+        who = url.searchParams.get("who");
+    
+    if (who === 'minjiwon') {
+        document.getElementById('resume').style.display = 'block';
+    }
+</script>
