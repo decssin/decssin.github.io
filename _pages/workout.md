@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Workout
-order: 7
+order: 4
 image: '/assets/images/pages/workout.jpg'
 ---
 

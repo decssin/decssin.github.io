@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Motto
-order: 4
+order: 6
 image: '/assets/images/pages/motto.jpg'
 ---
 
