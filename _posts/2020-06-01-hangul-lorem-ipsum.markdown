@@ -36,7 +36,7 @@ image: /assets/images/posts/2.jpg
 
 You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at `<your blog URL>/ghost/`. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!
 
-## Getting Started
+### Getting Started
 
 Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!
 
@@ -83,6 +83,48 @@ Got a streak of geek? We've got you covered there, too. You can write inline `<c
         width: 100%;
     }
 
+---
+
+{% highlight js %}
+'use strict';
+var markdown = require('markdown').markdown;
+function Editor(input, preview) {
+  this.update = function() {
+    preview.innerHTML = markdown.toHTML(input.value);
+  };
+  input.editor = this;
+  this.update();
+}
+{% endhighlight %}
+
+You can add inline code just like this, E.g. `.code { color: #fff; }`
+
+{% highlight css %}
+pre {
+  background-color: #f4f4f4;
+  max-width: 100%;
+  overflow: auto;
+}
+{% endhighlight %}
+
+---
+
+<input type="text" placeholder="I'm an input field!">
+
+---
+
+<button class='c-btn c-btn--small'>Button</button>
+
+<button class='c-btn'>Button</button>
+
+<button class='c-btn c-btn--full'>Button</button>
+
+{% highlight html %}
+<button class='c-btn c-btn--small'>Button</button>
+<button class='c-btn'>Button</button>
+<button class='c-btn c-btn--full'>Button</button>
+{% endhighlight %}
+
 ### Ready for a Break?
 
 Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.
@@ -97,15 +139,19 @@ There's one fantastic secret about Markdown. If you want, you can write plain ol
 
 That should be enough to get you started. Have fun - and let us know what you think :)
 
-# 샵 한개
-## 샵 두개
-### 샵 세개
-#### 샵 네개
-##### 샵 다섯개
-###### 샵 여섯개
-# One Sharp
-## Two Sharp
-### Three Sharp
-#### Four Sharp
-##### Five Sharp
-###### Six Sharp
+# Markdown 기본 헤딩 스타일
+## Markdown 기본 헤딩 스타일
+### Markdown 기본 헤딩 스타일
+#### Markdown 기본 헤딩 스타일
+##### Markdown 기본 헤딩 스타일
+###### Markdown 기본 헤딩 스타일
+# Simple default styles for headings
+## Simple default styles for headings
+### Simple default styles for headings
+#### Simple default styles for headings
+##### Simple default styles for headings
+###### Simple default styles for headings
+
+At [Aspire Themes](http://aspirethemes.com/) I use a lot of tools to help me create WordPress, Ghost and Jekyll themes. Tools will range from development, design, services, hosting and automation.
+
+Graphic design is the paradise of individuality, eccentricity, heresy, abnormality, hobbies, and humors. - George Santayana.
