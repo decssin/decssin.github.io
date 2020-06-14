@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Favorites
+order: 2
 image: '/assets/images/pages/favorites.jpg'
 ---
 

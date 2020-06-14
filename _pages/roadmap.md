@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Roadmap
+order: 5
 image: '/assets/images/pages/roadmap.jpg'
 ---
 

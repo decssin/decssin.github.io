@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Tags
+order: 6
 image: '/assets/images/pages/tags.jpg'
 ---
 
