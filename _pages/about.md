@@ -11,10 +11,17 @@ image: '/assets/images/pages/about.jpg'
     }
     #resume td {
         text-align: left;
-        text-indent: 20px;
+    }
+    #resume td:nth-child(odd) {
+        width:85px;
     }
     #resume .company {
         font-weight: bold;
+    }
+    @media (max-width: 414px) {
+        #resume .address {
+            display: none;
+        }
     }
 </style>
 
@@ -29,7 +36,7 @@ image: '/assets/images/pages/about.jpg'
     
     <h4>경력</h4>
     
-    <span class="company">해커스어학연구소, 서울 서초구 - 웹개발 / 프로</span><br/>
+    <span class="company">해커스어학연구소<span class="address">, 서울 서초구</span> - 웹개발 / 프로</span><br/>
     <small>2019년 07월 - 현재</small>
     <table>
         <tr>
@@ -50,12 +57,12 @@ image: '/assets/images/pages/about.jpg'
         </tr>
     </table>
     
-    <span class="company">바론미디어, 서울 구로구 - 디자인개발 / 사원</span><br/>
+    <span class="company">바론미디어<span class="address">, 서울 구로구</span> - 디자인개발 / 사원</span><br/>
     <small>2018년 07월 - 2019년 04월</small>
     <table>
         <tr>
             <td>회사명</td>
-            <td>Baronmedia</td>
+            <td>(주)바론미디어</td>
         </tr>
         <tr>
             <td>내용</td>
@@ -73,7 +80,7 @@ image: '/assets/images/pages/about.jpg'
     <table>
         <tr>
             <td>회사명</td>
-            <td>Zapple</td>
+            <td>(주)재플</td>
         </tr>
         <tr>
             <td>내용</td>
@@ -91,7 +98,7 @@ image: '/assets/images/pages/about.jpg'
     <table>
         <tr>
             <td>회사명</td>
-            <td>Daewoong</td>
+            <td>(주)대웅제약</td>
         </tr>
         <tr>
             <td>내용</td>
@@ -109,7 +116,7 @@ image: '/assets/images/pages/about.jpg'
     <table>
         <tr>
             <td>회사명</td>
-            <td>Midea Group</td>
+            <td>메이디그룹 (유)</td>
         </tr>
         <tr>
             <td>내용</td>
@@ -125,12 +132,12 @@ image: '/assets/images/pages/about.jpg'
         </tr>
     </table>
     
-    <span class="company">샵캐스트, 경기 성남시 - 연구개발 / 연구원</span><br/>
+    <span class="company">샵캐스트<span class="address">, 경기 성남시</span> - 연구개발 / 연구원</span><br/>
     <small>2017년 10월 - 2018년 07월</small>
     <table>
         <tr>
             <td>회사명</td>
-            <td>Shopcast (Itbob)</td>
+            <td>(주)샵캐스트</td>
         </tr>
         <tr>
             <td>내용</td>
@@ -148,7 +155,7 @@ image: '/assets/images/pages/about.jpg'
     <table>
         <tr>
             <td>회사명</td>
-            <td>Shopcast (Itbob)</td>
+            <td>(주)아이티밥</td>
         </tr>
         <tr>
             <td>내용</td>
