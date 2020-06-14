@@ -12,12 +12,12 @@ image: '/assets/images/pages/about.jpg'
         
     console.log(who);
     
-    if (who === 'iam') {
+    if (who === 'minjiwon') {
         document.getElementById('resume').style.display = 'block';
     }
 </script>
 
-<div style="padding: 80px 0 50px 0; display: none;">
+<div id="resume" style="padding: 80px 0 50px 0; display: none;">
     <p>경기도 수원<br/>jiwonov@gmail.com</p>
     <h2 style="border-bottom: 4px solid #333;padding-bottom: 5px;">민지원</h2>
     
