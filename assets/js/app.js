@@ -28,7 +28,7 @@ $(document).ready(function() {
 
         navigation.css({
           'transition':'transform .4s cubic-bezier(0.16, 0.68, 0.43, 0.99)',
-          'transform':'translate3d(300px, 0px, 0px)',
+          'transform':'translate3d(0px, 0px, 0px)',
           'z-index':'1'
         });
       } else {
@@ -36,7 +36,7 @@ $(document).ready(function() {
 
         navigation.css({
           'transition':'transform .4s cubic-bezier(0.16, 0.68, 0.43, 0.99)',
-          'transform':'translate3d(0px, 0px, 0px)',
+          'transform':'translate3d(300px, 0px, 0px)',
           'z-index':'1'
         });
       }
