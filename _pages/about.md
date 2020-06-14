@@ -9,8 +9,6 @@ image: '/assets/images/pages/about.jpg'
     let url_string = window.location.href,
         url = new URL(url_string),
         who = url.searchParams.get("who");
-        
-    console.log(who);
     
     if (who === 'minjiwon') {
         document.getElementById('resume').style.display = 'block';
