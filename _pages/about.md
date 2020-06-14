@@ -31,12 +31,8 @@ image: '/assets/images/pages/about.jpg'
     <span>해커스어학연구소, 서울 서초구</span> - <span>웹개발 / 프로</span><br/>
     <small>2019년 07월 - 현재</small>
     <ul>
-        <li>내용</li>
-        <li>내용</li>
-        <li>내용</li>
+        <li>-</li>
     </ul>
-    
-    <br/>
     
     <span>바론미디어, 서울 구로구</span> - <span>디자인개발 / 사원</span><br/>
     <small>2018년 07월 - 2019년 04월</small>
@@ -66,8 +62,6 @@ image: '/assets/images/pages/about.jpg'
         </li>
     </ul>
     
-    <br/>
-    
     <span>샵캐스트, 경기 성남시</span> - <span>연구개발 / 연구원</span>
     <br/>
     <small>2017년 10월 - 2018년 07월</small>
@@ -87,8 +81,6 @@ image: '/assets/images/pages/about.jpg'
             </ul>
         </li>
     </ul>
-    
-    <br/>
     
     
     
@@ -160,9 +152,6 @@ image: '/assets/images/pages/about.jpg'
     <ul>
         <li>토익</li>
     </ul>
-    
-    <br/>
-
         
     <h4>전자책 추천</h4>
     
@@ -220,8 +209,6 @@ image: '/assets/images/pages/about.jpg'
     <ul>
         <li>심플 소프트웨어, 길벗, 2019년 11월</li>
     </ul>
-
-    <br/>
     
     <h4>전자책 위시리스트</h4>
     
