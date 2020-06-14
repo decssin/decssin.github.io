@@ -149,3 +149,5 @@ image: '/assets/images/pages/values.jpg'
     당신은 당신의 시간에 아주 잘 맞춰서 가고 있습니다.
     </p>
 </div>
+
+Sources. [Reddit](https://www.reddit.com/r/GetMotivated/comments/7w9sy2/image_you_are_very_much_on_time)
