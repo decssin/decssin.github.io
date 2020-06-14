@@ -19,7 +19,8 @@ image: '/assets/images/pages/about.jpg'
         font-weight: bold;
     }
     @media (max-width: 414px) {
-        #resume .address {
+        #resume .address,
+        #resume .responsive-mobile {
             display: none;
         }
     }
@@ -175,12 +176,12 @@ image: '/assets/images/pages/about.jpg'
     
     <h4>학력</h4>
     
-    <span class="education">한국방송통신대학교, 서울 종로구 - 컴퓨터과학 전공</span><br/>
+    <span class="education">한국방송통신대학교<span class="address">, 서울 종로구</span> - 컴퓨터과학 전공</span><br/>
     <small>2016.02 - 현재 재학중</small>
 
     <br/><br>
     
-    <span class="education">수원공업고등학교, 경기 수원시 - 디지털게임과</span><br/>
+    <span class="education">수원공업고등학교<span class="address">, 경기 수원시</span> - 디지털게임과</span><br/>
     <small>2007년 02월 - 2010년 02월 졸업</small>
     
     <br/><br/>
@@ -195,7 +196,7 @@ image: '/assets/images/pages/about.jpg'
     
     <br/><br/>
     
-    <span class="certificate">한국생산성본부(KPC), 정보기술자격(ITQ)OA마스터</span><br/>
+    <span class="certificate">한국생산성본부<span class="responsive-mobile">(KPC)</span>, 정보기술자격<span class="responsive-mobile">(ITQ)</span>OA마스터</span><br/>
     <small>2014년 07월</small>
     
     <br/><br/>
