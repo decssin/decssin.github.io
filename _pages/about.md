@@ -28,24 +28,65 @@ image: '/assets/images/pages/about.jpg'
         <li>
             내부 그룹웨어 유지보수
             <ul>
-                <li>휴가계 및 영업 성과 등 전자결재 처리 시스템</li>
-                <li>CentOS, Apache, MySQL, PHP</li>
+                <li> BARONMEDIA
+                    <table>
+                        <tr>
+                            <th>내용 : </th>
+                            <td>휴가계 및 영업 성과 등 전자결재 처리 시스템</td>
+                        </tr>
+                        <tr>
+                            <th>기술스택 : </th>
+                            <td>CentOS, Apache, MySQL, PHP</td>
+                        </tr>
+                    </table>
+                </li>
             </ul>
         </li>
         <li>
             외주 웹사이트 개발
             <ul>
-                <li>[Zapple] 이메일 문의 및 기업소개 등 기업사이트 (관리자 연동)</li>
-                <li>CentOS, Apache, MySQL, PHP</li>
-                <li>[Daewoong] 내부 콘텐츠 소비를 위한 직원 전용 포털사이트</li>
-                <li>CentOS, JBOSS, MariaDB, JSP, Spring Framework</li>
+                <li> ZAPPLE
+                    <table>
+                        <tr>
+                            <th>내용 : </th>
+                            <td>이메일 문의 및 기업소개 등 기업사이트 (관리자 연동)</td>
+                        </tr>
+                        <tr>
+                            <th>기술스택 : </th>
+                            <td>CentOS, Apache, MySQL, PHP</td>
+                        </tr>
+                    </table>
+                </li>
+                
+                <li>DAEWOONG
+                    <table>
+                        <tr>
+                            <th>내용 : </th>
+                            <td>내부 콘텐츠 소비를 위한 직원 전용 포털사이트</td>
+                        </tr>
+                        <tr>
+                            <th>기술스택 : </th>
+                            <td>CentOS, JBOSS, MariaDB, JSP, Spring Framework</td>
+                        </tr>
+                    </table>
+                </li>
             </ul>
         </li>
         <li>
-            MWO NFC 연동 안드로이드 앱 개발
+            안드로이드 앱 개발
             <ul>
-                <li>[Midea Group] 스마트 전자레인지 연동을 위한 프로토타입 안드로이드 앱 개발 (중국 출장)</li>
-                <li>JAVA, Android API Level 22 (Lollipop) 호환</li>
+                <li>MIDEA GROUP
+                    <table>
+                        <tr>
+                            <th>내용 : </th>
+                            <td>NFC, 블루투스 연동을 활용한 스마트 MWO 프로토타입 앱 개발 (중국 출장)</td>
+                        </tr>
+                        <tr>
+                            <th>기술스택 : </th>
+                            <td>JAVA, Android API Level 22 (Lollipop) 호환</td>
+                        </tr>
+                    </table>
+                </li>
             </ul>
         </li>
     </ul>
@@ -57,15 +98,35 @@ image: '/assets/images/pages/about.jpg'
         <li>
             CMS 개발
             <ul>
-                <li>레이블 회사의 음원 및 유통 과정을 관리하는 시스템</li>
-                <li>PHP, MySQL, Semantic UI, Bootstrap</li>
+                <li>SHOPCAST (ITBOB)
+                    <table>
+                        <tr>
+                            <th>내용 : </th>
+                            <td>레이블 회사의 음원 및 유통 과정을 관리하는 시스템</td>
+                        </tr>
+                        <tr>
+                            <th>기술스택 : </th>
+                            <td>PHP, MySQL, Semantic UI, Bootstrap</td>
+                        </tr>
+                    </table>
+                </li>
             </ul>
         </li>
         <li>
             내부 그룹웨어 유지보수
             <ul>
-                <li>영업 관리, 고객 관리, 업무 요청 등 백오피스 그룹웨어</li>
-                <li>Oracle Database, PHP, Bootstrap</li>
+                <li>SHOPCAST (ITBOB)
+                    <table>
+                        <tr>
+                            <th>내용 : </th>
+                            <td>영업 관리, 고객 관리, 업무 요청 등 백오피스 그룹웨어</td>
+                        </tr>
+                        <tr>
+                            <th>기술스택 : </th>
+                            <td>Oracle Database, PHP, Bootstrap</td>
+                        </tr>
+                    </table>
+                </li>
             </ul>
         </li>
     </ul>
