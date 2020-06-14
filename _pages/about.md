@@ -5,6 +5,18 @@ order: 1
 image: '/assets/images/pages/about.jpg'
 ---
 
+<style type="text/css">
+    #resume table {
+        margin-top: 20px;
+    }
+    #resume th {
+        text-align: left;
+    }
+    #resume td {
+        text-indent: 10px;
+    }
+</style>
+
 <div id="resume" style="padding: 80px 0 50px 0; display: none;">
     <p>경기도 수원<br/>jiwonov@gmail.com</p>
     <h2 style="border-bottom: 4px solid #333;padding-bottom: 5px;">민지원</h2>
@@ -16,123 +28,142 @@ image: '/assets/images/pages/about.jpg'
     
     <h4>경력</h4>
     
-    <span>해커스어학연구소, 서울 서초구</span> - <span>웹개발 / 프로</span><br/>
+    <span>해커스어학연구소, 서울 서초구 - 웹개발 / 프로</span><br/>
     <small>2019년 07월 - 현재</small>
-    <ul>
-        <li>-</li>
-    </ul>
+    <table>
+        <tr>
+            <th>회사명</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>상세내용</th>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>기술스택</th>
+            <td>-</td>
+        </tr>
+    </table>
     
-    <span>바론미디어, 서울 구로구</span> - <span>디자인개발 / 사원</span><br/>
+    <span>바론미디어, 서울 구로구 - 디자인개발 / 사원</span><br/>
     <small>2018년 07월 - 2019년 04월</small>
-    <ul>
-        <li>
-            내부 그룹웨어 유지보수
-            <ul>
-                <li> BARONMEDIA
-                    <table>
-                        <tr>
-                            <th>내용 : </th>
-                            <td>휴가계 및 영업 성과 등 전자결재 처리 시스템</td>
-                        </tr>
-                        <tr>
-                            <th>기술스택 : </th>
-                            <td>CentOS, Apache, MySQL, PHP</td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-        </li>
-        <li>
-            외주 웹사이트 개발
-            <ul>
-                <li> ZAPPLE
-                    <table>
-                        <tr>
-                            <th>내용 : </th>
-                            <td>이메일 문의 및 기업소개 등 기업사이트 (관리자 연동)</td>
-                        </tr>
-                        <tr>
-                            <th>기술스택 : </th>
-                            <td>CentOS, Apache, MySQL, PHP</td>
-                        </tr>
-                    </table>
-                </li>
-                
-                <li>DAEWOONG
-                    <table>
-                        <tr>
-                            <th>내용 : </th>
-                            <td>내부 콘텐츠 소비를 위한 직원 전용 포털사이트</td>
-                        </tr>
-                        <tr>
-                            <th>기술스택 : </th>
-                            <td>CentOS, JBOSS, MariaDB, JSP, Spring Framework</td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-        </li>
-        <li>
-            안드로이드 앱 개발
-            <ul>
-                <li>MIDEA GROUP
-                    <table>
-                        <tr>
-                            <th>내용 : </th>
-                            <td>NFC, 블루투스 연동을 활용한 스마트 MWO 프로토타입 앱 개발 (중국 출장)</td>
-                        </tr>
-                        <tr>
-                            <th>기술스택 : </th>
-                            <td>JAVA, Android API Level 22 (Lollipop) 호환</td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <table>
+        <tr>
+            <th>회사명</th>
+            <td>Baronmedia</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>내부 그룹웨어 유지보수</td>
+        </tr>
+        <tr>
+            <th>상세내용</th>
+            <td>휴가계 및 영업 성과 등 전자결재 처리 시스템</td>
+        </tr>
+        <tr>
+            <th>기술스택</th>
+            <td>CentOS, Apache, MySQL, PHP</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>회사명</th>
+            <td>Zapple</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>외주 웹사이트 개발</td>
+        </tr>
+        <tr>
+            <th>상세내용</th>
+            <td>이메일 문의 및 기업소개 등 기업사이트 (관리자 연동)</td>
+        </tr>
+        <tr>
+            <th>기술스택</th>
+            <td>CentOS, Apache, MySQL, PHP</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>회사명</th>
+            <td>Daewoong</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>외주 웹사이트 개발</td>
+        </tr>
+        <tr>
+            <th>상세내용</th>
+            <td>내부 콘텐츠 소비를 위한 직원 전용 포털사이트</td>
+        </tr>
+        <tr>
+            <th>기술스택</th>
+            <td>CentOS, JBOSS, MariaDB, JSP, Spring Framework</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>회사명</th>
+            <td>Midea Group</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>안드로이드 앱 개발</td>
+        </tr>
+        <tr>
+            <th>상세내용</th>
+            <td>NFC, 블루투스 연동을 활용한 스마트 MWO 프로토타입 앱 개발 (중국 출장)</td>
+        </tr>
+        <tr>
+            <th>기술스택</th>
+            <td>JAVA, Android API Level 22 (Lollipop) 호환</td>
+        </tr>
+    </table>
     
-    <span>샵캐스트, 경기 성남시</span> - <span>연구개발 / 연구원</span>
-    <br/>
+    <span>샵캐스트, 경기 성남시 - 연구개발 / 연구원</span><br/>
     <small>2017년 10월 - 2018년 07월</small>
-    <ul>
-        <li>
-            CMS 개발
-            <ul>
-                <li>SHOPCAST (ITBOB)
-                    <table>
-                        <tr>
-                            <th>내용 : </th>
-                            <td>레이블 회사의 음원 및 유통 과정을 관리하는 시스템</td>
-                        </tr>
-                        <tr>
-                            <th>기술스택 : </th>
-                            <td>PHP, MySQL, Semantic UI, Bootstrap</td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-        </li>
-        <li>
-            내부 그룹웨어 유지보수
-            <ul>
-                <li>SHOPCAST (ITBOB)
-                    <table>
-                        <tr>
-                            <th>내용 : </th>
-                            <td>영업 관리, 고객 관리, 업무 요청 등 백오피스 그룹웨어</td>
-                        </tr>
-                        <tr>
-                            <th>기술스택 : </th>
-                            <td>Oracle Database, PHP, Bootstrap</td>
-                        </tr>
-                    </table>
-                </li>
-            </ul>
-        </li>
-    </ul>
-    
-    
-    
+    <table>
+        <tr>
+            <th>회사명</th>
+            <td>Shopcast (Itbob)</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>CMS 개발</td>
+        </tr>
+        <tr>
+            <th>상세내용</th>
+            <td>레이블 회사의 음원 및 유통 과정을 관리하는 시스템</td>
+        </tr>
+        <tr>
+            <th>기술스택</th>
+            <td>PHP, MySQL, Semantic UI, Bootstrap</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>회사명</th>
+            <td>Shopcast (Itbob)</td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>내부 그룹웨어 유지보수</td>
+        </tr>
+        <tr>
+            <th>상세내용</th>
+            <td>영업 관리, 고객 관리, 업무 요청 등 백오피스 그룹웨어</td>
+        </tr>
+        <tr>
+            <th>기술스택</th>
+            <td>Oracle Database, PHP, Bootstrap</td>
+        </tr>
+    </table>
+
+        
     
     <h4>학력</h4>
     
