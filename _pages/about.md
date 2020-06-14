@@ -326,9 +326,9 @@ image: '/assets/images/pages/about.jpg'
 </div>
 
 <script type="text/javascript">
-    let url_string = window.location.href,
-        url = new URL(url_string),
-        who = url.searchParams.get("who");
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    let who = url.searchParams.get("who");
     
     if (who === 'minjiwon') {
         document.getElementById('resume').style.display = 'block';
