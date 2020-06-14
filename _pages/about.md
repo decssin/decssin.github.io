@@ -17,7 +17,7 @@ image: '/assets/images/pages/about.jpg'
     }
 </script>
 
-<div style="padding: 80px 0 50px 0;">
+<div style="padding: 80px 0 50px 0; display: none;">
     <p>경기도 수원<br/>jiwonov@gmail.com</p>
     <h2 style="border-bottom: 4px solid #333;padding-bottom: 5px;">민지원</h2>
     
