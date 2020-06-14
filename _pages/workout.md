@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Values
+title: Workout
 image: '/assets/images/pages/workout.jpg'
 ---
 
