@@ -22,8 +22,9 @@ $(document).ready(function() {
     // IE Check
     if (window.document.documentMode) {
       let navigation = $('.c-off-canvas-content');
+
       if (!navigation.attr('data-ie')) {
-        navigation.data('ie', window.document.documentMode);
+        navigation.attr('data-ie', window.document.documentMode);
 
         navigation.css({
           'transition':'transform .4s cubic-bezier(0.16, 0.68, 0.43, 0.99)',
