@@ -76,7 +76,7 @@ image: '/assets/images/pages/values.jpg'
     You are very much on time.
     </p>
     
-    ---
+    <hr/>
     
     <p>
     뉴욕은 캘리포니아보다 3시간 빠릅니다.<br/>
