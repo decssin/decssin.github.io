@@ -85,6 +85,7 @@ image: '/assets/images/pages/favorites.jpg'
     <div class="neumorphism n-lnk" onclick="location.href='https://dribbble.com/shots/recent/web-design'">Dribbble</div>
     <div class="neumorphism n-lnk" onclick="location.href='https://pinterest.co.kr/search/pins/?rs=typed&q=WebDesign'">Pinterest</div>
     <div class="neumorphism n-lnk" onclick="location.href='https://behance.net/search?search=WebDesign'">Behance</div>
+    <div class="neumorphism n-lnk" onclick="location.href='https://www.instagram.com/explore/tags/webdesign'">Instagram</div>
     <div class="neumorphism n-lnk" onclick="location.href='https://aladin.co.kr/m/mnew.aspx?ViewRowsCount=25&ViewType=Detail&SortOrder=5&page=1&PublishDay=0&BranchType=9&NewType=New&CID=38401&MaxPageIndex=10&VType=0'">eBook</div>
     <div class="neumorphism n-lnk" onclick="location.href='https://aladin.co.kr/m/mnew.aspx?ViewRowsCount=25&ViewType=Detail&SortOrder=5&page=1&PublishDay=84&BranchType=1&NewType=New&CID=437&MaxPageIndex=4&VType=0'">Books</div>
     <div class="neumorphism n-lnk" onclick="location.href='https://ridibooks.com/category/new-releases/2220?order=recent'">Ridi</div>
