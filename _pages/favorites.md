@@ -103,7 +103,7 @@ image: '/assets/images/pages/favorites.jpg'
         color:gray !important;
     }
     .neumorphism.n-tag:active {
-        border-radius: 50px;
+        border-radius: 15px;
         background: linear-gradient(145deg, #d6d7db, #ffffff);
         box-shadow: inset 5px 5px 5px #cacbcf, 
                     inset -5px -5px 5px #ffffff;
