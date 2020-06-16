@@ -68,16 +68,19 @@ image: '/assets/images/pages/favorites.jpg'
 
     
     .neumorphism.n-tag-box:not(:first-child) {
-        margin-top: 60px;
+        margin-top: 85px;
     }
     .neumorphism.n-tag-box {
+        position: relative;
         width:100%;
-        height:125px;
+        height:95px;
     }
     .neumorphism.n-tag {
-        width: 80px;
-        height: 80px;
-        line-height: 80px;
+        position: absolute;
+        left:-3%;
+        width: 106%;
+        height: 55px;
+        line-height: 55px;
         
         text-align: center;
         text-decoration: none !important;
