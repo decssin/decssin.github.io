@@ -71,16 +71,13 @@ image: '/assets/images/pages/favorites.jpg'
         margin-top: 85px;
     }
     .neumorphism.n-tag-box {
-        position: relative;
         width:100%;
         height:95px;
     }
     .neumorphism.n-tag {
-        position: absolute;
-        left:-3%;
-        width: 106%;
-        height: 55px;
-        line-height: 55px;
+        width: 135px;
+        height: 45px;
+        line-height: 45px;
         
         text-align: center;
         text-decoration: none !important;
@@ -99,7 +96,8 @@ image: '/assets/images/pages/favorites.jpg'
         -ms-user-select: none;
         user-select: none;
         
-        border-radius: 0;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
         background: #eeeff3;
         box-shadow: 5px 5px 10px #cacbcf, 
                     -5px -5px 10px #ffffff
@@ -110,7 +108,8 @@ image: '/assets/images/pages/favorites.jpg'
         color:gray !important;
     }
     .neumorphism.n-tag:active {
-        border-radius: 0;
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
         background: linear-gradient(145deg, #d6d7db, #ffffff);
         box-shadow: inset 5px 5px 5px #cacbcf, 
                     inset -5px -5px 5px #ffffff;
