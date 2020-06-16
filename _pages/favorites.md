@@ -68,17 +68,17 @@ image: '/assets/images/pages/favorites.jpg'
 
     .neumorphism.n-tag-box {
         width:100%;
-        height:100px;
+        height:130px;
     }
     .neumorphism.n-tag {
-        width: 40px;
-        height: 125px;
+        width: 125px;
+        height: 40px;
         line-height: 40px;
         
         text-align: center;
         text-decoration: none !important;
         font-size: 13px;
-        margin: 30px auto;
+        margin: 45px auto;
         cursor: pointer;
         color: gray;
         outline: none;
@@ -97,6 +97,18 @@ image: '/assets/images/pages/favorites.jpg'
         box-shadow: 5px 5px 10px #cacbcf, 
                     -5px -5px 10px #ffffff
     }
+    .neumorphism.n-tag:hover,
+    .neumorphism.n-tag:active,
+    .neumorphism.n-tag:focus {
+        color:gray !important;
+    }
+    .neumorphism.n-tag:active {
+        border-radius: 50px;
+        background: linear-gradient(145deg, #d6d7db, #ffffff);
+        box-shadow: inset 5px 5px 5px #cacbcf, 
+                    inset -5px -5px 5px #ffffff;
+    }
+
     @media (max-width: 414px) {
         .neumorphism.n-bg {
             padding: 75px 0;
