@@ -138,7 +138,7 @@ image: '/assets/images/pages/about.jpg'
     <table>
         <tr>
             <td>회사명</td>
-            <td>(주)샵캐스트</td>
+            <td>(주)아이티밥</td>
         </tr>
         <tr>
             <td>내용</td>
@@ -156,7 +156,7 @@ image: '/assets/images/pages/about.jpg'
     <table>
         <tr>
             <td>회사명</td>
-            <td>(주)아이티밥</td>
+            <td>(주)샵캐스트</td>
         </tr>
         <tr>
             <td>내용</td>
