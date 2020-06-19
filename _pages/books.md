@@ -63,7 +63,6 @@ Information Technology
 Etc.
 
 - 심플 소프트웨어, 길벗, 2019년 11월
-- 
 
 #### E-Book wishlist
 
