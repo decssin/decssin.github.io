@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Values
-order: 5
+order: 6
 image: '/assets/images/pages/values.jpg'
 ---
 

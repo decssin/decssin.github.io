@@ -1,7 +1,7 @@
 ---
 layout: page
 title: PHP Standards Recommendations
-order: 8
+order: 9
 image: '/assets/images/pages/php-standards-recommendations.jpg'
 ---
 
