@@ -172,5 +172,5 @@ image: '/assets/images/pages/favorites.jpg'
     <div class="neumorphism n-lnk" onclick="location.href='https://youtube.com'">YouTube</div>
     <div class="neumorphism n-lnk" onclick="location.href='https://clien.net/service'">Clien</div>
     <div class="neumorphism n-lnk" onclick="location.href='https://jisanresort.co.kr/mobile/index.asp'">Jisan</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://knou.ac.kr/knou/univlfhd/EHPScafAnnc.jsp'">KNOU</div>
+    <div class="neumorphism n-lnk" onclick="location.href='https://ucampus.knou.ac.kr/ekp/app/notice/initASGNotice.do'">KNOU</div>
 </div>
