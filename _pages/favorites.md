@@ -36,6 +36,7 @@ image: '/assets/images/pages/favorites.jpg'
     }
 
     .neumorphism.n-lnk {
+        display: block;
         width: 80px;
         height: 80px;
         line-height: 80px;
@@ -142,46 +143,38 @@ image: '/assets/images/pages/favorites.jpg'
 
 <div class="neumorphism n-bg n-flex">
     <div class="neumorphism n-tag-box">
-        <div class="neumorphism n-tag">Development</div>
+        <div class="neumorphism n-tag">Dev, Design + Books</div>
     </div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://github.com/dnessi'">GitHub</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://codepen.io'">CodePen</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://reddit.com/r/webdev'">Reddit</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://awesome-devblog.now.sh'">DevBlog</div>
-
-
-    <div class="neumorphism n-tag-box">
-        <div class="neumorphism n-tag">Design</div>
-    </div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://awwwards.com/inspiration/search?text=Web+Design'">Awwwards</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://dribbble.com/shots/recent/web-design'">Dribbble</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://pinterest.co.kr/search/pins/?rs=typed&q=WebDesign'">Pinterest</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://behance.net/search?search=WebDesign'">Behance</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://www.instagram.com/explore/tags/webdesign'">Instagram</div>
-
-    <div class="neumorphism n-tag-box">
-        <div class="neumorphism n-tag">Books</div>
-    </div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://aladin.co.kr/m/mnew.aspx?ViewRowsCount=25&ViewType=Detail&SortOrder=5&page=1&PublishDay=0&BranchType=9&NewType=New&CID=38401&MaxPageIndex=10&VType=0'">eBook</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://aladin.co.kr/m/mnew.aspx?ViewRowsCount=25&ViewType=Detail&SortOrder=5&page=1&PublishDay=84&BranchType=1&NewType=New&CID=437&MaxPageIndex=4&VType=0'">Books</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://ridibooks.com/category/new-releases/2220?order=recent'">Ridi</div>
+    <a class="neumorphism n-lnk" target="_self" href="https://github.com/dnessi">GitHub</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://codepen.io">CodePen</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://reddit.com/r/webdev">Reddit</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://awesome-devblog.now.sh">DevBlog</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://awwwards.com/inspiration/search?text=Web+Design">Awwwards</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://dribbble.com/shots/recent/web-design">Dribbble</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://pinterest.co.kr/search/pins/?rs=typed&q=WebDesign">Pinterest</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://behance.net/search?search=WebDesign">Behance</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://www.instagram.com/explore/tags/webdesign">Instagram</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=9&NewType=New&CID=38401">eBook</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=1&NewType=New&CID=437">Books</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://ridibooks.com/category/new-releases/2220?order=recent">Ridi</a>
 
     <div class="neumorphism n-tag-box">
         <div class="neumorphism n-tag">Jobs</div>
     </div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://work.go.kr'">Worknet</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://saramin.co.kr'">Saramin</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://jobkorea.co.kr'">Jobkorea</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://jobplanet.co.kr'">Jobplanet</div>
+
+    <a class="neumorphism n-lnk" target="_self" href="https://work.go.kr">Worknet</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://saramin.co.kr">Saramin</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://jobkorea.co.kr">Jobkorea</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://jobplanet.co.kr">Jobplanet</a>
 
     <div class="neumorphism n-tag-box">
         <div class="neumorphism n-tag">ETC.</div>
     </div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://ssbrws.kr-weathernews.com/mv3/html/main.html'">Weather</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://lookpin.co.kr'">LookPin</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://m.naver.com'">Naver</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://youtube.com'">YouTube</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://clien.net/service'">Clien</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://jisanresort.co.kr/mobile/index.asp'">Jisan</div>
-    <div class="neumorphism n-lnk" onclick="location.href='https://ucampus.knou.ac.kr/ekp/app/notice/initASGNotice.do'">KNOU</div>
+    <a class="neumorphism n-lnk" target="_self" href="https://ssbrws.kr-weathernews.com/mv3/html/main.html">Weather</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://lookpin.co.kr">LookPin</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://m.naver.com">Naver</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://youtube.com">YouTube</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://clien.net/service">Clien</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://jisanresort.co.kr/mobile/index.asp">Jisan</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://ucampus.knou.ac.kr/ekp/app/notice/initASGNotice.do">KNOU</a>
 </div>
