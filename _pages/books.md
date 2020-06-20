@@ -8,7 +8,18 @@ image: '/assets/images/pages/books.jpg'
 
 #### E-Book recommendation
 
-PHP
+> PHP
+
+![imgae](https://img.ridicdn.net/cover/3166000001 =100x)
+
+![imgae](https://img.ridicdn.net/cover/754022482 =100x)
+
+![imgae](https://img.ridicdn.net/cover/1170000052 =100x)
+
+![imgae](https://img.ridicdn.net/cover/443000467 =100x)
+
+
+
 
 - 바쁜 팀장님 대신 알려주는 신입 PHP 개발자 안내서, 업투데이트북스, 2018년 01월
 - PHP 7 예비학교, 길벗, 2017년 12월
