@@ -22,7 +22,7 @@ image: '/assets/images/pages/favorites.jpg'
     <a class="neumorphism n-lnk" target="_self" href="https://www.instagram.com/explore/tags/webdesign">Instagram</a>
     <a class="neumorphism n-lnk" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=9&NewType=New&CID=38401">eBook</a>
     <a class="neumorphism n-lnk" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=1&NewType=New&CID=437">Books</a>
-    <a class="neumorphism n-lnk" target="_self" href="https://ridibooks.com/category/new-releases/2220?order=recent">Ridi</a>
+    <a class="neumorphism n-lnk" target="_self" href="https://ridibooks.com/category/books/2220?order=recent">Ridi</a>
     <div class="neumorphism n-tag-box">
         <div class="neumorphism n-tag">Et cetera</div>
     </div>
