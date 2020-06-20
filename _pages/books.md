@@ -7,7 +7,7 @@ image: '/assets/images/pages/books.jpg'
 
 <style>.c-content p a img{display:inline-block;width:100px;}</style>
 
-#### E-Book recommendation
+## E-Book recommendation
 
 > PHP
 
@@ -62,7 +62,9 @@ image: '/assets/images/pages/books.jpg'
 
 [![imgae](https://img.ridicdn.net/cover/754027214 "심플 소프트웨어")](https://ridibooks.com/books/754027214)
 
-#### E-Book wishlist
+--
+
+## E-Book wishlist
 
 > PHP
 
