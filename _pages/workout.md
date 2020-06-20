@@ -5,32 +5,23 @@ order: 4
 image: '/assets/images/pages/workout.jpg'
 ---
 
-<script>
-    /*
-    let target = document.querySelector(".c-content");
-    let table = document.createElement('table');
-    let tr = document.createElement('tr');
-    let th = document.createElement('th');
-    let td = document.createElement('td');
 
-    
-    th.innerHTML = '2';
-    tr.appendChild(th.cloneNode(true));
-    tr.appendChild(th.cloneNode(true));
+6월
 
-    table.appendChild(tr.cloneNode(true));
+| 일 |  월 |  화 |  수  |  목 |  금 |  토
+:---:|:---:|:---:|:---:|:---:|:---:|:---:
+<span>-</span>|<span class="2020 06 01">55</span>|<span class="2020 06 02">55</span>|<span class="2020 06 03">55</span>|<span class="2020 06 04">55</span>|<span class="2020 06 05">55</span>|<span class="2020 06">-</span>
+<span>-</span>|<span class="2020 06 08">55</span>|<span class="2020 06 09">55</span>|<span class="2020 06 10">55</span>|<span class="2020 06 11">55</span>|<span class="2020 06 12">55</span>|<span>-</span>
+<span>-</span>|<span class="2020 06 15">55</span>|<span class="2020 06 16">55</span>|<span class="2020 06 17">55</span>|<span class="2020 06 18">55</span>|<span class="2020 06 19">55</span>|<span>-</span>
+<span>-</span>|<span class="2020 06 22">55</span>|<span class="2020 06 23">55</span>|<span class="2020 06 24">55</span>|<span class="2020 06 25">55</span>|<span class="2020 06 26">55</span>|<span>-</span>
+<span>-</span>|<span class="2020 06 29">55</span>|<span class="2020 06 30">55</span>|<span>-</span>|<span>-</span>|<span>-</span>|<span>-</span>
 
-    td.innerHTML = '1';
-    tr.appendChild(td.cloneNode(true));
-    tr.appendChild(td.cloneNode(true));
+7월
 
-    table.appendChild(tr.cloneNode(true));
-
-    
-
-    var fragment = document.createDocumentFragment();
-    fragment.appendChild(table);
-
-    target.appendChild(fragment);
-    */
-</script>
+| 일 |  월 |  화 |  수  |  목 |  금 |  토
+:---:|:---:|:---:|:---:|:---:|:---:|:---:
+<span>-</span>|<span class="2020 06 01">55</span>|<span class="2020 06 02">55</span>|<span class="2020 06 03">55</span>|<span class="2020 06 04">55</span>|<span class="2020 06 05">55</span>|<span class="2020 06">-</span>
+<span>-</span>|<span class="2020 06 08">55</span>|<span class="2020 06 09">55</span>|<span class="2020 06 10">55</span>|<span class="2020 06 11">55</span>|<span class="2020 06 12">55</span>|<span>-</span>
+<span>-</span>|<span class="2020 06 15">55</span>|<span class="2020 06 16">55</span>|<span class="2020 06 17">55</span>|<span class="2020 06 18">55</span>|<span class="2020 06 19">55</span>|<span>-</span>
+<span>-</span>|<span class="2020 06 22">55</span>|<span class="2020 06 23">55</span>|<span class="2020 06 24">55</span>|<span class="2020 06 25">55</span>|<span class="2020 06 26">55</span>|<span>-</span>
+<span>-</span>|<span class="2020 06 29">55</span>|<span class="2020 06 30">55</span>|<span>-</span>|<span>-</span>|<span>-</span>|<span>-</span>
