@@ -6,6 +6,14 @@ image: '/assets/images/pages/favorites.jpg'
 ---
 
 <style>
+    body {
+        background: linear-gradient(
+            90deg, rgba(239,240,242,1) 0%,
+            rgba(237,238,242,1) 49%, 
+            rgba(236,237,241,1) 100% 
+        );
+    }
+
     .c-post__image { margin-bottom:0; }
     .neumorphism.n-flex {
         display: flex;
@@ -71,11 +79,14 @@ image: '/assets/images/pages/favorites.jpg'
         margin-top: 85px;
     }
     .neumorphism.n-tag-box {
+        position: relative;
         width:100%;
         height:95px;
     }
     .neumorphism.n-tag {
-        width: 135px;
+        position: absolute;
+        left: -3%;
+        width: 106%;
         height: 45px;
         line-height: 45px;
         
