@@ -62,7 +62,7 @@ image: '/assets/images/pages/books.jpg'
 
 [![imgae](https://img.ridicdn.net/cover/754027214 "심플 소프트웨어")](https://ridibooks.com/books/754027214)
 
---
+---
 
 ## E-Book wishlist
 
