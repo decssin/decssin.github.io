@@ -5,6 +5,7 @@ order: 5
 image: '/assets/images/pages/books.jpg'
 ---
 
+<style>.c-content p a img{display:inline-block;width:100px;}</style>
 
 #### E-Book recommendation
 
