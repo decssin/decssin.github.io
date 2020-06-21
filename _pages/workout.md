@@ -147,12 +147,12 @@ image: "/assets/images/pages/workout.jpg"
 
         if (typeof(each_year_element.id) === 'string') {
             
-            var tmp_last_date = new Date(
+            var year_last_date = new Date(
                 each_year_element.id.substring(0,4), 
                 each_year_element.id.substring(4,6) + 1, 
                 0
             );
-            year_date += tmp_last_date.getDate();
+            year_date += year_last_date.getDate();
 
             each_td = each_year_element.nextElementSibling.getElementsByTagName('td');
             for (var key_td in each_td)  {
