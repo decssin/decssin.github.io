@@ -203,6 +203,47 @@ image: '/assets/images/pages/about.jpg'
     
     <span class="certificate">한국산업인력공단, 정보기기운용기능사</span><br/>
     <small>2009년 07월</small>
+
+
+
+
+
+    <br/><br/>
+    <hr/><br/>
+
+    <h4>자격증 위시리스트</h4>	
+    <span>한국산업인력공단</span>	
+    <ul>	
+        <li>웹디자인기능사</li>	
+        <li>컴퓨터그래픽스운용기능사</li>	
+        <li>정보처리기사</li>	
+        <li>정보관리기술사</li>	
+        <li>기술지도사(정보처리)</li>	
+    </ul>	
+    <span>대한상공회의소</span>	
+    <ul>	
+        <li>컴퓨터활용능력1급</li>	
+        <li>컴퓨터운용사</li>	
+    </ul>	
+    <span>한국인터넷진흥원</span>	
+    <ul>	
+        <li>정보보안기사</li>	
+        <li>정보보호전문가1급</li>	
+    </ul>	
+    <span>한국데이터산업진흥원</span>	
+    <ul>	
+        <li>SQLD</li>	
+    </ul>	
+    <span>한국정보통신진흥협회</span>	
+    <ul>	
+        <li>DIAT</li>	
+        <li>리눅스마스터1급</li>	
+        <li>인터넷정보관리사 전문가</li>	
+    </ul>	
+    <span>미국 ETS</span>	
+    <ul>	
+        <li>토익</li>	
+    </ul>
 </div>
 
 <script type="text/javascript">
