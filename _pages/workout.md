@@ -122,10 +122,11 @@ image: "/assets/images/pages/workout.jpg"
         }
     }
 
-    let average = parseInt(total / last_day);
+    let average = parseInt(total / last_day.getDate());
     let nf = Intl.NumberFormat();
     let year_total = 0;
-    let year_workout_day = 0;
+    let year_date = 0;
+    let year_workout_date = 0;
     let year_element=document.querySelectorAll("h4[id^='2020']")
     let each_td = {};
     for (var key in year_element) {
@@ -134,9 +135,10 @@ image: "/assets/images/pages/workout.jpg"
             each_td = y_el.nextElementSibling.getElementsByTagName('td');
             for (var e_t in each_td)  {
                 if (typeof(each_td[e_t]) === 'object') {
+                    year_date++;
                     if (parseInt(each_td[e_t].innerText)) {
                         year_total += parseInt(each_td[e_t].innerText);
-                        year_workout_day++;
+                        year_workout_date++;
                     }
                 }
             }
@@ -146,9 +148,9 @@ image: "/assets/images/pages/workout.jpg"
     caption.innerHTML =
         "<legend><small>Total: " + nf.format(total) + "</small></legend>"
         + "<legend><small>Average: " + average + "</small></legend>"
-        + "<legend><small>Ratio: " + workout_day + "/" + last_day + "</small></legend>"
+        + "<legend><small>Ratio: " + workout_day + "/" + last_day.getDate() + "</small></legend>"
         + "<legend><small>Year Total: " + nf.format(year_total) + "</small></legend>"
-        + "<legend><small>" + year_workout_day + "</small></legend>"
+        + "<legend><small>Year Ratio: " + year_workout_date + "/" + year_date + "</small></legend>"
         ;
     table.appendChild(caption);
 </script>
