@@ -158,6 +158,10 @@ image: "/assets/images/pages/workout.jpg"
                     if (parseInt(each_td[key_td].innerText)) {
                         year_total += parseInt(each_td[key_td].innerText);
                         year_workout_date++;
+
+                        year_date++;
+                    } else if (parseInt(each_td[key_td].innerText) === 0) {
+                        year_date++;
                     }
                 }
             }
