@@ -141,30 +141,25 @@ image: "/assets/images/pages/workout.jpg"
     let average         = parseInt(total / last_day.getDate());
     let year_element    = document.querySelectorAll("h4[id^='2020']");
     let each_td         = {};
-    let tmp_date        = new Date();
 
     for (var key in year_element) {
         each_year_element = year_element[key];
 
         if (typeof(each_year_element.id) === 'string') {
-
-            tmp_date.setMonth(each_year_element.id.substring(4,6) + 1);
-            tmp_date.setMonth(
-                tmp_date.getFullYear(), 
-                tmp_date.getMonth() + 1, 
+            
+            var tmp_last_date = new Date(
+                each_year_element.id.substring(0,4), 
+                each_year_element.id.substring(4,6) + 1, 
                 0
             );
-            year_date += tmp_date.getDate();
+            year_date += tmp_last_date.getDate();
 
-            if (typeof(each_year_element) === 'object') {
-                each_td = each_year_element.nextElementSibling.getElementsByTagName('td');
-
-                for (var key_td in each_td)  {
-                    if (typeof(each_td[key_td]) === 'object') {
-                        if (parseInt(each_td[key_td].innerText)) {
-                            year_total += parseInt(each_td[key_td].innerText);
-                            year_workout_date++;
-                        }
+            each_td = each_year_element.nextElementSibling.getElementsByTagName('td');
+            for (var key_td in each_td)  {
+                if (typeof(each_td[key_td]) === 'object') {
+                    if (parseInt(each_td[key_td].innerText)) {
+                        year_total += parseInt(each_td[key_td].innerText);
+                        year_workout_date++;
                     }
                 }
             }
