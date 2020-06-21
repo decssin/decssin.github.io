@@ -106,53 +106,69 @@ image: "/assets/images/pages/workout.jpg"
 |  0  |  0  |  0  |  0  |  0  |  -  |  -  |
 
 <script>
-    let month_element = document.getElementById(new Date().getFullYear() +""+String(new Date().getMonth() + 1).padStart(2, "0"));
-    let table = month_element.nextElementSibling;
+    let month_element = document.getElementById(
+        new Date().getFullYear() 
+        + "" 
+        + String(new Date().getMonth() + 1).padStart(2, "0")
+    );
+
     if (month_element) {
         month_element.style.display = "block";
-        table.style.display = "table";
+        month_element.nextElementSibling.style.display = "table";
     }
 
-    let last_day = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0);
-    let total = 0;
-    let td = table.getElementsByTagName("td");
+    let last_day = new Date(
+        new Date().getFullYear(), 
+        new Date().getMonth() + 1, 
+        0
+    );
+
+    let total               = 0;
+    let nf                  = Intl.NumberFormat();
+    let year_total          = 0;
+    let year_date           = 0;
+    let year_workout_date   = 0;
+
+    let month_td = month_element.nextElementSibling.getElementsByTagName("td");
     let workout_day = 0;
-    for (var key in td) {
-        if (parseInt(td[key].innerText)) {
-            total += parseInt(parseInt(td[key].innerText));
+    for (var key in month_td) {
+        if (parseInt(month_td[key].innerText)) {
+            total += parseInt(parseInt(month_td[key].innerText));
             workout_day++;
         }
     }
 
-    let average = parseInt(total / last_day.getDate());
-    let nf = Intl.NumberFormat();
-    let year_total = 0;
-    let year_date = 0;
-    let year_workout_date = 0;
-    let year_element=document.querySelectorAll("h4[id^='2020']")
-    let each_td = {};
+    let average         = parseInt(total / last_day.getDate());
+    let year_element    = document.querySelectorAll("h4[id^='2020']");
+    let each_td         = {};
+
     for (var key in year_element) {
-        y_el = year_element[key];
-        if (typeof(y_el) === 'object') {
-            each_td = y_el.nextElementSibling.getElementsByTagName('td');
-            for (var e_t in each_td)  {
-                if (typeof(each_td[e_t]) === 'object') {
-                    year_date++;
-                    if (parseInt(each_td[e_t].innerText)) {
-                        year_total += parseInt(each_td[e_t].innerText);
+        each_year_element = year_element[key];
+
+        if (typeof(each_year_element) === 'object') {
+            each_td = each_year_element.nextElementSibling.getElementsByTagName('td');
+
+            for (var key_td in each_td)  {
+                if (typeof(each_td[key_td]) === 'object') {
+
+                    if (parseInt(each_td[key_td].innerText)) {
+                        year_total += parseInt(each_td[key_td].innerText);
                         year_workout_date++;
+                    } else if (parseInt(each_td[key_td].innerText) === 0) {
+                        year_date++;
                     }
                 }
             }
         }
     }
+
     let caption = document.createElement("caption");
     caption.innerHTML =
-        "<legend><small>Total: " + nf.format(total) + "</small></legend>"
-        + "<legend><small>Average: " + average + "</small></legend>"
-        + "<legend><small>Ratio: " + workout_day + "/" + last_day.getDate() + "</small></legend>"
-        + "<legend><small>Year Total: " + nf.format(year_total) + "</small></legend>"
-        + "<legend><small>Year Ratio: " + year_workout_date + "/" + year_date + "</small></legend>"
+        "<legend><small>Total: "        + nf.format(total)                          + "</small></legend>"
+        + "<legend><small>Average: "    + average                                   + "</small></legend>"
+        + "<legend><small>Ratio: "      + workout_day + "/" + last_day.getDate()    + "</small></legend>"
+        + "<legend><small>Year Total: " + nf.format(year_total)                     + "</small></legend>"
+        + "<legend><small>Year Ratio: " + year_workout_date + "/" + year_date       + "</small></legend>"
         ;
     table.appendChild(caption);
 </script>
