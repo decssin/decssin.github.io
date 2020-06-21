@@ -109,7 +109,7 @@ image: "/assets/images/pages/workout.jpg"
     let month_element = document.getElementById(
         new Date().getFullYear() 
         + "" 
-        + String(new Date().getMonth() + 1).padStart(2, "0")
+        + (new Date().getMonth() + 1).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
     );
 
     if (month_element) {
