@@ -146,21 +146,25 @@ image: "/assets/images/pages/workout.jpg"
     for (var key in year_element) {
         each_year_element = year_element[key];
 
-        tmp_date.setMonth(
-            each_year_element.id.substring(0,4), 
-            each_year_element.id.substring(4,6) + 1, 
-            0
-        );
-        year_date += tmp_date.getDate();
+        if (typeof(each_year_element.id) === 'string') {
 
-        if (typeof(each_year_element) === 'object') {
-            each_td = each_year_element.nextElementSibling.getElementsByTagName('td');
+            tmp_date.setMonth(each_year_element.id.substring(4,6) + 1);
+            tmp_date.setMonth(
+                tmp_date.getFullYear(), 
+                tmp_date.getMonth() + 1, 
+                0
+            );
+            year_date += tmp_date.getDate();
 
-            for (var key_td in each_td)  {
-                if (typeof(each_td[key_td]) === 'object') {
-                    if (parseInt(each_td[key_td].innerText)) {
-                        year_total += parseInt(each_td[key_td].innerText);
-                        year_workout_date++;
+            if (typeof(each_year_element) === 'object') {
+                each_td = each_year_element.nextElementSibling.getElementsByTagName('td');
+
+                for (var key_td in each_td)  {
+                    if (typeof(each_td[key_td]) === 'object') {
+                        if (parseInt(each_td[key_td].innerText)) {
+                            year_total += parseInt(each_td[key_td].innerText);
+                            year_workout_date++;
+                        }
                     }
                 }
             }
