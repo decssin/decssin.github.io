@@ -170,5 +170,5 @@ image: "/assets/images/pages/workout.jpg"
         + "<legend><small>Year Total: " + nf.format(year_total)                     + "</small></legend>"
         + "<legend><small>Year Ratio: " + year_workout_date + "/" + year_date       + "</small></legend>"
         ;
-    table.appendChild(caption);
+    month_element.nextElementSibling.appendChild(caption);
 </script>
