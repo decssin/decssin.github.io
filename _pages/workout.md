@@ -7,19 +7,20 @@ image: "/assets/images/pages/workout.jpg"
 
 <style>
     table {
-    width: 100%;
-    caption-side: bottom;
+        width: 100%;
+        caption-side: bottom;
     }
     table thead tr {
-    border-bottom: 1px solid #aaaa;
+        border-bottom: 1px solid #aaaa;
     }
     table caption {
-    text-align: left;
-    line-height: 1;
+        text-align: left;
+        line-height: 1;
+        padding-top: 25px;
     }
     .c-content h4,
     .c-content table {
-    display: none;
+        display: none;
     }
 </style>
 
