@@ -26,15 +26,14 @@ image: '/assets/images/pages/favorites.jpg'
     <div class="category">
         <label>Et cetera</label>
     </div>
-    <a class="neumorphism link" target="_self" href="https://ssbrws.kr-weathernews.com/mv3/html/main.html">Weather</a>
+    <a class="neumorphism link" target="_self" href="https://facebook.com">Facebook</a>
+    <a class="neumorphism link" target="_self" href="https://twitter.com">Twitter</a>
     <a class="neumorphism link" target="_self" href="https://lookpin.co.kr">LookPin</a>
-    <a class="neumorphism link" target="_self" href="https://m.naver.com">Naver</a>
-    <a class="neumorphism link" target="_self" href="https://youtube.com">YouTube</a>
-    <a class="neumorphism link" target="_self" href="https://clien.net/service">Clien</a>
+    <a class="neumorphism link" target="_self" href="https://clien.net">Clien</a>
     <a class="neumorphism link" target="_self" href="https://work.go.kr">Worknet</a>
     <a class="neumorphism link" target="_self" href="https://saramin.co.kr">Saramin</a>
     <a class="neumorphism link" target="_self" href="https://jobkorea.co.kr">Jobkorea</a>
     <a class="neumorphism link" target="_self" href="https://jobplanet.co.kr">Jobplanet</a>
-    <a class="neumorphism link" target="_self" href="https://jisanresort.co.kr/mobile/index.asp">Jisan</a>
+    <a class="neumorphism link" target="_self" href="https://jisanresort.co.kr">Jisan</a>
     <a class="neumorphism link" target="_self" href="https://ucampus.knou.ac.kr/ekp/app/notice/initASGNotice.do">KNOU</a>
 </div>
