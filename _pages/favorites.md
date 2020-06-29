@@ -35,5 +35,5 @@ image: '/assets/images/pages/favorites.jpg'
     <a class="neumorphism link" target="_self" href="https://jobkorea.co.kr">Jobkorea</a>
     <a class="neumorphism link" target="_self" href="https://jobplanet.co.kr">Jobplanet</a>
     <a class="neumorphism link" target="_self" href="https://jisanresort.co.kr">Jisan</a>
-    <a class="neumorphism link" target="_self" href="https://ucampus.knou.ac.kr/ekp/app/notice/initASGNotice.do">KNOU</a>
+    <a class="neumorphism link" target="_self" href="https://ucampus.knou.ac.kr">KNOU</a>
 </div>
