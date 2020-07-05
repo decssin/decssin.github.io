@@ -22,8 +22,8 @@ paginate:      10
 paginate_path: /page/:num
 
 sass:
-  style: compressed
   sass_dir: _assets/sass
+  style: compressed
 
 plugins:
   - jekyll-paginate
