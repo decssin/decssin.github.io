@@ -2,7 +2,7 @@
 layout: post
 title: Access main program. Access main security. Access main program grid
 tags: [jekyll, blog, lipsum]
-image: /assets/images/posts/1.jpg
+image: /_assets/images/posts/1.jpg
 ---
 
 Lorem ipsum dolor sit amet, vix ut case porro facilisis, alia possit neglegentur vis te. Has cu eirmod abhorreant, vel civibus efficiantur cu. Eu summo elitr vix, iusto putant maluisset per ut, ne etiam vivendum adipisci vel. Vis omnis tempor accusam ei, justo perpetua liberavisse cu qui. Saperet aliquando adipiscing ius ne, ne facer euripidis est. Pro mundi nostrum suavitate et.

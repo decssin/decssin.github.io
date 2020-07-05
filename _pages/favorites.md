@@ -2,7 +2,7 @@
 layout: page
 title: Favorites
 order: 3
-image: '/assets/images/pages/favorites.jpg'
+image: '/_assets/images/pages/favorites.jpg'
 ---
 
 <style>body{background:linear-gradient( 90deg,rgba(239,240,242,1) 0,rgba(237,238,242,1) 49%,rgba(236,237,241,1) 100% )}.c-post__image{margin-bottom:0}.neumorphism.flex{display:flex;justify-content:center;align-items:center;align-content:normal;justify-items:center;flex-flow:row wrap}.neumorphism.background{width:100%;padding:150px 0;background:rgb(239,240,242);background:linear-gradient( 90deg,rgba(239,240,242,1) 0,rgba(237,238,242,1) 49%,rgba(236,237,241,1) 100% )}.neumorphism.link{display:block;width:80px;height:80px;line-height:80px;text-align:center;text-decoration:none !important;font-size:13px;margin:0 25px 25px 25px;cursor:pointer;color:gray;outline:none;-webkit-tap-highlight-color:transparent;-webkit-highlight:none;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-radius:50px;background:#eeeff3;box-shadow:5px 5px 10px #cacbcf,-5px -5px 10px #ffffff}.neumorphism.link:hover,.neumorphism.link:active,.neumorphism.link:focus{color:gray !important}.neumorphism.link:active{border-radius:50px;background:linear-gradient(145deg,#d6d7db,#ffffff);box-shadow:inset 5px 5px 5px #cacbcf,inset -5px -5px 5px #ffffff}.category:not(:first-child){margin-top:85px}.category{width:100%;height:95px}.category label{display:inline-block;width:100%;text-align:center;font-size:20px;color:gray}@media (max-width:414px){.neumorphism.background{padding:75px 0}.neumorphism.link{width:75px;height:75px;line-height:75px;font-size:12px;margin:0 15px 30px 15px}}</style>

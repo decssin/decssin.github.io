@@ -2,7 +2,7 @@
 layout: page
 title: Motto
 order: 7
-image: '/assets/images/pages/motto.jpg'
+image: '/_assets/images/pages/motto.jpg'
 ---
 
 지금 다니고 있는 회사에서 하는 일을 잘하기 위해서 노력하는 것이 가장 좋은 공부다.

@@ -2,7 +2,7 @@
 layout: page
 title: About
 order: 1
-image: '/assets/images/pages/about.jpg'
+image: '/_assets/images/pages/about.jpg'
 ---
 
 <style type="text/css">

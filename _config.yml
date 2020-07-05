@@ -23,6 +23,7 @@ paginate_path: /page/:num
 
 sass:
   style: compressed
+  sass_dir: _assets/sass
 
 plugins:
   - jekyll-paginate
