@@ -19,6 +19,9 @@ $(document).ready(function() {
     $('.js-off-canvas-toggle').toggleClass('is-active');
     $('.js-off-canvas-container').toggleClass('is-active');
 
+    // Canvas menu left blank
+    $('.c-off-canvas-blank').toggleClass('is-active');
+
     // IE Check
     if (window.document.documentMode) {
       let navigation = $('.c-off-canvas-content');
@@ -40,6 +43,14 @@ $(document).ready(function() {
           'z-index':'1'
         });
       }
+    }
+  });
+
+  $('.c-off-canvas-blank').click(function(e) {
+    if ($(this).hasClass('is-active')) {
+      $('.js-off-canvas-toggle').toggleClass('is-active');
+      $('.js-off-canvas-container').toggleClass('is-active');
+      $(this).toggleClass('is-active');
     }
   });
 
