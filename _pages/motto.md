@@ -25,4 +25,4 @@ image: '/assets/images/pages/motto.jpg'
 
 혼자 하지 말고 함께 공부하라.
 
-Sources. [개발자의 평생공부](https://m.zdnet.co.kr/column_view.asp?artice_id=20170616090644&re=zdk)
+Sources. [개발자의 평생공부](https://zdnet.co.kr/view/?no=20170616090644)
