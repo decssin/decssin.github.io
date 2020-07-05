@@ -2,7 +2,7 @@
 layout: page
 title: Tags
 order: 2
-image: '/_assets/images/pages/tags.jpg'
+image: '/assets/images/pages/tags.jpg'
 ---
 
 <div>

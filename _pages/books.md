@@ -2,7 +2,7 @@
 layout: page
 title: Books
 order: 5
-image: '/_assets/images/pages/books.jpg'
+image: '/assets/images/pages/books.jpg'
 ---
 
 <style>.c-content p a img{display:inline-block;width:100px;}</style>
