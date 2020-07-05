@@ -22,7 +22,6 @@ paginate:      10
 paginate_path: /page/:num
 
 sass:
-  sass_dir: _assets/sass
   style: compressed
 
 plugins:
@@ -36,13 +35,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# Pages, Images path
+# Pages path
 defaults:
   - scope:
       path: '_pages'
     values:
       permalink: /:basename
-  - scope:
-      path: '_assets/images'
-    values:
-      image: true
