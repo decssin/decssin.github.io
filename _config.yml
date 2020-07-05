@@ -36,9 +36,13 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# Pages path
+# Pages, Images path
 defaults:
   - scope:
       path: '_pages'
     values:
       permalink: /:basename
+  - scope:
+      path: '_assets/images'
+    values:
+      image: true
