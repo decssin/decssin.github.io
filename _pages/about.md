@@ -222,21 +222,18 @@ image: '/assets/images/pages/about.jpg'
     </ul>	
     <span>대한상공회의소</span>	
     <ul>	
-        <li>컴퓨터활용능력1급</li>	
-        <li>컴퓨터운용사</li>	
+        <li>컴퓨터활용능력1급</li>
     </ul>	
     <span>한국인터넷진흥원</span>	
     <ul>	
         <li>정보보안기사</li>	
-        <li>정보보호전문가1급</li>	
     </ul>	
     <span>한국데이터산업진흥원</span>	
     <ul>	
         <li>SQLD</li>	
     </ul>	
     <span>한국정보통신진흥협회</span>	
-    <ul>	
-        <li>DIAT</li>	
+    <ul>
         <li>리눅스마스터1급</li>	
         <li>인터넷정보관리사 전문가</li>	
     </ul>	
