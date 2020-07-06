@@ -14,6 +14,7 @@ RewriteCond %{REQUEST_URI} ^/(artwork|calculate|storage|save|media)/
 RewriteRule ^(.*)$ Storage/$1 [L]
 ~~~
 
+<br/>
 위의 내용을 응용하면, 모든 접속 URL 을 하나의 파일에서 처리 할 수 있으므로, 권한 설정이나 기타 공통적으로 처리해야 하는 부분을 쉽게 해결할 수 있습니다.
 
 ~~~apache
@@ -23,6 +24,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.php?/$1 [L]
 ~~~
 
+<br/>
 특정 폴더로 접속하도록 설정하는 것도 가능합니다.
 
 ~~~apache
@@ -32,6 +34,7 @@ RewriteCond %{REQUEST_URI} !^/(view)
 RewriteRule (.*) /view/$1
 ~~~
 
+<br/>
 특정 파일에 대한 URL 로의 접근을 차단해야 하는 경우가 있습니다. 중요한 설정 파일이나, 특정 스크립트가 실행되는 파일은 URL 로 접근하는 것을 막아야 할 필요가 있습니다. 다음 htaccess 설정은 서버에서 URL 접근을 차단해줍니다.
 
 ~~~apache
@@ -49,6 +52,7 @@ RewriteRule (.*) /view/$1
 </Files>
 ~~~
 
+<br/>
 아파치의 httpd.conf 파일에서 htaccess 에 대한 설정 여부를 허용하면, php 설정 값도 변경 할 수 있습니다. 이 때, 서버의 재실행이 불필요 하기 때문에, 유연한 제어가 가능합니다.
 
 ~~~apache
@@ -65,6 +69,7 @@ ErrorDocument 403 "/Resource/err/403.php"
 ErrorDocument 500 "/Resource/err/500.php"
 ~~~
 
+<br/>
 그 외에 htaccess 파일에서 설정 가능한 유용한 값들을 살펴봅니다.
 
 ~~~apache
@@ -85,5 +90,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
 ~~~
+
+<br/>
 
 > PHP에서 파일 제어 중에 서버로 업로드 안되는 경우, 권한을 확인합니다. 아파치의 기본 사용자는 nobody 또는 daemon 입니다. 그렇기 때문에, 서버에서 루트 권한이 아니라면 파일 제어가 되지 않을 수 있습니다.

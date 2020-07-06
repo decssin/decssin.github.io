@@ -104,6 +104,8 @@ $ ls
 authorized_keys2 id_dsa known_hosts config id_dsa.pub
 ~~~
 
+<br/>
+
 > `id_dsa`나 `id_rsa`라는 파일 이름이 보일 것이고 이에 같은 파일명의 `.pub` 라는 확장자가 붙은 파일이 하나 더 있을 것입니다. 그중 `.pub` 파일이 공개키이고 다른 파일은 개인키입니다. 만약 이 파일들이 없거나 `.ssh` 디렉토리도 없으면 `ssh-keygen` 이라는 프로그램으로 키를 생성해야 합니다. `ssh-keygen` 프로그램은 Linux나 Mac의 SSH 패키지에 포함돼 있고 Windows는 Git for Windows 안에 들어 있습니다.
 
 ~~~
@@ -119,6 +121,7 @@ The key fingerprint is:
 d0:82:24:8e:d7:f1:bb:9b:33:53:96:93:49:da:9b:e3 path@laptop.local
 ~~~
 
+<br/>
 
 ### 참조 
 
@@ -137,6 +140,7 @@ mZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbx
 NrRFi9wrf+M7Q== path@laptop.local
 ~~~
 
+<br/>
 
 ### 초기 설정 (서버, 로컬 동일)
 
@@ -167,14 +171,14 @@ NrRFi9wrf+M7Q== path@laptop.local
 ---
 
 
-### 작업 순서 1 (로컬에서 수정 -> Bare 저장소에서 확인 -> 서버에서 적용)
+### 작업 순서 1 (로컬수정 > Bare 저장소 확인 > 서버적용)
 
 1. 로컬에서 클론 후 프로젝트 수정하고 저장 : `git clone (Bare 저장소)` -> ... -> `git push`
 2. Bare 저장소에서 변경 사항 확인 및 비교 :  `git log`, `git show`
 3. 서버 프로젝트에 변경 사항 적용 : `git fetch /path/my_project.git` -> `git pull /path/my_project.git`
 
 
-### 작업 순서 2 (서버에서 수정 -> Bare 저장소에서 확인 -> 로컬에서 적용)
+### 작업 순서 2 (서버수정 > Bare 저장소 확인 -> 로컬적용)
 
 1. 서버에서 수정한 프로젝트를 Bare 저장소에 저장 : `git push /path/my_project.git`
 2. Bare 저장소에서 변경 사항 확인 및 비교 :  `git log`, `git show`
@@ -210,3 +214,5 @@ NrRFi9wrf+M7Q== path@laptop.local
 같은 작업을 했던 곳의 작업 내용이 표시됨.
 >>>>>>> refs/remotes/origin/master
 ```
+
+<br/>
