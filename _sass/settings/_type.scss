@@ -14,16 +14,6 @@ $font-size-medium: 16px;
 $font-size-small:  14px;
 $font-size-tiny:   12px;
 
-@media (min-width: 1024px) {
-  $font-size-base:   17px;
-}
-@media (min-width: 768px) {
-  $font-size-base:   16px;
-}
-@media (min-width: 450px) {
-  $font-size-base:   15px;
-}
-
 $font-weight-light:   300;
 $font-weight-regular: 400;
 $font-weight-bold:    600;
