@@ -9,6 +9,31 @@ $font-size-h4:  20px;
 $font-size-h5:  18px;
 $font-size-h6:  16px;
 
+@media (min-width: 1024px) {
+  $font-size-h1:  34px;
+  $font-size-h2:  26px;
+  $font-size-h3:  22px;
+  $font-size-h4:  18px;
+  $font-size-h5:  16px;
+  $font-size-h6:  15px;
+}
+@media (min-width: 768px) {
+  $font-size-h1:  32px;
+  $font-size-h2:  24px;
+  $font-size-h3:  20px;
+  $font-size-h4:  16px;
+  $font-size-h5:  15px;
+  $font-size-h6:  15px;
+}
+@media (min-width: 450px) {
+  $font-size-h1:  36px;
+  $font-size-h2:  22px;
+  $font-size-h3:  18px;
+  $font-size-h4:  15px;
+  $font-size-h5:  15px;
+  $font-size-h6:  15px;
+}
+
 h1,
 h2,
 h3,
