@@ -104,8 +104,6 @@ $ ls
 authorized_keys2 id_dsa known_hosts config id_dsa.pub
 ~~~
 
-<br/>
-
 > `id_dsa`나 `id_rsa`라는 파일 이름이 보일 것이고 이에 같은 파일명의 `.pub` 라는 확장자가 붙은 파일이 하나 더 있을 것입니다. 그중 `.pub` 파일이 공개키이고 다른 파일은 개인키입니다. 만약 이 파일들이 없거나 `.ssh` 디렉토리도 없으면 `ssh-keygen` 이라는 프로그램으로 키를 생성해야 합니다. `ssh-keygen` 프로그램은 Linux나 Mac의 SSH 패키지에 포함돼 있고 Windows는 Git for Windows 안에 들어 있습니다.
 
 ~~~
@@ -120,8 +118,6 @@ Your public key has been saved in /home/path/.ssh/id_rsa.pub.
 The key fingerprint is:
 d0:82:24:8e:d7:f1:bb:9b:33:53:96:93:49:da:9b:e3 path@laptop.local
 ~~~
-
-<br/>
 
 ### 참조 
 
@@ -139,8 +135,6 @@ t3FaoJoAsncM1Q9x5+3V0Ww68/eIFmb1zuUFljQJKprrX88XypNDvjYNby6vw/Pb0rwert/En
 mZ+AW4OZPnTPI89ZPmVMLuayrD2cE86Z/il8b+gw3r3+1nKatmIkjn2so1d01QraTlMqVSsbx
 NrRFi9wrf+M7Q== path@laptop.local
 ~~~
-
-<br/>
 
 ### 초기 설정 (서버, 로컬 동일)
 
@@ -214,5 +208,3 @@ NrRFi9wrf+M7Q== path@laptop.local
 같은 작업을 했던 곳의 작업 내용이 표시됨.
 >>>>>>> refs/remotes/origin/master
 ```
-
-<br/>

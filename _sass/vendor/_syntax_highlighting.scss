@@ -6,6 +6,12 @@
   margin: 0;
   background: #fff;
 
+  code {
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+  }
+
   .highlighter-rouge & {
     background: #FAFAFA;
     margin-bottom: 32px;

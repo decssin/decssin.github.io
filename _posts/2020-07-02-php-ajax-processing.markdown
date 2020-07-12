@@ -11,29 +11,23 @@ image: /assets/images/posts/2020-07-02-01.jpg
 
 ~~~js
 $.ajax({
-    type        : 'post',   // GET 또는 POST
-    url         : url,      // 데이터 처리할 URL
-    dataType    : 'json',   // json 설정하면 JSON.parse를 할 필요 없습니다.
-    data        : data,     // form 데이터를 보낼 경우, Submit 데이터를 보냅니다.
+    type        : 'post',
+    url         : url,
+    dataType    : 'json',
+    data        : data,
     beforeSend  : null,
     error : function(e)
     {
-        alert('통신실패!!');
+        // 통신실패
         console.log(e.responseText);
     },
     success : function(return)
     {
-        if (return['status'] === "ok") {
-            alert(return['msg']);
-            self.location.reload();
-        } else {
-            alert(return['msg']);
-        }
+        // 데이터 처리
+        console.log(return);
     }
 });
 ~~~
-
-<br/>
 
 ### 프로필 이미지의 변경
 
@@ -57,8 +51,6 @@ $('input[name=profile]').on('change', function() {
    });
 });
 ~~~
-
-<br/>
 
 ### 미디어 파일의 검색
 
