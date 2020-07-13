@@ -17,12 +17,30 @@ body {
   background: $color-brand;
 }
 
-@media (max-width: 1024px) {
-  body { font-size: 17px; line-height: calc(17px * 1.7); }
+@include mq($from: wide) {
+  body {
+    font-size: 17px;
+    line-height: calc(17px * 1.7);
+  }
 }
-@media (max-width: 768px) {
-  body { font-size: 16px; line-height: calc(16px * 1.7); }
+
+@include mq($from: desktop) {
+  body {
+    font-size: 16px;
+    line-height: calc(16px * 1.7);
+  }
 }
-@media (max-width: 450px) {
-  body { font-size: 15px; line-height: calc(15px * 1.7); }
+
+@include mq($from: tablet) {
+  body {
+    font-size: 15px;
+    line-height: calc(15px * 1.7);
+  }
+}
+
+@include mq($from: mobile) {
+  body {
+    font-size: 15px;
+    line-height: calc(15px * 1.7);
+  }
 }
