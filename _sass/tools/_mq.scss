@@ -1,6 +1,13 @@
 @charset "UTF-8"; // Fixes an issue where Ruby locale is not set properly
                   // See https://github.com/sass-mq/sass-mq/pull/10
 
+/// Breakpoint variable
+/// @type Number 
+$wide:      1300px;
+$desktop:   1024px;
+$tablet:    640px;
+$mobile:    320px;
+
 /// Base font size on the `<body>` element
 /// @type Number (unit)
 $mq-base-font-size: 16px !default;

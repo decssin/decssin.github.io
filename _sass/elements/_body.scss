@@ -17,28 +17,25 @@ body {
   background: $color-brand;
 }
 
-@include mq($from: wide) {
+@media (max-width: $wide) {
   body {
     font-size: 17px;
     line-height: calc(17px * 1.7);
   }
 }
-
-@include mq($from: desktop) {
+@media (max-width: $desktop) {
   body {
     font-size: 16px;
     line-height: calc(16px * 1.7);
   }
 }
-
-@include mq($from: tablet) {
+@media (max-width: $tablet) {
   body {
     font-size: 15px;
     line-height: calc(15px * 1.7);
   }
 }
-
-@include mq($from: mobile) {
+@media (max-width: $mobile) {
   body {
     font-size: 15px;
     line-height: calc(15px * 1.7);

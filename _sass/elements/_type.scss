@@ -22,7 +22,7 @@ h4 {font-size: $font-size-h4;}
 h5 {font-size: $font-size-h5;}
 h6 {font-size: $font-size-h6;}
 
-@include mq($from: wide) {
+@media (max-width: $wide) {
   h1 {font-size: round($font-size-h1 * 0.9);}
   h2 {font-size: round($font-size-h2 * 0.9);}
   h3 {font-size: round($font-size-h3 * 0.9);}
@@ -30,8 +30,7 @@ h6 {font-size: $font-size-h6;}
   h5 {font-size: round($font-size-h5 * 0.9);}
   h6 {font-size: round($font-size-h6 * 0.9);}
 }
-
-@include mq($from: desktop) {
+@media (max-width: $desktop) {
   h1 {font-size: round($font-size-h1 * 0.8);}
   h2 {font-size: round($font-size-h2 * 0.8);}
   h3 {font-size: round($font-size-h3 * 0.8);}
@@ -39,8 +38,7 @@ h6 {font-size: $font-size-h6;}
   h5 {font-size: round($font-size-h5 * 0.8);}
   h6 {font-size: round($font-size-h6 * 0.8);}
 }
-
-@include mq($from: tablet) {
+@media (max-width: $tablet) {
   h1 {font-size: round($font-size-h1 * 0.75);}
   h2 {font-size: round($font-size-h2 * 0.75);}
   h3 {font-size: round($font-size-h3 * 0.75);}
@@ -48,8 +46,7 @@ h6 {font-size: $font-size-h6;}
   h5 {font-size: round($font-size-h5 * 0.75);}
   h6 {font-size: round($font-size-h6 * 0.75);}
 }
-
-@include mq($from: mobile) {
+@media (max-width: $mobile) {
   h1 {font-size: round($font-size-h1 * 0.65);}
   h2 {font-size: round($font-size-h2 * 0.65);}
   h3 {font-size: round($font-size-h3 * 0.65);}
