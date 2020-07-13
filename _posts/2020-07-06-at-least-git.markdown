@@ -200,11 +200,11 @@ NrRFi9wrf+M7Q== path@laptop.local
 - 같은 파일을 변경하여 'fetch' 할 경우, 에러 발생 => 'merge' 할 때, 모든 작업 내용이 포함 적용됩니다.
 
 
-```
+~~~
 <<<<<<< HEAD
 'merge' 명령어를 실행한 곳의 작업 내용이 표시됨.
 
 =======
 같은 작업을 했던 곳의 작업 내용이 표시됨.
 >>>>>>> refs/remotes/origin/master
-```
+~~~

@@ -13,17 +13,17 @@ image: /assets/images/posts/2020-07-04-01.jpg
 
 ### 도커 컨테이너 생성 및 실행 
 
-```
+~~~
 docker run -i -t -p 443:443 -p 80:80 ubuntu:18.04 bash
 # -t : 터미널 모드 사용
 # -i : 표준 입력을 받을 수 있게 함
 # -v : 호스트의 디렉토리와 컨테이너의 디렉토리를 공유시킴
 # bash : bash 사용
-```
+~~~
 
 ### 도커 그 외 명령어
 
-```
+~~~
 docker images               : 이미지 목록
 docker ps -a                : 컨테이너 목록
 docker rename <old> <new>   : 컨테이너 이름 변경
@@ -31,7 +31,7 @@ docker start <name>         : 컨테이너 실행 [start, restart, stop]
 docker attach <name>        : 컨테이너에 접속하기
 docker rm <container id>    : 컨테이너 삭제
 docker rmi <image id>       : 이미지 삭제
-```
+~~~
 
 ### 도커 무중단 쉘 빠져나오기
 
@@ -41,15 +41,15 @@ docker rmi <image id>       : 이미지 삭제
 
 ### 외부에서 컨테이너 안의 명령 실행하기
 
-```
+~~~
 docker exec <container name> <command>
 docker exec <container name> service httpd restart
 # 실행 중인 컨테이너에만 사용 가능
-```
+~~~
 
 ### 배포용 도커 이미지 만들기
 
-```
+~~~
     1. docker run -i -t -p 443:443 -p 80:80 --name <container-name> ubuntu:18.04 bash
     2. apt update
     3. apt upgrade
@@ -66,11 +66,11 @@ docker exec <container name> service httpd restart
         * 이후 변화가 생길 시, 다시 커밋 후 배포
         * docker commit <container-name> <id>/ubuntu:18.05
         * docker push <id>/ubuntu:18.05
-```
+~~~
 ​
 ### 도커로 공유받은 개발 환경 구축하기
 
-```
+~~~
 docker run -i -t -p 443:443 -p 80:80 -v <project-path>:<remote-path> <id>/ubuntu:18.04 bash
 docker run -i -t -p 443:443 -p 80:80 -p 3306:3306 --name <container-name> -v <project-path>:<remote-path> <id>/ubuntu:18.04 bash​
-```
+~~~
