@@ -16,7 +16,7 @@ image: '/assets/images/pages/tags.jpg'
         {% if post.title != null %}
             {% if group == null or group == post.group %}
             
-                <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}" target="_self" style="font-size:16px;text-decoration:none;">{{ post.title }}</a><br/>
+                <a class="text-dark" href="{{ site.baseurl }}{{ post.url }}" target="_self" style="font-size:15px;text-decoration:none;">{{ post.title }}</a><br/>
                 
             {% endif %}
         {% endif %}
