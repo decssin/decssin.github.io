@@ -72,4 +72,31 @@ $(document).ready(function() {
     document.body.style.paddingTop = '27px';
   }
 
+  // Day & Night
+  document.getElementById('DayNight').onclick = function() {
+    if (document.body.classList.contains('day')) {
+      document.body.classList.remove('day');
+      document.body.classList.add('night');
+
+      setCookie('DAY_AND_NIGHT', 'NIGHT', {
+        secure    : true, 
+        samesite  : true, 
+        httpOnly  : true, 
+        path      : '/', 
+        'max-age' : 2600000 // About 30 days
+      });
+    } else {
+      document.body.classList.remove('night');
+      document.body.classList.add('day');
+
+      setCookie('DAY_AND_NIGHT', 'DAY', {
+        secure    : true, 
+        samesite  : true, 
+        httpOnly  : true, 
+        path      : '/', 
+        'max-age' : 2600000
+      });
+    }
+  }
+
 });
