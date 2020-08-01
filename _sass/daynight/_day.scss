@@ -1,12 +1,13 @@
-#day-night {
-    float: right;
-    position: relative;
-    top: 8px;
-    z-index: 10;
-    height: 19px;
-    width: 19px;
-    cursor: pointer;
-    margin-right: 10px;
-    border: 1px solid white;
-    border-radius: 100%;
+.day {
+    #day-night {
+        float: right;
+        position: relative;
+        top: 2px;
+        z-index: 10;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        margin-right: 15px;
+        background: no-repeat center/100% url('/assets/images/pages/daynight.svg');
+    }
 }
