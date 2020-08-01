@@ -3,7 +3,33 @@
 
 {% include head.html %}
 
-<body class='day' {% cookies[:DAYNIGHT] %}>
+<body class='day'>
+  <script>
+    // getCookie
+    // return: String|undefined
+    function getCookie(name) {
+      let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    switch (getCookie('DAYNIGHT')) {
+      case 'DAY': 
+        if (document.body.classList.contains('night')) {
+          document.body.classList.remove('night');
+          document.body.classList.add('day');
+        }
+      break;
+      case 'NIGHT': 
+        if (document.body.classList.contains('day')) {
+          document.body.classList.remove('day');
+          document.body.classList.add('night');
+        }
+      break;
+    }
+  </script>
+
   <div id="mIEssage" style="position:fixed;top:0;z-index:9999;display:none;width:100%;text-align:center;background:linear-gradient(#feefae,#fae692);font-size:14px;">
     <strong>No longer supports this web browser.</strong>
   </div>
