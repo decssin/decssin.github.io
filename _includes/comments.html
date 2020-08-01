@@ -1,4 +1,30 @@
 <section class='utteranc.es'>
+  <script>
+    switch (getCookie('DAYNIGHT')) {
+      case 'DAY': 
+        let utterancScript = document.createElement('script');
+        utterancScript.setAttribute('src', 'https://utteranc.es/client.js');
+        utterancScript.setAttribute('repo', 'dnessi/dnessi.github.io');
+        utterancScript.setAttribute('issue-term', 'url');
+        utterancScript.setAttribute('theme', 'github-light');
+        utterancScript.setAttribute('crossorigin', 'anonymous');
+        utterancScript.setAttribute('async', true);
+
+        document.getElementsByClassName('utteranc.es')[0].appendChild(utterancScript);
+      break;
+      case 'NIGHT': 
+        let utterancScript = document.createElement('script');
+        utterancScript.setAttribute('src', 'https://utteranc.es/client.js');
+        utterancScript.setAttribute('repo', 'dnessi/dnessi.github.io');
+        utterancScript.setAttribute('issue-term', 'url');
+        utterancScript.setAttribute('theme', 'github-dark');
+        utterancScript.setAttribute('crossorigin', 'anonymous');
+        utterancScript.setAttribute('async', true);
+
+        document.getElementsByClassName('utteranc.es')[0].appendChild(utterancScript);
+      break;
+    }
+  </script>
   <noscript>
     Please enable JavaScript to view the 
     <a href='https://github.com/dnessi/dnessi.github.io/issues' rel='nofollow'>comments powered by utteranc.</a>
