@@ -80,8 +80,7 @@ $(document).ready(function() {
 
       setCookie('DAYNIGHT', 'NIGHT', {
         secure    : true, 
-        samesite  : true, 
-        httpOnly  : true, 
+        samesite  : 'Strict', 
         path      : '/', 
         'max-age' : 2600000 // About 30 days
       });
@@ -91,8 +90,7 @@ $(document).ready(function() {
 
       setCookie('DAYNIGHT', 'DAY', {
         secure    : true, 
-        samesite  : true, 
-        httpOnly  : true, 
+        samesite  : 'Strict', 
         path      : '/', 
         'max-age' : 2600000
       });
