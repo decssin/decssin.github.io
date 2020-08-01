@@ -69,6 +69,7 @@ $(document).ready(function() {
   // IE alert message
   if (window.document.documentMode) {
     document.getElementById('mIEssage').style.display = 'block';
+    document.body.style.paddingTop = '27px';
   }
 
 });
