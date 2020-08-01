@@ -78,7 +78,7 @@ $(document).ready(function() {
       document.body.classList.remove('day');
       document.body.classList.add('night');
 
-      setCookie('DAY_AND_NIGHT', 'NIGHT', {
+      setCookie('DAYNIGHT', 'NIGHT', {
         secure    : true, 
         samesite  : true, 
         httpOnly  : true, 
@@ -89,7 +89,7 @@ $(document).ready(function() {
       document.body.classList.remove('night');
       document.body.classList.add('day');
 
-      setCookie('DAY_AND_NIGHT', 'DAY', {
+      setCookie('DAYNIGHT', 'DAY', {
         secure    : true, 
         samesite  : true, 
         httpOnly  : true, 
