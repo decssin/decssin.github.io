@@ -1,29 +1,19 @@
 <section class='utteranc.es'>
   <script>
-    switch (getCookie('DAYNIGHT')) {
-      case 'DAY': 
-        let utterancScript = document.createElement('script');
-        utterancScript.setAttribute('src', 'https://utteranc.es/client.js');
-        utterancScript.setAttribute('repo', 'dnessi/dnessi.github.io');
-        utterancScript.setAttribute('issue-term', 'url');
-        utterancScript.setAttribute('theme', 'github-light');
-        utterancScript.setAttribute('crossorigin', 'anonymous');
-        utterancScript.setAttribute('async', true);
+    var utterancScript = document.createElement('script');
+    var utterancTheme = 'github-light';
 
-        document.getElementsByClassName('utteranc.es')[0].appendChild(utterancScript);
-      break;
-      case 'NIGHT': 
-        let utterancScript = document.createElement('script');
-        utterancScript.setAttribute('src', 'https://utteranc.es/client.js');
-        utterancScript.setAttribute('repo', 'dnessi/dnessi.github.io');
-        utterancScript.setAttribute('issue-term', 'url');
-        utterancScript.setAttribute('theme', 'github-dark');
-        utterancScript.setAttribute('crossorigin', 'anonymous');
-        utterancScript.setAttribute('async', true);
+    utterancScript.setAttribute('src', 'https://utteranc.es/client.js');
+    utterancScript.setAttribute('repo', 'dnessi/dnessi.github.io');
+    utterancScript.setAttribute('issue-term', 'url');
 
-        document.getElementsByClassName('utteranc.es')[0].appendChild(utterancScript);
-      break;
-    }
+    utterancTheme = getCookie('DAYNIGHT') === 'DAY' ? 'github-light' : 'github-dark';
+    utterancScript.setAttribute('theme', utterancTheme);
+
+    utterancScript.setAttribute('crossorigin', 'anonymous');
+    utterancScript.setAttribute('async', true);
+
+    document.getElementsByClassName('utteranc.es')[0].appendChild(utterancScript);
   </script>
   <noscript>
     Please enable JavaScript to view the 
