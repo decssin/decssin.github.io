@@ -1,19 +1,23 @@
 <section class='utteranc.es'>
-  <script id="utteranc-script"
-          src="https://utteranc.es/client.js"
+  <script src="https://utteranc.es/client.js"
           repo="dnessi/dnessi.github.io"
-          issue-term="pathname"
+          issue-term="comments"
           theme="github-light"
           crossorigin="anonymous"
           async>
-    switch (getCookie('DAYNIGHT')) {
-      case 'DAY': 
-        document.getElementById('utteranc-script').theme = "github-light";
-      break;
-      case 'NIGHT': 
-        document.getElementById('utteranc-script').theme = "github-dark";
-      break;
-    }
   </script>
 <noscript>Please enable JavaScript to view the <a href='https://github.com/dnessi/dnessi.github.io/issues' rel='nofollow'>comments powered by utteranc.</a></noscript>
 </section>
+
+<script>
+    switch (getCookie('DAYNIGHT')) {
+      case 'DAY': 
+        document.getElementsByClassName('utterances-frame')[0].src = "";
+      break;
+      case 'NIGHT': 
+        document.getElementsByClassName('utterances-frame')[0].src = "";
+      break;
+    }
+
+    // "https://utteranc.es/utterances.html?id=utteranc-script&src=https://utteranc.es/client.js&repo=dnessi/dnessi.github.io&issue-term=pathname&theme=github-light&crossorigin=anonymous&url=https://dessin.dev/hangul-lorem-ipsum&origin=https://dessin.dev&pathname=hangul-lorem-ipsum";
+</script>
