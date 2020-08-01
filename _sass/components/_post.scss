@@ -40,5 +40,30 @@
 
   &__image {
     margin: 0 auto $base-spacing-unit;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
+
+  @media (max-width: $wide) {
+    &__image {
+      height: 300px;
+    }
+  }
+  @media (max-width: $desktop) {
+    &__image {
+      height: 300px;
+    }
+  }
+  @media (max-width: $tablet) {
+    &__image {
+      height: 250px;
+    }
+  }
+  @media (max-width: $mobile) {
+    &__image {
+      height: 180px;
+    }
+  }
+  
 }
