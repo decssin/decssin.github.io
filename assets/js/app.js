@@ -72,6 +72,64 @@ $(document).ready(function() {
     document.body.style.paddingTop = '27px';
   }
 
+  // getCookie
+  // return: String|undefined
+  function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+
+  // setCookie
+  // example: setCookie('user', 'John', {secure: true, 'max-age': 3600});
+  function setCookie(name, value, options = {}) {
+
+    options = {
+      path: '/',
+      // Default values can be set if required
+      ...options
+    };
+  
+    if (options.expires instanceof Date) {
+      options.expires = options.expires.toUTCString();
+    }
+  
+    let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+  
+    for (let optionKey in options) {
+      updatedCookie += "; " + optionKey;
+      let optionValue = options[optionKey];
+      if (optionValue !== true) {
+        updatedCookie += "=" + optionValue;
+      }
+    }
+  
+    document.cookie = updatedCookie;
+  }
+
+  // deleteCookie
+  function deleteCookie(name) {
+    setCookie(name, "", {
+      'max-age': -1
+    })
+  }
+  
+  switch (getCookie('DAYNIGHT')) {
+    case 'DAY': 
+      if (document.body.classList.contains('night')) {
+        document.body.classList.remove('night');
+        document.body.classList.add('day');
+      }
+    break;
+    case 'NIGHT': 
+      if (document.body.classList.contains('day')) {
+        document.body.classList.remove('day');
+        document.body.classList.add('night');
+      }
+    break;
+  }
+
   // Day & Night
   document.getElementById('day-night').onclick = function() {
     if (document.body.classList.contains('day')) {
@@ -96,5 +154,4 @@ $(document).ready(function() {
       });
     }
   }
-
 });
