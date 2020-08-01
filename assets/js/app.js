@@ -130,14 +130,5 @@ $(document).ready(function() {
       });
     }
   }
-
-  // Change comment color
-  switch (getCookie('DAYNIGHT')) {
-    case 'DAY': 
-      $('.utterances-frame').attr('src', 'https://utteranc.es/utterances.html?src=https://utteranc.es/client.js&repo=dnessi/dnessi.github.io&issue-term=url&theme=github-light&crossorigin=anonymous&url={{ site.url }}{{ page.url }}&origin={{ site.url }}&pathname={{ page.url }}&title=Comments&descrption=Comments');
-    break;
-    case 'NIGHT': 
-      $('.utterances-frame').attr('src', 'https://utteranc.es/utterances.html?src=https://utteranc.es/client.js&repo=dnessi/dnessi.github.io&issue-term=url&theme=github-dark&crossorigin=anonymous&url={{ site.url }}{{ page.url }}&origin={{ site.url }}&pathname={{ page.url }}&title=Comments&descrption=Comments');
-    break;
-  }
+  
 });
