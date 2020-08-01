@@ -22,6 +22,9 @@
     a {
         color:white;
     }
+    input[type='text'] {
+        color:#333;
+    }
     img {
         filter: brightness(0.8);
     }
@@ -43,11 +46,15 @@
     .c-social-nav__icon {
         fill:white;
     }
-    .highlighter-rouge .highlight {
+    .highlighter-rouge .highlight,
+    .highlight pre {
         background:#666;
     }
     .highlight code {
         background-color:transparent;
+    }
+    .c-btn {
+        background-color:#207cdf;
     }
     .c-tags a {
         background-color:#666;

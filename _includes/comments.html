@@ -1,10 +1,19 @@
 <section class='utteranc.es'>
-  <script src="https://utteranc.es/client.js"
+  <script id="utteranc-script"
+          src="https://utteranc.es/client.js"
           repo="dnessi/dnessi.github.io"
           issue-term="pathname"
           theme="github-light"
           crossorigin="anonymous"
           async>
+    switch (getCookie('DAYNIGHT')) {
+      case 'DAY': 
+        document.getElementById('utteranc-script').theme = "github-light";
+      break;
+      case 'NIGHT': 
+        document.getElementById('utteranc-script').theme = "github-dark";
+      break;
+    }
   </script>
 <noscript>Please enable JavaScript to view the <a href='https://github.com/dnessi/dnessi.github.io/issues' rel='nofollow'>comments powered by utteranc.</a></noscript>
 </section>
