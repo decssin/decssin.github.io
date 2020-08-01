@@ -5,46 +5,17 @@
 
 <body class='day'>
   <script>
-    // getCookie
-    // return: String|undefined
-    function getCookie(name) {
-      let matches = document.cookie.match(new RegExp(
-        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-      ));
-      return matches ? decodeURIComponent(matches[1]) : undefined;
-    }
-
     switch (getCookie('DAYNIGHT')) {
       case 'DAY': 
         if (document.body.classList.contains('night')) {
           document.body.classList.remove('night');
           document.body.classList.add('day');
-
-          let utterancScript = document.createElement('script');
-          utterancScript.setAttribute('src', 'https://utteranc.es/client.js');
-          utterancScript.setAttribute('repo', 'dnessi/dnessi.github.io');
-          utterancScript.setAttribute('issue-term', 'url');
-          utterancScript.setAttribute('theme', 'github-light');
-          utterancScript.setAttribute('crossorigin', 'anonymous');
-          utterancScript.setAttribute('async', true);
-
-          document.getElementsByClassName('utteranc.es')[0].appendChild(utterancScript);
         }
       break;
       case 'NIGHT': 
         if (document.body.classList.contains('day')) {
           document.body.classList.remove('day');
           document.body.classList.add('night');
-
-          let utterancScript = document.createElement('script');
-          utterancScript.setAttribute('src', 'https://utteranc.es/client.js');
-          utterancScript.setAttribute('repo', 'dnessi/dnessi.github.io');
-          utterancScript.setAttribute('issue-term', 'url');
-          utterancScript.setAttribute('theme', 'github-dark');
-          utterancScript.setAttribute('crossorigin', 'anonymous');
-          utterancScript.setAttribute('async', true);
-
-          document.getElementsByClassName('utteranc.es')[0].appendChild(utterancScript);
         }
       break;
     }
