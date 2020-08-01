@@ -45,14 +45,9 @@
     object-position: center center;
   }
 
-  @media (min-width: $wide) {
+  @media (min-width: $mobile) {
     &__image {
-      height: 300px;
-    }
-  }
-  @media (min-width: $desktop) {
-    &__image {
-      height: 300px;
+      height: 180px;
     }
   }
   @media (min-width: $tablet) {
@@ -60,9 +55,14 @@
       height: 250px;
     }
   }
-  @media (min-width: $mobile) {
+  @media (min-width: $desktop) {
     &__image {
-      height: 180px;
+      height: 300px;
+    }
+  }
+  @media (min-width: $wide) {
+    &__image {
+      height: 300px;
     }
   }
   
