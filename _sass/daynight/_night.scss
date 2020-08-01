@@ -1,69 +1,74 @@
-* {
-    background:#333;
-    color:white;
-}
-a {
-    color:white;
-}
-img {
-    filter: brightness(0.8);
-}
-.highlight * {
-    background: none;
-}
-
-.c-post-card__date,
-.c-post__date {
-    color:#4ba2c1;
-}
-.c-off-canvas-toggle__icon {
-    background:white;
-}
-.c-footer {
-    background:#333;
-    color:white;
-}
-.c-social-nav__icon {
-    fill:white;
-}
-.highlighter-rouge .highlight {
-    background:#666;
-}
-.highlight code {
-    background-color:transparent;
-}
-.c-tags a {
-    background-color:#666;
-}
-.c-tags a:hover, .c-tags a:active, .c-tags a:focus {
-    background-color: #333;
-}
-.c-off-canvas-blank.is-active {
-    background:transparent;
-}
-.c-off-canvas-content {
-    background-color:#333;
-}
-.c-off-canvas-toggle--close .c-off-canvas-toggle__icon:before, .c-off-canvas-toggle--close .c-off-canvas-toggle__icon:after {
-    background:white;
-}
-.neumorphism.background {
-    background:none !important;
-}
-.neumorphism.link {
-    color:white !important;
-    background: #333 !important;
-    box-shadow: 5px 5px 10px #464646, -5px -5px 10px #1d1d1d !important;
-}
-.neumorphism.link:hover,
-.neumorphism.link:active,
-.neumorphism.link:focus{
-    color:white !important
-}
-.neumorphism.link:active{
-    background: linear-gradient(145deg,#222,#464646) !important;
-    box-shadow: inset 5px 5px 5px #222, inset -5px -5px 5px #333 !important;
-}
-.category label {
-    color:white !important;
+.night {
+    * {
+        background:#333;
+        color:white;
+    }
+    a {
+        color:white;
+    }
+    img {
+        filter: brightness(0.8);
+    }
+    .highlight * {
+        background: none;
+    }
+    
+    .c-post-card__date,
+    .c-post__date {
+        color:#4ba2c1;
+    }
+    .c-off-canvas-toggle__icon {
+        background:white;
+    }
+    .c-footer {
+        background:#333;
+        color:white;
+    }
+    .c-social-nav__icon {
+        fill:white;
+    }
+    .highlighter-rouge .highlight {
+        background:#666;
+    }
+    .highlight code {
+        background-color:transparent;
+    }
+    .c-tags a {
+        background-color:#666;
+    }
+    .c-tags a:hover, 
+    .c-tags a:active, 
+    .c-tags a:focus {
+        background-color: #333;
+    }
+    .c-off-canvas-blank.is-active {
+        background:transparent;
+    }
+    .c-off-canvas-content {
+        background-color:#333;
+    }
+    .c-off-canvas-toggle--close .c-off-canvas-toggle__icon:before, 
+    .c-off-canvas-toggle--close .c-off-canvas-toggle__icon:after {
+        background:white;
+    }
+    .neumorphism.background {
+        background:none !important;
+    }
+    .neumorphism.link {
+        color:white !important;
+        background: #333 !important;
+        box-shadow: 5px 5px 10px #464646, -5px -5px 10px #1d1d1d !important;
+    }
+    .neumorphism.link:hover,
+    .neumorphism.link:active,
+    .neumorphism.link:focus{
+        color:white !important
+    }
+    .neumorphism.link:active{
+        background: linear-gradient(145deg,#222,#464646) !important;
+        box-shadow: inset 5px 5px 5px #222, inset -5px -5px 5px #333 !important;
+    }
+    .category label {
+        color:white !important;
+    }
 }

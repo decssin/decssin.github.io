@@ -73,7 +73,7 @@ $(document).ready(function() {
   }
 
   // Day & Night
-  document.getElementById('DayNight').onclick = function() {
+  document.getElementById('day-night').onclick = function() {
     if (document.body.classList.contains('day')) {
       document.body.classList.remove('day');
       document.body.classList.add('night');
