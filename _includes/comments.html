@@ -19,5 +19,6 @@
       break;
     }
 
-    // "https://utteranc.es/utterances.html?src=https://utteranc.es/client.js&repo=dnessi/dnessi.github.io&issue-term=url&theme=github-light&crossorigin=anonymous&url={{ site.url }}{{ post.url }}&origin={{ site.url }}&pathname={{ post.url }}"
+    // text={{ page.title }}&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}
+    // "https://utteranc.es/utterances.html?src=https://utteranc.es/client.js&repo=dnessi/dnessi.github.io&issue-term=url&theme=github-light&crossorigin=anonymous&url={{ site.url }}{{ page.url }}&origin={{ site.url }}&pathname={{ page.url }}"
 </script>
