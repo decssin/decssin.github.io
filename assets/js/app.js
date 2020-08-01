@@ -66,4 +66,9 @@ $(document).ready(function() {
     }
   });
 
+  // IE alert message
+  if (window.document.documentMode) {
+    document.mIEssage.style.display = 'block';
+  }
+
 });
