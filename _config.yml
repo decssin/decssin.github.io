@@ -13,7 +13,7 @@ baseurl:     '' # The subpath of your site, e.g. /blog
 url:         'https://dessin.dev' # The base hostname & protocol for your site
 twitter:     'https://twitter.com/tritwte'
 github:      'https://github.com/dnessi'
-instagram:   'https://www.instagram.com/codpen'
+instagram:   'https://www.instagram.com/instarmga'
 facebook:    'https://www.facebook.com/febacook'
 
 markdown:      kramdown
