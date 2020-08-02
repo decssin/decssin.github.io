@@ -23,11 +23,11 @@ apt autoremove
 ### 패키지 관련 그 외 명령어
 
 ~~~
-su - jiwon            # 계정 변경
-dpkg -l | grep php    # 설치 패키지 확인
-apt list --installed  # 설치 패키지 확인
-apt -qq list php      # 패키지 검색
-apt search php7       # 패키지 검색
+su - jiwon # 계정 변경
+dpkg -l | grep php # 설치 패키지 확인
+apt list --installed # 설치 패키지 확인
+apt -qq list php # 패키지 검색
+apt search php7 # 패키지 검색
 ~~~
 
 ### 리눅스 파일권한 상식
