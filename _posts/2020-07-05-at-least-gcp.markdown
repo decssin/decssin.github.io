@@ -5,6 +5,10 @@ tags: [gcp]
 image: /assets/images/posts/2020-07-05-01.jpg
 ---
 
+구글 클라우드 플랫폼(Google Cloud Platform)은 구글 검색과 유튜브와 같은 최종 사용자 제품을 위해 내부적으로 구글이 사용하는, 동일한 지원 인프라스트럭처 위에서 호스팅을 제공하는 구글의 클라우드 컴퓨팅 서비스입니다. 클라우드 플랫폼 제공자들은 단순 웹사이트에서부터 복잡한 애플리케이션에 이르는 일련의 프로그램들을 빌드하기 위한 개발자 제품들을 제공합니다.
+
+기본적으로 아마존 AWS의 EC2 서비스와 비슷한 가상 호스팅을 제공하는 구글 컴퓨트 엔진(GCE) 서비스가 있습니다. 그 외에는 네트워크 서비스의 부하 분산, Cloud SQL과 같은 서비스 등이 있습니다.
+
 ### Google Compute Engine
 
 ~~~
@@ -125,16 +129,12 @@ image: /assets/images/posts/2020-07-05-01.jpg
 ~~~
 36. apache2ctl -S
 ~~~
-
-* [서버 설정 참조](https://blog.lael.be/post/7264 '서버 설정 참조')
 ​
 ### 그외 참고사항
 
+* [서버 설정 참조](https://blog.lael.be/post/7264 '서버 설정 참조')
 * GCP 네트워크 부하 분산 (로드밸런서) 기능 사용 시에는 Let's Encrypt 설치 불필요
 * Laravel 사용 시, 000-default-ssl.conf 파일에서 Root 경로를 ../public 으로 변경
-* rsync -avzh --delete <product-root>/ <dev-root> 
-	* <product-root>/ 안의 파일들을 <dev-root> 폴더 안에 복사
-* rsync -avzh --delete <dev-root>/ <product-root> 
-	* 개발 루트에서 작업 후 운영 루트로 복사
-* rsync -avzh --delete --exclude-from '<dev-root>/.gitignore' <dev-root>/ <product-root> 
-	* 특정 패턴의 파일 및 폴더 제외 후 복사​
+* `rsync -avzh --delete <product-root>/ <dev-root>` : `<product-root>/` 안의 파일들을 `<dev-root>` 폴더 안에 복사
+* `rsync -avzh --delete <dev-root>/ <product-root>` : 개발 루트에서 작업 후 운영 루트로 복사
+* `rsync -avzh --delete --exclude-from '<dev-root>/.gitignore' <dev-root>/ <product-root>` : 특정 패턴의 파일 및 폴더 제외 후 복사​
