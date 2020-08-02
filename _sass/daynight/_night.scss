@@ -31,6 +31,9 @@
     .highlight * {
         background: none;
     }
+    .language-plaintext.highlighter-rouge {
+        background-color: #666 !important;
+    }
     
     .c-post-card__date,
     .c-post__date {
