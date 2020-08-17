@@ -119,6 +119,7 @@ image: '/assets/images/pages/favorites.jpg'
     <a class="neumorphism link" target="_self" href="https://github.com/dnessi">GitHub</a>
     <a class="neumorphism link" target="_self" href="https://codepen.io">CodePen</a>
     <a class="neumorphism link" target="_self" href="https://reddit.com/r/webdev">Reddit</a>
+    <a class="neumorphism link" target="_self" href="https://news.ycombinator.com">HackerNews</a>
     <a class="neumorphism link" target="_self" href="https://awesome-devblog.now.sh">DevBlog</a>
     <a class="neumorphism link" target="_self" href="https://awwwards.com/inspiration/search?text=Web+Design">Awwwards</a>
     <a class="neumorphism link" target="_self" href="https://dribbble.com/shots/recent/web-design">Dribbble</a>
