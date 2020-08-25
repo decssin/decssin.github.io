@@ -2,16 +2,19 @@
     #day-night {
         float: right;
         position: relative;
-        top: 4px;
+        top: 5px;
         right: 10px;
         height: 23px;
         width: 23px;
         cursor: pointer;
         /*background: no-repeat center/100% url('/assets/images/pages/daynight.svg');*/
     }
-    /*#daynight-icon {
-        fill:white;
-    }*/
+    #daynight-darkorange {
+        fill:darkorange;
+    }
+    #daynight-orange {
+        fill:orange;
+    }
 
     * {
         background:#333;
