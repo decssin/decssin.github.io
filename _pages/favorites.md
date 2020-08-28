@@ -128,7 +128,7 @@ image: '/assets/images/pages/favorites.jpg'
     <a class="neumorphism link" target="_self" href="https://www.instagram.com/explore/tags/webdesign">Instagram</a>
     <a class="neumorphism link" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=9&NewType=New&CID=38401&SortOrder=5">eBook</a>
     <a class="neumorphism link" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=1&NewType=New&CID=437&SortOrder=5">Books</a>
-    <a class="neumorphism link" target="_self" href="https://ridibooks.com/category/books/2220?order=recent">Ridi</a>
+    <a class="neumorphism link" target="_self" href="https://ridibooks.com/category/books/2200?order=recent">Ridi</a>
     <div class="category">
         <label>Et cetera</label>
     </div>
