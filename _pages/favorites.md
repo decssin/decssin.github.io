@@ -130,43 +130,44 @@ image: '/assets/images/pages/favorites.jpg'
     <div class="category">
         <label>Et cetera</label>
     </div>
-    <select onchange="window.open(this.value)">
-        <option value="https://ko.javascript.info/">JavaScript<option>
-        <option value="https://kr.vuejs.org/v2/guide/">Vue.js<option>
-        <option value="https://ko.reactjs.org/tutorial">React.js<option>
-        <option value="https://laravel.kr/docs">Laravel<option>
-        <option value="https://www.cikorea.net/bbs/lists/news">CodeIgniter<option>
-        <option value="https://github.com/jupeter/clean-code-php">Clean PHP<option>
-        <option value="https://poiemaweb.com">HTML5<option>
-        <option value="https://htmlreference.io">HTML Reference<option>
-        <option value="https://git-scm.com/book/ko/v2">Git<option>
-        <option value="https://overapi.com">OverAPI<option>
-        <option value="https://verstory.com">Verstory<option>
-        <option value="https://www.lesstif.com">BLOG<option>
-        <option value="https://blog.lael.be">BLOG<option>
-        <option value="https://squoosh.app">Google Image Optimizer<option>
-        <option value="https://imagecompressor.com/ko/">Optimizilla<option>
-        <option value="https://www.wappalyzer.com">Identify Technology<option>
-        <option value="https://regexr.com">RegExr<option>
-        <option value="https://tablericons.com">Icon<option>
-        <option value="https://color.adobe.com/ko/create/color-wheel">Color Palette<option>
-        <option value="https://htmlcolorcodes.com/color-picker">Color Picker<option>
-        <option value="https://developers.google.com/speed/pagespeed/insights/?hl=ko">PageSpeed Insights<option>
-        <option value="https://pixlr.com/kr/">Pixlr<option>
-        <option value="https://programmers.co.kr/">Programmers<option>
-        <option value="https://leetcode.com/">LeetCode<option>
-        <option value="https://www.acmicpc.net/">Baekjoon Online Judge<option>
-        <option value="https://algospot.com/">AlgoSpot<option>
-        <option value="http://www.jungol.co.kr/">Jungol<option>
-        <option value="http://codingdojang.com/">CodingDojang<option>
-        <option value="https://news.ycombinator.com/news">Hacker News<option>
-        <option value="https://usesthis.com/">Use This / Interviews<option>
-        <option value="https://codepen.io/">CodePen<option>
-        <option value="https://phpschool.com/">PHPSCHOOL<option>
-        <option value="https://jsdev.kr/">jsdev<option>
-        <option value="https://zetawiki.com/">ZetaWiki<option>
-        <option value="https://www.w3schools.com/">W3Schools<option>
-        <option value="https://developer.mozilla.org/ko/">MDN<option>
+    <select onchange="if (this.value) {window.open(this.value)}">
+        <option value=""></option>
+        <option value="https://ko.javascript.info/">JavaScript</option>
+        <option value="https://kr.vuejs.org/v2/guide/">Vue.js</option>
+        <option value="https://ko.reactjs.org/tutorial">React.js</option>
+        <option value="https://laravel.kr/docs">Laravel</option>
+        <option value="https://www.cikorea.net/bbs/lists/news">CodeIgniter</option>
+        <option value="https://github.com/jupeter/clean-code-php">Clean PHP</option>
+        <option value="https://poiemaweb.com">HTML5</option>
+        <option value="https://htmlreference.io">HTML Reference</option>
+        <option value="https://git-scm.com/book/ko/v2">Git</option>
+        <option value="https://overapi.com">OverAPI</option>
+        <option value="https://verstory.com">Verstory</option>
+        <option value="https://www.lesstif.com">BLOG</option>
+        <option value="https://blog.lael.be">BLOG</option>
+        <option value="https://squoosh.app">Google Image Optimizer</option>
+        <option value="https://imagecompressor.com/ko/">Optimizilla</option>
+        <option value="https://www.wappalyzer.com">Identify Technology</option>
+        <option value="https://regexr.com">RegExr</option>
+        <option value="https://tablericons.com">Icon</option>
+        <option value="https://color.adobe.com/ko/create/color-wheel">Color Palette</option>
+        <option value="https://htmlcolorcodes.com/color-picker">Color Picker</option>
+        <option value="https://developers.google.com/speed/pagespeed/insights/?hl=ko">PageSpeed Insights</option>
+        <option value="https://pixlr.com/kr/">Pixlr</option>
+        <option value="https://programmers.co.kr/">Programmers</option>
+        <option value="https://leetcode.com/">LeetCode</option>
+        <option value="https://www.acmicpc.net/">Baekjoon Online Judge</option>
+        <option value="https://algospot.com/">AlgoSpot</option>
+        <option value="http://www.jungol.co.kr/">Jungol</option>
+        <option value="http://codingdojang.com/">CodingDojang</option>
+        <option value="https://news.ycombinator.com/news">Hacker News</option>
+        <option value="https://usesthis.com/">Use This / Interviews</option>
+        <option value="https://codepen.io/">CodePen</option>
+        <option value="https://phpschool.com/">PHPSCHOOL</option>
+        <option value="https://jsdev.kr/">jsdev</option>
+        <option value="https://zetawiki.com/">ZetaWiki</option>
+        <option value="https://www.w3schools.com/">W3Schools</option>
+        <option value="https://developer.mozilla.org/ko/">MDN</option>
     </select>
 </div>
 
