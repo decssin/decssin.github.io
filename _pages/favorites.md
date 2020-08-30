@@ -143,3 +143,75 @@ image: '/assets/images/pages/favorites.jpg'
     <a class="neumorphism link" target="_self" href="https://jisanresort.co.kr">Jisan</a>
     <a class="neumorphism link" target="_self" href="https://ucampus.knou.ac.kr">KNOU</a>
 </div>
+
+
+
+
+<!--
+
+twitter @ittbot
+
+RSS MIX 
+http://www.rssmix.com/u/12079453/rss.xml
+
+RSS LIST
+https://d2.naver.com/d2.atom
+https://blog.rocketpunch.com/feed/
+https://feeds.feedburner.com/imaso
+https://feeds.feedburner.com/slownews/tech
+https://woowabros.github.io/feed.xml
+http://icunow.co.kr/feed/
+https://tech.kakao.com/feed/
+https://ppss.kr/archives/category/tech/feed
+https://aws.amazon.com/ko/blogs/korea/feed/
+https://developer.ibm.com/kr/blog/feed/
+https://www.elastic.co/kr/blog/feed
+https://feeds.feedburner.com/GoogleDevelopersKorea
+https://engineering.linecorp.com/ko/feed/
+https://www.popit.kr/feed/
+https://spoqa.github.io/atom.xml
+https://kldp.org/blog/feed
+https://tech.osci.kr/rss/
+https://rss.blog.naver.com/qualcommkr.xml
+https://blog.aliencube.org/feed.xml
+https://feeds.feedburner.com/jandi/cbSy?format=xml
+http://labs.brandi.co.kr/feed.xml
+https://brunch.co.kr/rss/@@30Rl
+https://rss.blog.naver.com/codestates.xml
+http://blog.smartmaker.com/rss
+https://hyperconnect.github.io/feed.xml
+https://blog.lgcns.com/rss
+https://blog.alyac.co.kr/feed
+https://blog.cloudflare.com/ko/rss/
+https://meetup.toast.com/rss
+https://rss.blog.naver.com/codeitofficial.xml
+https://medium.com/feed/deliverytechkorea
+https://zuminternet.github.io/feed.xml
+https://rss.blog.naver.com/n_cloudplatform.xml
+https://medium.com/feed/watcha
+https://blog.pabii.co.kr/feed/
+https://cntechsystems.tistory.com/rss
+https://tech.gamevilcom2us.com/feed
+https://helloworld.kurly.com/feed.xml
+https://medium.com/feed/humanscape-tech
+https://brunch.co.kr/rss/@@5fXt
+https://code-200.tistory.com/rss
+https://library.gabia.com/feed
+https://rss.blog.naver.com/goorm_official.xml
+https://rss.blog.naver.com/skaibril.xml
+https://danawalab.github.io/feed
+https://tech.kakaoenterprise.com/rss
+https://rss.blog.naver.com/spartacoding.xml
+https://blog.pingpong.us/feed.xml
+https://blog.banksalad.com/rss.xml
+https://www.reddit.com/r/javascript/.rss
+https://www.reddit.com/r/webdev/.rss
+
+GOOGLE ALERTS
+https://www.google.com/alerts/feeds/17131064651910957541/10389051803556398256
+https://www.google.com/alerts/feeds/17131064651910957541/7668219712789044615
+https://www.google.com/alerts/feeds/17131064651910957541/1364728849794688936
+https://www.google.com/alerts/feeds/17131064651910957541/7668219712789041763
+https://www.google.com/alerts/feeds/17131064651910957541/1527222574837740467
+
+-->
