@@ -118,30 +118,56 @@ image: '/assets/images/pages/favorites.jpg'
     </div>
     <a class="neumorphism link" target="_self" href="https://github.com/dnessi">GitHub</a>
     <a class="neumorphism link" target="_self" href="https://codepen.io">CodePen</a>
-    <a class="neumorphism link" target="_self" href="https://reddit.com/r/webdev">Reddit</a>
-    <a class="neumorphism link" target="_self" href="https://news.ycombinator.com">HackerNews</a>
     <a class="neumorphism link" target="_self" href="https://awesome-devblog.now.sh">DevBlog</a>
-    <a class="neumorphism link" target="_self" href="https://awwwards.com/inspiration/search?text=Web+Design">Awwwards</a>
+    <a class="neumorphism link" target="_self" href="https://awwwards.com">Awwwards</a>
     <a class="neumorphism link" target="_self" href="https://dribbble.com/shots/recent/web-design">Dribbble</a>
     <a class="neumorphism link" target="_self" href="https://pinterest.co.kr/search/pins/?rs=typed&q=WebDesign">Pinterest</a>
     <a class="neumorphism link" target="_self" href="https://behance.net/search?search=WebDesign">Behance</a>
-    <a class="neumorphism link" target="_self" href="https://www.instagram.com/explore/tags/webdesign">Instagram</a>
     <a class="neumorphism link" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=9&NewType=New&CID=38401&SortOrder=5">eBook</a>
     <a class="neumorphism link" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=1&NewType=New&CID=437&SortOrder=5">Books</a>
     <a class="neumorphism link" target="_self" href="https://ridibooks.com/category/books/2200?order=recent">Ridi</a>
+    <a class="neumorphism link" target="_self" href="https://lookpin.co.kr">LookPin</a>
     <div class="category">
         <label>Et cetera</label>
     </div>
-    <a class="neumorphism link" target="_self" href="https://facebook.com">Facebook</a>
-    <a class="neumorphism link" target="_self" href="https://twitter.com">Twitter</a>
-    <a class="neumorphism link" target="_self" href="https://lookpin.co.kr">LookPin</a>
-    <a class="neumorphism link" target="_self" href="https://clien.net">Clien</a>
-    <a class="neumorphism link" target="_self" href="https://work.go.kr">Worknet</a>
-    <a class="neumorphism link" target="_self" href="https://saramin.co.kr">Saramin</a>
-    <a class="neumorphism link" target="_self" href="https://jobkorea.co.kr">Jobkorea</a>
-    <a class="neumorphism link" target="_self" href="https://jobplanet.co.kr">Jobplanet</a>
-    <a class="neumorphism link" target="_self" href="https://jisanresort.co.kr">Jisan</a>
-    <a class="neumorphism link" target="_self" href="https://ucampus.knou.ac.kr">KNOU</a>
+    <select onchange="window.open(this.value)">
+        <option value="https://ko.javascript.info/">JavaScript<option>
+        <option value="https://kr.vuejs.org/v2/guide/">Vue.js<option>
+        <option value="https://ko.reactjs.org/tutorial">React.js<option>
+        <option value="https://laravel.kr/docs">Laravel<option>
+        <option value="https://www.cikorea.net/bbs/lists/news">CodeIgniter<option>
+        <option value="https://github.com/jupeter/clean-code-php">Clean PHP<option>
+        <option value="https://poiemaweb.com">HTML5<option>
+        <option value="https://htmlreference.io">HTML Reference<option>
+        <option value="https://git-scm.com/book/ko/v2">Git<option>
+        <option value="https://overapi.com">OverAPI<option>
+        <option value="https://verstory.com">Verstory<option>
+        <option value="https://www.lesstif.com">BLOG<option>
+        <option value="https://blog.lael.be">BLOG<option>
+        <option value="https://squoosh.app">Google Image Optimizer<option>
+        <option value="https://imagecompressor.com/ko/">Optimizilla<option>
+        <option value="https://www.wappalyzer.com">Identify Technology<option>
+        <option value="https://regexr.com">RegExr<option>
+        <option value="https://tablericons.com">Icon<option>
+        <option value="https://color.adobe.com/ko/create/color-wheel">Color Palette<option>
+        <option value="https://htmlcolorcodes.com/color-picker">Color Picker<option>
+        <option value="https://developers.google.com/speed/pagespeed/insights/?hl=ko">PageSpeed Insights<option>
+        <option value="https://pixlr.com/kr/">Pixlr<option>
+        <option value="https://programmers.co.kr/">Programmers<option>
+        <option value="https://leetcode.com/">LeetCode<option>
+        <option value="https://www.acmicpc.net/">Baekjoon Online Judge<option>
+        <option value="https://algospot.com/">AlgoSpot<option>
+        <option value="http://www.jungol.co.kr/">Jungol<option>
+        <option value="http://codingdojang.com/">CodingDojang<option>
+        <option value="https://news.ycombinator.com/news">Hacker News<option>
+        <option value="https://usesthis.com/">Use This / Interviews<option>
+        <option value="https://codepen.io/">CodePen<option>
+        <option value="https://phpschool.com/">PHPSCHOOL<option>
+        <option value="https://jsdev.kr/">jsdev<option>
+        <option value="https://zetawiki.com/">ZetaWiki<option>
+        <option value="https://www.w3schools.com/">W3Schools<option>
+        <option value="https://developer.mozilla.org/ko/">MDN<option>
+    </select>
 </div>
 
 
