@@ -117,128 +117,68 @@ image: '/assets/images/pages/favorites.jpg'
         <label>Dev, Design + Books</label>
     </div>
     <a class="neumorphism link" target="_self" href="https://github.com/dnessi">GitHub</a>
-    <a class="neumorphism link" target="_self" href="https://codepen.io">CodePen</a>
+    <a class="neumorphism link" target="_self" href="https://facebook.com">Facebook</a>
+    <a class="neumorphism link" target="_self" href="https://dev.to">DEV</a>
+    <a class="neumorphism link" target="_self" href="https://www.reddit.com">Reddit</a>
     <a class="neumorphism link" target="_self" href="https://awesome-devblog.now.sh">DevBlog</a>
     <a class="neumorphism link" target="_self" href="https://awwwards.com">Awwwards</a>
     <a class="neumorphism link" target="_self" href="https://dribbble.com/shots/recent/web-design">Dribbble</a>
     <a class="neumorphism link" target="_self" href="https://pinterest.co.kr/search/pins/?rs=typed&q=WebDesign">Pinterest</a>
     <a class="neumorphism link" target="_self" href="https://behance.net/search?search=WebDesign">Behance</a>
+    <a class="neumorphism link" target="_self" href="https://www.instagram.com/explore/tags/uiux">Instagram</a>
     <a class="neumorphism link" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=9&NewType=New&CID=38401&SortOrder=5">eBook</a>
     <a class="neumorphism link" target="_self" href="https://aladin.co.kr/m/mnew.aspx?BranchType=1&NewType=New&CID=437&SortOrder=5">Books</a>
     <a class="neumorphism link" target="_self" href="https://ridibooks.com/category/books/2200?order=recent">Ridi</a>
-    <a class="neumorphism link" target="_self" href="https://lookpin.co.kr">LookPin</a>
     <div class="category">
         <label>Et cetera</label>
     </div>
     <select onchange="if (this.value) {window.open(this.value)}">
-        <option value=""></option>
-        <option value="https://ko.javascript.info/">JavaScript</option>
-        <option value="https://kr.vuejs.org/v2/guide/">Vue.js</option>
-        <option value="https://ko.reactjs.org/tutorial">React.js</option>
-        <option value="https://laravel.kr/docs">Laravel</option>
-        <option value="https://www.cikorea.net/bbs/lists/news">CodeIgniter</option>
-        <option value="https://github.com/jupeter/clean-code-php">Clean PHP</option>
-        <option value="https://poiemaweb.com">HTML5</option>
-        <option value="https://htmlreference.io">HTML Reference</option>
-        <option value="https://git-scm.com/book/ko/v2">Git</option>
-        <option value="https://overapi.com">OverAPI</option>
-        <option value="https://verstory.com">Verstory</option>
-        <option value="https://www.lesstif.com">BLOG</option>
-        <option value="https://blog.lael.be">BLOG</option>
-        <option value="https://squoosh.app">Google Image Optimizer</option>
-        <option value="https://imagecompressor.com/ko/">Optimizilla</option>
-        <option value="https://www.wappalyzer.com">Identify Technology</option>
-        <option value="https://regexr.com">RegExr</option>
-        <option value="https://tablericons.com">Icon</option>
-        <option value="https://color.adobe.com/ko/create/color-wheel">Color Palette</option>
-        <option value="https://htmlcolorcodes.com/color-picker">Color Picker</option>
-        <option value="https://developers.google.com/speed/pagespeed/insights/?hl=ko">PageSpeed Insights</option>
-        <option value="https://pixlr.com/kr/">Pixlr</option>
-        <option value="https://programmers.co.kr/">Programmers</option>
-        <option value="https://leetcode.com/">LeetCode</option>
-        <option value="https://www.acmicpc.net/">Baekjoon Online Judge</option>
-        <option value="https://algospot.com/">AlgoSpot</option>
-        <option value="http://www.jungol.co.kr/">Jungol</option>
-        <option value="http://codingdojang.com/">CodingDojang</option>
-        <option value="https://news.ycombinator.com/news">Hacker News</option>
-        <option value="https://usesthis.com/">Use This / Interviews</option>
-        <option value="https://codepen.io/">CodePen</option>
-        <option value="https://phpschool.com/">PHPSCHOOL</option>
-        <option value="https://jsdev.kr/">jsdev</option>
-        <option value="https://zetawiki.com/">ZetaWiki</option>
-        <option value="https://www.w3schools.com/">W3Schools</option>
-        <option value="https://developer.mozilla.org/ko/">MDN</option>
+        <optgroup label="Algorithm">
+            <option value="https://programmers.co.kr/">Programmers</option>
+            <option value="https://leetcode.com/">LeetCode</option>
+            <option value="https://www.acmicpc.net/">Baekjoon Online Judge</option>
+            <option value="https://algospot.com/">AlgoSpot</option>
+            <option value="http://www.jungol.co.kr/">Jungol</option>
+            <option value="http://codingdojang.com/">CodingDojang</option>
+        </optgroup>
+        <optgroup label="Social">
+            <option value="https://www.lesstif.com">Blog (lesstif)</option>
+            <option value="https://blog.lael.be">Blog (lael)</option>
+            <option value="https://news.ycombinator.com/news">Hacker News</option>
+            <option value="https://usesthis.com/">Use This / Interviews</option>
+            <option value="https://codepen.io/">CodePen</option>
+            <option value="https://phpschool.com/">PHPSCHOOL</option>
+            <option value="https://jsdev.kr/">jsdev</option>
+            <option value="https://zetawiki.com/">ZetaWiki</option>
+            <option value="https://www.w3schools.com/">W3Schools</option>
+            <option value="https://developer.mozilla.org/ko/">MDN</option>
+        </optgroup>
+        <optgroup label="Reference">
+            <option value="https://ko.javascript.info/">JavaScript</option>
+            <option value="https://kr.vuejs.org/v2/guide/">Vue.js</option>
+            <option value="https://ko.reactjs.org/tutorial">React.js</option>
+            <option value="https://laravel.kr/docs">Laravel</option>
+            <option value="https://www.cikorea.net/bbs/lists/news">CodeIgniter</option>
+            <option value="https://github.com/jupeter/clean-code-php">Clean PHP</option>
+            <option value="https://poiemaweb.com">HTML5</option>
+            <option value="https://htmlreference.io">HTML Reference</option>
+            <option value="https://git-scm.com/book/ko/v2">Git</option>
+            <option value="https://overapi.com">OverAPI</option>
+            <option value="https://verstory.com">Verstory</option>
+        </optgroup>
+        <optgroup label="Application">
+            <option value="https://squoosh.app">Google Image Optimizer</option>
+            <option value="https://imagecompressor.com/ko/">Optimizilla</option>
+            <option value="https://www.wappalyzer.com">Identify Technology</option>
+            <option value="https://regexr.com">RegExr</option>
+            <option value="https://tablericons.com">Icon</option>
+            <option value="https://color.adobe.com/ko/create/color-wheel">Color Palette</option>
+            <option value="https://htmlcolorcodes.com/color-picker">Color Picker</option>
+            <option value="https://developers.google.com/speed/pagespeed/insights/?hl=ko">PageSpeed Insights</option>
+            <option value="https://pixlr.com/kr/">Pixlr</option>
+        </optgroup>
+        <optgroup label="Etc">
+            <option value="https://lookpin.co.kr">LookPin</option>
+        </optgroup>
     </select>
 </div>
-
-
-
-
-<!--
-
-twitter @ittbot
-
-RSS MIX 
-http://www.rssmix.com/u/12079453/rss.xml
-
-RSS LIST
-https://d2.naver.com/d2.atom
-https://blog.rocketpunch.com/feed/
-https://feeds.feedburner.com/imaso
-https://feeds.feedburner.com/slownews/tech
-https://woowabros.github.io/feed.xml
-http://icunow.co.kr/feed/
-https://tech.kakao.com/feed/
-https://ppss.kr/archives/category/tech/feed
-https://aws.amazon.com/ko/blogs/korea/feed/
-https://developer.ibm.com/kr/blog/feed/
-https://www.elastic.co/kr/blog/feed
-https://feeds.feedburner.com/GoogleDevelopersKorea
-https://engineering.linecorp.com/ko/feed/
-https://www.popit.kr/feed/
-https://spoqa.github.io/atom.xml
-https://kldp.org/blog/feed
-https://tech.osci.kr/rss/
-https://rss.blog.naver.com/qualcommkr.xml
-https://blog.aliencube.org/feed.xml
-https://feeds.feedburner.com/jandi/cbSy?format=xml
-http://labs.brandi.co.kr/feed.xml
-https://brunch.co.kr/rss/@@30Rl
-https://rss.blog.naver.com/codestates.xml
-http://blog.smartmaker.com/rss
-https://hyperconnect.github.io/feed.xml
-https://blog.lgcns.com/rss
-https://blog.alyac.co.kr/feed
-https://blog.cloudflare.com/ko/rss/
-https://meetup.toast.com/rss
-https://rss.blog.naver.com/codeitofficial.xml
-https://medium.com/feed/deliverytechkorea
-https://zuminternet.github.io/feed.xml
-https://rss.blog.naver.com/n_cloudplatform.xml
-https://medium.com/feed/watcha
-https://blog.pabii.co.kr/feed/
-https://cntechsystems.tistory.com/rss
-https://tech.gamevilcom2us.com/feed
-https://helloworld.kurly.com/feed.xml
-https://medium.com/feed/humanscape-tech
-https://brunch.co.kr/rss/@@5fXt
-https://code-200.tistory.com/rss
-https://library.gabia.com/feed
-https://rss.blog.naver.com/goorm_official.xml
-https://rss.blog.naver.com/skaibril.xml
-https://danawalab.github.io/feed
-https://tech.kakaoenterprise.com/rss
-https://rss.blog.naver.com/spartacoding.xml
-https://blog.pingpong.us/feed.xml
-https://blog.banksalad.com/rss.xml
-https://www.reddit.com/r/javascript/.rss
-https://www.reddit.com/r/webdev/.rss
-
-GOOGLE ALERTS
-https://www.google.com/alerts/feeds/17131064651910957541/10389051803556398256
-https://www.google.com/alerts/feeds/17131064651910957541/7668219712789044615
-https://www.google.com/alerts/feeds/17131064651910957541/1364728849794688936
-https://www.google.com/alerts/feeds/17131064651910957541/7668219712789041763
-https://www.google.com/alerts/feeds/17131064651910957541/1527222574837740467
-
--->
