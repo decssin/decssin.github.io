@@ -179,6 +179,8 @@ image: '/assets/images/pages/favorites.jpg'
         </optgroup>
         <optgroup label="Etc">
             <option value="https://lookpin.co.kr">LookPin</option>
+            <option value="https://phoenixhnr.co.kr/m/page/main/pyeongchang">Phoenix Pyeongchang</option>
+            <option value="https://www.jisanresort.co.kr/mobile/index.asp">Jisan Resort</option>
         </optgroup>
     </select>
 </div>
