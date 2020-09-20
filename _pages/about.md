@@ -5,38 +5,13 @@ order: 1
 image: '/assets/images/pages/about.jpg'
 ---
 
-<style type="text/css">
-    #resume table {
-        margin-top: 20px;
-    }
-    #resume td {
-        text-align: left;
-    }
-    #resume td:nth-child(odd) {
-        width:85px;
-    }
-    #resume .company {
-        font-weight: bold;
-    }
-    @media (max-width: 414px) {
-        #resume .address,
-        #resume .responsive-mobile {
-            display: none;
-        }
-    }
-</style>
+<style type="text/css">#resume table{margin-top:20px;}#resume td{text-align:left;}#resume td:nth-child(odd){width:85px;}#resume .company{font-weight:bold;}@media(max-width:414px){#resume .address,#resume .responsive-mobile{display:none;}}</style>
 
 <div id="resume" style="padding: 80px 0 50px 0; display: none;">
     <p>경기도 수원<br/>jiwonov@gmail.com</p>
     <h2 style="border-bottom: 4px solid #333;padding-bottom: 5px;">민지원</h2>
-    
     <br/>
-    
-    
-    
-    
     <h4>경력</h4>
-    
     <span class="company">해커스어학연구소<span class="address">, 서울 서초구</span> - 웹개발 / 프로</span><br/>
     <small>2019년 07월 - 현재</small>
     <table>
@@ -57,7 +32,6 @@ image: '/assets/images/pages/about.jpg'
             <td>-</td>
         </tr>
     </table>
-    
     <span class="company">바론미디어<span class="address">, 서울 구로구</span> - 디자인개발 / 사원</span><br/>
     <small>2018년 07월 - 2019년 04월</small>
     <table>
@@ -132,7 +106,6 @@ image: '/assets/images/pages/about.jpg'
             <td>JAVA, Android API Level 22 (Lollipop) 호환</td>
         </tr>
     </table>
-    
     <span class="company">샵캐스트<span class="address">, 경기 성남시</span> - 연구개발 / 연구원</span><br/>
     <small>2017년 10월 - 2018년 07월</small>
     <table>
@@ -171,46 +144,31 @@ image: '/assets/images/pages/about.jpg'
             <td>Oracle Database, PHP, Bootstrap</td>
         </tr>
     </table>
-
-        
-    
     <h4>학력</h4>
-    
     <span class="education">한국방송통신대학교<span class="address">, 서울 종로구</span> - 컴퓨터과학 전공</span><br/>
     <small>2016.02 - 현재 재학중</small>
-
-    <br/><br>
-    
+    <br/>
+    <br/>
     <span class="education">수원공업고등학교<span class="address">, 경기 수원시</span> - 디지털게임과</span><br/>
     <small>2007년 02월 - 2010년 02월 졸업</small>
-    
-    <br/><br/>
-    
-    
-    
-    
+    <br/>
+    <br/>
     <h4>자격증</h4>
-    
     <span class="certificate">한국산업인력공단, 정보처리산업기사</span><br/>
     <small>2015년 10월</small>
-    
-    <br/><br/>
-    
-    <span class="certificate">한국생산성본부<span class="responsive-mobile">(KPC)</span>, 정보기술자격<span class="responsive-mobile">(ITQ)</span>OA마스터</span><br/>
+    <br/>
+    <br/>
+    <span class="certificate">한국생산성본부<span class="responsive-mobile">(KPC)</span>, 정보기술자격<span class="responsive-mobile">(ITQ)</span>OA마스터</span>
+    <br/>
     <small>2014년 07월</small>
-    
-    <br/><br/>
-    
+    <br/>
+    <br/>
     <span class="certificate">한국산업인력공단, 정보기기운용기능사</span><br/>
     <small>2009년 07월</small>
-
-
-
-
-
-    <br/><br/>
-    <hr/><br/>
-
+    <br/>
+    <br/>
+    <hr/>
+    <br/>
     <h4>자격증 위시리스트</h4>	
     <span>한국산업인력공단</span>	
     <ul>	
