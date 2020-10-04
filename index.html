@@ -1,15 +1,49 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DESSIN.DEV</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 
-<div class='o-wrapper'>
-  <div class='o-grid'>
-    {% for post in paginator.posts %}
-      {% include post-card.liquid %}
-    {% endfor %}
-  </div>
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/32x32.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/192x192.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/16x16.png">
 
-  <div class='o-grid'>
-    {% include pagination.html %}
-  </div>
-</div>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Jiwon Min</h1>
+						<p>Web Developer &nbsp;&bull;&nbsp; Workout-work balance &nbsp;&bull;&nbsp; Snowboarding</p>
+						<nav>
+							<ul>
+								<li><a href="https://twitter.com/dnexxi" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/dnexxi" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/dnexxi" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/dnessi" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="https://gist.github.com/dnessi" class="icon brands fa-slack-hash"><span class="label">Github</span></a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; dessin.dev @<a href="https://github.com/dnessi">dnessi</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
