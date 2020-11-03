@@ -1,49 +1,114 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>DESSIN.DEV</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DESSIN.DEV</title>
 
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/32x32.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/192x192.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="icon" type="image/png" href="favicon.ico">
 
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+	<link rel="stylesheet" href="index.css" />
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Jiwon Min</h1>
-						<p>Web Developer &nbsp;&bull;&nbsp; Workout-work balance &nbsp;&bull;&nbsp; Snowboarding</p>
-						<nav>
-							<ul>
-								<li><a href="https://twitter.com/decssin" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.facebook.com/decssin" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.instagram.com/decssin" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/decssin" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="https://gist.github.com/decssin" class="icon brands fa-slack-hash"><span class="label">Github</span></a></li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; dessin.dev @<a href="https://github.com/decssin">decssin</a>.</span>
-					</footer>
-
+	<noscript><div id="noscript">Your browser does not support JavaScript!</div></noscript>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<div class="header-wrap">
+				<div class="menu"></div>
+				<div class="title" onclick="scollTop()">DESSIN</div>
+				<div></div>
 			</div>
 		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+
+		<div id="article">
+			<ul>
+				<li>
+					<a class="title" href="./article/lorem-ipsum-1.html">무의미한 한글 텍스트 생성 - 1</a>
+					<div class="content">지나가는 아침이 아스라히 봅니다. 이름을 별이 언덕 그리고 별을 묻힌 내 마디씩 있습니다. 어머니, 애기 하나에 별 이름자 부끄러운 했던 비둘기, 있습니다. 언덕 이제 새워 묻힌 덮어 멀듯이, 프랑시스 있습니다. 멀리 무덤 쓸쓸함과 이름자를 보고, 봅니다. 어머니, 책상을 다 쓸쓸함과 있습니다. 아스라히 자랑처럼 말 별에도 소녀들의 이름을 듯합니다. 나는 경, 소학교 릴케 이름자 가난한 이 버리었습니다. 불러 것은 아무 지나가는 무엇인지 별 나는 별 계십니다. 딴은 않은 별 내일 했던 별이 한 듯합니다. 별에도 별들을 프랑시스 새워 까닭입니다.</div>
+					<div class="datetime">2020년 11월 01일</div>
+				</li>
+				<li>
+					<a class="title" href="">무의미한 한글 텍스트 생성 - 2</a>
+					<div class="content">지나가는 아침이 아스라히 봅니다. 이름을 별이 언덕 그리고 별을 묻힌 내 마디씩 있습니다. 어머니, 애기 하나에 별 이름자 부끄러운 했던 비둘기, 있습니다. 언덕 이제 새워 묻힌 덮어 멀듯이, 프랑시스 있습니다. 멀리 무덤 쓸쓸함과 이름자를 보고, 봅니다. 어머니, 책상을 다 쓸쓸함과 있습니다. 아스라히 자랑처럼 말 별에도 소녀들의 이름을 듯합니다. 나는 경, 소학교 릴케 이름자 가난한 이 버리었습니다. 불러 것은 아무 지나가는 무엇인지 별 나는 별 계십니다. 딴은 않은 별 내일 했던 별이 한 듯합니다. 별에도 별들을 프랑시스 새워 까닭입니다.</div>
+					<div class="datetime">2020년 11월 02일</div>
+				</li>
+				<li>
+					<a class="title" href="">무의미한 한글 텍스트 생성 - 3</a>
+					<div class="content">지나가는 아침이 아스라히 봅니다. 이름을 별이 언덕 그리고 별을 묻힌 내 마디씩 있습니다. 어머니, 애기 하나에 별 이름자 부끄러운 했던 비둘기, 있습니다. 언덕 이제 새워 묻힌 덮어 멀듯이, 프랑시스 있습니다. 멀리 무덤 쓸쓸함과 이름자를 보고, 봅니다. 어머니, 책상을 다 쓸쓸함과 있습니다. 아스라히 자랑처럼 말 별에도 소녀들의 이름을 듯합니다. 나는 경, 소학교 릴케 이름자 가난한 이 버리었습니다. 불러 것은 아무 지나가는 무엇인지 별 나는 별 계십니다. 딴은 않은 별 내일 했던 별이 한 듯합니다. 별에도 별들을 프랑시스 새워 까닭입니다.</div>
+					<div class="datetime">2020년 11월 03일</div>
+				</li>
+				<li>
+					<a class="title" href="">무의미한 한글 텍스트 생성 - 4</a>
+					<div class="content">지나가는 아침이 아스라히 봅니다. 이름을 별이 언덕 그리고 별을 묻힌 내 마디씩 있습니다. 어머니, 애기 하나에 별 이름자 부끄러운 했던 비둘기, 있습니다. 언덕 이제 새워 묻힌 덮어 멀듯이, 프랑시스 있습니다. 멀리 무덤 쓸쓸함과 이름자를 보고, 봅니다. 어머니, 책상을 다 쓸쓸함과 있습니다. 아스라히 자랑처럼 말 별에도 소녀들의 이름을 듯합니다. 나는 경, 소학교 릴케 이름자 가난한 이 버리었습니다. 불러 것은 아무 지나가는 무엇인지 별 나는 별 계십니다. 딴은 않은 별 내일 했던 별이 한 듯합니다. 별에도 별들을 프랑시스 새워 까닭입니다.</div>
+					<div class="datetime">2020년 11월 04일</div>
+				</li>
+				<li>
+					<a class="title" href="">무의미한 한글 텍스트 생성 - 5</a>
+					<div class="content">지나가는 아침이 아스라히 봅니다. 이름을 별이 언덕 그리고 별을 묻힌 내 마디씩 있습니다. 어머니, 애기 하나에 별 이름자 부끄러운 했던 비둘기, 있습니다. 언덕 이제 새워 묻힌 덮어 멀듯이, 프랑시스 있습니다. 멀리 무덤 쓸쓸함과 이름자를 보고, 봅니다. 어머니, 책상을 다 쓸쓸함과 있습니다. 아스라히 자랑처럼 말 별에도 소녀들의 이름을 듯합니다. 나는 경, 소학교 릴케 이름자 가난한 이 버리었습니다. 불러 것은 아무 지나가는 무엇인지 별 나는 별 계십니다. 딴은 않은 별 내일 했던 별이 한 듯합니다. 별에도 별들을 프랑시스 새워 까닭입니다.</div>
+					<div class="datetime">2020년 11월 05일</div>
+				</li>
+			</ul>
+
+			<div id="pagination" style="display: none;">
+				<button type="button">더보기</button>
+			</div>
+
+			<div id="footer">
+				<div class="rights">&copy; 2020 Jiwon Min. All rights reserved.</div>
+				<div class="design">Designed by Jiwon Min.</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		/* IE Check */
+		if (document.documentMode) {
+			document.body.innerHTML = 
+				"<div id='noexplorer'>"
+					+ "<span>DESSIN.DEV no longer supports this web browser. "
+						+ "<a href='microsoft-edge:https://dessin.dev'>Click here to launch the site in the MS Edge browser</a>"
+					+ "</span>"
+				+ "</div>";
+		}
+
+		/* Header Title onClick */
+		function scollTop() {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		}
+
+		/* Get Articles By AJAX */
+		function getArticles(page) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "index.json?page=" + page, true);
+            xhttp.responseType = 'json';
+            xhttp.send();
+
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // document.getElementById("github-ajax-test").innerHTML = this.responseText;
+
+                    var resp = this.response;
+                    console.log(resp);
+                }
+            };
+        }
+
+		/* Pagination */
+		(function() {
+			if (typeof URL === "function" && location.protocol !== 'file:') {
+				let url = new URL(window.location.href);
+				let page = url.searchParams.get("page");
+				
+				if (page > 1) {
+					window.document.getElementById("pagination").style.display = "block";
+					getArticles(page);
+				}
+			}
+		}());
+	</script>
+</body>
 </html>

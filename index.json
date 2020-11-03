@@ -1,0 +1,76 @@
+{
+    "rss": {
+        "version": "2.0",
+        "channel": {
+            "title": "DESSIN.DEV",
+            "link": "https://dessin.dev",
+            "description": "dessin.dev",
+            "item": {
+                "1": [
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    },
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    },
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    },
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    },
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    }
+                ],
+                "2": [
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    },
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    },
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    },
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    },
+                    {
+                        "title": "제목",
+                        "link": "주소",
+                        "description": "글 내용 전체 또는 일부",
+                        "pubDate": "시간"
+                    }
+                ]
+            }
+        }
+    }
+}
