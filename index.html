@@ -89,19 +89,35 @@
 
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
+					// GET PAGE NUMBER
 					var page = parseInt(document.getElementById('pagination').getAttribute('data-page'));
-					document.getElementById('pagination').setAttribute('data-page', page + 1);
 
+					// AJAX Response
                     var resp = this.response;
+
+					// Articles length
+					var li_length = parseInt(document.getElementById('article').getElementsByTagName('li').length);
+
+					// for start idx
+					var start_idx = (li_length - 1 < 0) ? 0 : li_length - 1;
+
+					// for end idx
 					var end_idx = (page * 5 > resp.rss.channel.item.length) ? resp.rss.channel.item.length : page * 5;
 
-					if (end_idx >= 50) {
+					// Limit 10 page
+					if (page >= 10) {
 						alert('더 이상 불러올 수 없습니다.');
 						return;
 					}
 
-					document.querySelector('#article ul').innerHTML = '';
-					for (idx = 0; idx < end_idx; idx++) {
+					// Get all articles
+					if (end_idx > resp.rss.channel.item.length) {
+						alert('모든 포스트를 불러왔습니다.');
+						return;
+					}
+
+					// document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
+					for (idx = start_idx; idx < end_idx; idx++) {
 						var li = document.createElement('li');
 						var title = document.createElement('a');
 						var content = document.createElement('div');
@@ -121,13 +137,17 @@
 						li.appendChild(content);
 						li.appendChild(datetime);
 
-						document.querySelector('#article ul').appendChild(li);
+						document.getElementById('article').getElementsByTagName('ul')[0].appendChild(li);
 					}
+
+					// Add 1 page
+					document.getElementById('pagination').setAttribute('data-page', page + 1);
                 }
             };
         }
 
-		document.querySelector('#article ul').innerHTML = '';
+		// Init articles
+		document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
 		getArticles();
 	</script>
 </body>
