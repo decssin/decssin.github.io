@@ -172,6 +172,7 @@ body {
 }
 #content .explain h1 {
     font-size:1.6rem;
+    margin-bottom:16px;
 }
 #content .explain a {
     color:rgb(138 180 248);
@@ -194,6 +195,19 @@ body {
     padding: 15px;
     background-color:#272822;
     color:#818c96;
+    margin-bottom:16px;
+}
+#content .explain table {
+    margin-bottom:16px;
+}
+#content .explain p {
+    margin-bottom:16px;
+}
+#content .explain hr {
+    margin-bottom:16px;
+}
+#content .explain ul {
+     margin-bottom:16px;
 }
 #content .explain li {
     list-style: disc inside;

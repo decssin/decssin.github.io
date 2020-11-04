@@ -53,8 +53,8 @@
 				</li>
 			</ul>
 
-			<div id="pagination" style="display: none;">
-				<button type="button">더보기</button>
+			<div id="pagination" data-page="1">
+				<button type="button" onclick="getArticles()">더보기</button>
 			</div>
 
 			<div id="footer">
@@ -81,7 +81,9 @@
 		}
 
 		/* Get Articles By AJAX */
-		function getArticles(page) {
+		function getArticles() {
+			var page = document.getElementById('pagination').getAttribute('data-page');
+
             var xhttp = new XMLHttpRequest();
             xhttp.open("GET", "index.json?page=" + page, true);
             xhttp.responseType = 'json';
@@ -89,6 +91,7 @@
 
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
+					document.getElementById('pagination').setAttribute('data-page', page + 1);
                     // document.getElementById("github-ajax-test").innerHTML = this.responseText;
 
                     var resp = this.response;
@@ -96,19 +99,6 @@
                 }
             };
         }
-
-		/* Pagination */
-		(function() {
-			if (typeof URL === "function" && location.protocol !== 'file:') {
-				let url = new URL(window.location.href);
-				let page = url.searchParams.get("page");
-				
-				if (page > 1) {
-					window.document.getElementById("pagination").style.display = "block";
-					getArticles(page);
-				}
-			}
-		}());
 	</script>
 </body>
 </html>
