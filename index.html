@@ -121,7 +121,7 @@
 						var page = parseInt(document.getElementById('pagination').getAttribute('data-page'));
 
 						// for start idx
-						var start_idx = parseInt(document.getElementById('article').getElementsByTagName('li').length);
+						var start_idx = (page === 1) ? 0 : parseInt(document.getElementById('article').getElementsByTagName('li').length);
 
 						// for end idx
 						var end_idx = (page * 5 > resp.rss.channel.item.length) ? resp.rss.channel.item.length : page * 5;
