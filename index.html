@@ -114,9 +114,6 @@
 
 				xhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
-						// Hide rotaion animation
-						document.getElementById('rotate-wrap').style.display = 'none';
-												
 						// AJAX Response
 						var resp = this.response;
 
@@ -131,12 +128,16 @@
 
 						// Limit 10 page
 						if (page >= 10) {
+							// Hide rotaion animation
+							document.getElementById('rotate-wrap').style.display = 'none';
 							alert('더 이상 불러올 수 없습니다.');
 							return;
 						}
 
 						// Get all articles
 						if (start_idx >= end_idx) {
+							// Hide rotaion animation
+							document.getElementById('rotate-wrap').style.display = 'none';
 							alert('모든 포스트를 불러왔습니다.');
 							return;
 						}
@@ -176,6 +177,13 @@
 
 						// Add 1 page
 						document.getElementById('pagination').setAttribute('data-page', page + 1);
+
+						// Hide rotaion animation
+						document.getElementById('rotate-wrap').style.display = 'none';
+					} else {
+						// Hide rotaion animation
+						document.getElementById('rotate-wrap').style.display = 'none';
+						alert('포스트를 불러오지 못했습니다.');
 					}
 				};
 			}, 1800);
