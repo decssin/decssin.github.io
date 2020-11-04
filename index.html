@@ -105,8 +105,6 @@
 
 			// Hide ration animation & Ajax processing
 			setTimeout(function() {
-				document.getElementById('rotate-wrap').style.display = 'none';
-
 				var xhttp = new XMLHttpRequest();
 				xhttp.open("GET", "index.json", true);
 				xhttp.responseType = 'json';
@@ -173,6 +171,9 @@
 
 						// Add 1 page
 						document.getElementById('pagination').setAttribute('data-page', page + 1);
+
+						// Hide rotaion animation
+						document.getElementById('rotate-wrap').style.display = 'none';
 					}
 				};
 			}, 1800);
