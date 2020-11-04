@@ -86,6 +86,10 @@ body {
     
     cursor: pointer;
 }
+#header .empty-space {
+    width: 18px;
+    height: 15px;
+}
 
 /* Article */
 #article {
