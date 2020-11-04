@@ -143,9 +143,9 @@
 							if (idx < 5) {
 								// Initialization DOM matching
 								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].setAttribute('href', resp.rss.channel.item[idx].link);
-								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].innserHTML = resp.rss.channel.item[idx].title;
-								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('content')[0].innserHTML = resp.rss.channel.item[idx].description;
-								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].innserHTML = resp.rss.channel.item[idx].pubDate;
+								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].innerHTML = resp.rss.channel.item[idx].title;
+								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('content')[0].innerHTML = resp.rss.channel.item[idx].description;
+								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('datetime')[0].innerHTML = resp.rss.channel.item[idx].pubDate;
 							} else {
 								// 5+ DOM Matching
 								var li 			= document.createElement('li');
