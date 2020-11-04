@@ -82,20 +82,47 @@
 
 		/* Get Articles By AJAX */
 		function getArticles() {
-			var page = document.getElementById('pagination').getAttribute('data-page');
-
             var xhttp = new XMLHttpRequest();
-            xhttp.open("GET", "index.json?page=" + page, true);
+            xhttp.open("GET", "index.json", true);
             xhttp.responseType = 'json';
             xhttp.send();
 
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
+					var page = parseInt(document.getElementById('pagination').getAttribute('data-page'));
 					document.getElementById('pagination').setAttribute('data-page', page + 1);
-                    // document.getElementById("github-ajax-test").innerHTML = this.responseText;
+
+					var title = document.createElement('a');
+					var content = document.createElement('div');
+					var datetime = document.createElement('div');
 
                     var resp = this.response;
-                    console.log(resp);
+					var end_idx = (page * 5 > resp.channel.item.length) ? resp.channel.item.length : page * 5;
+					for (idx = 0; idx < end_idx; idx++) {
+						var li = document.createElement('li');
+
+						title.setAttribute('class', 'title');
+						title.setAttribute('href', resp.channel.item[idx].link);
+						title.innerHTML = resp.channel.item[idx].title;
+
+						content.setAttribute('class', 'content');
+						content.innerHTML = resp.channel.item[idx].description;
+
+						datetime.setAttribute('class', 'datetime');
+						datetime.innerHTML = resp.channel.item[idx].pubDate;
+
+						li.appendChild(title);
+						li.appendChild(content);
+						li.appendChild(datetime);
+
+						document.querySelector('#article ul').appendChild(li);
+
+						if (idx >= 100) {
+							alert('더 이상 불러올 수 없습니다.');
+						}
+					}
+
+					console.log(resp);
                 }
             };
         }
