@@ -92,40 +92,43 @@
 					var page = parseInt(document.getElementById('pagination').getAttribute('data-page'));
 					document.getElementById('pagination').setAttribute('data-page', page + 1);
 
-					var title = document.createElement('a');
-					var content = document.createElement('div');
-					var datetime = document.createElement('div');
-
                     var resp = this.response;
-					var end_idx = (page * 5 > resp.channel.item.length) ? resp.channel.item.length : page * 5;
+					var end_idx = (page * 5 > resp.rss.channel.item.length) ? resp.rss.channel.item.length : page * 5;
+
+					if (end_idx >= 50) {
+						alert('더 이상 불러올 수 없습니다.');
+						return;
+					}
+
 					for (idx = 0; idx < end_idx; idx++) {
 						var li = document.createElement('li');
+						var title = document.createElement('a');
+						var content = document.createElement('div');
+						var datetime = document.createElement('div');
 
 						title.setAttribute('class', 'title');
-						title.setAttribute('href', resp.channel.item[idx].link);
-						title.innerHTML = resp.channel.item[idx].title;
+						title.setAttribute('href', resp.rss.channel.item[idx].link);
+						title.innerHTML = resp.rss.channel.item[idx].title;
 
 						content.setAttribute('class', 'content');
-						content.innerHTML = resp.channel.item[idx].description;
+						content.innerHTML = resp.rss.channel.item[idx].description;
 
 						datetime.setAttribute('class', 'datetime');
-						datetime.innerHTML = resp.channel.item[idx].pubDate;
+						datetime.innerHTML = resp.rss.channel.item[idx].pubDate;
 
 						li.appendChild(title);
 						li.appendChild(content);
 						li.appendChild(datetime);
 
 						document.querySelector('#article ul').appendChild(li);
-
-						if (idx >= 100) {
-							alert('더 이상 불러올 수 없습니다.');
-						}
 					}
-
-					console.log(resp);
                 }
             };
         }
+
+		document.querySelector('#article ul').innerHTML = '';
+		getArticles();
+
 	</script>
 </body>
 </html>
