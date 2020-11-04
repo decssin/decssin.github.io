@@ -25,6 +25,10 @@ html {
     align-items:center;
 }
 
+body {
+    background: rgb(27 27 30);
+}
+
 /* Wrap */
 #wrap {
     margin:0 auto;
@@ -38,12 +42,13 @@ html {
 #header {
     width:100%;
     height:50px;
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 7%);
     position: fixed;
     z-index:1;
     top:0;
     left:0;
-    background:white;
+    background:rgb(39 40 43);
+    color:rgb(175 176 177);
 }
 #header .header-wrap {
     display: flex;
@@ -72,7 +77,7 @@ html {
 #article .title {
     font-size: 1.6rem;
     line-height: 2;
-    color:#2a408e;
+    color:rgb(138 180 248);
 }
 #article .title:hover {
     color: #d2603a;
@@ -87,13 +92,15 @@ html {
 
     font-size:1.3rem;
     line-height: 2;
+    color:rgb(175 176 177);
 }
 #article .datetime {
     font-size:1.1rem;
     line-height: 3;
+    color:#6c757d;
 }
 #article li {
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid rgb(44 45 45);
     padding-top: 15px;
     padding-bottom: 25px;
 }
@@ -105,17 +112,15 @@ html {
 #pagination button {
     display: inline-block;
     width: 100%;
-    background: white;
+    background: rgb(28 52 94);
     border: 0;
-    box-shadow: 0 0 8px 0 #eaeaea;
+    box-shadow: 0 0 8px 0 rgb(27 27 30);
+    border-color:rgb(66 94 138);
     font-size: 1.4rem;
     line-height: 3;
     outline: none;
     cursor:pointer;
-    color:#555;
-}
-#pagination button:active {
-    box-shadow: 0 0 4px 0 #f1f1f1, 0 0 4px 0 #efefef inset;
+    color:rgb(175 176 177);
 }
 
 /* Footer */
@@ -133,13 +138,22 @@ html {
     align-content: center;
 
     height: 70px;
-    border-top: 1px solid #f3f3f3;
+    border-top: 1px solid rgb(44 45 45);
     font-size:1.2rem;
+    color:#7a7b7d;
+}
+#footer a {
+    color: rgb(171 171 171);
+}
+#footer a:hover {
+    color: #d2603a;
+    border-bottom: 1px solid #d2603a;
 }
 
 /* Content */
 #content {
     padding: 70px 15px;
+    color:rgb(175 176 177);
 }
 #content .title {
     font-size:2rem;
@@ -160,15 +174,16 @@ html {
     font-size:1.6rem;
 }
 #content .explain a {
-    color:#2a408e;
-    border-bottom: 1px solid #dee2e6;
+    color:rgb(138 180 248);
+    border-bottom: 1px solid rgb(82 108 150);
 }
 #content .explain a:hover {
     color:#d2603a;
     border-bottom: 1px solid #d2603a;
 }
 #content .explain code {
-    background-color: #f3f3f3;
+    color: #de6b18;
+    background-color: #272822;
     border-radius: 4px;
     padding: 5px;
 }
@@ -177,7 +192,8 @@ html {
     overflow-x: auto;
     white-space: pre-line;
     padding: 15px;
-    background-color: #f3f3f3;
+    background-color:#272822;
+    color:#818c96;
 }
 #content .explain li {
     list-style: disc inside;
