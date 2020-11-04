@@ -100,6 +100,7 @@
 						return;
 					}
 
+					document.querySelector('#article ul').innerHTML = '';
 					for (idx = 0; idx < end_idx; idx++) {
 						var li = document.createElement('li');
 						var title = document.createElement('a');
@@ -128,7 +129,6 @@
 
 		document.querySelector('#article ul').innerHTML = '';
 		getArticles();
-
 	</script>
 </body>
 </html>
