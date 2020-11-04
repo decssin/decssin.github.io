@@ -169,7 +169,10 @@
 
 		// Init articles
 		if (location.protocol !== 'file:') {
-			document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
+			setTimeout(function() {
+				document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
+			}, 1800);
+			
 			getArticles();
 		}
 	</script>
