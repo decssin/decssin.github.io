@@ -27,6 +27,7 @@ html {
 
 body {
     background: rgb(27 27 30);
+    overflow: hidden;
 }
 
 /* Wrap */

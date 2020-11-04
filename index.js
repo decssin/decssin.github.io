@@ -1,3 +1,6 @@
+/* Noscript checked */
+document.body.style.overflow = 'auto';
+
 /* IE Check */
 if (document.documentMode) {
     document.body.innerHTML = 
@@ -26,6 +29,12 @@ function openMenu() {
 
 /* Get Articles By AJAX */
 function getArticles() {
+    // IE Check
+    if (document.documentMode) {
+        return;
+    }
+
+    // Local check
     if (location.protocol === 'file:') {
         document.getElementById('rotate-wrap').style.display = 'none';
         document.getElementById('rotate-wrap').style.opacity = '0';
