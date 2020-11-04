@@ -135,11 +135,11 @@ body {
 }
 #rotate-wrap #spin-object {
     position: absolute;
-    top: calc(50% - (150px/2));
-    left: calc(50% - (150px/2));
-    width: 150px;
-    height: 150px;
-    border-width: 17px;
+    top: calc(50% - (60px/2));
+    left: calc(50% - (60px/2));
+    width: 60px;
+    height: 60px;
+    border-width: 10px;
     border-style: inset;
     border-color:rgb(175 176 177);
     border-radius: 100%;

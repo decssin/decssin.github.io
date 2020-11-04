@@ -87,6 +87,8 @@
 		/* Get Articles By AJAX */
 		function getArticles() {
 			if (location.protocol === 'file:') {
+				document.getElementById('rotate-wrap').style.display = 'none';
+				document.getElementById('rotate-wrap').style.opacity = '0';
 				return;
 			}
 
@@ -180,9 +182,7 @@
         }
 
 		// Init articles
-		if (location.protocol !== 'file:') {
-			getArticles();
-		}
+		getArticles();
 	</script>
 </body>
 </html>
