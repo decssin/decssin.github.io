@@ -140,26 +140,35 @@
 
 						// document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
 						for (idx = start_idx; idx < end_idx; idx++) {
-							var li 			= document.createElement('li');
-							var title 		= document.createElement('a');
-							var content 	= document.createElement('div');
-							var datetime 	= document.createElement('div');
+							if (idx < 5) {
+								// Initialization DOM matching
+								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[idx].setAttribute('href', resp.rss.channel.item[idx].link);
+								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[idx].innserHTML = resp.rss.channel.item[idx].title;
+								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('content')[idx].innserHTML = resp.rss.channel.item[idx].description;
+								document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[idx].innserHTML = resp.rss.channel.item[idx].pubDate;
+							} else {
+								// 5+ DOM Matching
+								var li 			= document.createElement('li');
+								var title 		= document.createElement('a');
+								var content 	= document.createElement('div');
+								var datetime 	= document.createElement('div');
 
-							title.setAttribute('class', 'title');
-							title.setAttribute('href', resp.rss.channel.item[idx].link);
-							title.innerHTML = resp.rss.channel.item[idx].title;
+								title.setAttribute('class', 'title');
+								title.setAttribute('href', resp.rss.channel.item[idx].link);
+								title.innerHTML = resp.rss.channel.item[idx].title;
 
-							content.setAttribute('class', 'content');
-							content.innerHTML = resp.rss.channel.item[idx].description;
+								content.setAttribute('class', 'content');
+								content.innerHTML = resp.rss.channel.item[idx].description;
 
-							datetime.setAttribute('class', 'datetime');
-							datetime.innerHTML = resp.rss.channel.item[idx].pubDate;
+								datetime.setAttribute('class', 'datetime');
+								datetime.innerHTML = resp.rss.channel.item[idx].pubDate;
 
-							li.appendChild(title);
-							li.appendChild(content);
-							li.appendChild(datetime);
+								li.appendChild(title);
+								li.appendChild(content);
+								li.appendChild(datetime);
 
-							document.getElementById('article').getElementsByTagName('ul')[0].appendChild(li);
+								document.getElementById('article').getElementsByTagName('ul')[0].appendChild(li);
+							}
 						}
 
 						// Add 1 page
@@ -171,10 +180,6 @@
 
 		// Init articles
 		if (location.protocol !== 'file:') {
-			setTimeout(function() {
-				document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
-			}, 1800);
-			
 			getArticles();
 		}
 	</script>
