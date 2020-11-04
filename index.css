@@ -104,6 +104,51 @@ body {
     padding-top: 15px;
     padding-bottom: 25px;
 }
+#article .example_title {
+    padding:0 100px;
+    background:rgb(138 180 248);
+}
+#article .example_content {
+    background:rgb(175 176 177);
+    color: transparent;
+}
+#article .example_content::selection {
+    color: transparent;
+}
+#article .example_datetime {
+    background:#6c757d;
+}
+
+/* Rotate Animation */
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+#rotate-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 50px auto 0;
+    width: 100%;
+    height: calc(100% - 120px);
+    background: rgba(27, 27, 30, 0.7);
+}
+#rotate-wrap #spin-object {
+    position: absolute;
+    top: calc(50% - (150px/2));
+    left: calc(50% - (150px/2));
+    width: 150px;
+    height: 150px;
+    border-width: 17px;
+    border-style: inset;
+    border-color:rgb(175 176 177);
+    border-radius: 100%;
+
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
 
 /* Pagination */
 #pagination {
