@@ -114,6 +114,9 @@
 
 				xhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
+						// Hide rotaion animation
+						document.getElementById('rotate-wrap').style.display = 'none';
+												
 						// AJAX Response
 						var resp = this.response;
 
@@ -173,9 +176,6 @@
 
 						// Add 1 page
 						document.getElementById('pagination').setAttribute('data-page', page + 1);
-
-						// Hide rotaion animation
-						document.getElementById('rotate-wrap').style.display = 'none';
 					}
 				};
 			}, 1800);
