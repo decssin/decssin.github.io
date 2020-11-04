@@ -94,12 +94,9 @@
 
 					// AJAX Response
                     var resp = this.response;
-
-					// Articles length
-					var li_length = parseInt(document.getElementById('article').getElementsByTagName('li').length);
-
+					
 					// for start idx
-					var start_idx = (li_length - 1 < 0) ? 0 : li_length - 1;
+					var start_idx = parseInt(document.getElementById('article').getElementsByTagName('li').length);
 
 					// for end idx
 					var end_idx = (page * 5 > resp.rss.channel.item.length) ? resp.rss.channel.item.length : page * 5;
