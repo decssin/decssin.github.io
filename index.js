@@ -1,5 +1,6 @@
 /* Noscript checked */
-document.body.style.overflow = 'auto';
+document.body.style.overflow = 'visible';
+document.body.style.pointerEvents = 'auto';
 
 /* IE Check */
 if (document.documentMode) {
