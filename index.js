@@ -3,8 +3,8 @@ document.body.style.overflow = 'visible';
 document.body.style.pointerEvents = 'auto';
 
 /* IE Check */
-if (document.documentMode) {
-    document.body.innerHTML = 
+if (document["documentMode"]) {
+    document.body.innerHTML =
         "<div id='noexplorer'>"
             + "<span>DESSIN.DEV no longer supports this web browser. "
                 + "<a href='microsoft-edge:https://dessin.dev'>Click here to launch the site in the MS Edge browser</a>"
@@ -13,7 +13,7 @@ if (document.documentMode) {
 }
 
 /* Header Title onClick */
-function scollTop() {
+function scrollTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -31,7 +31,7 @@ function openMenu() {
 /* Get Articles By AJAX */
 function getArticles() {
     // IE Check
-    if (document.documentMode) {
+    if (document["documentMode"]) {
         return;
     }
 
@@ -52,30 +52,30 @@ function getArticles() {
 
     // Hide ration animation & Ajax processing
     setTimeout(function() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "index.json", true);
-        xhttp.responseType = 'json';
-        xhttp.send();
+        let request = new XMLHttpRequest();
+        request.open("GET", "index.json", true);
+        request.responseType = 'json';
+        request.send();
 
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                // Hide rotaion animation
+        request.onreadystatechange = function() {
+            if (this.readyState === 4 && this.status === 200) {
+                // Hide rotation animation
                 document.getElementById('rotate-wrap').style.opacity = '0';
                 setTimeout(function() {
                     document.getElementById('rotate-wrap').style.display = 'none';
                 }, 200);
 
                 // AJAX Response
-                var resp = this.response;
+                let resp = this.response;
 
                 // Get page number
-                var page = parseInt(document.getElementById('pagination').getAttribute('data-page'));
+                let page = parseInt(document.getElementById('pagination').getAttribute('data-page'));
 
                 // for start idx
-                var start_idx = (page === 1) ? 0 : parseInt(document.getElementById('article').getElementsByTagName('li').length);
+                let start_idx = (page === 1) ? 0 : document.getElementById('article').getElementsByTagName('li').length;
 
                 // for end idx
-                var end_idx = (page * 5 > resp.rss.channel.item.length) ? resp.rss.channel.item.length : page * 5;
+                let end_idx = (page * 5 > resp['rss']['channel']['item'].length) ? resp['rss']['channel']['item'].length : page * 5;
 
                 // Limit 10 page
                 if (page >= 10) {
@@ -90,29 +90,29 @@ function getArticles() {
                 }
 
                 // document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
-                for (idx = start_idx; idx < end_idx; idx++) {
+                for (let idx = start_idx; idx < end_idx; idx++) {
                     if (idx < 5) {
                         // Initialization DOM matching
-                        document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].setAttribute('href', resp.rss.channel.item[idx].link);
-                        document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].innerHTML = resp.rss.channel.item[idx].title;
-                        document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('content')[0].innerHTML = resp.rss.channel.item[idx].description;
-                        document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('datetime')[0].innerHTML = resp.rss.channel.item[idx].pubDate;
+                        document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].setAttribute('href', resp['rss']['channel']['item'][idx]['link']);
+                        document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].innerHTML = resp['rss']['channel']['item'][idx]['title'];
+                        document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('content')[0].innerHTML = resp['rss']['channel']['item'][idx]['description'];
+                        document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('datetime')[0].innerHTML = resp['rss']['channel']['item'][idx]['pubDate'];
                     } else {
                         // 5+ DOM Matching
-                        var li 			= document.createElement('li');
-                        var title 		= document.createElement('a');
-                        var content 	= document.createElement('div');
-                        var datetime 	= document.createElement('div');
+                        let li 			= document.createElement('li');
+                        let title 		= document.createElement('a');
+                        let content 	= document.createElement('div');
+                        let datetime 	= document.createElement('div');
 
                         title.setAttribute('class', 'title');
-                        title.setAttribute('href', resp.rss.channel.item[idx].link);
-                        title.innerHTML = resp.rss.channel.item[idx].title;
+                        title.setAttribute('href', resp['rss']['channel']['item'][idx]['link']);
+                        title.innerHTML = resp['rss']['channel']['item'][idx]['title'];
 
                         content.setAttribute('class', 'content');
-                        content.innerHTML = resp.rss.channel.item[idx].description;
+                        content.innerHTML = resp['rss']['channel']['item'][idx]['description'];
 
                         datetime.setAttribute('class', 'datetime');
-                        datetime.innerHTML = resp.rss.channel.item[idx].pubDate;
+                        datetime.innerHTML = resp['rss']['channel']['item'][idx]['pubDate'];
 
                         li.appendChild(title);
                         li.appendChild(content);
@@ -123,7 +123,7 @@ function getArticles() {
                 }
 
                 // Add 1 page
-                document.getElementById('pagination').setAttribute('data-page', page + 1);
+                document.getElementById('pagination').setAttribute('data-page', (page + 1).toString());
             }
         };
     }, 700);
