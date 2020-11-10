@@ -116,7 +116,7 @@ function searchArticles(_this) {
     document.getElementById('pagination').style.display = 'none';
     document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
     for (let idx = 0; idx < articles.length; idx++) {
-        if (articles[idx]['title'].indexOf(_this.value) > -1) {
+        if (articles[idx]['title'].toLowerCase().indexOf(_this.value.toLowerCase()) > -1) {
             createArticleDOM(idx);
         }
     }
