@@ -62,6 +62,7 @@ function openMenu() {
     this.event.stopPropagation();
 }
 
+/* Common function for create article DOM */
 function createArticleDOM(idx) {
     let li 			= document.createElement('li');
     let title 		= document.createElement('a');
