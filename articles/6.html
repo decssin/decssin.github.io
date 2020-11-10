@@ -67,11 +67,11 @@
                 <pre>
                 docker images : 이미지 목록
                 docker ps -a : 컨테이너 목록
-                docker rename <old> <new> : 컨테이너 이름 변경
-                docker start <name> : 컨테이너 실행 [start, restart, stop]
-                docker attach <name> : 컨테이너에 접속하기
-                docker rm <container id> : 컨테이너 삭제
-                docker rmi <image id> : 이미지 삭제
+                docker rename `old` `new` : 컨테이너 이름 변경
+                docker start `name` : 컨테이너 실행 [start, restart, stop]
+                docker attach `name` : 컨테이너에 접속하기
+                docker rm `container id` : 컨테이너 삭제
+                docker rmi `image id` : 이미지 삭제
                 </pre>
                 
                 <h1>도커 무중단 쉘 빠져나오기</h1>
@@ -84,15 +84,15 @@
                 <h1>외부에서 컨테이너 안의 명령 실행하기</h1>
                 
                 <pre>
-                docker exec <container name> <command>
-                docker exec <container name> service httpd restart
+                docker exec `container name` `command`
+                docker exec `container name` service httpd restart
                 # 실행 중인 컨테이너에만 사용 가능
                 </pre>
                 
                 <h1>배포용 도커 이미지 만들기</h1>
                 
                 <pre>
-                    01. docker run -i -t -p 443:443 -p 80:80 --name <container-name> ubuntu:18.04 bash
+                    01. docker run -i -t -p 443:443 -p 80:80 --name `container-name` ubuntu:18.04 bash
                     02. apt update
                     03. apt upgrade
                     04. apt dist-upgrade
@@ -103,18 +103,18 @@
                     09. apt install apache2
                     10. apt install php
                     11. apt install php-mbstring php-gd php-curl php-xml php-bcmath php-oauth php-mysql composer
-                    12. docker commit <container-name> <id>/ubuntu:18.04
+                    12. docker commit `container-name` `id`/ubuntu:18.04
                     13. docker push laladock/ubuntu:18.04
                         * 이후 변화가 생길 시, 다시 커밋 후 배포
-                        * docker commit <container-name> <id>/ubuntu:18.05
-                        * docker push <id>/ubuntu:18.05
+                        * docker commit `container-name` `id`/ubuntu:18.05
+                        * docker push `id`/ubuntu:18.05
                 </pre>
                 
                 <h1>도커로 공유받은 개발 환경 구축하기</h1>
                 
                 <pre>
-                docker run -i -t -p 443:443 -p 80:80 -v <project-path>:<remote-path> <id>/ubuntu:18.04 bash
-                docker run -i -t -p 443:443 -p 80:80 -p 3306:3306 --name <container-name> -v <project-path>:<remote-path> <id>/ubuntu:18.04 bash​
+                docker run -i -t -p 443:443 -p 80:80 -v `project-path`:`remote-path` `id`/ubuntu:18.04 bash
+                docker run -i -t -p 443:443 -p 80:80 -p 3306:3306 --name `container-name` -v `project-path`:`remote-path` `id`/ubuntu:18.04 bash​
                 </pre>
                 
                 <h1>도커 허브에 있는 기존 이미지 사용하기</h1>
@@ -127,13 +127,13 @@
                 docker run --name "project" -p "80:80" -v /c/dev/workspace/project:/var/www/html mattrayner/lamp:latest
                 
                 # mysql 접근 (lamp 도커 이미지의 경우, localhost/phpmyadmin/index.php 으로 접근 가능합니다.)
-                mysql -uadmin -p<PASSWORD> -h<HOST> -P<PORT>
+                mysql -uadmin -p`PASSWORD` -h`HOST` -P`PORT`
                 </pre>
             </div>
 
 			<div id="footer">
-				<div class="rights">&copy; 2020 Jiwon Min. All rights reserved.</div>
-				<div class="design">Designed by Jiwon Min.</div>
+                <div class="rights">&copy; 2020 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.</div>
+                <div class="design">Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.</div>
 			</div>
 		</div>
 	</div>
