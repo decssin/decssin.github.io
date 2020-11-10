@@ -115,9 +115,19 @@ function toggleSearchbar() {
 function searchArticles(_this) {
     document.getElementById('pagination').style.display = 'none';
     document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
+
+    if (_this.value === '') {
+        return;
+    }
+
     for (let idx = 0; idx < articles.length; idx++) {
         if (articles[idx]['title'].toLowerCase().indexOf(_this.value.toLowerCase()) > -1) {
             createArticleDOM(idx);
+        }
+
+        if (idx >= 50) {
+            document.getElementById('pagination').style.display = 'block';
+            break;
         }
     }
 }
