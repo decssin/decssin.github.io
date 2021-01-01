@@ -176,20 +176,6 @@ body {
     padding-top: 15px;
     padding-bottom: 25px;
 }
-#article .example_title {
-    padding:0 100px;
-    background:rgb(138 180 248);
-}
-#article .example_content {
-    background:rgb(175 176 177);
-    color: transparent;
-}
-#article .example_content::selection {
-    color: transparent;
-}
-#article .example_datetime {
-    background:#6c757d;
-}
 
 /* Rotate Animation */
 @keyframes spin {
@@ -197,17 +183,18 @@ body {
     to {transform:rotate(360deg);}
 }
 #rotate-wrap {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     margin: 50px auto 0;
     width: 100%;
-    height: calc(100% - 120px);
+    height: 100%;
+    /* height: calc(100% - 120px); */
     background: rgba(27, 27, 30, 0.7);
 }
 #rotate-wrap #spin-object {
     position: absolute;
-    top: calc(50% - (60px/2));
+    top: calc(50% - 80px);
     left: calc(50% - (60px/2));
     width: 60px;
     height: 60px;

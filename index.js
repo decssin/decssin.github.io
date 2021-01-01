@@ -12,40 +12,6 @@ if (document["documentMode"]) {
         + "</div>";
 }
 
-/* json data for search */
-let articles = [];
-(function() {
-    // IE check
-    if (document["documentMode"]) {
-        return;
-    }
-
-    // Index page check
-    if (location.pathname !== '/' && location.hostname !== 'localhost') {
-        return;
-    }
-
-    // Local check
-    if (location.protocol === 'file:') {
-        document.getElementById('rotate-wrap').style.display = 'none';
-        document.getElementById('rotate-wrap').style.opacity = '0';
-        return;
-    }
-
-    let request = new XMLHttpRequest();
-    request.open("GET", "index.json", true);
-    request.responseType = 'json';
-    request.send();
-
-    request.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-
-            // AJAX Response
-            articles = this.response['rss']['channel']['item'];
-        }
-    };
-})();
-
 /* Header Title onClick */
 function scrollToHeader() {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -155,10 +121,10 @@ function getArticles() {
             let page = parseInt(document.getElementById('pagination').getAttribute('data-page'));
 
             // for start idx
-            let start_idx = (page === 1) ? 0 : document.getElementById('article').getElementsByTagName('li').length;
+            let start_idx = (page === 1) ? 5 : document.getElementById('article').getElementsByTagName('li').length;
 
             // for end idx
-            let end_idx = (page * 5 > articles.length) ? articles.length : page * 5;
+            let end_idx = ((page * 5 + 5) > articles.length) ? articles.length : page * 5 + 5;
 
             // Limit 10 page
             if (page >= 10) {
@@ -174,16 +140,8 @@ function getArticles() {
 
             // document.getElementById('article').getElementsByTagName('ul')[0].innerHTML = '';
             for (let idx = start_idx; idx < end_idx; idx++) {
-                if (idx < 5) {
-                    // Initialization DOM matching
-                    document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].setAttribute('href', articles[idx]['link']);
-                    document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('title')[0].innerHTML = articles[idx]['title'];
-                    document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('content')[0].innerHTML = articles[idx]['description'];
-                    document.getElementById('article').getElementsByTagName('li')[idx].getElementsByClassName('datetime')[0].innerHTML = articles[idx]['pubDate'];
-                } else {
-                    // 5+ DOM Matching
-                    createArticleDOM(idx);
-                }
+                // 5+ DOM Matching
+                createArticleDOM(idx);
             }
 
             // Add 1 page
