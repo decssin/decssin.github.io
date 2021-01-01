@@ -6,7 +6,7 @@ document.body.style.pointerEvents = 'auto';
 if (document["documentMode"]) {
     document.body.innerHTML =
         "<div id='is-explorer'>"
-            + "<span>DESSIN.DEV no longer supports this web browser. "
+            + "<span>Dessin no longer supports this web browser. "
                 + "<a href='microsoft-edge:https://dessin.dev'>Click here to launch the site in the MS Edge browser</a>"
             + "</span>"
         + "</div>";
