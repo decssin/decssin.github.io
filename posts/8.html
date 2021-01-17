@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JIWONBLOG</title>
+
+	<link rel="icon" type="image/png" href="../favicon.ico">
+	<link rel="stylesheet" href="../index.css" />
+
+	<noscript><div id="noscript">Your browser does not support JavaScript!</div></noscript>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header" onclick="scrollToHeader()">
+			<div class="header-wrap">
+				<div class="menu" onclick="openMenu()">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="title" onclick="goHomepage()">JIWONBLOG</div>
+				<div class="search-articles"></div>
+			</div>
+		</div>
+
+		<div id="content">
+            <div class="title">LAMP</div>
+            <div class="datetime">2020년 11월 06일</div>
+
+            <div class="explain">
+				
+				낮은 사양의 리눅스 사용 시, 메모리가 부족한 경우, 작업 중인 일부 내용을 디스크로 스왑(Swap)하게 됩니다.
+				
+				<br/>
+				<br/>
+
+				<h3>스왑 파일/파티션 존재 여부 확인</h3>
+				<pre>sudo free -m</pre>
+
+				<h3>swap 설정이 되어있는지 확인</h3>
+				<pre>sudo swapon -s</pre>
+
+				<h3>스왑 파일(swapfile) 생성</h3>
+				
+				스왑 용도로 사용할 파일을 swapfile 이라는 이름으로 생성합니다.
+				아래 명령어는 2GB의 용량으로 생성합니다.
+				
+				<br/>
+				<br/>
+				
+				<pre>sudo fallocate -l 2G /swapfile</pre>
+
+				
+				파일의 권한을 수정합니다.
+				
+				<br/>
+				<br/>
+
+				<pre>sudo chmod 600 /swapfile</pre>
+
+				<h3>스왑 활성화</h3>
+				<pre>sudo swapon /swapfile</pre>
+
+				
+				재부팅 이후에도 계속 사용하려면 아래 내용을 등록합니다.
+				
+				<br/>
+				<br/>
+
+				<pre>sudo vim /etc/fstab<br/><br/># 파일 하단에 아래 내용을 추가합니다.<br/>/swapfile swap swap defaults 0 0</pre>
+
+				
+				리눅스 timzeone 설정
+				<br/>
+				<br/>
+
+				<pre>sudo dpkg-reconfigure tzdata</pre>
+
+				
+				필요한 패키지 다운로드
+				
+				<br/>
+				<br/>
+
+				<pre>apt install vim<br/>apt install git</pre>
+
+
+				<hr/>
+				
+
+				<h3>우분투 패키지 검색</h3>
+
+				<ul>
+					<li>https://packages.ubuntu.com/</li>
+				</ul>
+
+				<h3>1. apache 설치</h3>
+
+				<pre>apt install apache2</pre>
+
+				<h3>https 인증서 관련 패키지 설치 및 apache2 기본 설정</h3>
+
+				<pre># apt install ssl-cert<br/># apt install certbot<br/># a2enmod rewrite<br/># a2enmod headers<br/># a2enmod ssl<br/># a2dismod -f autoindex</pre>
+
+				<h3>Apache 개별 권한 설정</h3>
+				<pre>apt-cache search mpm-itk<br/><br/>apt install libapache2-mpm-itk<br/>chmod 711 /home<br/>chmod -R 700 /home/*<br/></pre>
+
+				<h3>변경사항 적용 후 문법검사</h3>
+				<pre>service apache2 restart<br/>apache2ctl -S<br/></pre>
+
+				<h3>apache2 charset, timezone, security 추가 설정</h3>
+				<pre># AddDefaultCharset UTF-8 주석 제거<br/>vi /etc/apache2/conf-available/charset.conf<br/><br/># ServerSignature Off 등 주석 제거<br/>vi /etc/apache2/conf-available/security.conf<br/><br/># .git, .env 등 추가 보안 필요한 파일 설정<br/>vi /etc/apache2/apache2.conf</pre>
+
+
+				<hr/>
+
+
+				<h3>2. php 설치 </h3>
+				<pre>apt install php</pre>
+				
+				<h3>php 관련 모듈 설치</h3>
+				<pre># mysql 연동 시 필요<br/>apt install php-mysql<br/><br/># 필요한 패키지 검색<br/>apt-cache search php- | grep ^php- | grep module<br/></pre>
+
+				<h3>timezone, security 추가 설정</h3>
+				<pre>vi /etc/php/7.2/apache2/php.ini<br/>vi /etc/php/7.2/cli/php.ini<br/><br/># /timezone 입력으로 검색 후 설정<br/>date.timezone = Asia/Seoul</pre>
+				
+
+				<hr/>
+
+				<h3>3. mysql 설치</h3>
+				<pre>apt install mysql-server</pre>
+
+				<h3>mysql_secure_installation 실행</h3>
+				
+				모두 y 입력하고, password strength 는 0 으로 설정
+				잘못 입력 했을 경우, 한번 더 실행
+				<br/>
+				<br/>
+
+				<h3>mysql charset 확인</h3>
+				<pre>mysqladmin variables | grep character</pre>
+
+				<h3>mysql user 확인</h3>
+				<pre>SELECT user,authentication_string,plugin,host FROM mysql.user;<br/><br/># root 계정은 auth_socket 으로 설정되어 있어서 패스워드 로그인 불가능<br/>root.plugin = 'auth_socket'<br/><br/>로그인 시에 `sudo mysql` 으로만 로그인 가능<br/></pre>
+
+				<h3>mysql 새로운 사용자 추가</h3>
+				<pre>CREATE user 'ID'@'HOST' IDENTIFIED BY 'PASSWORD';<br/><br/>권한 확인 후 추가<br/>SHOW GRANTS FOR 'ID'@'HOST';<br/>GRANT SELECT, INSERT, UPDATE, DELETE ON dbname.* TO 'ID'@'HOST';</pre>
+				
+
+				<hr/>
+
+
+				<h3>4. https 설정</h3>
+				
+				아래의 링크를 클릭해서 환경설정 파일을 생성하세요.
+				<br/>
+				<br/>
+
+				<pre>Apache2 환경설정 생성기<br/><a href="https://webmaster.cafe/tools/apache-conf-generator/" title="Apache2 환경설정 생성기" target="_blank">https://webmaster.cafe/tools/apache-conf-generator/</a></pre>
+
+				<h3>사이트 켜기</h3>
+				<pre>a2ensite lab.dessin.dev</pre>
+
+				<h3>사이트 끄기</h3>
+				<pre>a2dissite lab.dessin.dev</pre>
+
+				<h3>변경사항 적용</h3>
+				<pre>service apache2 reload</pre>
+
+				<h3>LetsEncrypt 인증서 발급</h3>
+				<pre>certbot certonly --webroot --webroot-path=/var/www/lab.dessin.dev -d lab.dessin.dev<br/># 발급에 실패하는 경우, http 접근 허용 확인 필요</pre>
+				
+
+				<hr/>
+
+
+				<h3>5. Lect's Encrypt SSL 인증서 자동 갱신</h3>
+
+				<h3>리눅스 스케쥴러 패키지 설치</h3>
+				<pre>apt install cron</pre>
+
+				<h3>Crontab 등록</h3>
+				<pre>sudo crontab -e<br/><br/># 매월 1일 03시 인증서 갱신 후 웹서버 reload<br/>0 3 1 * * certbot renew --renew-hook="service apache2 reload"</pre>
+
+				<h3>Crontab 실행 로그</h3>
+				<pre>view /var/log/syslog</pre>
+
+				<h3>인증서 만료일 확인</h3>
+				<pre>certbot certificates</pre>
+
+				<h3>현재 서버에서 사용중인 인증서 목록 보기</h3>
+				<pre>sudo ls /etc/letsencrypt/live/</pre>
+            </div>
+
+			<div id="footer">
+				<div class="rights">&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.</div>
+				<div class="design">Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.</div>
+			</div>
+		</div>
+	</div>
+
+    <script src="../index.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JIWONBLOG</title>
+
+	<link rel="icon" type="image/png" href="../favicon.ico">
+	<link rel="stylesheet" href="../index.css" />
+
+	<noscript><div id="noscript">Your browser does not support JavaScript!</div></noscript>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header" onclick="scrollToHeader()">
+			<div class="header-wrap">
+				<div class="menu" onclick="openMenu()">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="title" onclick="goHomepage()">JIWONBLOG</div>
+				<div class="search-articles"></div>
+			</div>
+		</div>
+
+		<div id="content">
+            <div class="title">GCP</div>
+            <div class="datetime">2020년 11월 03일</div>
+
+            <div class="explain">
+				
+				구글 클라우드 플랫폼(Google Cloud Platform)은 구글 검색과 유튜브와 같은 최종 사용자 제품을 위해 내부적으로 구글이 사용하는, 
+				동일한 지원 인프라스트럭처 위에서 호스팅을 제공하는 구글의 클라우드 컴퓨팅 서비스입니다. 
+				클라우드 플랫폼 제공자들은 단순 웹사이트에서부터 복잡한 애플리케이션에 이르는 일련의 프로그램들을 빌드하기 위한 개발자 제품들을 제공합니다.
+				
+				<br/>
+				<br/>
+				
+				
+				기본적으로 아마존 AWS의 EC2 서비스와 비슷한 가상 호스팅을 제공하는 구글 컴퓨트 엔진(GCE) 서비스가 있습니다. 
+				그 외에는 네트워크 서비스의 부하 분산, Cloud SQL과 같은 서비스 등이 있습니다.
+				
+				<br/>
+				<br/>
+				
+				<h3>Google Compute Engine</h3>
+				
+				<ol>
+					<li>[GCE] VM 인스턴스 생성</li>
+					<li>[GCE] 인스턴스 그룹 생성</li>
+					<li>[GNS] 부하 분산(로드 밸런싱) 생성</li>
+					<li>[GNS] Cloud DNS &lt;-&gt; LB IP 연결</li>
+					<li>Cloud SQL 생성</li>
+					<li>VM &lt;-&gt; SQL 고정 IP, Home IP 허용 목록에 추가</li>
+				</ol>
+				
+				<h3>서버 업데이트</h3>
+				<pre>1. apt update<br/>2. apt upgrade<br/>3. apt dist-upgrade<br/>4. apt autoremove<br/></pre>
+				
+				<h3>최소한의 필요 모듈 설치</h3>
+				<pre>5. apt install vim<br/>6. apt install git<br/>7. apt install unzip<br/>8. apt install sendmail<br/>9. apt install apache2<br/></pre>
+				
+				<h3>Apache2 모듈 활성화</h3>
+				<pre>10. a2enmod rewrite<br/>11. a2enmod headers<br/>12. a2enmod ssl<br/>13. a2dismod -f autoindex</pre>
+				
+				<h3>웹서버 기본 설정</h3>
+				<pre>14. vi /etc/apache2/conf-available/charset.conf<br/>    * AddDefaultCharset UTF-8 # 주석 제거<br/>15. vi /etc/apache2/conf-available/security.conf<br/>    * AllowOverride None, Require all denied # 주석 제거<br/>    * ServerTokens Prod<br/>    * ServerSignature Off<br/>    * TraceEnable Off<br/>    * Header set X-Content-Type-Options: "nosniff"<br/>    * Header set X-Frame-Options: "sameorigin"<br/>16. vi /etc/apache2/apache2.conf<br/>    * 특정 파일에 대한 접근 보안 설정<br/>    * Let's Encrypt SSL 적용 시, 해당 파일에 권한 부여</pre>
+				
+				<h3>Apache 개별 권한 설정</h3>
+				<pre>17. apt-cache search mpm-itk<br/>18. apt install libapache2-mpm-itk<br/>    * shell, sftp, web의 권한을 동일하게 관리하기 위한 프로그램 설치<br/></pre>
+				
+				<h3>기본 사이트 추가 설정</h3>
+				<pre>19. vi /etc/apache2/sites-available/000-default.conf<br/>    * http [80] 포트 추가 설정<br/>20. mv /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/000-default-ssl.conf<br/>    * https [443] 포트 추가 설정<br/>21. a2ensite 000-default-ssl.conf<br/>    * 443 프로토콜 설정 추가<br/>22. a2dissite 000-default.conf<br/>    * 80 프로토콜 설정 제거</pre>
+				
+				<h3>php 설치</h3>
+				
+				<pre>23. apt install php<br/>24. apt install php-mbstring<br/>25. apt install php-gd<br/>26. apt install php-curl php-xml<br/>27. apt install php-bcmath<br/>28. apt install php-oauth<br/>29. apt install php-mysql<br/>30. apt install composer<br/></pre>
+
+				<h3>php 보안 설정</h3>
+				<pre>31. vi /etc/apache2/mods-available/php7.2.conf<br/>    * php 해석 확장자 변경<br/>    * <code>&lt;FilesMatch ".+\.ph(p3|p4|p5|p7|ar|t|tml)$"&gt; Require all denied &lt;/FilesMatch&gt;</code></pre>
+				
+				<h3>php 기본 timezone 설정</h3>
+				
+				<pre>32. vi /etc/php/7.2/apache2/php.ini<br/>33. vi /etc/php/7.2/cli/php.ini # 타임존 설정<br/>    * `/timezone` 으로 검색 후 `Asia/Seoul` 으로 설정</pre>
+				
+				<h3>변경 된 서버 설정 적용</h3>
+				<pre>34. service apache2 restart<br/>35. service apache2 reload</pre>
+				
+				<h3>Apache2 환경설정 문법검사</h3>
+				<pre>36. apache2ctl -S</pre>
+				
+				<h3>그외 참고사항</h3>
+				
+				<ul>
+					<li><a href="https://blog.lael.be/post/7264" title="서버 설정 참조" title="_blank">서버 설정 참조</a></li>
+					<li>GCP 네트워크 부하 분산 (로드밸런서) 기능 사용 시에는 Let's Encrypt 설치 불필요</li>
+					<li>Laravel 사용 시, 000-default-ssl.conf 파일에서 Root 경로를 .../public 으로 변경</li>
+					<li><code>rsync -avzh --delete {product-root}/ {dev-root}</code> : <code>{product-root}/</code> 안의 파일들을 <code>{dev-root}</code> 폴더 안에 복사</li>
+					<li><code>rsync -avzh --delete {dev-root}/ {product-root}</code> : 개발 루트에서 작업 후 운영 루트로 복사</li>
+					<li><code>rsync -avzh --delete --exclude-from '{dev-root}.gitignore' {dev-root}/ {product-root}</code> : 특정 패턴의 파일 및 폴더 제외 후 복사</li>
+				</ul>
+            </div>
+
+			<div id="footer">
+				<div class="rights">&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.</div>
+				<div class="design">Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../index.js" type="text/javascript"></script>
+</body>
+</html>

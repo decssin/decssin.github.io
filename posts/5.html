@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JIWONBLOG</title>
+
+	<link rel="icon" type="image/png" href="../favicon.ico">
+	<link rel="stylesheet" href="../index.css" />
+
+	<noscript><div id="noscript">Your browser does not support JavaScript!</div></noscript>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header" onclick="scrollToHeader()">
+			<div class="header-wrap">
+				<div class="menu" onclick="openMenu()">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="title" onclick="goHomepage()">JIWONBLOG</div>
+				<div class="search-articles"></div>
+			</div>
+		</div>
+
+		<div id="content">
+            <div class="title">UBUNTU</div>
+            <div class="datetime">2020년 11월 03일</div>
+
+            <div class="explain">
+                
+                우분투(Ubuntu)는 영국 기업 캐노니컬이 개발, 배포하는 컴퓨터 운영 체제입니다. 
+                데비안 리눅스를 기반으로 개발되며, 데비안에 비해 사용 편의성에 초점을 맞춘 리눅스 배포판입니다.
+                <br/>
+                <br/>
+                
+                
+                우분투는 배포판을 수정하거나 수정한 것을 재배포할 수 있는 자유 소프트웨어로, 
+                지금까지 수많은 변형 배포판이나 공식 지원하지 않는 창 관리자를 데스크톱으로 하는 배포판들이 나왔습니다. 
+                우분투의 기본적인 철학, 즉 전 세계의 사람 누구나 어렵지 않게 리눅스를 사용하자는 표어에서 알 수 있듯이, 
+                기본적으로 세계의 다양한 언어를 지원하고 그다지 높은 사양의 컴퓨터가 필요하지 않습니다.
+                <br/>
+                <br/>
+                
+                
+                우분투 서버는 우분투 데스크탑 버전과 같은 APT 저장소를 사용하는 서버 판 우분투를 가리킵니다. 
+                우분투 데스크탑 버전과의 다른 점은 X 윈도 환경이 서버판에서는 존재하지 않는다는 것입니다. 
+                서버판은 설치 과정에서 그래픽 인터페이스(GUI) 대신 커맨드 라인 인터페이스(CLI)를 사용합니다. 
+                또한 설치후에도 CLI환경만 설치되며 GUI환경은 설치에서 제외됩니다. 
+                한편 우분투 GUI 데스크탑 환경 역시 CLI 네트워크 환경위에서 작동하도록 설계되어있으므로 우분투 데스크탑환경에서도 CLI 네트워크환경(서버환경)을 경험할 수 있도록 설정할 수 있습니다.
+                <br/>
+                <br/>
+                
+                <h3>패키지 업데이트</h3>
+                <pre>apt update<br/>apt upgrade<br/>apt dist-upgrade<br/>apt autoremove</pre>
+                
+                <h3>패키지 관련 그 외 명령어</h3>
+                <pre>su - jiwon # 계정 변경<br/>dpkg -l | grep php # 설치 패키지 확인<br/>apt list --installed # 설치 패키지 확인<br/>apt -qq list php # 패키지 검색<br/>apt search php7 # 패키지 검색</pre>
+                
+                <h3>리눅스 파일권한 상식</h3>
+                
+                ls -al 로 파일의 자세한 정보를 볼 수 있습니다.<br/>
+                맨앞에 문자가 - 일 경우 파일, d 이면 디렉토리, l 이면 링크를 나타냅니다
+                <br/>
+                <br/>
+                
+                <pre>r : Read = 4<br/>w : Write = 2<br/>x : eXcute = 1<br/><br/>-rwxrwxrwx (777)<br/>-r--r--r-- (444)<br/>-rwx--x--x (711)<br/><br/>2~4필드 : 소유주 (User) 권한<br/>5~7필드 : 그룹 (Group) 권한<br/>8~10필드 : 나머지 (Others) 권한</pre>
+
+                <h3>파일 권한 변경</h3>                
+                <pre>chmod : 파일, 디렉토리 권한 수정<br/>    - chmod 755 a_file => 소유자에겐 7(rwx), 그룹과 나머지에겐 5(r-x) 권한부여<br/>    - chmod o+rw a_file => others에게 읽기, 쓰기 권한 부여<br/>    - chmod 700 * => 현재 위치의 모든 파일과 폴더 권한 수정<br/>    - chmod -R 755 www => www디렉토리 내의 모든 파일과 디렉토리의 권한 수정<br/><br/>umask : 파일이 만들어질때 허가권 기본값<br/>    - umask 022 => chmod와 반대개념 777에서 뺌. 022일 경우 chmod 755와 같습니다.<br/><br/>chown : 파일 소유자, 소유그룹 수정 <br/>    - chown bible file1 => file1 파일의 소유자를 bible로 수정<br/>    - chown bible:bible2 file2 => file2 파일의 소유자를 bible로 그룹을 bible2로 수정<br/>    - chown -cR nobody:nobody dirl => dirl 폴더와 그 안의 모든 파일, 디렉토리의 소유자, 소유그룹 변경<br/>    - chown -R bible:webhost uploads --from=nobody:nobody => uploads디렉토리 내의 파일중 소유자가 nobody이고 소유그룹이 nobody로 되어 있는 파일의 소유자를 bible로 변경하고 소유그룹을 webhost로 변경<br/></pre>
+                
+                <h3>기타 명령어</h3>
+                
+                <pre>which php : 위치 확인<br/>whoami : 사용자 확인<br/>echo $PATH : $PATH 읽기<br/>vi filename<br/>    - q 끄기<br/>    - :wq 저장 후 끄기<br/>    - :q! 강제 종료<br/>    - i 입력<br/>    - dd 한줄 삭제</pre>
+            </div>
+
+			<div id="footer">
+                <div class="rights">&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.</div>
+                <div class="design">Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.</div>
+			</div>
+		</div>
+	</div>
+
+  <script src="../index.js" type="text/javascript"></script>
+</body>
+</html>

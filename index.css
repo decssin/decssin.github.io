@@ -271,12 +271,17 @@ body {
 }
 #content .explain {
     font-size:1.6rem;
-    line-height:1.5;
+    line-height:1.7;
     margin-bottom: 60px;
 }
-#content .explain h1 {
-    font-size:1.6rem;
-    margin-bottom:16px;
+#content .explain h1,
+#content .explain h2,
+#content .explain h3,
+#content .explain h4,
+#content .explain h5,
+#content .explain h6 {
+    font-size:1.8rem;
+    margin-bottom:3.2rem;
 }
 #content .explain a {
     color:rgb(138 180 248);
@@ -295,26 +300,31 @@ body {
 #content .explain pre {
     width: 100%;
     overflow-x: auto;
-    white-space: pre-line;
+    /* white-space: pre-line; */
     padding: 15px;
     background-color:#272822;
     color:#818c96;
-    margin-bottom:16px;
+    margin-bottom:3.2rem;
 }
 #content .explain table {
-    margin-bottom:16px;
+    margin-bottom:3.2rem;
 }
 #content .explain p {
-    margin-bottom:16px;
+    /* margin-bottom:3.2rem; */
 }
 #content .explain hr {
-    margin-bottom:16px;
+    margin-bottom:3.2rem;
 }
-#content .explain ul {
-     margin-bottom:16px;
+#content .explain ul,
+#content .explain ol {
+    margin-bottom:3.2rem;
 }
-#content .explain li {
+#content .explain ul li {
     list-style: disc inside;
+    font-size:1.5rem;
+}
+#content .explain ol li {
+    list-style: decimal inside;
     font-size:1.5rem;
 }
 #content .explain table, 
