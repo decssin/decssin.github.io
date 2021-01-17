@@ -300,7 +300,6 @@ body {
 #content .explain pre {
     width: 100%;
     overflow-x: auto;
-    /* white-space: pre-line; */
     padding: 15px;
     background-color:#272822;
     color:#818c96;
@@ -308,9 +307,6 @@ body {
 }
 #content .explain table {
     margin-bottom:3.2rem;
-}
-#content .explain p {
-    /* margin-bottom:3.2rem; */
 }
 #content .explain hr {
     margin-bottom:3.2rem;
