@@ -20,7 +20,7 @@ function scrollToHeader() {
 /* Go Homepage */
 function goHomepage() {
     this.event.stopPropagation();
-    location.href = "https://dessin.dev";
+    location.href = "https://jiwon.blog";
 }
 
 /* Open menu */
