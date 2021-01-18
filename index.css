@@ -305,10 +305,22 @@ body {
     color:#818c96;
     margin-bottom:3.2rem;
 }
-#content .explain table {
-    margin-bottom:3.2rem;
+#content .explain pre::-webkit-scrollbar {
+    width: 0;
+    height: 8px;
 }
-#content .explain hr {
+#content .explain pre::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+#content .explain pre::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: gray;
+}
+#content .explain pre::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+#content .explain table {
     margin-bottom:3.2rem;
 }
 #content .explain ul,

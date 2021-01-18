@@ -25,78 +25,171 @@
 		</div>
 
 		<div id="content">
-            <div class="title">RESTFUL API</div>
-            <div class="datetime">2020년 11월 04일</div>
+            <div class="title">LAMP</div>
+            <div class="datetime">2020년 11월 06일</div>
 
             <div class="explain">
-              
-              Restful Api는 URI를 기반으로 리소스를 처리하는 방법을 제시하는 설계 방법론입니다. REST(Representational State Transfer)는 단어에서 의미하는 것과 같이 추상적이거나 모호하지 않고, 명확하게 상태를 교환하는 아키텍처의 한 형식입니다.
-              
-              <br/>
-              <br/>
+				
+<h3>디스크 스왑</h3>
+낮은 사양의 컴퓨팅 리소스 사용 시, 디스크 스왑 기능의 사용이 필요합니다.<br/><br/>
 
-              
-              REST 아키텍처라는 용어를 정의한 로이 필딩(Roy Fielding)에 따르면 다음의 제한 조건을 만족해야만 온전한 REST 아키텍처를 구현했다고 할 수 있습니다.
-              <br/>
-              <br/>
+<pre>
+/* 스왑 파일/파티션 존재 여부 확인 */
+<code>$ sudo free -m</code>
 
-              <ul>
-                  <li>클라이언트/서버 구조가 일관적인 인터페이스로 분리되어 있어야 합니다.</li>
-                  <li>각 요청 간 클라이언트의 콘텍스트가 서버에 저장되어서는 안됩니다.</li>
-                  <li>클라이언트는 응답을 캐싱할 수 있어야 합니다.</li>
-                  <li>로드 밸런싱이나 공유 캐시 기능을 제공함으로써 시스템 규모 확장성을 향상시킬 수 있어야 합니다.</li>
-                  <li>클라이언트가 실행시킬 수 있는 로직을 전송하여 기능을 확장시킬 수 있어야 합니다.</li>
-                  <li>아키텍처는 단순해야하고, 작은 단위로 분리가능해야 하며 클라이언트-서버의 각 파트가 독립적으로 개선될 수 있도록 해야합니다.</li>
-              </ul>
-              
-              <h3>METHOD 역할</h3>
+/* swap 설정이 되어있는지 확인 */
+<code>$ sudo swapon -s</code>
 
-              <ul>
-                  <li>POST를 통해 해당 URI를 요청하면 리소스를 생성합니다. (URI: <code>/posts</code>)</li>
-                  <li>GET를 통해 해당 리소스를 조회합니다. (URI: <code>/posts</code>, <code>/posts/:index</code>)</li>
-                  <li>PUT를 통해 해당 리소스를 수정합니다. (URI: <code>/posts/:index</code>)</li>
-                  <li>DELETE를 통해 리소스를 삭제합니다. (URI: <code>/posts/:index</code>)</li>
-              </ul>
-              
-              <h3>REST API에서 중요한 점</h3>
+/* 스왑 파일(swapfile) 생성 */
+<code>$ sudo fallocate -l 2G /swapfile</code>
 
-              <ul>
-                  <li>URI는 정보의 자원을 표현해야 합니다. (행위에 대한 표현이 들어가지 않습니다.)</li>
-                  <li>자원에 대한 행위는 HTTP METHOD를 사용합니다.</li>
-                  <li>URI 마지막 문자로 슬래시(/)를 포함하지 않습니다.</li>
-                  <li>가독성을 위해 하이픈(-)을 사용하되, 밑줄(_)은 사용하지 않습니다.</li>
-                  <li>파일 확장자는 URI에 포함시키지 않습니다.</li>
-                  <li>자원을 표현하는 Collection과 Document에 단수, 복수를 지켜줍니다. ex) http://restapi.example.com/sports/soccer/players/13</li>
-              </ul>
-              
-              <h3>HTTP 상태 코드</h3>
+/* 파일의 권한을 수정 */
+<code>$ sudo chmod 600 /swapfile</code>
 
-              <ul>
-                  <li>200: OK, 클라이언트의 요청을 정상적으로 수행</li>
-                  <li>201: Created, 클라이언트의 요청을 정상적으로 수행</li>
-                  <li>301: Moved Permanently, 요청한 리소스의 URI 변경</li>
-                  <li>400: Bad Request, 잘못된 문법</li>
-                  <li>401: Unauthorized, 비인증(unauthenticated)</li>
-                  <li>403: Forbidden, 클라이언트의 접근 차단</li>
-                  <li>404: Not Found, 알려지지 않은 URL</li>
-                  <li>405: Method Not Allowed, 사용 불가능한 메소드</li>
-                  <li>500: Internal Server Error, 서버 처리 에러</li>
-              </ul>
-              
-              <h3>참고</h3>
+/* 해당 파일이 스왑으로 동작하도록 설정 */
+<code>$ sudo mkswap /swapfile</code>
 
-              <ul>
-                  <li><a href="http://meetup.toast.com/posts/92" title="REST API 제대로 알고 사용하기" target="_blank">REST API 제대로 알고 사용하기</a></li>
-              </ul>
+/* 스왑 활성화 */
+<code>$ sudo swapon /swapfile</code>
+
+/* 재부팅 후에도 스왑 활성화되도록 설정 */
+<code>$ sudo vim /etc/fstab</code>
+/* 파일 하단에 아래 내용 추가 */
+<code>/swapfile swap swap defaults 0 0</code>
+</pre>
+
+<h3>Apache 설치 및 설정</h3>
+
+<pre>
+/* 설치 */
+<code>$ apt install apache2</code>
+
+/* SSL 인증서 관련 패키지 설치 및 기본 설정 */
+<code>$ apt install ssl-cert</code>
+<code>$ apt install certbot</code>
+<code>$ a2enmod rewrite</code>
+<code>$ a2enmod headers</code>
+<code>$ a2enmod ssl</code>
+<code>$ a2dismod -f autoindex</code>
+
+/* 개별 권한 설정 */
+<code>$ apt-cache search mpm-itk</code>
+<code>$ apt install libapache2-mpm-itk</code>
+<code>$ chmod 711 /home</code>
+<code>$ chmod -R 700 /home/*</code>
+
+/* 변경사항 적용 후 문법검사 */
+<code>$ service apache2 restart</code>
+<code>$ apache2ctl -S</code>
+
+/* Charset, TimeZone, Security 추가 설정 */
+<code>$ vi /etc/apache2/conf-available/charset.conf</code> # AddDefaultCharset UTF-8 주석 제거
+<code>$ vi /etc/apache2/conf-available/security.conf</code> # ServerSignature Off 등 주석 제거
+<code>$ vi /etc/apache2/apache2.conf</code> # .git, .env 등 추가 보안 필요한 파일 설정
+</pre>
+
+
+<h3>PHP 설치 및 설정</h3>
+
+<pre>
+/* 설치 */
+<code>$ apt install php</code>
+
+/* 관련 모듈 설치 */
+<code>$ apt install php-mysql</code> # mysql 연동 시 필요
+<code>$ apt-cache search php- | grep ^php- | grep module</code> # 필요한 패키지 검색
+
+/* TimeZone, Security 추가 설정 */
+<code>$ vi /etc/php/7.2/apache2/php.ini</code>
+<code>$ vi /etc/php/7.2/cli/php.ini</code>
+<code>date.timezone = Asia/Seoul</code> # /timezone 입력으로 검색 후 설정
+</pre>
+
+
+<h3>MySQL 설치 및 설정</h3>
+<pre>
+/* 설치 */
+<code>$ apt install mysql-server</code>
+
+/* 계정 설정 */
+<code>$ mysql_secure_installation</code>
+# 모두 y 입력하고, 'password strength' 값은 0 으로 설정
+# 잘못 입력 했을 경우, 다시 실행
+
+/* Charset 확인 */
+<code>$ mysqladmin variables | grep character</code>
+
+/* 사용자 확인 */
+<code>SELECT user,authentication_string,plugin,host FROM mysql.user;</code>
+
+<code>root.plugin = 'auth_socket'</code> 
+# root 계정은 auth_socket 으로 설정되어 있어서 패스워드 로그인 불가능
+# 로그인 시, `sudo mysql` 으로만 로그인 가능
+
+/* 사용자 추가 */
+<code>CREATE user 'ID'@'HOST' IDENTIFIED BY 'PASSWORD';</code>
+
+/* 권한 확인 및 추가 */
+<code>SHOW GRANTS FOR 'ID'@'HOST';</code>
+<code>GRANT SELECT, INSERT, UPDATE, DELETE ON dbname.* TO 'ID'@'HOST';</code>
+</pre>
+
+
+
+
+<h3>SSL 설정</h3>
+
+<pre>
+# 아래의 링크를 클릭해서 환경설정 파일을 생성하세요.
+# Apache2 환경설정 생성기
+<a href="https://webmaster.cafe/tools/apache-conf-generator/" title="Apache2 환경설정 생성기" target="_blank">https://webmaster.cafe/tools/apache-conf-generator/</a>
+
+/* 사이트 켜기 */
+<code>$ a2ensite jiwon.blog</code>
+
+/* 사이트 끄기 */
+<code>$ a2dissite jiwon.blog</code>
+
+/* 변경사항 적용 */
+<code>$ service apache2 reload</code>
+
+/* LetsEncrypt 인증서 발급 */
+# 발급에 실패하는 경우, http 접근 허용 확인 필요
+<code>$ certbot certonly --webroot --webroot-path=/var/www/jiwon.blog -d jiwon.blog</code>
+</pre>
+
+
+
+<h3>Lect's Encrypt SSL 인증서 자동 갱신</h3>
+<pre>
+/* 리눅스 스케쥴러 패키지 설치 */
+<code>$ apt install cron</code>
+
+/* Crontab 등록 */
+<code>$ sudo crontab -e</code>
+
+# 매월 1일 03시 인증서 갱신 후 웹서버 reload
+<code>0 3 1 * * certbot renew --renew-hook="service apache2 reload"</code>
+
+/* Crontab 실행 로그 확인 */
+<code>$ view /var/log/syslog</code>
+
+/* 인증서 만료일 확인 */
+<code>$ certbot certificates</code>
+
+/* 현재 서버에서 사용중인 인증서 목록 보기 */
+<code>$ sudo ls /etc/letsencrypt/live/</code>
+</pre>
+
             </div>
 
 			<div id="footer">
-                <div class="rights">&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.</div>
-                <div class="design">Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.</div>
+				<div class="rights">&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.</div>
+				<div class="design">Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.</div>
 			</div>
 		</div>
 	</div>
 
-	<script src="../index.js" type="text/javascript"></script>
+    <script src="../index.js" type="text/javascript"></script>
 </body>
 </html>
