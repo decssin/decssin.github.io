@@ -1,29 +1,11 @@
 /* Normalize */
-*, *::before, *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	list-style: none;
-	text-decoration: none;
-}
-html {
-    font-size: 62.5%;
-}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;}
+html{font-size: 62.5%;}
 
-/* Checkout */
-#noscript, #is-explorer {
-    position:fixed;
-    z-index:9999;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:white;
-    font-size:2rem;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-}
+/* Check */
+#noscript,#internetexplorer{position:fixed;z-index:9999;top:0;left:0;width:100%;height:100%;background:white;font-size:2rem;display:flex;justify-content:center;align-items:center;}
+
+
 
 body {
     background: rgb(27 27 30);
@@ -117,12 +99,12 @@ body {
     outline: none;
     text-align: center;
 }
-#header .search-articles {
+#header .search-posts {
     position: relative;
     width: 20px;
     height: 20px;
 }
-#header .search-articles .magnifier-circle {
+#header .search-posts .magnifier-circle {
     position: absolute;
     top: 0;
     left: 0;
@@ -131,7 +113,7 @@ body {
     border: 3px solid #999;
     border-radius: 100%;
 }
-#header .search-articles .magnifier-grip {
+#header .search-posts .magnifier-grip {
     position: absolute;
     bottom: 0;
     right: 3px;
@@ -142,20 +124,20 @@ body {
     border-radius: 5px;
 }
 
-/* Article */
-#article {
+/* Post list */
+#post-list {
     padding: 70px 15px;
 }
-#article .title {
+#post-list .title {
     font-size: 1.6rem;
     line-height: 2;
     color:rgb(138 180 248);
 }
-#article .title:hover {
+#post-list .title:hover {
     color: #d2603a;
     border-bottom: 1px solid #d2603a;
 }
-#article .content {
+#post-list .content {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -166,12 +148,12 @@ body {
     line-height: 2;
     color:rgb(175 176 177);
 }
-#article .datetime {
+#post-list .datetime {
     font-size:1.1rem;
     line-height: 3;
     color:#6c757d;
 }
-#article li {
+#post-list li {
     border-bottom: 1px solid rgb(44 45 45);
     padding-top: 15px;
     padding-bottom: 25px;
