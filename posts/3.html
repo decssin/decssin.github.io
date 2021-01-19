@@ -8,11 +8,11 @@
 	<link rel="icon" type="image/png" href="../favicon.ico">
     <link rel="stylesheet" href="../index.css" />
 
-	<noscript><div id="noscript">Your browser does not support JavaScript!</div></noscript>
+	<noscript><div id="noscript" class="display-flex">Your browser does not support JavaScript!</div></noscript>
 </head>
 <body>
 	<div id="wrap">
-        <div class="open-menu" style="opacity: 0; visibility: hidden;">
+        <div class="open-menu display-flex" style="opacity:0;visibility:hidden;">
 			<ul class="menu-list">
 				<li>HOME</li>
 				<li>WEB DESIGN</li>
@@ -22,22 +22,22 @@
 				<li><label onclick="dayAndNight()">DAY/NIGHT</label></li>
 			</ul>
         </div>
-        
-		<div id="header" onclick="scrollToHeader()">
-			<div class="header-wrap">
-				<div class="menu" onclick="openMenu()">
+
+		<div id="header" onclick="toTheTop()">
+			<div class="header-wrap display-flex">
+				<div class="menu-button display-flex" onclick="toggleMenu()">
 					<div class="line"></div>
 					<div class="line"></div>
 					<div class="line"></div>
 				</div>
-				<div class="title" onclick="goHomepage()">JB</div>
+				<div class="title" onclick="goHome()">JB</div>
 				<div class="search-posts"></div>
 			</div>
-		</div>
+        </div>
 
 		<div id="content">
             <div class="title">GIT</div>
-            <div class="datetime">2020년 11월 02일</div>
+            <div class="info">January 20th, 2021 by Jiwon Min</div>
 
             <div class="explain">
                 깃(Git)은 컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 분산 버전 관리 시스템입니다. 
@@ -170,16 +170,12 @@
                 <br/>
                 <br/>
                 
-                <hr/>
-                
                 <h3>작업 순서 1 (로컬수정 > Bare 저장소 확인 > 서버적용)</h3>
                 <pre>/* 로컬에서 클론 후 프로젝트 수정하고 저장 */<br/><code>git clone</code> (Bare 저장소) -> ... -> <code>git push</code><br/><br/>/* Bare 저장소에서 변경 사항 확인 및 비교 */<br/><code>git log</code>, <code>git show</code><br/><br/>/* 서버 프로젝트에 변경 사항 적용 */<br/><code>git fetch /path/my_project.git</code> -> <code>git pull /path/my_project.git</code><br/></pre>
                 
                 <h3>작업 순서 2 (서버수정 > Bare 저장소 확인 -> 로컬적용)</h3>
                 <pre>/* 서버에서 수정한 프로젝트를 Bare 저장소에 저장 */<br/><code>git push /path/my_project.git</code><br/><br/>/* Bare 저장소에서 변경 사항 확인 및 비교 */<br/><code>git log</code>, <code>git show</code><br/><br/>/* 로컬 프로젝트에 변경 사항 적용 */<br/><code>git pull</code></pre>
                 
-                
-                <hr/>
                 
                 <h3>그 외 git 명령어</h3>
                 
@@ -205,7 +201,7 @@
                 <pre><<<<<<< HEAD<br/>'merge' 명령어를 실행한 곳의 작업 내용이 표시됩니다.<br/><br/>=======<br/>변경 된 작업 내용이 표시됩니다.<br/>>>>>>>> refs/remotes/origin/master</pre>
             </div>
 
-			<div id="footer">
+			<div id="footer" class="display-flex">
                 <div class="rights">&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.</div>
                 <div class="design">Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.</div>
 			</div>

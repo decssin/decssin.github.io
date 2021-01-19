@@ -1,8 +1,9 @@
 # mac os
-*.DS_Store
+.DS_Store
 
 # vscode
-*.vscode
+.vscode
+.prettierrc
 
 # jetbrains
-*.idea
+.idea
