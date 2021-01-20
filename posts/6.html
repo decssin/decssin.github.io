@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JB</title>
+	<title>@jiwon.blog</title>
 
 	<link rel="icon" type="image/png" href="../favicon.ico">
 	<link rel="stylesheet" href="../index.css" />
@@ -12,36 +12,36 @@
 </head>
 <body>
 	<div id="wrap">		
-		<div class="open-menu display-flex" style="opacity:0;visibility:hidden;">
+		<div class="open-menu display-flex position-fixed top-0 left-0" style="opacity:0;visibility:hidden;">
 			<ul class="menu-list">
-				<li>HOME</li>
-				<li>WEB DESIGN</li>
-				<li>ABOUT ME</li>
+				<li><span class="cursor-pointer">HOME</span></li>
+				<li><span class="cursor-pointer"></span>WEB DESIGN</span></li>
+				<li><span class="cursor-pointer"></span>ABOUT ME</span></li>
 				<li><br/></li>
-				<li>ENG/KOR</li>
-				<li><label onclick="dayAndNight()">DAY/NIGHT</label></li>
+				<li><span class="cursor-pointer"></span>KOR/ENG</span></li>
+				<li><span class="cursor-pointer" onclick="dayAndNight()">DAY/NIGHT</span></li>
 			</ul>
 		</div>
 
-		<div id="header" onclick="toTheTop()">
-			<div class="header-wrap display-flex">
-				<div class="menu-button display-flex" onclick="toggleMenu()">
-					<div class="line"></div>
-					<div class="line"></div>
-					<div class="line"></div>
+		<div id="header" class="width-100 position-fixed top-0 left-0 cursor-pointer" onclick="toTheTop()">
+			<div class="header-wrap display-flex width-100 height-100 position-relative margin-0-auto">
+				<div class="menu-button display-flex cursor-pointer" onclick="toggleMenu()">
+					<div class="line width-100"></div>
+					<div class="line width-100"></div>
+					<div class="line width-100"></div>
 				</div>
-				<div class="title" onclick="goHome()">JB</div>
-				<div class="search-posts"></div>
+				<div class="title cursor-pointer" onclick="goHome()">@jiwon.blog</div>
+				<div class="search-posts position-relative"></div>
 			</div>
 		</div>
 
 		<div id="content">
-            <div class="title">RESTFUL API</div>
-            <div class="info">January 20th, 2021 by Jiwon Min</div>
+            <div class="title">RESTful API 기본 개념</div>
+            <div class="info">2021. 01. 20, 21:30:00 by Jiwon Min</br>Wed Jan 20 2021 21:30:00 GMT+0900 (KST)</div>
 
             <div class="explain">
               
-Restful API는 URI를 기반으로 리소스를 처리하는 방법을 제시하는 설계 방법론입니다. REST(Representational State Transfer)는 단어에서 의미하는 것과 같이 추상적이거나 모호하지 않고, 명확하게 상태를 교환하는 아키텍처의 한 형식입니다.
+RESTful API는 URI를 기반으로 리소스를 처리하는 방법을 제시하는 설계 방법론입니다. REST(Representational State Transfer)는 단어에서 의미하는 것과 같이 추상적이거나 모호하지 않고, 명확하게 상태를 교환하는 아키텍처의 한 형식입니다.
 
 <br/>
 <br/>
@@ -69,7 +69,7 @@ REST 아키텍처라는 용어를 정의한 로이 필딩(Roy Fielding)에 따�
 <li>DELETE를 통해 리소스를 삭제합니다. (URI: <code>/posts/:index</code>)</li>
 </ul>
 
-<h3>REST API에서 중요한 점</h3>
+<h3>RESTful API에서 중요한 점</h3>
 
 <ul>
 <li>URI는 정보의 자원을 표현해야 합니다. (행위에 대한 표현이 들어가지 않습니다.)</li>
@@ -77,7 +77,7 @@ REST 아키텍처라는 용어를 정의한 로이 필딩(Roy Fielding)에 따�
 <li>URI 마지막 문자로 슬래시(/)를 포함하지 않습니다.</li>
 <li>가독성을 위해 하이픈(-)을 사용하되, 밑줄(_)은 사용하지 않습니다.</li>
 <li>파일 확장자는 URI에 포함시키지 않습니다.</li>
-<li>자원을 표현하는 Collection과 Document에 단수, 복수를 지켜줍니다. ex) http://restapi.example.com/sports/soccer/players/13</li>
+<li>자원을 표현하는 Collection과 Document에 단수, 복수를 지켜줍니다. ex) /sports/soccer/players/13</li>
 </ul>
 
 <h3>HTTP 상태 코드</h3>
@@ -102,7 +102,7 @@ REST 아키텍처라는 용어를 정의한 로이 필딩(Roy Fielding)에 따�
 
             </div>
 
-			<div id="footer" class="display-flex">
+			<div id="footer" class="display-flex position-absolute bottom-0 left-0">
                 <div class="rights">&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.</div>
                 <div class="design">Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.</div>
 			</div>
