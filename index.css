@@ -1,9 +1,8 @@
-*,*::before,*::after {margin: 0;padding: 0;box-sizing: border-box;list-style: none;text-decoration: none;}
+*,*::before,*::after {margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;-webkit-tap-highlight-color:transparent;}
 html {font-size: 62.5%;}
 body::-webkit-scrollbar {width: 8px;}
 body::-webkit-scrollbar-thumb {background-color: gray;}
 #noscript,#internetexplorer {position: fixed;z-index: 2;top: 0;left: 0;width: 100%;height: 100%;background: white;font-size: 2rem;}
-
 
 
 body {background: white;}
@@ -75,15 +74,11 @@ body {overflow: hidden;pointer-events: none;}
 
 
 #wrap {
-  margin: 0 auto;
   max-width: 900px;
-  position: relative;
   min-height: 100vh;
 }
 #wrap .open-menu {
   z-index: 1;
-  width: 100%;
-  height: 100%;
   transition: opacity 0.3s, visibility 0.3s;
 }
 #wrap .open-menu .menu-list {
@@ -183,46 +178,14 @@ body {overflow: hidden;pointer-events: none;}
 }
 
 @keyframes spin {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}
-#rotate-wrap {
-  z-index: 1;
-  margin: 47px auto 0;
-  background: rgba(27, 27, 30, 0.7);
-}
-#rotate-wrap #spin-object {
-  top: calc(50% - 80px);
-  left: calc(50% - (60px / 2));
-  width: 60px;
-  height: 60px;
-  border: inset 10px #afb0b1;
-  border-radius: 100%;
-  animation: spin 4s infinite linear;
-}
+#rotate-wrap {z-index: 1;margin: 47px auto 0;background: rgba(27, 27, 30, 0.7);}
+#rotate-wrap #spin-object {top: calc(50% - 80px);left: calc(50% - (60px / 2));width: 60px;height: 60px;border: inset 10px #afb0b1;border-radius: 100%;animation: spin 4s infinite linear;}
 
-#pagination {
-  margin: 40px 0;
-}
-#pagination .more-button {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
-  border-radius: 100%;
-  justify-content: space-evenly;
-}
-#pagination .more-dot {
-  width: 4px;
-  height: 4px;
-  background: white;
-  border-radius: 100%;
-}
+#pagination {margin: 40px 0;}
+#pagination .more-button {width: 40px;height: 40px;margin: 0 auto;border-radius: 100%;justify-content: space-evenly;}
+#pagination .more-dot {width: 4px;height: 4px;background: white;border-radius: 100%;}
 
-#footer {
-  width: calc(100% - 30px);
-  margin: 0 18px;
-  justify-content: space-between;
-  height: 70px;
-  font-size: 1.2rem;
-  color: #7a7b7d;
-}
+#footer {width: calc(100% - 30px);height: 70px;margin: 0 18px;justify-content: space-between;font-size: 1.2rem;color: #7a7b7d;}
 
 #content {
   padding: 70px 18px;
