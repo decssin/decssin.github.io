@@ -127,12 +127,12 @@ function toggleMenu() {
         temp.style      = 'opacity:0;visibility:hidden;';
         temp.innerHTML  = 
                 '<ul class="menu-list">'
-                    + '<li><a class="cursor-pointer" href="https://jiwon.blog">BLOG</a></li>'
-                    + '<li><a class="cursor-pointer" href="">WEB DESIGN</a></li>'
-                    + '<li><a class="cursor-pointer" href="">ABOUT ME</a></li>'
+                    + '<li><a class="cursor-pointer" href="https://jiwon.blog">blog</a></li>'
+                    + '<li><a class="cursor-pointer" href="https://jiwon.blog/gallery/hall">gallery</a></li>'
+                    + '<li><a class="cursor-pointer" href="https://jiwon.blog/calendar/cover">calendar</a></li>'
                     + '<li><br/></li>'
-                    + '<li><span class="cursor-pointer">KOR/ENG</span></li>'
-                    + '<li><span class="cursor-pointer" onclick="dayAndNight()">DAY/NIGHT</span></li>'
+                    + '<li><a class="cursor-pointer" href="https://jiwon.blog/about/me">about me</a></li>'
+                    + '<li><span class="cursor-pointer" onclick="dayAndNight()">day/night</span></li>'
                 + '</ul>';
         document.getElementById('wrap').prepend(temp);
     }
