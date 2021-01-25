@@ -38,9 +38,6 @@ body#night-theme {background: #1b1b1e;}
 #post-list .content {color: dimgrey;}
 #night-theme #post-list .content {color: #afb0b1;}
 
-#pagination .more-button {background: lightgray;}
-#night-theme #pagination .more-button {background: #1c345e;}
-
 #post-list li {border-bottom: 1px solid #f3f3f3;}
 #night-theme #post-list li {border-bottom: 1px solid #2c2d2d;}
 
@@ -75,7 +72,7 @@ body#night-theme {background: #1b1b1e;}
 .cursor-pointer {cursor: pointer;}
 /* ---------- */
 
-/* wrap */
+/* common wrap */
 #wrap {max-width: 700px;min-height: 100vh;}
 #wrap .open-menu {z-index: 1;transition: opacity 0.3s, visibility 0.3s;}
 #wrap .open-menu .menu-list {text-align: center;}
@@ -99,24 +96,22 @@ body#night-theme {background: #1b1b1e;}
 #footer {width: calc(100% - 30px);height: 70px;margin: 0 18px;justify-content: space-between;font-size: 1.2rem;color: #7a7b7d;}
 /* ---------- */
 
-/* home post list */
+/* index post list */
 #post-list {padding: 70px 18px;}
 #post-list .title {font-size: 2.1rem;line-height: 2;}
 #post-list .content {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;font-size: 1.4rem;line-height: 2.2;margin-top: 5px;}
 #post-list .datetime {font-size: 1.2rem;line-height: 3;color: #6c757d;margin-top: 5px;}
 #post-list li {padding-top: 10px;padding-bottom: 11px;margin-bottom: 8px;}
+#post-list li:last-child {border:0;}
 /* ---------- */
 
-/* home pagination & animation */
+/* index animation */
 @keyframes spin {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}
 #rotate-wrap {z-index: 1;margin: 47px auto 0;background: rgba(27, 27, 30, 0.7);}
 #rotate-wrap #spin-object {top: calc(50% - 80px);left: calc(50% - (60px / 2));width: 60px;height: 60px;border: inset 10px #afb0b1;border-radius: 100%;animation: spin 4s infinite linear;}
-#pagination {margin: 40px 0;}
-#pagination .more-button {width: 40px;height: 40px;margin: 0 auto;border-radius: 100%;justify-content: space-evenly;}
-#pagination .more-dot {width: 4px;height: 4px;background: white;border-radius: 100%;}
 /* ---------- */
 
-/* content */
+/* posts content */
 #content {padding: 70px 18px;}
 #content .title {font-size: 2.4rem;line-height: 2;margin-top: 3px;}
 #content .info {display:inline-block;font-size: 1.3rem;line-height: 2;margin-bottom: 50px;margin-top: 6px;color: #6c757d;}

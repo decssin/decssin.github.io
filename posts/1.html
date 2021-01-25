@@ -6,10 +6,44 @@
 	<title>@jiwon.blog</title>
 	<link rel="icon" type="image/png" href="../favicon.ico">
 	<link rel="stylesheet" href="../index.css" />
-	<noscript><div id="noscript" class="display-flex">Your browser does not support JavaScript!</div></noscript>
+	
+	<noscript>
+		<div id="noscript" class="display-flex">
+			Your browser does not support JavaScript!
+		</div>
+	</noscript>
 </head>
 <body>
 	<div id="wrap" class="margin-0-auto position-relative">
+		<!-- menu -->
+		<div class="open-menu display-flex position-fixed width-100 height-100 top-0 left-0" style="opacity:0;visibility:hidden;">
+			<ul class="menu-list">
+				<li><a class="cursor-pointer" href="https://jiwon.blog">blog</a></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/gallery/hall">gallery</a></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/calendar/cover">calendar</a></li>
+				<li><br/></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/about/me">about me</a></li>
+				<li><span class="cursor-pointer" onclick="toggleTheme()">day/night</span></li>
+			</ul>
+		</div>
+		
+		<!-- header -->
+		<div id="header" class="width-100 position-fixed top-0 left-0 cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+			<div class="header-wrap display-flex width-100 height-100 position-relative margin-0-auto">
+				<div class="menu-button display-flex cursor-pointer" onclick="toggleMenu()">
+					<div class="line width-100"></div>
+					<div class="line width-100"></div>
+					<div class="line width-100"></div>
+				</div>
+				<a class="title cursor-pointer" href="https://jiwon.blog" onclick="window.event.stopPropagation()">@jiwon.blog</a>
+				<div class="search-form display-flex position-absolute top-0" style="width:0;" onclick="event.stopPropagation()">
+					<input type="text" class="search-input position-relative" title="search input" onkeyup="searchPosts(this)">
+				</div>
+				<div class="search-posts position-relative"></div>
+			</div>
+		</div>
+		
+		<!-- main content -->
 		<div id="content">
             <div class="title">LIPSUM</div>
 			<div class="info">2021. 01. 20 by Jiwon Min</br>Wed Jan 20 2021 (Korea Standard Time)</div>
@@ -68,6 +102,16 @@
 관현악이며, 살았으며, 보이는 못하다 보이는 풀밭에 때에, 놀이 사막이다. 청춘은 같은 붙잡아 싸인 그리하였는가? 피고, 꾸며 가는 피다. 발휘하기 소리다.이것은 이상을 열매를 노년에게서 그리하였는가? 갑 청춘의 뜨거운지라, 품었기 위하여서. 예수는 방황하였으며, 되려니와, 따뜻한 얼마나 튼튼하며, 것이다. 이상의 우리의 노래하며 커다란 만천하의 하는 수 현저하게 약동하다. 눈이 것이다.보라, 이상 풀이 트고, 구하기 가슴이 것은 얼음과 보라. 무한한 주는 꽃이 가슴에 행복스럽고 피다. 이 설산에서 하였으며, 부패를 피에 끓는 긴지라 몸이 얼음이 힘있다. 무엇을 봄바람을 희망의 지혜는 황금시대를 하는 생생하며, 커다란 봄바람이다.
 <br/><br/>
             </div>
+		</div>
+
+		<!-- footer -->
+		<div id="footer" class="display-flex position-absolute bottom-0 left-0">
+			<div class="rights">
+				&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.
+			</div>
+			<div class="design">
+				Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.
+			</div>
 		</div>
 	</div>
 

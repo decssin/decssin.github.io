@@ -6,53 +6,178 @@
 	<title>@jiwon.blog</title>
 	<link rel="icon" type="image/png" href="favicon.ico">
 	<link rel="stylesheet" href="index.css" />
-	<noscript><div id="noscript" class="display-flex">Your browser does not support JavaScript!</div></noscript>
+
+	<noscript>
+		<div id="noscript" class="display-flex">
+			Your browser does not support JavaScript!
+		</div>
+	</noscript>
 </head>
 <body>
 	<div id="wrap" class="margin-0-auto position-relative">
+		<!-- menu -->
+		<div class="open-menu display-flex position-fixed width-100 height-100 top-0 left-0" style="opacity:0;visibility:hidden;">
+			<ul class="menu-list">
+				<li><a class="cursor-pointer" href="https://jiwon.blog">blog</a></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/gallery/hall">gallery</a></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/calendar/cover">calendar</a></li>
+				<li><br/></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/about/me">about me</a></li>
+				<li><span class="cursor-pointer" onclick="toggleTheme()">day/night</span></li>
+			</ul>
+		</div>
+
+		<!-- header -->
+		<div id="header" class="width-100 position-fixed top-0 left-0 cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+			<div class="header-wrap display-flex width-100 height-100 position-relative margin-0-auto">
+				<div class="menu-button display-flex cursor-pointer" onclick="toggleMenu()">
+					<div class="line width-100"></div>
+					<div class="line width-100"></div>
+					<div class="line width-100"></div>
+				</div>
+				<a class="title cursor-pointer" href="https://jiwon.blog" onclick="window.event.stopPropagation()">@jiwon.blog</a>
+				<div class="search-form display-flex position-absolute top-0" style="width:0;" onclick="event.stopPropagation()">
+					<input type="text" class="search-input position-relative" title="search input" onkeyup="searchPosts(this)">
+				</div>
+				<div class="search-posts position-relative" onclick="toggleSearchbar()">
+					<div class="magnifier-circle position-absolute top-0 left-0"></div>
+					<div class="magnifier-grip position-absolute bottom-0"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- main content -->
 		<div id="post-list">
 			<div id="rotate-wrap" class="width-100 height-100 position-fixed top-0 left-0" style="display:none; opacity:0; transition:opacity .5s ease;">
 				<div id="spin-object" class="position-absolute"></div>
 			</div>
 
-			<ul>
-				<li>
-					<a class="title" href=""></a>
-					<div class="content"></div>
-					<div class="datetime"></div>
-				</li>
-				<li>
-					<a class="title" href=""></a>
-					<div class="content"></div>
-					<div class="datetime"></div>
-				</li>
-				<li>
-					<a class="title" href=""></a>
-					<div class="content"></div>
-					<div class="datetime"></div>
-				</li>
-				<li>
-					<a class="title" href=""></a>
-					<div class="content"></div>
-					<div class="datetime"></div>
-				</li>
-				<li>
-					<a class="title" href=""></a>
-					<div class="content"></div>
-					<div class="datetime"></div>
-				</li>
-			</ul>
+			<ul></ul>
+		</div>
 
-			<div id="pagination" data-page="1">
-				<div class="more-button display-flex cursor-pointer" onclick="getPosts()">
-					<div class="more-dot"></div>
-					<div class="more-dot"></div>
-					<div class="more-dot"></div>
-				</div>
+		<!-- footer -->
+		<div id="footer" class="display-flex position-absolute bottom-0 left-0">
+			<div class="rights">
+				&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.
+			</div>
+			<div class="design">
+				Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.
 			</div>
 		</div>
 	</div>
 
+	<script src="posts.js" type="text/javascript"></script>
 	<script src="index.js" type="text/javascript"></script>
+	<script>
+		function createPostDOM(idx) {
+			let li 			= document.createElement('li');
+			let title 		= document.createElement('a');
+			let content 	= document.createElement('div');
+			let datetime 	= document.createElement('div');
+
+			title.setAttribute('class', 'title');
+			title.setAttribute('href', posts[idx]['link']);
+			title.innerHTML = posts[idx]['title'];
+
+			content.setAttribute('class', 'content');
+			content.innerHTML = posts[idx]['description'];
+
+			datetime.setAttribute('class', 'datetime');
+			datetime.innerHTML = posts[idx]['pubDate'];
+
+			li.appendChild(title);
+			li.appendChild(content);
+			li.appendChild(datetime);
+
+			document.getElementById('post-list').getElementsByTagName('ul')[0].appendChild(li);
+		}
+
+		for (let idx = 0; idx < 30; idx++) {
+			if (!posts[idx]) {
+				break;
+			}
+
+			createPostDOM(idx);
+		}
+
+		let page_number = 1;
+		let rotate_wrap = document.getElementById('rotate-wrap');
+		window.onscroll = function(ev) {
+			if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+				let search_form_width = parseInt(document.getElementById('header').getElementsByClassName('search-form')[0].style.width);
+				let start_idx = document.getElementById('post-list').getElementsByTagName('li').length;
+				let end_idx = ((page_number * 10) > posts.length) ? posts.length : page_number * 10;
+
+				if (start_idx >= end_idx) {
+					// alert('All posts have been loaded.');
+					return;
+				}
+				
+				if (rotate_wrap.style.display === 'none' && search_form_width === 0) {
+					document.body.style.overflow = 'hidden';
+					rotate_wrap.style.display = 'block';
+					setTimeout(function() {
+						rotate_wrap.style.opacity = '1';
+					}, 100);
+					
+					setTimeout(function() {
+						document.body.style.overflow = 'visible';
+						rotate_wrap.style.opacity = '0';
+						setTimeout(function() {
+							rotate_wrap.style.display = 'none';
+						}, 200);
+
+						for (let idx = start_idx; idx < end_idx; idx++) {
+							createPostDOM(idx);
+						}
+
+						// Add 1 page_number
+						page_number++;
+					}, 700);
+				}
+			}
+		};
+
+		function toggleSearchbar() {
+			let search_form     = document.getElementById('header').getElementsByClassName('search-form')[0];
+			let search_input    = document.getElementById('header').getElementsByClassName('search-input')[0];
+			let header_color    = window.getComputedStyle(document.getElementById('header')).getPropertyValue('background-color');
+
+			if (parseInt(search_form.style.width) === 0) {
+				search_form.style.width         = 'calc(100% - 45px)';
+				search_form.style.background    = header_color;
+				search_input.style.border       = '1px solid lightgray';
+
+				search_input.focus();
+			} else {
+				search_form.style.width         = '0';
+				search_form.style.background    = 'transparent';
+				search_input.style.borderColor  = 'transparent';
+				search_input.value              = '';
+
+				document.getElementById('post-list').getElementsByTagName('ul')[0].innerHTML = '';
+
+				for (let idx = 0; idx < 5; idx++) {
+					createPostDOM(idx);
+				}
+			}
+
+			this.event.stopPropagation();
+		}
+
+		function searchPosts(_this) {
+			document.getElementById('post-list').getElementsByTagName('ul')[0].innerHTML = '';
+
+			if (_this.value === '') {
+				return;
+			}
+
+			for (let idx = 0; idx < posts.length; idx++) {
+				if (posts[idx]['title'].toLowerCase().indexOf(_this.value.toLowerCase()) > -1) {
+					createPostDOM(idx);
+				}
+			}
+		}
+	</script>
 </body>
 </html>

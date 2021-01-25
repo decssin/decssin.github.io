@@ -6,10 +6,44 @@
 	<title>@jiwon.blog</title>
 	<link rel="icon" type="image/png" href="../favicon.ico">
 	<link rel="stylesheet" href="../index.css" />
-	<noscript><div id="noscript" class="display-flex">Your browser does not support JavaScript!</div></noscript>
+	
+	<noscript>
+		<div id="noscript" class="display-flex">
+			Your browser does not support JavaScript!
+		</div>
+	</noscript>
 </head>
 <body>
 	<div id="wrap" class="margin-0-auto position-relative">
+		<!-- menu -->
+		<div class="open-menu display-flex position-fixed width-100 height-100 top-0 left-0" style="opacity:0;visibility:hidden;">
+			<ul class="menu-list">
+				<li><a class="cursor-pointer" href="https://jiwon.blog">blog</a></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/gallery/hall">gallery</a></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/calendar/cover">calendar</a></li>
+				<li><br/></li>
+				<li><a class="cursor-pointer" href="https://jiwon.blog/about/me">about me</a></li>
+				<li><span class="cursor-pointer" onclick="toggleTheme()">day/night</span></li>
+			</ul>
+		</div>
+		
+		<!-- header -->
+		<div id="header" class="width-100 position-fixed top-0 left-0 cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+			<div class="header-wrap display-flex width-100 height-100 position-relative margin-0-auto">
+				<div class="menu-button display-flex cursor-pointer" onclick="toggleMenu()">
+					<div class="line width-100"></div>
+					<div class="line width-100"></div>
+					<div class="line width-100"></div>
+				</div>
+				<a class="title cursor-pointer" href="https://jiwon.blog" onclick="window.event.stopPropagation()">@jiwon.blog</a>
+				<div class="search-form display-flex position-absolute top-0" style="width:0;" onclick="event.stopPropagation()">
+					<input type="text" class="search-input position-relative" title="search input" onkeyup="searchPosts(this)">
+				</div>
+				<div class="search-posts position-relative"></div>
+			</div>
+		</div>
+
+		<!-- main content -->
 		<div id="content">
             <div class="title">Apache 웹 서버 설정</div>
             <div class="info">2021. 01. 20 by Jiwon Min</br>Wed Jan 20 2021 (Korea Standard Time)</div>
@@ -140,6 +174,16 @@ RewriteRule ^([^\.]+)$ $1.php [NC,L]
 PHP에서 파일 제어 중에 서버로 업로드 안되는 경우, 권한을 확인합니다. 아파치의 기본 사용자는 nobody 또는 daemon 입니다. 
 그렇기 때문에, 서버에서 루트 권한이 아니라면 파일 제어가 되지 않을 수 있습니다.
             </div>
+		</div>
+
+		<!-- footer -->
+		<div id="footer" class="display-flex position-absolute bottom-0 left-0">
+			<div class="rights">
+				&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.
+			</div>
+			<div class="design">
+				Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.
+			</div>
 		</div>
 	</div>
 
