@@ -1,171 +1,176 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>@jiwon.blog</title>
-	<link rel="icon" type="image/png" href="../favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="194x194" href="../favicon-194x194.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-	<link rel="manifest" href="../site.webmanifest">
-	<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="apple-mobile-web-app-title" content="@jiwon.blog">
-	<meta name="application-name" content="@jiwon.blog">
-	<meta name="msapplication-TileColor" content="#000000">
-	<meta name="msapplication-TileImage" content="../mstile-144x144.png">
-	<meta name="theme-color" content="#000000">
-	
-	<link rel="stylesheet" href="../assets/common.css" />
-	<link rel="stylesheet" href="../assets/posts.css" />
-	
-	<noscript>
-		<div id="noscript" class="display-flex">
-			Your browser does not support JavaScript!
-		</div>
-	</noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@jiwon.blog</title>
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="../favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="@jiwon.blog">
+    <meta name="application-name" content="@jiwon.blog">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="../mstile-144x144.png">
+    <meta name="theme-color" content="#000000">
+    
+    <link rel="stylesheet" href="../assets/common.css" />
+    <link rel="stylesheet" href="../assets/posts.css" />
+    
+    <noscript>
+        <div id="noscript" class="display-flex">
+            Your browser does not support JavaScript!
+        </div>
+    </noscript>
 </head>
 <body>
-	<div id="wrap" class="margin-0-auto position-relative">
-		<!-- menu -->
-		<div class="open-menu display-flex position-fixed width-100 height-100 top-0 left-0" style="opacity:0;visibility:hidden;">
-			<ul class="menu-list">
-				<li><a class="cursor-pointer" href="https://jiwon.blog">blog</a></li>
-				<li><a class="cursor-pointer" href="https://jiwon.blog/gallery/hall">gallery</a></li>
-				<li><a class="cursor-pointer" href="https://jiwon.blog/calendar/cover">calendar</a></li>
-				<li><br/></li>
-				<li><a class="cursor-pointer" href="https://jiwon.blog/about/me">about me</a></li>
-				<li><span class="cursor-pointer" onclick="toggleTheme()">day/night</span></li>
-			</ul>
-		</div>
-		
-		<!-- header -->
-		<div id="header" class="width-100 position-fixed top-0 left-0 cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-			<div class="header-wrap display-flex width-100 height-100 position-relative margin-0-auto">
-				<div class="menu-button display-flex cursor-pointer" onclick="toggleMenu()">
-					<div class="line width-100"></div>
-					<div class="line width-100"></div>
-					<div class="line width-100"></div>
-				</div>
-				<a class="title cursor-pointer" href="https://jiwon.blog" onclick="window.event.stopPropagation()">@jiwon.blog</a>
-				<div class="search-form display-flex position-absolute top-0" style="width:0;" onclick="event.stopPropagation()">
-					<input type="text" class="search-input position-relative" title="search input" onkeyup="searchPosts(this)">
-				</div>
-				<div class="search-posts position-relative"></div>
-			</div>
-		</div>
+    <div id="wrap" class="margin-0-auto position-relative">
+        <!-- menu -->
+        <div class="open-menu display-flex position-fixed width-100 height-100 top-0 left-0" style="opacity:0;visibility:hidden;">
+            <ul class="menu-list">
+                <li><a class="cursor-pointer" href="https://jiwon.blog">blog</a></li>
+                <li><a class="cursor-pointer" href="https://jiwon.blog/gallery/hall">gallery</a></li>
+                <li><a class="cursor-pointer" href="https://jiwon.blog/calendar/cover">calendar</a></li>
+                <li><br/></li>
+                <li><a class="cursor-pointer" href="https://jiwon.blog/about/me">about me</a></li>
+                <li><span class="cursor-pointer" onclick="toggleTheme()">day/night</span></li>
+            </ul>
+        </div>
+        
+        <!-- header -->
+        <div id="header" class="width-100 position-fixed top-0 left-0 cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <div class="header-wrap display-flex width-100 height-100 position-relative margin-0-auto">
+                <div class="menu-button display-flex cursor-pointer" onclick="toggleMenu()">
+                    <div class="line width-100"></div>
+                    <div class="line width-100"></div>
+                    <div class="line width-100"></div>
+                </div>
+                <a class="title cursor-pointer" href="https://jiwon.blog" onclick="window.event.stopPropagation()">@jiwon.blog</a>
+                <div class="search-form display-flex position-absolute top-0" style="width:0;" onclick="event.stopPropagation()">
+                    <input type="text" class="search-input position-relative" title="search input" onkeyup="searchPosts(this)">
+                </div>
+                <div class="search-posts position-relative"></div>
+            </div>
+        </div>
 
-		<!-- main content -->
-		<div id="content">
+        <!-- main content -->
+        <div id="content">
             <div class="title">LAMP 및 SSL 기본 설정</div>
-            <div class="info">2021. 01. 20 by Jiwon Min</br>Wed Jan 20 2021 (Korea Standard Time)</div>
+            <div class="info">2021. 01. 20 by Jiwon Min<br />Wed Jan 20 2021 (Korea Standard Time)</div>
 
             <div class="explain">
-				
+
 <h3>디스크 스왑</h3>
-낮은 사양의 컴퓨팅 리소스 사용 시, 디스크 스왑 기능의 사용이 필요합니다.<br/><br/>
+<p>낮은 사양의 컴퓨팅 리소스 사용 시, 디스크 스왑 기능의 사용이 필요합니다.</p>
 
-<pre>
-/* 스왑 파일/파티션 존재 여부 확인 */
-<code>$ sudo free -m</code>
-
-/* swap 설정이 되어있는지 확인 */
-<code>$ sudo swapon -s</code>
-
-/* 스왑 파일(swapfile) 생성 */
-<code>$ sudo fallocate -l 2G /swapfile</code>
-
-/* 파일의 권한을 수정 */
-<code>$ sudo chmod 600 /swapfile</code>
-
-/* 해당 파일이 스왑으로 동작하도록 설정 */
-<code>$ sudo mkswap /swapfile</code>
-
-/* 스왑 활성화 */
-<code>$ sudo swapon /swapfile</code>
-
-/* 재부팅 후에도 스왑 활성화되도록 설정 */
-<code>$ sudo vim /etc/fstab</code>
-/* 파일 하단에 아래 내용 추가 */
-<code>/swapfile swap swap defaults 0 0</code>
-</pre>
+<pre><strong>스왑 파일/파티션 존재 여부 확인</strong><br />$ sudo free -m</pre>
+<pre><strong>swap 설정이 되어있는지 확인</strong><br />$ sudo swapon -s</pre>
+<pre><strong>스왑 파일(swapfile) 생성</strong><br />$ sudo fallocate -l 2G /swapfile</pre>
+<pre><strong>파일의 권한을 수정</strong><br />$ sudo chmod 600 /swapfile</pre>
+<pre><strong>해당 파일이 스왑으로 동작하도록 설정</strong><br />$ sudo mkswap /swapfile</pre>
+<pre><strong>스왑 활성화</strong><br />$ sudo swapon /swapfile</pre>
+<pre><strong>재부팅 후에도 스왑 활성화되도록 설정</strong><br />$ sudo vim /etc/fstab</pre>
+<pre><strong>파일 하단에 아래 내용 추가</strong><br />/swapfile swap swap defaults 0 0</pre>
 
 <h3>Apache 설치 및 설정</h3>
 
+<pre><strong>설치</strong><br />$ apt install apache2</pre>
+
 <pre>
-/* 설치 */
-<code>$ apt install apache2</code>
+<strong>SSL 인증서 관련 패키지 설치 및 기본 설정</strong>
+$ apt install ssl-cert
+$ apt install certbot
+$ a2enmod rewrite
+$ a2enmod headers
+$ a2enmod ssl
+$ a2dismod -f autoindex
+</pre>
 
-/* SSL 인증서 관련 패키지 설치 및 기본 설정 */
-<code>$ apt install ssl-cert</code>
-<code>$ apt install certbot</code>
-<code>$ a2enmod rewrite</code>
-<code>$ a2enmod headers</code>
-<code>$ a2enmod ssl</code>
-<code>$ a2dismod -f autoindex</code>
+<pre>
+<strong>개별 권한 설정</strong>
+$ apt-cache search mpm-itk
+$ apt install libapache2-mpm-itk
+$ chmod 711 /home
+$ chmod -R 700 /home/*
+</pre>
 
-/* 개별 권한 설정 */
-<code>$ apt-cache search mpm-itk</code>
-<code>$ apt install libapache2-mpm-itk</code>
-<code>$ chmod 711 /home</code>
-<code>$ chmod -R 700 /home/*</code>
+<pre>
+<strong>변경사항 적용 후 문법검사</strong>
+$ service apache2 restart
+$ apache2ctl -S
+</pre>
 
-/* 변경사항 적용 후 문법검사 */
-<code>$ service apache2 restart</code>
-<code>$ apache2ctl -S</code>
-
-/* Charset, TimeZone, Security 추가 설정 */
-<code>$ vi /etc/apache2/conf-available/charset.conf</code> # AddDefaultCharset UTF-8 주석 제거
-<code>$ vi /etc/apache2/conf-available/security.conf</code> # ServerSignature Off 등 주석 제거
-<code>$ vi /etc/apache2/apache2.conf</code> # .git, .env 등 추가 보안 필요한 파일 설정
+<pre>
+<strong>Charset, TimeZone, Security 추가 설정</strong>
+$ vi /etc/apache2/conf-available/charset.conf   # AddDefaultCharset UTF-8 주석 제거
+$ vi /etc/apache2/conf-available/security.conf  # ServerSignature Off 등 주석 제거
+$ vi /etc/apache2/apache2.conf                  # .git, .env 등 추가 보안 필요한 파일 설정
 </pre>
 
 
 <h3>PHP 설치 및 설정</h3>
 
 <pre>
-/* 설치 */
-<code>$ apt install php</code>
+<strong>설치</strong>
+$ apt install php
+</pre>
 
-/* 관련 모듈 설치 */
-<code>$ apt install php-mysql</code> # mysql 연동 시 필요
-<code>$ apt-cache search php- | grep ^php- | grep module</code> # 필요한 패키지 검색
+<pre>
+<strong>관련 모듈 설치</strong>
+$ apt install php-mysql # mysql 연동 시 필요
+$ apt-cache search php- | grep ^php- | grep module # 필요한 패키지 검색
+</pre>
 
-/* TimeZone, Security 추가 설정 */
-<code>$ vi /etc/php/7.2/apache2/php.ini</code>
-<code>$ vi /etc/php/7.2/cli/php.ini</code>
-<code>date.timezone = Asia/Seoul</code> # /timezone 입력으로 검색 후 설정
+<pre>
+<strong>TimeZone, Security 추가 설정</strong>
+$ vi /etc/php/7.2/apache2/php.ini
+$ vi /etc/php/7.2/cli/php.ini
+date.timezone = Asia/Seoul # /timezone 입력으로 검색 후 설정
 </pre>
 
 
 <h3>MySQL 설치 및 설정</h3>
 <pre>
-/* 설치 */
-<code>$ apt install mysql-server</code>
+<strong>설치</strong>
+$ apt install mysql-server
+</pre>
 
-/* 계정 설정 */
-<code>$ mysql_secure_installation</code>
+<pre>
+<strong>계정 설정</strong>
+$ mysql_secure_installation
 # 모두 y 입력하고, 'password strength' 값은 0 으로 설정
 # 잘못 입력 했을 경우, 다시 실행
+</pre>
 
-/* Charset 확인 */
-<code>$ mysqladmin variables | grep character</code>
+<pre>
+<strong>Charset 확인</strong>
+$ mysqladmin variables | grep character
+</pre>
 
-/* 사용자 확인 */
-<code>SELECT user,authentication_string,plugin,host FROM mysql.user;</code>
+<pre>
+<strong>사용자 확인</strong>
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+</pre>
 
-<code>root.plugin = 'auth_socket'</code> 
+<pre>
+<strong>root.plugin = 'auth_socket'</strong>
 # root 계정은 auth_socket 으로 설정되어 있어서 패스워드 로그인 불가능
 # 로그인 시, `sudo mysql` 으로만 로그인 가능
+</pre>
 
-/* 사용자 추가 */
-<code>CREATE user 'ID'@'HOST' IDENTIFIED BY 'PASSWORD';</code>
+<pre>
+<strong>사용자 추가</strong>
+CREATE user 'ID'@'HOST' IDENTIFIED BY 'PASSWORD';
+</pre>
 
-/* 권한 확인 및 추가 */
-<code>SHOW GRANTS FOR 'ID'@'HOST';</code>
-<code>GRANT SELECT, INSERT, UPDATE, DELETE ON dbname.* TO 'ID'@'HOST';</code>
+<pre>
+<strong>권한 확인 및 추가</strong>
+SHOW GRANTS FOR 'ID'@'HOST';
+GRANT SELECT, INSERT, UPDATE, DELETE ON dbname.* TO 'ID'@'HOST';
 </pre>
 
 
@@ -174,60 +179,78 @@
 <h3>SSL 설정</h3>
 
 <pre>
+<strong>Apache2 환경설정 생성기</strong>
 # 아래의 링크를 클릭해서 환경설정 파일을 생성하세요.
-# Apache2 환경설정 생성기
 <a href="https://webmaster.cafe/tools/apache-conf-generator/" title="Apache2 환경설정 생성기" target="_blank">https://webmaster.cafe/tools/apache-conf-generator/</a>
+</pre>
 
-/* 사이트 켜기 */
-<code>$ a2ensite jiwon.blog</code>
+<pre>
+<strong>사이트 켜기</strong>
+$ a2ensite jiwon.blog
+</pre>
 
-/* 사이트 끄기 */
-<code>$ a2dissite jiwon.blog</code>
+<pre>
+<strong>사이트 끄기</strong>
+$ a2dissite jiwon.blog
+</pre>
 
-/* 변경사항 적용 */
-<code>$ service apache2 reload</code>
+<pre>
+<strong>변경사항 적용</strong>
+$ service apache2 reload
+</pre>
 
-/* LetsEncrypt 인증서 발급 */
+<pre>
+<strong>LetsEncrypt 인증서 발급</strong>
 # 발급에 실패하는 경우, http 접근 허용 확인 필요
-<code>$ certbot certonly --webroot --webroot-path=/var/www/jiwon.blog -d jiwon.blog</code>
+$ certbot certonly --webroot --webroot-path=/var/www/jiwon.blog -d jiwon.blog
 </pre>
 
 
 
 <h3>Lect's Encrypt SSL 인증서 자동 갱신</h3>
 <pre>
-/* 리눅스 스케쥴러 패키지 설치 */
-<code>$ apt install cron</code>
+<strong>리눅스 스케쥴러 패키지 설치 */</strong>
+$ apt install cron
+</pre>
 
-/* Crontab 등록 */
-<code>$ sudo crontab -e</code>
+<pre>
+<strong>Crontab 등록 */</strong>
+$ sudo crontab -e
+</pre>
 
-# 매월 1일 03시 인증서 갱신 후 웹서버 reload
-<code>0 3 1 * * certbot renew --renew-hook="service apache2 reload"</code>
+<pre>
+<strong>매월 1일 03시 인증서 갱신 후 웹서버 reload</strong>
+0 3 1 * * certbot renew --renew-hook="service apache2 reload
+</pre>
 
-/* Crontab 실행 로그 확인 */
-<code>$ view /var/log/syslog</code>
+<pre>
+<strong>Crontab 실행 로그 확인 */</strong>
+$ view /var/log/syslog
+</pre>
 
-/* 인증서 만료일 확인 */
-<code>$ certbot certificates</code>
+<pre>
+<strong>인증서 만료일 확인 */</strong>
+$ certbot certificates
+</pre>
 
-/* 현재 서버에서 사용중인 인증서 목록 보기 */
-<code>$ sudo ls /etc/letsencrypt/live/</code>
+<pre>
+<strong>현재 서버에서 사용중인 인증서 목록 보기 */</strong>
+$ sudo ls /etc/letsencrypt/live
 </pre>
 
             </div>
-		</div>
+        </div>
 
-		<!-- footer -->
-		<div id="footer" class="display-flex position-absolute bottom-0 left-0">
-			<div class="rights">
-				&copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.
-			</div>
-			<div class="design">
-				Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.
-			</div>
-		</div>
-	</div>
+        <!-- footer -->
+        <div id="footer" class="display-flex position-absolute bottom-0 left-0">
+            <div class="rights">
+                &copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.
+            </div>
+            <div class="design">
+                Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.
+            </div>
+        </div>
+    </div>
 
     <script src="../assets/common.js" type="text/javascript"></script>
 </body>
