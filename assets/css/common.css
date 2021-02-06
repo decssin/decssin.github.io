@@ -1,5 +1,9 @@
+/* font */
+@font-face {font-family:'RIDIBatang';src:url('../fonts/RIDIBatang.otf')format('woff');font-weight:normal;font-style:normal;}
+/* ---------- */
+
 /* normalize */
-*,*::before,*::after {margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;-webkit-tap-highlight-color:transparent;}
+*,*::before,*::after {font-family:'RIDIBatang';margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;-webkit-tap-highlight-color:transparent;}
 html {font-size: 62.5%;}
 a,a:active,a:visited{color:inherit}
 body {overflow: hidden;pointer-events: none;}
@@ -7,6 +11,7 @@ body::-webkit-scrollbar {width: 8px;}
 body::-webkit-scrollbar-thumb {background-color: gray;}
 #noscript,#internetexplorer {position: fixed;z-index: 2;top: 0;left: 0;width: 100%;height: 100%;background: white;font-size: 2rem;}
 /* ---------- */
+
 
 /* theme color black & white */
 body {background: white;}
@@ -18,8 +23,8 @@ body#night-theme {background: #1b1b1e;}
 #wrap .open-menu .menu-list li {color: #4e4e4e;}
 #night-theme #wrap .open-menu .menu-list li {color: white;}
 
-#header {background: white;color: #4e4e4e;}
-#night-theme #header {background: #27282b;color: #afb0b1;}
+#header {background: rgba(255 255 255 / 80%);color: #4e4e4e;backdrop-filter: blur(2px);}
+#night-theme #header {background: rgba(39 40 43 / 80%);color: #afb0b1;}
 
 #header .line {background: #999;}
 #night-theme #header .line {background: #afb0b1;}
