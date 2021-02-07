@@ -1,5 +1,5 @@
 /* font */
-@font-face {font-family:'RIDIBatang';src:url('../fonts/RIDIBatang.otf')format('woff');font-weight:normal;font-style:normal;}
+@font-face {font-family:'RIDIBatang';src:url('../fonts/RIDIBatang.otf')format('woff');font-weight:normal;font-style:normal;font-display:swap;}
 /* ---------- */
 
 /* normalize */
