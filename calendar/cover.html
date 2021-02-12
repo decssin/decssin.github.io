@@ -272,7 +272,7 @@
             </table>
 
             <!-- iframe -->
-            <div id="close" class="position-absolute width-100" onclick="closeIframe()" style="display: none;">
+            <div id="close" class="position-absolute width-100 cursor-pointer" onclick="closeIframe()" style="display: none;">
                 <div class="line line_1 position-absolute top-0"></div>
                 <div class="line line_2 position-absolute top-0"></div>
             </div>
@@ -317,8 +317,12 @@
                         let ul = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day'] + ' > .do_something');
                         ul.appendChild(li);
 
-                        let date_number = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day'] + ' > .date').innerText;
-                        document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day']).setAttribute('onclick', 'loadDate(\'' + (date['capt'] + ' / ' + String(date_number).padStart(2, 0)).replace(/\s/g, '') + '\')');
+                        let date_label = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day'] + ' > .date');
+                        date_label.style.cursor = 'pointer';
+
+                        let day_td = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day']);
+                        day_td.setAttribute('onclick', 'loadDate(\'' + (date['capt'] + ' / ' + String(date_label.innerText).padStart(2, 0)).replace(/\s/g, '') + '\')');
+                        day_td.style.cursor = 'pointer';
                     }
                 }
             }, 50);
