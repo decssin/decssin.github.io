@@ -59,7 +59,7 @@ body#night-theme {background: #1b1b1e;}
 /* ---------- */
 
 /* common header */
-#header {z-index: 1;height: 47px;box-shadow: 0 3px 5px 0 rgb(0 0 0 / 7%);}
+#header {z-index: 9;height: 47px;box-shadow: 0 3px 5px 0 rgb(0 0 0 / 7%);}
 #header .header-wrap {justify-content: space-between;max-width: 700px;padding: 0 18px;}
 #header .menu-button {width: 15px;height: 12px;justify-content: space-between;flex-flow: column;}
 #header .line {height: 2px;border-radius: 15px;}
@@ -72,5 +72,5 @@ body#night-theme {background: #1b1b1e;}
 /* ---------- */
 
 /* common footer */
-#footer {width: calc(100% - 30px);height: 70px;margin: 0 18px;justify-content: space-between;font-size: 1.2rem;color: #7a7b7d;}
+#footer {z-index:9; width: calc(100% - 30px);height: 70px;margin: 0 18px;justify-content: space-between;font-size: 1.2rem;color: #7a7b7d;}
 /* ---------- */

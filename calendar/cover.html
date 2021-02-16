@@ -23,19 +23,27 @@
         #content #calendar {width: 100%;max-height: 650px;height: calc(100% - 210px);text-align: center; font-size:1.8rem;}
         #content #calendar th, #content #calendar td {width:14.3%;height:60px;}
         #content #calendar td {vertical-align: middle;}
-        #content #calendar .do_something {justify-content:space-between;width:21px;margin-left:55%;}
+        #content #calendar .do_something {justify-content:space-around;width:21px;margin-left:55%;}
         #content #calendar .do_something li {width: 5px;height: 5px;background: coral;border-radius: 100%;}
 
-        #close {z-index:1;top:72px;height:25px;margin-bottom:25px;}
+        #close {z-index:1;top:72px;height:25px;margin-bottom:25px;transition: opacity 0.3s, visibility 0.3s;}
         #close .line {width:10px;height:25px;border-radius:100%;background:darkslategray;left:calc(50% - 5px);}
         #close .line_1 {transform:rotate(45deg);}
         #close .line_2 {transform:rotate(-45deg);}
-        #content #iframe {top:47px;height:calc(100% - 117px);background:rgba(255,255,255,0.8);backdrop-filter:blur(5px);}
+        #content #iframe {top:47px;height:calc(100% - 117px);background:rgba(255,255,255,0.8);backdrop-filter:blur(5px);transition: opacity 0.3s, visibility 0.3s;}
+
+        @keyframes fill-animation{0%{stroke-dasharray: 40 242.6;stroke-dashoffset: 0;}50%{stroke-dasharray: 141.3;stroke-dashoffset: 141.3;}100%{stroke-dasharray: 40 242.6;stroke-dashoffset: 282.6;}}
+        #svg-loader {transition: opacity 0.3s, visibility 0.3s;}
+        #svg-circle {transition: opacity 0.3s, visibility 0.3s;}
 
         @media (max-width: 430px) {
             #content #calendar .do_something {width: 18px;margin-left: 65%;}
             #content #calendar .do_something li {width:4px;height:4px;}
         }
+
+        #night-theme #content #iframe {background:#1b1b1e;}
+        #night-theme #content * {color:white;}
+        #night-theme #svg-loader {background:#1b1b1e !important;}
     </style>
     
     <noscript>
@@ -76,6 +84,13 @@
         
         <!-- main content -->
         <div id="content" class="display-flex position-absolute width-100 height-100">
+
+            <div id="svg-loader" style="display:flex;position:absolute;z-index:2;align-content: space-around;justify-content: center;align-items: center;justify-items: center;width:100%;height:100%;background:rgba(255,255,255,0.8);backdrop-filter:blur(5px);">
+                <svg id="svg-circle" height="100" width="100" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" style="position: absolute;left: 0; right: 0; top: 0; bottom: 0;fill: none;stroke-width: 5px;stroke-linecap: round;stroke: rgb(64, 0, 148); stroke-width: 8px;stroke: rgb(207, 205, 245);"></circle>
+                    <circle cx="50" cy="50" r="45" style="position: absolute;left: 0; right: 0; top: 0; bottom: 0;fill: none;stroke-width: 5px;stroke-linecap: round;stroke: rgb(64, 0, 148); stroke-dasharray: 242.6;animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;"></circle>
+                </svg>
+            </div>
 
             <table id="calendar">
                 <caption></caption>
@@ -294,7 +309,12 @@
     <script>
         let color, date, data;
         let script = document.createElement('script');
-        script.setAttribute('src', '../calendar/2021/01/data.js');
+
+        let now = new Date();
+        let year = now.getFullYear();
+        let month = String(now.getMonth() + 1).padStart(2, 0);
+        
+        script.setAttribute('src', '../calendar/' + year + '/' + month + '/data.js');
 
         document.body.appendChild(script);
     </script>
@@ -302,30 +322,28 @@
 
     <script>
         function getCalendar() {
-            setTimeout(function() {
-                document.querySelector('#calendar > caption').innerText = date['capt'];
-                let td = document.getElementsByTagName('td');
-                for (let i = date.init, j = 1; i <= date.last; i++, j++) {
-                    td[i].children[1].innerText = j;
+            document.querySelector('#calendar > caption').innerText = date['capt'];
+            let td = document.getElementsByTagName('td');
+            for (let i = date.init, j = 1; i <= date.last; i++, j++) {
+                td[i].children[1].innerText = j;
+            }
+
+            for (let i = 0; i < data.length; i++) {
+                data[i]['len'] = (!data[i]['len'])      ? 1 : data[i]['len'];
+                data[i]['len'] = (data[i]['len'] > 3)   ? 3 : data[i]['len'];
+                for (let j = 0; j < data[i]['len']; j++) {
+                    let li = document.createElement('li');
+                    let ul = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day'] + ' > .do_something');
+                    ul.appendChild(li);
+
+                    let date_label = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day'] + ' > .date');
+                    date_label.style.cursor = 'pointer';
+
+                    let day_td = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day']);
+                    day_td.setAttribute('onclick', 'loadDate(\'' + (date['capt'] + ' / ' + String(date_label.innerText).padStart(2, 0)).replace(/\s/g, '') + '\')');
+                    day_td.style.cursor = 'pointer';
                 }
-
-                for (let i = 0; i < data.length; i++) {
-                    data[i]['len'] = (!data[i]['len'])      ? 1 : data[i]['len'];
-                    data[i]['len'] = (data[i]['len'] > 3)   ? 3 : data[i]['len'];
-                    for (let j = 0; j < data[i]['len']; j++) {
-                        let li = document.createElement('li');
-                        let ul = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day'] + ' > .do_something');
-                        ul.appendChild(li);
-
-                        let date_label = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day'] + ' > .date');
-                        date_label.style.cursor = 'pointer';
-
-                        let day_td = document.querySelector('#week_' + data[i]['week'] + ' > .' + data[i]['day']);
-                        day_td.setAttribute('onclick', 'loadDate(\'' + (date['capt'] + ' / ' + String(date_label.innerText).padStart(2, 0)).replace(/\s/g, '') + '\')');
-                        day_td.style.cursor = 'pointer';
-                    }
-                }
-            }, 300);
+            }
         }
 
         function loadMonth() {
@@ -333,17 +351,48 @@
         }
 
         function loadDate(filename) {
-            document.getElementById('close').style.display = 'initial';
-            document.getElementById('iframe').style.display = 'initial';
+            document.getElementById('svg-loader').style.opacity = 1;
+            document.getElementById('svg-circle').style.opacity = 1;
+            document.getElementById('svg-loader').style.visibility = 'visible';
+            document.getElementById('svg-circle').style.visibility = 'visible';
+
             document.getElementById('iframe').setAttribute('src', filename + '.html');
+            document.getElementById('iframe').addEventListener('load', function() {
+                setTimeout(function() {
+                    document.getElementById('close').style.display = 'initial';
+                    document.getElementById('iframe').style.display = 'initial';
+                    document.getElementById('close').style.opacity = 1;
+                    document.getElementById('iframe').style.opacity = 1;
+                    document.getElementById('close').style.visibility = 'visible';
+                    document.getElementById('iframe').style.visibility = 'visible';
+                    document.getElementById('svg-loader').style.opacity = 0;
+                    document.getElementById('svg-circle').style.opacity = 0;
+                    document.getElementById('svg-loader').style.visibility = 'hidden';
+                    document.getElementById('svg-circle').style.visibility = 'hidden';
+                }, 500);
+            });
         }
 
         function closeIframe() {
-            document.getElementById('close').style.display = 'none';
-            document.getElementById('iframe').style.display = 'none';
+            document.getElementById('close').style.opacity = 0;
+            document.getElementById('iframe').style.opacity = 0;
+            document.getElementById('close').style.visibility = 'hidden';
+            document.getElementById('iframe').style.visibility = 'hidden';
+            setTimeout(function() {
+                document.getElementById('close').style.display = 'none';
+                document.getElementById('iframe').style.display = 'none';
+            }, 300);
         }
 
-        getCalendar();
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                getCalendar();
+                document.getElementById('svg-loader').style.opacity = 0;
+                document.getElementById('svg-circle').style.opacity = 0;
+                document.getElementById('svg-loader').style.visibility = 'hidden';
+                document.getElementById('svg-circle').style.visibility = 'hidden';
+            }, 500);
+        });
     </script>
 </body> 
 </html>
