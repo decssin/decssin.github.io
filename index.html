@@ -3,231 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@jiwon.blog</title>
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="apple-mobile-web-app-title" content="@jiwon.blog">
-    <meta name="application-name" content="@jiwon.blog">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <meta name="theme-color" content="#000000">
+    <title>jiwon.io</title>
 
-    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="index.css" />
     <style>
-        /* animation */
-        @keyframes spin {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}
-        #rotate-wrap {z-index: 1;margin: 47px auto 0;background: rgba(27, 27, 30, 0.7);}
-        #rotate-wrap #spin-object {top: calc(50% - 80px);left: calc(50% - (60px / 2));width: 60px;height: 60px;border: inset 10px #afb0b1;border-radius: 100%;animation: spin 4s infinite linear;}
-        /* ---------- */
-
-        /* posts list */
-        #post-list {padding: 70px 18px;}
-        #post-list .title {font-size: 2.1rem;line-height: 2;}
-        #post-list .content {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;font-size: 1.4rem;line-height: 2.2;margin-top: 5px;}
-        #post-list .datetime {font-size: 1.2rem;line-height: 3;color: #6c757d;margin-top: 5px;}
-        #post-list li {padding-top: 10px;padding-bottom: 11px;margin-bottom: 8px;}
-        #post-list li:last-child {border:0 !important;}
-        /* ---------- */
-
-        /* theme color black & white */
-        #post-list .title {color: #2a408e;}
-        #post-list .title:hover {color: #d2603a !important;border-bottom: 1px solid #d2603a !important;}
-        #night-theme #post-list .title {color: #8ab4f8;}
-
-        #post-list .content {color: dimgrey;}
-        #night-theme #post-list .content {color: #afb0b1;}
-
-        #post-list li {border-bottom: 1px solid #f3f3f3;}
-        #night-theme #post-list li {border-bottom: 1px solid #2c2d2d;}
-        /* ---------- */
+        table {width: 100%;font-size: 1.5rem;text-align: center;}
+        th,td,caption {line-height: 45px;}
+        caption {font-weight: bold;}
+        .today {background: lightblue;color: white;}
     </style>
-
-    <noscript>
-        <div id="noscript" class="display-flex">
-            Your browser does not support JavaScript!
-        </div>
-    </noscript>
+    <noscript><div id="noscript">Your browser does not support JavaScript!</div></noscript>
 </head>
 <body>
-    <!-- SVG-LOADER
-    <style>@keyframes fill-animation{0%{stroke-dasharray: 40 242.6;stroke-dashoffset: 0;}50%{stroke-dasharray: 141.3;stroke-dashoffset: 141.3;}100%{stroke-dasharray: 40 242.6;stroke-dashoffset: 282.6;}}</style>
-    <div class="svg-loader" style="display:flex;position: relative;align-content: space-around;justify-content: center;">
-        <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
-            <circle class="loader-svg bg" cx="50" cy="50" r="45" style="position: absolute;left: 0; right: 0; top: 0; bottom: 0;fill: none;stroke-width: 5px;stroke-linecap: round;stroke: rgb(64, 0, 148); stroke-width: 8px;stroke: rgb(207, 205, 245);"></circle>
-            <circle class="loader-svg animate" cx="50" cy="50" r="45" style="position: absolute;left: 0; right: 0; top: 0; bottom: 0;fill: none;stroke-width: 5px;stroke-linecap: round;stroke: rgb(64, 0, 148); stroke-dasharray: 242.6;animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;"></circle>
+    <!-- loader -->
+    <div id="svg-loader" style="display:flex;position:absolute;z-index:2;align-content: space-around;justify-content: center;align-items: center;justify-items: center;width:100%;height:100%;background:rgba(255,255,255,0.8);backdrop-filter:blur(5px);transition: opacity 0.3s, visibility 0.3s;">
+        <svg id="svg-circle" height="100" width="100" viewBox="0 0 100 100" style="transition: opacity 0.3s, visibility 0.3s;">
+            <circle cx="50" cy="50" r="45" style="position: absolute;left: 0; right: 0; top: 0; bottom: 0;fill: none;stroke-width: 5px;stroke-linecap: round;stroke: rgb(64, 0, 148); stroke-width: 8px;stroke: rgb(207, 205, 245);"></circle>
+            <circle cx="50" cy="50" r="45" style="position: absolute;left: 0; right: 0; top: 0; bottom: 0;fill: none;stroke-width: 5px;stroke-linecap: round;stroke: rgb(64, 0, 148); stroke-dasharray: 242.6;animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;"></circle>
         </svg>
     </div>
-    -->
 
-    <div id="wrap" class="margin-0-auto position-relative">
-        <!-- menu -->
-        <div class="open-menu display-flex position-fixed width-100 height-100 top-0 left-0" style="opacity:0;visibility:hidden;">
-            <ul class="menu-list">
-                <li><a class="cursor-pointer" href="https://jiwon.blog">blog</a></li>
-                <li><a class="cursor-pointer" href="https://jiwon.blog/gallery/hall">gallery</a></li>
-                <li><a class="cursor-pointer" href="https://jiwon.blog/calendar/cover">calendar</a></li>
-                <li><br/></li>
-                <li><a class="cursor-pointer" href="https://jiwon.blog/about/me">about me</a></li>
-                <li><span class="cursor-pointer" onclick="toggleTheme()">day/night</span></li>
-            </ul>
-        </div>
-
+    <!-- wrap -->
+    <div id="wrap">
         <!-- header -->
-        <div id="header" class="width-100 position-fixed top-0 left-0 cursor-pointer" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-            <div class="header-wrap display-flex width-100 height-100 position-relative margin-0-auto">
-                <div class="menu-button display-flex cursor-pointer" onclick="toggleMenu()">
-                    <div class="line width-100"></div>
-                    <div class="line width-100"></div>
-                    <div class="line width-100"></div>
-                </div>
-                <a class="title cursor-pointer" href="https://jiwon.blog" onclick="window.event.stopPropagation()">@jiwon.blog</a>
-                <div class="search-form display-flex position-absolute top-0" style="width:0;" onclick="event.stopPropagation()">
-                    <input type="text" class="search-input position-relative" title="search input" onkeyup="searchPosts(this)">
-                </div>
-                <div class="search-posts position-relative" onclick="toggleSearchbar()">
-                    <div class="magnifier-circle position-absolute top-0 left-0"></div>
-                    <div class="magnifier-grip position-absolute bottom-0"></div>
-                </div>
-            </div>
+        <div id="header">
+            <a href="" class="title">jiwon.io</a>
         </div>
 
-        <!-- main content -->
-        <div id="post-list">
-            <div id="rotate-wrap" class="width-100 height-100 position-fixed top-0 left-0" style="display:none; opacity:0; transition:opacity .5s ease;">
-                <div id="spin-object" class="position-absolute"></div>
-            </div>
+        <!-- content -->
+        <div id="content">
 
-            <ul></ul>
+
+            <table>
+                <caption id="calendar-caption"></caption>
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body">
+
+                </tbody>
+            </table>
+
+
         </div>
 
         <!-- footer -->
-        <div id="footer" class="display-flex position-absolute bottom-0 left-0">
-            <div class="rights">
-                &copy; 2021 <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>. All rights reserved.
-            </div>
-            <div class="design">
-                Designed by <a href="javascript:void(0)" title="Jiwon Min">Jiwon Min</a>.
-            </div>
+        <div id="footer">
+            <label>&copy; <a href="javascript:void(0)">Jiwon Min</a>. All rights reserved.</label>
         </div>
     </div>
 
-    <script src="assets/js/posts.js" type="text/javascript"></script>
-    <script src="assets/js/common.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
     <script>
-        function createPostDOM(idx) {
-            let li 			= document.createElement('li');
-            let title 		= document.createElement('a');
-            let content 	= document.createElement('div');
-            let datetime 	= document.createElement('div');
+        let date = new Date();
+        let first_date = new Date(date.getFullYear(), date.getMonth(), 1);
+        let last_date = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-            title.setAttribute('class', 'title');
-            title.setAttribute('href', posts[idx]['link']);
-            title.innerHTML = posts[idx]['title'];
+        let tbl = document.getElementById('calendar-body');
+        let capt = document.getElementById('calendar-caption');
+        capt.innerHTML = months[date.getMonth()] + " " + date.getFullYear();
 
-            content.setAttribute('class', 'content');
-            content.innerHTML = posts[idx]['description'];
+        let mark_date = 1;
+        for (let i = 0; i < 6; i++) {
+            let row = document.createElement("tr");
 
-            datetime.setAttribute('class', 'datetime');
-            datetime.innerHTML = posts[idx]['pubDate'];
-
-            li.appendChild(title);
-            li.appendChild(content);
-            li.appendChild(datetime);
-
-            document.getElementById('post-list').getElementsByTagName('ul')[0].appendChild(li);
-        }
-
-        for (let idx = 0; idx < 30; idx++) {
-            if (!posts[idx]) {
-                break;
-            }
-
-            createPostDOM(idx);
-        }
-
-        let page_number = 1;
-        let rotate_wrap = document.getElementById('rotate-wrap');
-        window.onscroll = function(ev) {
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-                let search_form_width = parseInt(document.getElementById('header').getElementsByClassName('search-form')[0].style.width);
-                let start_idx = document.getElementById('post-list').getElementsByTagName('li').length;
-                let end_idx = ((page_number * 10) > posts.length) ? posts.length : page_number * 10;
-
-                if (start_idx >= end_idx) {
-                    // alert('All posts have been loaded.');
-                    return;
-                }
-                
-                if (rotate_wrap.style.display === 'none' && search_form_width === 0) {
-                    document.body.style.overflow = 'hidden';
-                    rotate_wrap.style.display = 'block';
-                    setTimeout(function() {
-                        rotate_wrap.style.opacity = '1';
-                    }, 100);
-                    
-                    setTimeout(function() {
-                        document.body.style.overflow = 'visible';
-                        rotate_wrap.style.opacity = '0';
-                        setTimeout(function() {
-                            rotate_wrap.style.display = 'none';
-                        }, 200);
-
-                        for (let idx = start_idx; idx < end_idx; idx++) {
-                            createPostDOM(idx);
-                        }
-
-                        // Add 1 page_number
-                        page_number++;
-                    }, 700);
-                }
-            }
-        };
-
-        function toggleSearchbar() {
-            let search_form     = document.getElementById('header').getElementsByClassName('search-form')[0];
-            let search_input    = document.getElementById('header').getElementsByClassName('search-input')[0];
-            let header_color    = window.getComputedStyle(document.getElementById('header')).getPropertyValue('background-color');
-
-            if (parseInt(search_form.style.width) === 0) {
-                search_form.style.width         = 'calc(100% - 45px)';
-                search_form.style.background    = header_color;
-                search_input.style.border       = '1px solid lightgray';
-
-                search_input.focus();
-            } else {
-                search_form.style.width         = '0';
-                search_form.style.background    = 'transparent';
-                search_input.style.borderColor  = 'transparent';
-                search_input.value              = '';
-
-                document.getElementById('post-list').getElementsByTagName('ul')[0].innerHTML = '';
-
-                for (let idx = 0; idx < 5; idx++) {
-                    createPostDOM(idx);
+            for (let j = 0; j < 7; j++) {
+                if (i === 0 && j < first_date.getDay()) { 
+                    cell = document.createElement("td");
+                    cellText = document.createTextNode("");
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                } else if (mark_date > last_date.getDate()) {
+                    break;
+                } else {
+                    cell = document.createElement("td");
+                    cellText = document.createTextNode(mark_date);
+                    if (mark_date === date.getDate()) {
+                        cell.classList.add("today");
+                    } // color today's date
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                    mark_date++;
                 }
             }
 
-            this.event.stopPropagation();
-        }
-
-        function searchPosts(_this) {
-            document.getElementById('post-list').getElementsByTagName('ul')[0].innerHTML = '';
-
-            if (_this.value === '') {
-                return;
-            }
-
-            for (let idx = 0; idx < posts.length; idx++) {
-                if (posts[idx]['title'].toLowerCase().indexOf(_this.value.toLowerCase()) > -1) {
-                    createPostDOM(idx);
-                }
-            }
+            tbl.appendChild(row);
         }
     </script>
 </body>

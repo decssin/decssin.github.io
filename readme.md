@@ -1,11 +1,6 @@
-# github pages
+# Keep It Super Simple
 
-> *I think it’s more like, I am therefore I blog.*
 
-![github pages](https://images.unsplash.com/photo-1455390582262-044cdead277a "github pages")
-source : [unsplash](https://unsplash.com)
-
----
 
 ### ___gitmoji___
 
@@ -42,9 +37,42 @@ source : [unsplash](https://unsplash.com)
 | 🛂 | `:passport_control:`     | Work on code related to authorization, roles and permissions. |
 | 🗑 | `:wastebasket:`           | Deprecate code that needs to be cleaned up. |
 
----
-
-     :loud_sound: Add logs (gazonnement🌱)
 
 
+### ___ubuntu upgrade___
 
+```ubuntu
+$ apt update
+$ apt upgrade
+$ apt full-upgrade
+$ apt autoremove
+$ apt autoclean
+$ apt clean
+```
+
+
+### ___ubuntu swap disk___
+
+```ubuntu
+Verify Swapfile Existence
+$ sudo free -m
+
+Verify Swap Settings
+$ sudo swapon -s
+
+Create Swapfile
+$ sudo fallocate -l 2G /swapfile
+
+Modify swapfile permissions
+$ sudo chmod 600 /swapfile
+
+Set the file to be swap
+$ sudo mkswap /swapfile
+
+Enable Swap
+$ sudo swapon /swapfile
+
+Enable swap activation after reboot
+$ sudo vim /etc/fstab
+  Add content to bottom of file -> /swapfile swap swap defaults 0 0
+```
