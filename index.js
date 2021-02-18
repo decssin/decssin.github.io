@@ -15,10 +15,27 @@ window.addEventListener('load', function() {
     }, 500);
 });
 
-let data = [
-    {
-        today: '2021-02-17',
-        workout: '00:00:00',
-        learned: false
-    },
-];
+let data = {
+    '2021': {
+        '02' : {
+            '01': {workout:'02:05:22',learned:true},
+            '02': {workout:'01:09:59',learned:true},
+            '03': {workout:'00:00:00',learned:false},
+            '04': {workout:'02:03:17',learned:true},
+            '05': {workout:'00:45:52',learned:true},
+            '06': {workout:'02:07:18',learned:true},
+            '07': {workout:'00:00:00',learned:true},
+            '08': {workout:'01:38:18',learned:true},
+            '09': {workout:'02:04:29',learned:true},
+            '10': {workout:'00:00:00',learned:false},
+            '11': {workout:'02:02:59',learned:false},
+            '12': {workout:'02:06:54',learned:false},
+            '13': {workout:'01:57:10',learned:true},
+            '14': {workout:'00:00:00',learned:false},
+            '15': {workout:'01:00:06',learned:true},
+            '16': {workout:'01:39:22',learned:true},
+            '17': {workout:'00:00:00',learned:false},
+            '18': {workout:'01:58:07',learned:true}
+        } 
+    }
+};

@@ -6,20 +6,14 @@
     <title>jiwon.io</title>
 
     <link rel="stylesheet" href="index.css" />
-    <style>
-        table {width: 100%;font-size: 1.5rem;text-align: center;}
-        th,td,caption {line-height: 45px;}
-        caption {font-weight: bold;}
-        .today {background: lightblue;color: white;}
-    </style>
     <noscript><div id="noscript">Your browser does not support JavaScript!</div></noscript>
 </head>
 <body>
     <!-- loader -->
-    <div id="svg-loader" style="display:flex;position:absolute;z-index:2;align-content: space-around;justify-content: center;align-items: center;justify-items: center;width:100%;height:100%;background:rgba(255,255,255,0.8);backdrop-filter:blur(5px);transition: opacity 0.3s, visibility 0.3s;">
-        <svg id="svg-circle" height="100" width="100" viewBox="0 0 100 100" style="transition: opacity 0.3s, visibility 0.3s;">
-            <circle cx="50" cy="50" r="45" style="position: absolute;left: 0; right: 0; top: 0; bottom: 0;fill: none;stroke-width: 5px;stroke-linecap: round;stroke: rgb(64, 0, 148); stroke-width: 8px;stroke: rgb(207, 205, 245);"></circle>
-            <circle cx="50" cy="50" r="45" style="position: absolute;left: 0; right: 0; top: 0; bottom: 0;fill: none;stroke-width: 5px;stroke-linecap: round;stroke: rgb(64, 0, 148); stroke-dasharray: 242.6;animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;"></circle>
+    <div id="svg-loader">
+        <svg id="svg-circle" height="100" width="100" viewBox="0 0 100 100">
+            <circle class="circle bg" cx="50" cy="50" r="45"></circle>
+            <circle class="circle spin" cx="50" cy="50" r="45"></circle>
         </svg>
     </div>
 
@@ -34,7 +28,7 @@
         <div id="content">
 
 
-            <table>
+            <table id="calendar">
                 <caption id="calendar-caption"></caption>
                 <thead>
                     <tr>
@@ -52,6 +46,28 @@
                 </tbody>
             </table>
 
+            <table id="dashboard">
+                <tbody>
+                    <tr>
+                        <td>Total exercise time</td>
+                        <td id="overall-time">00:00:00</td>
+                    </tr>
+                    <tr>
+                        <td>Average exercise time</td>
+                        <td id="avarage-time">00:00:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Learning Count</td>
+                        <td id="overall-learned">0</td>
+                    </tr>
+                    <tr>
+                        <td>Learning rate</td>
+                        <td id="avarage-learned">0</td>
+                    </tr>
+                </tbody>
+            </table>
+
 
         </div>
 
@@ -63,40 +79,146 @@
 
     <script src="index.js" type="text/javascript"></script>
     <script>
-        let date = new Date();
-        let first_date = new Date(date.getFullYear(), date.getMonth(), 1);
-        let last_date = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+        let today = new Date();
+        let today_year = String(today.getFullYear());
+        let today_month = String(today.getMonth() + 1).padStart(2, '0');
+
+        let first_date = (new Date(today.getFullYear(), today.getMonth(), 1)).getDate();
+        let last_date = (new Date(today.getFullYear(), today.getMonth() + 1, 0)).getDate();
+
+        let tbody = document.getElementById('calendar-body');
+
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        let caption = document.getElementById('calendar-caption');
+        caption.innerHTML = months[today.getMonth()] + " " + today.getFullYear();
 
-        let tbl = document.getElementById('calendar-body');
-        let capt = document.getElementById('calendar-caption');
-        capt.innerHTML = months[date.getMonth()] + " " + date.getFullYear();
+        let overall_time = 0;
+        let avarage_time = 0;
+        let overall_learned = 0;
+        let avarage_learned = 0;
 
-        let mark_date = 1;
+        let marking_date = 1;
         for (let i = 0; i < 6; i++) {
             let row = document.createElement("tr");
 
             for (let j = 0; j < 7; j++) {
-                if (i === 0 && j < first_date.getDay()) { 
+                if (i === 0 && j < first_date) { 
                     cell = document.createElement("td");
-                    cellText = document.createTextNode("");
-                    cell.appendChild(cellText);
+                    cell_text = document.createTextNode("");
+                    cell.appendChild(cell_text);
                     row.appendChild(cell);
-                } else if (mark_date > last_date.getDate()) {
+                } else if (marking_date > last_date) {
                     break;
                 } else {
                     cell = document.createElement("td");
-                    cellText = document.createTextNode(mark_date);
-                    if (mark_date === date.getDate()) {
+                    cell_text = document.createTextNode(marking_date);
+                    if (marking_date === today.getDate()) {
                         cell.classList.add("today");
                     } // color today's date
-                    cell.appendChild(cellText);
+
+                    if (typeof data[today_year] === 'object' && typeof data[today_year][today_month] === 'object') {
+
+                        checking_data = data[today_year][today_month][String(marking_date).padStart(2, '0')];
+                        if (typeof checking_data === 'object') {
+                            mktime = checking_data['workout'].split(':');
+
+                            workout_h = Number(mktime[0]) * 60 * 60;
+                            workout_m = Number(mktime[1]) * 60;
+                            workout_s = Number(mktime[2]);
+                            workout_t = workout_h + workout_m + workout_s;
+                            if (workout_t > 0 || checking_data['learned']) {
+                                today_check = document.createElement('div');
+                                today_check.classList.add('check');
+                                today_check.setAttribute('onclick', 'togglePopup(this)');
+                                cell.appendChild(today_check);
+
+                                popup = document.createElement('div');
+                                popup.classList.add('popup');
+                                popup.setAttribute('onclick', 'closePopup(this)');
+                                cell.appendChild(popup);
+
+                                if (workout_t > 0) {
+                                    workout = document.createElement('div');
+                                    workout.classList.add('workout');
+                                    today_check.appendChild(workout);
+
+                                    pop_workout = document.createElement('div');
+                                    pop_workout_text = document.createTextNode(checking_data['workout'] + ' 💪');
+                                    pop_workout.appendChild(pop_workout_text);
+                                    pop_workout.classList.add('workout');
+                                    popup.appendChild(pop_workout);
+
+                                    overall_time += workout_t;
+                                    avarage_time ++;
+                                }
+                                if (checking_data['learned']) {
+                                    learned = document.createElement('div');
+                                    learned.classList.add('learned');
+                                    today_check.appendChild(learned);
+
+                                    pop_learned = document.createElement('div');
+                                    pop_learned_text = document.createTextNode('seatwork✍');
+                                    pop_learned.appendChild(pop_learned_text);
+                                    pop_learned.classList.add('learned');
+                                    popup.appendChild(pop_learned);
+
+                                    overall_learned++;
+                                }
+                            }
+
+                            avarage_learned++;
+                        }
+                    } // check workout & learned
+                    
+                    cell.appendChild(cell_text);
                     row.appendChild(cell);
-                    mark_date++;
+                    marking_date++;
                 }
             }
 
-            tbl.appendChild(row);
+            tbody.appendChild(row);
+        }
+
+        overall_h = String(parseInt(overall_time / 60 / 60)).padStart(2, '0');
+        overall_m = String(parseInt(overall_time / 60 % 60)).padStart(2, '0');
+        overall_s = String(parseInt(overall_time % 60 % 60)).padStart(2, '0');
+        avarage_h = String(parseInt(overall_time / avarage_time / 60 / 60)).padStart(2, '0');
+        avarage_m = String(parseInt(overall_time / avarage_time / 60 % 60)).padStart(2, '0');
+        avarage_s = String(parseInt(overall_time / avarage_time % 60 % 60)).padStart(2, '0');
+
+        avarage_h = isNaN(avarage_h) ? '00' : avarage_h;
+        avarage_m = isNaN(avarage_m) ? '00' : avarage_m;
+        avarage_s = isNaN(avarage_s) ? '00' : avarage_s;
+
+        document.getElementById('overall-time').innerHTML = overall_h + ':' + overall_m + ':' + overall_s;
+        document.getElementById('avarage-time').innerHTML = avarage_h + ':' + avarage_m + ':' + avarage_s; 
+
+        overall_learned = String(overall_learned).padStart(2, '0');
+        avarage_learned = String(Math.round(overall_learned / avarage_learned * 100)).padStart(2, '0');
+
+        avarage_learned = isNaN(avarage_learned) ? '00' : avarage_learned;
+
+        document.getElementById('overall-learned').innerHTML = overall_learned;
+        document.getElementById('avarage-learned').innerHTML = avarage_learned + '%';
+
+        function togglePopup(_this) {
+            let popup = _this.nextSibling;
+
+            if (parseInt(popup.style.height) == '0' || isNaN(parseInt(popup.style.height))) {
+                if (window.innerWidth <= 555) {
+                    let another_popup = document.getElementsByClassName('popup');
+                    for(i = 0; i < another_popup.length; i++) {
+                        another_popup[i].style.height = 0;
+                    }
+                }
+                
+                popup.style.height = '45px';
+            } else {
+                popup.style.height = '0';
+            }
+        }
+        function closePopup(_this) {
+            _this.style.height = '0';
         }
     </script>
 </body>
