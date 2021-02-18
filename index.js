@@ -36,6 +36,38 @@ let data = {
             '16': {workout:'01:39:22',learned:true},
             '17': {workout:'00:00:00',learned:false},
             '18': {workout:'01:58:07',learned:true}
-        } 
+        },
+        '01' : {
+            '01' : {workout:'00:37:56',learned:false},
+            '02' : {workout:'01:46:30',learned:false},
+            '03' : {workout:'00:00:00',learned:false},
+            '04' : {workout:'01:46:54',learned:false},
+            '05' : {workout:'01:12:25',learned:false},
+            '06' : {workout:'00:00:00',learned:false},
+            '07' : {workout:'01:35:32',learned:false},
+            '08' : {workout:'01:42:32',learned:false},
+            '09' : {workout:'01:41:59',learned:false},
+            '10' : {workout:'00:00:00',learned:false},
+            '11' : {workout:'01:40:38',learned:false},
+            '12' : {workout:'01:51:01',learned:false},
+            '13' : {workout:'00:00:00',learned:false},
+            '14' : {workout:'01:41:48',learned:false},
+            '15' : {workout:'01:52:29',learned:false},
+            '16' : {workout:'01:36:25',learned:false},
+            '17' : {workout:'00:00:00',learned:false},
+            '18' : {workout:'01:33:28',learned:false},
+            '19' : {workout:'01:30:09',learned:false},
+            '20' : {workout:'00:00:00',learned:false},
+            '21' : {workout:'02:00:42',learned:false},
+            '22' : {workout:'01:32:46',learned:false},
+            '23' : {workout:'00:00:00',learned:false},
+            '24' : {workout:'00:00:00',learned:false},
+            '25' : {workout:'02:01:03',learned:false},
+            '26' : {workout:'01:43:32',learned:false},
+            '27' : {workout:'00:00:00',learned:false},
+            '28' : {workout:'02:04:26',learned:false},
+            '29' : {workout:'01:31:05',learned:false},
+            '30' : {workout:'02:15:56',learned:false}
+        }
     }
 };
