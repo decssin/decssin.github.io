@@ -37,6 +37,7 @@ let data = {
             '17': {workout:'00:00:00',learned:false},
             '18': {workout:'01:58:07',learned:true},
             '19': {workout:'02:03:27',learned:false},
+            '20': {workout:'01:44:50',learned:false},
         },
         '01' : {
             '01' : {workout:'00:37:56',learned:false},
