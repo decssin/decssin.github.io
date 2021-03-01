@@ -55,7 +55,7 @@
                     </tr>
                     <tr>
                         <td>Average exercise time</td>
-                        <td id="avarage-time">00:00:00</td>
+                        <td id="average-time">00:00:00</td>
                     </tr>
 
                     <tr>
@@ -64,7 +64,7 @@
                     </tr>
                     <tr>
                         <td>Learning rate</td>
-                        <td id="avarage-learned">0</td>
+                        <td id="average-learned">0</td>
                     </tr>
                 </tbody>
             </table>
@@ -94,9 +94,9 @@
         caption.innerHTML = months[today.getMonth()] + " " + today.getFullYear();
 
         let overall_time = 0;
-        let avarage_time = 0;
+        let average_time = 0;
         let overall_learned = 0;
-        let avarage_learned = 0;
+        let average_learned = 0;
 
         let marking_date = 1;
         for (let i = 0; i < 6; i++) {
@@ -150,7 +150,7 @@
                                     popup.appendChild(pop_workout);
 
                                     overall_time += workout_t;
-                                    avarage_time ++;
+                                    average_time ++;
                                 }
                                 if (checking_data['learned']) {
                                     learned = document.createElement('div');
@@ -167,7 +167,7 @@
                                 }
                             }
 
-                            avarage_learned++;
+                            average_learned++;
                         }
                     } // check workout & learned
                     
@@ -183,24 +183,24 @@
         overall_h = String(parseInt(overall_time / 60 / 60)).padStart(2, '0');
         overall_m = String(parseInt(overall_time / 60 % 60)).padStart(2, '0');
         overall_s = String(parseInt(overall_time % 60 % 60)).padStart(2, '0');
-        avarage_h = String(parseInt(overall_time / avarage_time / 60 / 60)).padStart(2, '0');
-        avarage_m = String(parseInt(overall_time / avarage_time / 60 % 60)).padStart(2, '0');
-        avarage_s = String(parseInt(overall_time / avarage_time % 60 % 60)).padStart(2, '0');
+        average_h = String(parseInt(overall_time / average_time / 60 / 60)).padStart(2, '0');
+        average_m = String(parseInt(overall_time / average_time / 60 % 60)).padStart(2, '0');
+        average_s = String(parseInt(overall_time / average_time % 60 % 60)).padStart(2, '0');
 
-        avarage_h = isNaN(avarage_h) ? '00' : avarage_h;
-        avarage_m = isNaN(avarage_m) ? '00' : avarage_m;
-        avarage_s = isNaN(avarage_s) ? '00' : avarage_s;
+        average_h = isNaN(average_h) ? '00' : average_h;
+        average_m = isNaN(average_m) ? '00' : average_m;
+        average_s = isNaN(average_s) ? '00' : average_s;
 
         document.getElementById('overall-time').innerHTML = overall_h + ':' + overall_m + ':' + overall_s;
-        document.getElementById('avarage-time').innerHTML = avarage_h + ':' + avarage_m + ':' + avarage_s; 
+        document.getElementById('average-time').innerHTML = average_h + ':' + average_m + ':' + average_s; 
 
         overall_learned = String(overall_learned).padStart(2, '0');
-        avarage_learned = String(Math.round(overall_learned / avarage_learned * 100)).padStart(2, '0');
+        average_learned = String(Math.round(overall_learned / average_learned * 100)).padStart(2, '0');
 
-        avarage_learned = isNaN(avarage_learned) ? '00' : avarage_learned;
+        average_learned = isNaN(average_learned) ? '00' : average_learned;
 
         document.getElementById('overall-learned').innerHTML = overall_learned;
-        document.getElementById('avarage-learned').innerHTML = avarage_learned + '%';
+        document.getElementById('average-learned').innerHTML = average_learned + '%';
 
         function togglePopup(_this) {
             let popup = _this.nextSibling;

@@ -2,7 +2,7 @@
 document.body.style.overflow = 'visible';
 document.body.style.pointerEvents = 'auto';
 // ie-check
-if (document['documentMode']) {
+if (document.documentMode) {
     document.body.innerHTML = "<div id='internetexplorer'><span>My blog no longer supports this web browser. <a href='microsoft-edge:https://jiwon.io'>Click here to launch the site in the MS Edge browser</a></span></div>";
 }
 // load-animation
