@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
 let data = {
     '2021': {
         '03' : {
-            '01': {workout:'01:47:47',learned:false},
+            '02': {workout:'01:47:47',learned:false},
         },
         '02' : {
             '01': {workout:'02:05:22',learned:true},
