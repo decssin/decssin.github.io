@@ -19,7 +19,8 @@ let data = {
     '2021': {
         '03' : {
             '02': {workout:'01:47:47',learned:true},
-            '03': {workout:'01:15:23',learned:false}
+            '03': {workout:'01:15:23',learned:false},
+            '04': {workout:'01:31:08',learned:false},
         },
         '02' : {
             '01': {workout:'02:05:22',learned:true},
