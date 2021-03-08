@@ -24,6 +24,7 @@ let data = {
             '05': {workout:'01:32:36',learned:false},
             '06': {workout:'00:31:54',learned:false},
             '08': {workout:'01:46:23',learned:false},
+            '09': {workout:'01:53:17',learned:false},
         },
         '02' : {
             '01': {workout:'02:05:22',learned:true},
