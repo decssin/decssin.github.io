@@ -4,7 +4,7 @@ title: "Blue Bottle"
 date: 2017-10-18
 description: 
 image: /assets/images/placeholder-5.jpg
-author: Thomas Vaeth
+author: Jiwon Min
 tags: 
   - Squid
   - Moon Drinking

@@ -4,7 +4,7 @@ title: "Unicorn Echo Park"
 date: 2017-10-11
 description: 
 image: /assets/images/placeholder-10.jpg
-author: Thomas Vaeth
+author: Jiwon Min
 tags: 
   - Mixtape
   - Moon Drinking

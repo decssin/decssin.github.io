@@ -4,7 +4,7 @@ title: "Snackwave"
 date: 2017-10-14
 description: 
 image: /assets/images/placeholder-11.jpg
-author: Thomas Vaeth
+author: Jiwon Min
 tags: 
   - Squid
   - Mixtape
