@@ -1,0 +1,231 @@
+---
+layout: page
+title: Workout
+image: /assets/images/workout-1.jpg
+---
+<style>
+    /* content */
+    #content {padding:70px 18px;}
+    #content table#calendar {width:100%;text-align:center;table-layout:fixed;}
+    #content table#calendar * {cursor:default;}
+    #content table#calendar th,
+    #content table#calendar td,
+    #content table#calendar caption {line-height:45px;position:relative;}
+    #content table#calendar caption {font-weight:bold;}
+    #content table#calendar .today {background:lightblue;color:white;}
+    #content table#calendar .workout {position: absolute;top:calc(50% - 14px);left:calc(50% + 6px);cursor:pointer;background:#ff2c70;width:4px;height:4px;border-radius:100%;}
+    #content table#calendar .workout_time {position:absolute;top:0;left:0;background:white;transition:height .3s;width:100%;height:0;overflow:hidden;font-size:0.8em;color:black;cursor:pointer;}
+    #content table#dashboard {table-layout:fixed;margin-top:70px;font-size:0.8em;}
+    #content table#dashboard * {cursor:default;}
+</style>
+<div id="content">
+    <table id="calendar">
+        <caption id="calendar-caption"></caption>
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody id="calendar-body">
+
+        </tbody>
+    </table>
+
+    <table id="dashboard">
+        <tbody>
+            <tr>
+                <td>Total exercise time</td>
+                <td id="overall-time">00:00:00</td>
+            </tr>
+            <tr>
+                <td>Average exercise time</td>
+                <td id="average-time">00:00:00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    let calendar_data = {
+        '2021': {
+            '03' : {
+                '02': {workout:'01:47:47'},
+                '03': {workout:'01:15:23'},
+                '04': {workout:'01:31:08'},
+                '05': {workout:'01:32:36'},
+                '06': {workout:'00:31:54'},
+                '08': {workout:'01:46:23'},
+                '09': {workout:'01:53:17'},
+                '11': {workout:'01:44:12'},
+                '12': {workout:'01:39:57'},
+            },
+            '02' : {
+                '01': {workout:'02:05:22'},
+                '02': {workout:'01:09:59'},
+                '03': {workout:'00:00:00'},
+                '04': {workout:'02:03:17'},
+                '05': {workout:'00:45:52'},
+                '06': {workout:'02:07:18'},
+                '07': {workout:'00:00:00'},
+                '08': {workout:'01:38:18'},
+                '09': {workout:'02:04:29'},
+                '10': {workout:'00:00:00'},
+                '11': {workout:'02:02:59'},
+                '12': {workout:'02:06:54'},
+                '13': {workout:'01:57:10'},
+                '14': {workout:'00:00:00'},
+                '15': {workout:'01:00:06'},
+                '16': {workout:'01:39:22'},
+                '17': {workout:'00:00:00'},
+                '18': {workout:'01:58:07'},
+                '19': {workout:'02:03:27'},
+                '20': {workout:'01:44:50'},
+                '22': {workout:'01:38:30'},
+                '23': {workout:'01:44:13'},
+                '25': {workout:'01:33:39'},
+                '26': {workout:'01:43:58'},
+                '27': {workout:'01:24:51'},
+            },
+            '01' : {
+                '01' : {workout:'00:37:56'},
+                '02' : {workout:'01:46:30'},
+                '03' : {workout:'00:00:00'},
+                '04' : {workout:'01:46:54'},
+                '05' : {workout:'01:12:25'},
+                '06' : {workout:'00:00:00'},
+                '07' : {workout:'01:35:32'},
+                '08' : {workout:'01:42:32'},
+                '09' : {workout:'01:41:59'},
+                '10' : {workout:'00:00:00'},
+                '11' : {workout:'01:40:38'},
+                '12' : {workout:'01:51:01'},
+                '13' : {workout:'00:00:00'},
+                '14' : {workout:'01:41:48'},
+                '15' : {workout:'01:52:29'},
+                '16' : {workout:'01:36:25'},
+                '17' : {workout:'00:00:00'},
+                '18' : {workout:'01:33:28'},
+                '19' : {workout:'01:30:09'},
+                '20' : {workout:'00:00:00'},
+                '21' : {workout:'02:00:42'},
+                '22' : {workout:'01:32:46'},
+                '23' : {workout:'00:00:00'},
+                '24' : {workout:'00:00:00'},
+                '25' : {workout:'02:01:03'},
+                '26' : {workout:'01:43:32'},
+                '27' : {workout:'00:00:00'},
+                '28' : {workout:'02:04:26'},
+                '29' : {workout:'01:31:05'},
+                '30' : {workout:'02:15:56'}
+            }
+        }
+    };
+    
+    (function() {
+        let today = new Date();
+        let today_year = String(today.getFullYear());
+        let today_month = String(today.getMonth() + 1).padStart(2, '0');
+        let first_date = (new Date(today.getFullYear(), today.getMonth(), 1)).getDate();
+        let last_date = (new Date(today.getFullYear(), today.getMonth() + 1, 0)).getDate();
+        
+        let total_second = 0;
+        let workout_days = 0;
+        
+        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        document.getElementById('calendar-caption').innerHTML = months[today.getMonth()] + " " + today.getFullYear();
+
+        let marking_date = 1;
+        for (let i = 0; i < 6; i++) {
+            row = document.createElement("tr");
+
+            for (let j = 0; j < 7; j++) {
+                if (i === 0 && j < first_date) { 
+                    cell = document.createElement("td");
+                    cell.appendChild(document.createTextNode(""));
+                    row.appendChild(cell);
+                } else if (marking_date > last_date) {
+                    break;
+                } else {
+                    cell = document.createElement("td");
+                    cell.appendChild(document.createTextNode(marking_date));
+
+                    if (marking_date === today.getDate()) {
+                        cell.classList.add("today");
+                    }
+
+                    if (typeof calendar_data[today_year] === 'object') {
+                        if (typeof calendar_data[today_year][today_month] === 'object') {
+
+                            checking_data = calendar_data[today_year][today_month][String(marking_date).padStart(2, '0')];
+                            if (typeof checking_data === 'object') {
+                                make_time = checking_data['workout'].split(':');
+
+                                workout_h = Number(make_time[0]) * 60 * 60;
+                                workout_m = Number(make_time[1]) * 60;
+                                workout_s = Number(make_time[2]);
+                                workout_t = workout_h + workout_m + workout_s;
+                                if (workout_t > 0) {
+                                    cell.style.cursor = 'pointer';
+                                    cell.setAttribute('onclick', 'togglePop(this)');
+                                    
+                                    workout = document.createElement('div');
+                                    workout.classList.add('workout');
+                                    cell.appendChild(workout);
+
+                                    workout_time = document.createElement('div');
+                                    workout_time.appendChild(document.createTextNode(checking_data['workout'] + ' 💪'));
+                                    workout_time.setAttribute('data-timestamp', checking_data['workout'] + ' 💪');
+                                    workout_time.setAttribute('data-minutes', make_time[0] + ':' + make_time[1]);
+                                    workout_time.classList.add('workout_time');
+                                    cell.appendChild(workout_time);
+
+                                    total_second += workout_t;
+                                    workout_days ++;
+                                }
+                            }
+                        }
+                    } 
+                    
+                    row.appendChild(cell);
+                    marking_date++;
+                }
+            }
+
+            document.getElementById('calendar-body').appendChild(row);
+        }
+
+        overall_h = String(parseInt(total_second / 60 / 60)).padStart(2, '0');
+        overall_m = String(parseInt(total_second / 60 % 60)).padStart(2, '0');
+        overall_s = String(parseInt(total_second % 60 % 60)).padStart(2, '0');
+
+        average_h = String(parseInt(total_second / workout_days / 60 / 60)).padStart(2, '0');
+        average_m = String(parseInt(total_second / workout_days / 60 % 60)).padStart(2, '0');
+        average_s = String(parseInt(total_second / workout_days % 60 % 60)).padStart(2, '0');
+        average_h = isNaN(average_h) ? '00' : average_h;
+        average_m = isNaN(average_m) ? '00' : average_m;
+        average_s = isNaN(average_s) ? '00' : average_s;
+
+        document.getElementById('overall-time').innerHTML = overall_h + ':' + overall_m + ':' + overall_s;
+        document.getElementById('average-time').innerHTML = average_h + ':' + average_m + ':' + average_s;
+    })();
+
+    function togglePop(_this) {
+        if (_this.children[1].style.height) {
+            _this.children[1].removeAttribute('style');
+        } else {
+            if (window.innerWidth <= 555) {
+                _this.children[1].innerHTML = _this.children[1].dataset.minutes;
+            } else {
+                _this.children[1].innerHTML = _this.children[1].dataset.timestamp;
+            }
+            _this.children[1].style.height = '47px';
+        }
+
+    }
+</script>
