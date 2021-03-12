@@ -1,7 +1,20 @@
-# Barber
-Barber is a minimal blog theme built for Jekyll. The blog theme features a masonry grid, endless scrolling, and page transitions. 💈 Barber is also available for [Ghost](https://github.com/samesies/barber-ghost).
+### TL;DR
 
-![Barber](https://raw.githubusercontent.com/samesies/barber-jekyll/master/barber.jpg "Barber")
+- for init
+  1. Checkout branch -> tests
+  2. Run ````bundle install````
+  3. Run ````npm install````
+
+- for deployment
+  1. Checkout branch -> tests
+  2. Run ````bundle exec jekyll serve```` or ````npm start```` to exec (localhost:4000).
+  3. Run ````bundle exec jekyll build```` or ````npm run build```` to build a production ready site for deployment.
+  4. Manually add the contents of the ```_site``` folder to the ```master``` branch.
+
+  ---
+
+  # Barber
+Barber is a minimal blog theme built for Jekyll. The blog theme features a masonry grid, endless scrolling, and page transitions. 💈 Barber is also available for [Ghost](https://github.com/jiwou/barber-ghost).
 
 ## Initial Setup
 * [Installation](#installation)
@@ -29,46 +42,44 @@ Almost everything to personalize your site is in the ````_config.yml````.
 
 ```
 # Site/SEO settings
-email: okay@samesies.io
+email: okay@jiwon.io
 baseurl: ""
 permalink: /:year/:month/:day/:title/
 google_analytics: 
 
-name: Thomas Vaeth
+name: Jiwon Min
 title: The Barber Theme
 description: >
-  Barber is a blog theme for Jekyll built by Thomas Vaeth for Samesies using HTML, Sass, and JavaScript.
-url: http://barber.samesies.io
-twitter_username: thomasvaeth
+  Barber is a blog theme for Jekyll built by Jiwon Min for Jiwon using HTML, Sass, and JavaScript.
+url: https://jiwon.io
+twitter_username: jiwontwitt
 default_img: /assets/images/seo.jpg
 social:
   - name: twitter
-    url: https://twitter.com/thomasvaeth
+    url: https://twitter.com/jiwontwitt
   - name: instagram
-    url: https://www.instagram.com/thomas.vaeth/
-  - name: linkedin
-    url: https://www.linkedin.com/in/thomasvaeth/
+    url: https://www.instagram.com/jiwon.ig/
+  - name: facebook
+    url: https://www.facebook.com/jiwon.fb/
   - name: github
-    url: https://github.com/samesies
-  - name: codepen
-    url: https://codepen.io/thomasvaeth/
+    url: https://github.com/jiwou
 
 # Contact settings
 contact_img: /assets/images/placeholder-28.jpg
-formcarry: https://formcarry.com/s/HkIo0nMb7
+formcarry: https://formcarry.com/s/TeSt0aCt7
 
 # Disqus settings
-disqus: test-apkdzgmqhj
+disqus: test-userid
 
 # MailChimp settings
-mailchimp_action: https://samesies.us17.list-manage.com/subscribe/post-json?u=66ddf555dab480e6a8606430b&amp;id=89b3ee034f
-mailchimp_input: b_66ddf555dab480e6a8606430b_89b3ee034f
+mailchimp_action: https://jiwou.us17.list-manage.com/subscribe/post-json?u=testf555dab480e6a8606430b&amp;id=89b3ee034f
+mailchimp_input: b_testf555dab480e6a8606430b_89b3ee034f
 
 # Author settings
 author:
-  - name: Thomas Vaeth
-    bio: Thomas Vaeth was born in New York, raised in Pennsylvania, and transplanted in Washington. He was a Web Developer at Urban Influence, but now he's a Software Engineer at Getty Images.
-    url: http://thomasvaeth.com
+  - name: Jiwon Min
+    bio: Jiwon Min was born in New York, raised in Pennsylvania, and transplanted in Washington. He was a Web Developer at Urban Influence, but now he's a Software Engineer at Getty Images.
+    url: https://jiwon.io
 
 # Pagination settings
 pagination:
@@ -99,7 +110,7 @@ autopages:
 You can change the URL the [contact form](#contact-form) is sent to, add Google Analytics, change the SEO settings, grow your website with additional authors, and much more.
 
 ### Create Posts
-All posts go upder the ````_posts```` directory. You can also have a ````_drafts```` directory with posts that will on your development page, but not in production.
+All posts go under the ````_posts```` directory. You can also have a ````_drafts```` directory with posts that will on your development page, but not in production.
 
 ```
 ---
@@ -108,7 +119,7 @@ title: "Brunch Swag"
 date: 2017-02-18
 description: 
 image: /assets/images/placeholder-15.jpg
-author: Thomas Vaeth
+author: Jiwon Min
 tags: 
   - XOXO
   - La Croix
@@ -137,8 +148,6 @@ You can create a navigation in ````_includes/navigation.html````. Visitors can b
 
 ### Contact Form
 The form uses [Formcarry](https://formcarry.com/) to send submitted messages straight to your inbox. The image on the popup is the the ````contact_img```` variable and the URL the forms sends to is the ````formcarry```` variable in ````_config.yml```` (see [Update Settings](#update-settings)).
-
-![Contact Form](http://samesies.io/assets/images/barber/doc/framed-contact-form.jpg "Contact Form")
 
 This file can be found in ````_includes/formscarry.html````. You can change the labels of the form here. After everything is set you will need to submit a message to yourself to confirm everything is correct.
 
@@ -218,14 +227,3 @@ The source code is broken down to make finding what you need as easy as possible
 ```
 
 The CSS is written in Sass. The JavaScript is written in ES6, so your code is up to date with the newest standards.
-
-### Donations
-Barber has been released for free. Similar themes cost around $29 on [ThemeForest](https://themeforest.net/category/static-site-generators/jekyll). Any donations would be greatly appreciated after the work that went into releasing Barber.
-
-* PayPal – <https://www.paypal.me/samesies>
-* Bitcoin – 1PSzNmcfAFJY1PtBK5u9R5bTGfF7KAuLcq
-* Ethereum – 0x392F7116e4171F1D740397B6000EadD2e4bb9670
-* Litecoin – LSH9AnjcUTV5T7PUxXQuxPqb9W5aSR9GEP
-
-### Support
-Email <okay@samesies.io> if you need any additional support with Barber.

@@ -6,9 +6,94 @@
 </description>
     <link>https://jiwon.io</link>
     <atom:link href="https://jiwon.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Mar 2021 06:03:42 +0900</pubDate>
-    <lastBuildDate>Fri, 12 Mar 2021 06:03:42 +0900</lastBuildDate>
+    <pubDate>Fri, 12 Mar 2021 17:50:24 +0900</pubDate>
+    <lastBuildDate>Fri, 12 Mar 2021 17:50:24 +0900</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Style Guide</title>
+        <description>&lt;p&gt;My name is Thomas Vaeth and this is Barber. 💈 Barber is a minimal blog theme with a masonry grid layout and infinite scroll. &lt;a href=&quot;http://samesies.io&quot; target=&quot;_blank&quot;&gt;Samesies&lt;/a&gt; builds themes for Ghost, WordPress, and Jekyll and they are only available through ThemeForest.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1&gt;Artisan cray pickled whatever&lt;/h1&gt;
+&lt;h2&gt;Artisan cray pickled whatever&lt;/h2&gt;
+&lt;h3&gt;Artisan cray pickled whatever&lt;/h3&gt;
+&lt;h4&gt;Artisan cray pickled whatever&lt;/h4&gt;
+&lt;h5&gt;Artisan cray pickled whatever&lt;/h5&gt;
+&lt;h6&gt;Artisan cray pickled whatever&lt;/h6&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Wes anderson cliche cosby sweater brooklyn vegan organic.&lt;/li&gt;
+  &lt;li&gt;Synth ennui semiotics mustache pickled.&lt;/li&gt;
+  &lt;li&gt;Food truck freegan vinyl thundercats, post-ironic ennui wes anderson banh mi four loko synth photo booth authentic 3 wolf moon.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Wes anderson cliche cosby sweater brooklyn vegan organic.&lt;/li&gt;
+  &lt;li&gt;Synth ennui semiotics mustache pickled.&lt;/li&gt;
+  &lt;li&gt;Food truck freegan vinyl thundercats, post-ironic ennui wes anderson banh mi four loko synth photo booth authentic 3 wolf moon.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Bicycle rights mustache artisan, keytar lo-fi sustainable fap stumptown vegan salvia freegan four loko terry richardson.”&lt;/p&gt;
+  &lt;cite&gt;Wolf Moon Cred&lt;/cite&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;pre&gt;
+&lt;code&gt;
+code {
+  padding: 0.25em 0.5em;
+
+  color: $color-black;
+  background: $color-lightgrey;
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/placeholder-18.jpg&quot; alt=&quot;Grid Image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;You can &lt;code&gt;use inline code&lt;/code&gt; and append &lt;code&gt;#full&lt;/code&gt; to the end of an image URL for full width images.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/placeholder-18.jpg#full&quot; alt=&quot;Full Image&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/XFYWazblaUA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;iframe src=&quot;https://player.vimeo.com/video/189919038?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;640&quot; height=&quot;640&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;iframe height=&quot;400&quot; scrolling=&quot;no&quot; title=&quot;Flexbox Flex-Grow Mast&quot; src=&quot;//codepen.io/thomasvaeth/embed/qmbKVq/?height=265&amp;amp;theme-id=0&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;&lt;/iframe&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;American apparel jean shorts terry richardson squid. Letterpress tattooed cray beard pinterest. Jean shorts tofu wayfarers, fap PBR swag banh mi. Organic chillwave scenester wayfarers semiotics salvia messenger bag, vice odd future.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 24 Oct 2017 00:00:00 +0900</pubDate>
+        <link>https://jiwon.io/2017/10/24/style-guide/</link>
+        <guid isPermaLink="true">https://jiwon.io/2017/10/24/style-guide/</guid>
+        
+        <category>Dummy Text</category>
+        
+        <category>Moon Drinking</category>
+        
+        <category>Kale</category>
+        
+        
+      </item>
     
       <item>
         <title>Polaroid Williamsburg</title>
