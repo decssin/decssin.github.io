@@ -301,7 +301,9 @@
                 } else {
                     _this.children[1].innerHTML = _this.children[1].dataset.timestamp;
                 }
-                alert(_this.children[1].innerHTML);
+
+                alert(_this.outerHTML);
+                alert(_this.children[1].outerHTML);
                 _this.children[1].style.height = '47px';
             }
 
