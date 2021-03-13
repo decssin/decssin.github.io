@@ -297,12 +297,12 @@
                 _this.children[1].removeAttribute('style');
             } else {
                 if (window.innerWidth <= 555) {
-                    alert(_this.children[1].innerHTML);
                     _this.children[1].innerHTML = _this.children[1].dataset.minutes;
                 } else {
                     _this.children[1].innerHTML = _this.children[1].dataset.timestamp;
                 }
-                // _this.children[1].style.height = '47px';
+                alert(_this.children[1].innerHTML);
+                _this.children[1].style.height = '47px';
             }
 
         }
