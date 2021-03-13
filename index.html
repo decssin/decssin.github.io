@@ -8,15 +8,15 @@
     <style>
         /* normalize */
         *,*::before,*::after {margin:0;padding:0;box-sizing:border-box;list-style:none;text-decoration:none;-webkit-tap-highlight-color:transparent;}
-        html {font-size: 62.5%;}
+        html {font-size: 62.5%;height: -webkit-fill-available;}
         a,a:active,a:visited{color:inherit}
-        body {overflow: hidden;pointer-events: none;}
+        body {overflow: hidden;pointer-events: none;height: -webkit-fill-available;}
         body::-webkit-scrollbar {width: 8px;}
         body::-webkit-scrollbar-thumb {background-color: gray;}
         #script-check,#ie-check {display: flex;justify-content: center;justify-items: center;align-items: center;align-content: center;position: fixed;z-index: 2;top: 0;left: 0;width: 100%;height: 100%;background: white;font-size: 2rem;}
 
         /* wrap */
-        #wrap {max-width:700px;height:100vh;min-height:-webkit-fill-available;margin:0 auto;position:relative;}
+        #wrap {max-width:700px;min-height:100vh;min-height:-webkit-fill-available;margin:0 auto;position:relative;}
 
         /* header */
         #header {display:flex;justify-content: center; width:100%; position:fixed; top:0; left:0; z-index: 9;height: 47px;box-shadow: 0 3px 5px 0 rgb(0 0 0 / 7%);}
