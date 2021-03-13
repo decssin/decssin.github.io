@@ -33,6 +33,7 @@
         #content table#calendar .today {background:lightblue;color:white;}
         #content table#calendar .workout {position: absolute;top:calc(50% - 14px);left:calc(50% + 6px);cursor:pointer;background:#ff2c70;width:4px;height:4px;border-radius:100%;}
         #content table#calendar .workout_time {position:absolute;top:0;left:0;background:white;transition:height .5s;width:100%;height:0;overflow:hidden;font-size:1.3rem;color:black;cursor:pointer;}
+        #content table#calendar .height-47px {height:47px;}
         #content table#dashboard {table-layout:fixed;margin-top:70px;font-size:1.1rem;}
         #content table#dashboard * {cursor:default;}
 
@@ -293,20 +294,13 @@
         })();
 
         function togglePop(_this) {
-            if (_this.children[1].style.height) {
-                _this.children[1].removeAttribute('style');
+            _this.children[1].classList.toggle('height-47px');
+
+            if (window.innerWidth <= 555) {
+                _this.children[1].innerHTML = _this.children[1].dataset.minutes;
             } else {
-                if (window.innerWidth <= 555) {
-                    _this.children[1].innerHTML = _this.children[1].dataset.minutes;
-                } else {
-                    _this.children[1].innerHTML = _this.children[1].dataset.timestamp;
-                }
-
-                alert(_this.outerHTML);
-                alert(_this.children[1].outerHTML);
-                _this.children[1].style.height = '47px';
+                _this.children[1].innerHTML = _this.children[1].dataset.timestamp;
             }
-
         }
     </script>
 </body>
