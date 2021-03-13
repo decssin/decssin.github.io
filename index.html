@@ -293,8 +293,7 @@
         })();
 
         function togglePop(_this) {
-            alert(_this.innerHTML);
-            return;
+            alert(String(_this.children[1].style.height));
             if (_this.children[1].style.height) {
                 _this.children[1].removeAttribute('style');
             } else {
