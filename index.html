@@ -32,8 +32,8 @@
         #content table#calendar caption {font-weight:bold;}
         #content table#calendar .today {background:lightblue;color:white;}
         #content table#calendar .workout {position: absolute;top:calc(50% - 14px);left:calc(50% + 6px);cursor:pointer;background:#ff2c70;width:4px;height:4px;border-radius:100%;}
-        #content table#calendar .workout_time {position:absolute;top:0;left:0;background:white;transition:height .5s;width:100%;height:0;overflow:hidden;font-size:1.3rem;color:black;cursor:pointer;}
-        #content table#calendar .height-47px {height:47px;}
+        #content table#calendar .workout_time {position:absolute;top:0;left:0;background:white;transition:opacity 0.3s, visibility 0.3s;width:100%;visibility:hidden;opacity:0;overflow:hidden;font-size:1.3rem;color:black;cursor:pointer;}
+        #content table#calendar .visible {visibility:visible;opacity:1;}
         #content table#dashboard {table-layout:fixed;margin-top:70px;font-size:1.1rem;}
         #content table#dashboard * {cursor:default;}
 
@@ -294,7 +294,7 @@
         })();
 
         function togglePop(_this) {
-            _this.children[1].classList.toggle('height-47px');
+            _this.children[1].classList.toggle('visible');
 
             if (window.innerWidth <= 555) {
                 _this.children[1].innerHTML = _this.children[1].dataset.minutes;
