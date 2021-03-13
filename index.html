@@ -27,12 +27,11 @@
         #content table#calendar {width:100%;font-size:1.5rem;text-align:center;table-layout:fixed;}
         #content table#calendar * {cursor:default;}
         #content table#calendar th,
-        #content table#calendar td,
-        #content table#calendar caption {line-height:45px;position:relative;}
-        #content table#calendar caption {font-weight:bold;}
+        #content table#calendar td {line-height:45px;position:relative;}
+        #content div#calendar-caption {line-height:45px;font-weight:bold;font-size:1.5rem;text-align:center;}
         #content table#calendar .today {background:lightblue;color:white;}
         #content table#calendar .workout {position: absolute;top:calc(50% - 14px);left:calc(50% + 6px);cursor:pointer;background:#ff2c70;width:4px;height:4px;border-radius:100%;}
-        #content table#calendar .workout_time {position:absolute;top:0;left:0;background:white;transition:opacity 0.3s, visibility 0.3s;width:100%;visibility:hidden;opacity:0;overflow:hidden;font-size:1.3rem;color:black;cursor:pointer;}
+        #content table#calendar .workout_time {position:absolute;top:0;left:0;background:white;transition:opacity 0.15s, visibility 0.15s;width:100%;visibility:hidden;opacity:0;overflow:hidden;font-size:1.3rem;color:black;cursor:pointer;}
         #content table#calendar .visible {visibility:visible;opacity:1;}
         #content table#dashboard {table-layout:fixed;margin-top:70px;font-size:1.1rem;}
         #content table#dashboard * {cursor:default;}
@@ -68,8 +67,8 @@
         </div>
 
         <div id="content">
+            <div id="calendar-caption"></div>
             <table id="calendar">
-                <caption id="calendar-caption"></caption>
                 <thead>
                     <tr>
                         <th>Sun</th>
